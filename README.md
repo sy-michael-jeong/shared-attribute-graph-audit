@@ -2,7 +2,7 @@
 
 Artifact for *Where Do the Gains Come From? Auditing Shared-Attribute
 Heterogeneous Graphs for Encrypted Traffic Intrusion Detection* (submitted to
-Computer Networks). Archived at Zenodo: https://doi.org/10.5281/zenodo.22248003
+Computer Networks). Archived at Zenodo: https://doi.org/10.5281/zenodo.22250187
 
 **Internal naming note.** The column and relation named `ja3` / `via_ja3` in
 this code is the paper's **VersionCipher** relation. The extraction pipeline

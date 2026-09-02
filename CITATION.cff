@@ -8,6 +8,8 @@ authors:
     affiliation: "Korea Institute of Science and Technology Information (KISTI)"
     email: jsy8630@kisti.re.kr
 license: MIT
+doi: 10.5281/zenodo.22250187
+version: 1.0.1
 repository-code: "https://github.com/sy-michael-jeong/shared-attribute-graph-audit"
 keywords:
   - encrypted traffic
