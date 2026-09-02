@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Build Figure 1, the metapath saturation curves.
+"""Build supplementary saturation curves (relation count vs. validation score; not a figure in the paper).
 
 The horizontal axis counts the relations that actually enter the graph. A
 configuration file can list a relation that produces no edges in a given

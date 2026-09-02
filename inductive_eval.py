@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Deployment-style inductive evaluation (Sec. 6.2).
+"""Deployment-style inductive evaluation (Sec. 6.4).
 
 Every other run in this artifact is transductive. The graph is built once over
 the union of the partitions, so a test flow is a node during training and can

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Field-value overlap between the training and test partitions (Sec. 3.3).
+"""Field-value overlap between the training and test partitions (Sec. 4.3).
 
 A split protocol that is valid at the level of rows can still leave the same
 identifier value on both sides of the boundary, in which case a relation built

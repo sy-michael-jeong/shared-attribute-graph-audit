@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Edge homophily and reach of every relation (Sec. 3, 6.3).
+"""Edge homophily and reach of every relation (Sec. 5.3, 6.5).
 
 Coverage says how many flows carry a field. It does not say whether the edges
 that field induces join flows of the same class. A relation can be present on

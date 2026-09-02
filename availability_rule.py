@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""What a rule that reads only field presence achieves (Sec. 6.1, 6.4).
+"""What a rule that reads only field presence achieves (Sec. 6.2).
 
 A relation can only join flows that carry its field. So before asking what the
 values mean, ask what the pattern of who carries the field is worth on its own.

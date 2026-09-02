@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
-"""Rank agreement and the diagnostic correlations (Sec. 6.2, 6.4).
+"""Rank agreement and the diagnostic correlations (Sec. 6.5).
 
 Two questions are answered here, and both are rank statistics, so they share a
 file.
 
-  Sec. 6.2   Does the relation ranking survive a redraw of the split? Each
+  Sec. 6.5   Does the relation ranking survive a redraw of the split? Each
              split variant gives every relation a five-seed mean, and the
              relations are ordered by it. Agreement between two orderings is
              Kendall's tau.
 
-  Sec. 6.4   Do the pre-training diagnostics predict the gain a relation
+  Sec. 6.5   Do the pre-training diagnostics predict the gain a relation
              brings? Normalised homophily and reach are computed before any
              training, and are correlated with what the relation adds over the
              self-loop control by Spearman's rho.
@@ -41,7 +41,7 @@ import numpy as np
 
 DATASETS = ["bccc_dohbrw", "iscx_vpn", "hikari", "cic_andmal", "vnat"]
 
-# The split variants of Section 6.3. Edge-seed variants redraw the graph rather
+# The split variants of Section 6.3 and 6.5. Edge-seed variants redraw the graph rather
 # than the split, so they are kept apart from the protocol comparison.
 PREFIXES = ("random_", "cutoff_", "edgeseed_")
 
@@ -186,7 +186,7 @@ def diagnostics(root: Path):
             continue
         rels = hom[ds]["relations"]
         # The relation the paper reports for this dataset.
-        # Section 6.4 tabulates the maximum over relations, not the relation
+        # Table 12 tabulates the maximum over relations, not the relation
         # the selection rule picked. Several relations often share that
         # maximum, so the count of relations at it is reported alongside; the
         # name of any one of them would be an arbitrary choice.

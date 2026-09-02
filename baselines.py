@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-"""Reference lines computed without training (Table 3 availability row,
-Table 7 majority column).
+"""Reference lines computed without training (field-presence rule of
+Sec. 6.2, Table 4 majority-class column).
 
   majority      macro-F1 on the test partition of always predicting the
                 majority class.

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Whether a group-disjoint split can be built at all (Sec. 3.2).
+"""Whether a group-disjoint split can be built at all (Sec. 4.1).
 
 Guidance on leakage control asks that an identifier value seen in training
 never reappear in testing. Whether that is achievable is a property of the

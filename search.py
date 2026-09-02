@@ -24,10 +24,10 @@ def beam_search(name, data_dir, cfg, pool, beam_k, seed):
         except Exception as e:
             print("  [error] %s" % e)
             m, score = {}, -1.0
-        # 실현된 관계를 함께 남긴다. 엣지를 만들지 못한 관계가 섞이면
-        # 요청 집합이 달라도 그래프가 같다. select_relations.py 와 make_fig1.py 가
-        # 중복을 없앨 때 이 목록을 쓴다. 없으면 조용히 요청 집합으로
-        # 되돌아가 같은 그래프를 여럿으로 센다.
+        # Record the realized relations too. When a relation produced no edges,
+        # two different requested sets yield the same graph; select_relations.py
+        # and make_fig1.py use this list to de-duplicate. Without it they fall
+        # back to the requested set and count one graph several times.
         r = {"stage": stage, "metapaths": list(rels),
              "metapaths_used": list(m.get("relations", rels)),
              "score": score, "val_macro_f1": score,

@@ -2,7 +2,7 @@
 # class MI (nats, binary task label), train-test value overlap.
 #
 # The shipped results/profiling/relation_profiling.json was produced under the
-# conventional stratified random split, which is what Table 3 reports. Running
+# conventional stratified random split, which is what Sec. 3.3 reports. Running
 # this script against data/processed_deg2 measures the audited split instead,
 # so the `protocol` field records which one a file holds.
 import argparse

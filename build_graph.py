@@ -155,15 +155,16 @@ def materialize(name, raw_root, out_root, cfg, task, split_mode):
 
 
 def requested_relations(cfg, name):
-    """이 데이터셋에 요청하는 관계.
+    """Relations requested for this dataset.
 
-    `metapaths_by_dataset` 에 항목이 있으면 그것을, 없으면 `metapaths` 를 쓴다.
-    BCCC-DoH 와 CIC-AndMal 은 TLS 관계만 요청한다 — 그 두 코퍼스에서 호스트와
-    시간 관계는 트래픽이 아니라 캡처 구성을 읽기 때문이다.
+    Uses `metapaths_by_dataset` when it has an entry, else `metapaths`. BCCC-DoH
+    and CIC-AndMal request the TLS relations only: in those two corpora the host
+    and temporal relations read the capture setup rather than the traffic
+    (Section 3.2 of the paper).
 
-    이 함수가 없으면 요청 목록이 데이터셋마다 다르다는 사실이 코드에서 사라지고,
-    `hin_summary.json` 의 `skipped` 에 없는 관계가 "실현되지 않았다" 인지
-    "요청되지 않았다" 인지 구별되지 않는다.
+    Without this function the fact that the request differs by dataset would
+    vanish from the code, and a relation absent from `skipped` in
+    `hin_summary.json` could not be told apart as "not realized" vs "not requested".
     """
     per = cfg["hin"].get("metapaths_by_dataset") or {}
     return list(per.get(name, cfg["hin"]["metapaths"]))
@@ -206,14 +207,14 @@ def main():
     ap.add_argument("--raw", default="data/raw")
     ap.add_argument("--out", default="data/processed")
     ap.add_argument("--config", default="config.yaml")
-    # 민감도 분석은 예산과 시간 구간만 바꾼 데이터 루트를 필요로 한다. 그 둘을
-    # CLI 로 받지 않으면 config 를 손으로 고친 사본을 만들어야 하는데, 그러면
-    # 어느 사본으로 어느 루트를 지었는지가 아티팩트에 남지 않는다. 여기서 받아
-    # hin_summary.json 에 기록하면 결과 파일만 보고도 알 수 있다.
+    # The sensitivity analyses need data roots that differ only in the budget or
+    # the time-bin width. Taking both on the command line (and recording them in
+    # hin_summary.json) keeps the provenance in the result files instead of in
+    # hand-edited copies of config.yaml.
     ap.add_argument("--max-degree", type=int, default=None,
-                    help="config 의 hin.max_degree_per_value 를 덮어쓴다")
+                    help="override hin.max_degree_per_value from config")
     ap.add_argument("--timebin-seconds", type=float, default=None,
-                    help="config 의 hin.timebin_seconds 를 덮어쓴다")
+                    help="override hin.timebin_seconds from config")
     ap.add_argument("--task", choices=["binary", "multiclass"], default="binary")
     ap.add_argument("--split-mode", default="random",
                     choices=["random", "time", "time_stratified",

@@ -1,5 +1,20 @@
 # Auditing what a TLS relation graph carries — reproducibility artifact
 
+Artifact for *Where Do the Gains Come From? Auditing Shared-Attribute
+Heterogeneous Graphs for Encrypted Traffic Intrusion Detection* (submitted to
+Computer Networks). Archived at Zenodo: https://doi.org/10.5281/zenodo.22248003
+
+**Internal naming note.** The column and relation named `ja3` / `via_ja3` in
+this code is the paper's **VersionCipher** relation. The extraction pipeline
+used for the reported experiments does not provide JA3; the relation is built
+from the TLS version and the cipher-suite list as a coarse stand-in
+(paper, Section 3.2). Likewise `via_tls_cipher_group` is the paper's
+CipherGroup and `via_timebin` its TimeBin. `verify_paper.py` carries the mapping.
+
+**Verify the paper's numbers.** `python verify_paper.py` recomputes every
+value the paper reports (Tables 4–14 and the numbers quoted in the text, 280
+claims) from the shipped files in `results/` and prints PASS/FAIL per claim.
+
 Every number the paper reports comes from a file in `results/`, and every file
 in `results/` is produced by a command below. One check enforces that:
 
@@ -596,13 +611,15 @@ percent over five seeds. The `values` copy is rounded to four places, so
 
     python rank_stability.py --results results --out results/rank_stability
 
-    python make_fig1.py --summaries results/saturation --out fig1_saturation.pdf
+    # supplementary saturation curves (relation count vs. validation score); not a paper figure
+    python make_fig1.py --summaries results/saturation --out saturation_curves.pdf
 
 ## Checks
 
     python test_graph_invariants.py     # graph construction
     python test_inductive_attach.py     # attachment rule
-    python collect.py --results results --check
+    python collect.py --results results --check   # every shipped file has a source
+    python verify_paper.py                        # every reported number recomputes
 
     python verify_graph.py --datasets bccc_dohbrw iscx_vpn hikari cic_andmal vnat \
         --data data/processed_deg2 --out results/structure/verify_graph.json

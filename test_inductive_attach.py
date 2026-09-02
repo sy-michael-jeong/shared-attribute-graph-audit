@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-"""귀납 붙이기 규칙이 지켜야 하는 불변량. 데이터도 GPU 도 필요 없다.
+"""Invariants the inductive attachment rule must satisfy. Needs no data and no GPU.
 
-배포 규칙은 코드 한 줄이 어긋나도 조용히 깨진다. 새 flow 끼리 엣지가 하나만
-생겨도 그 그래프는 전이 학습으로 되돌아가고, 결과는 정상으로 보인다. 그래서
-규칙을 문장이 아니라 검사로 적어 둔다.
+A deployment rule breaks silently when one line of code is off: a single
+new-new edge turns the graph back into transductive training and the scores
+still look normal. So the rule is written as checks, not prose.
 
     python -u test_inductive_attach.py
 """
@@ -25,53 +25,53 @@ def check(label: str, ok: bool) -> None:
 
 
 def main() -> int:
-    print("새 flow 끼리 잇지 않는다")
+    print("new flows are never connected to each other")
     v = np.array(["A"] * 12)
     e = attach_new(v, 6, 2, 42)
     new = e >= 6
-    check("모든 값이 같아도 새-새 엣지가 0", int((new[0] & new[1]).sum()) == 0)
+    check("no new-new edge even when every value is identical", int((new[0] & new[1]).sum()) == 0)
 
-    print("\n예산을 지킨다")
-    # 메시지는 source -> target 으로 간다. 새 노드가 받는 이웃 수는
-    # 들어오는 차수다. 나가는 차수로 세면 0 이 나온다.
+    print("\nbudget is respected")
+    # Messages travel source -> target. A new node's neighbour count is its
+    # in-degree; counting out-degree would give 0.
     indeg = np.bincount(e[1], minlength=12)
-    check("새 flow 의 들어오는 차수가 전부 예산과 같다",
+    check("every new flow has in-degree equal to the budget",
           set(indeg[6:].tolist()) == {2})
-    check("학습 flow 는 부착으로 아무것도 받지 않는다",
+    check("training flows receive nothing from attachment",
           int(indeg[:6].sum()) == 0)
 
-    print("\n학습에 없는 값은 고립된다")
+    print("\nvalues absent from training are isolated")
     v = np.array(["A", "A", "A", "B", "B", "B", "C", "C", "A", "A", "Z", "Z"])
     e = attach_new(v, 6, 2, 42)
     indeg = np.bincount(e[1], minlength=12) if e.shape[1] else np.zeros(12, int)
-    check("학습에 없던 값은 차수 0", indeg[6] == 0 and indeg[7] == 0
+    check("value unseen in training -> degree 0", indeg[6] == 0 and indeg[7] == 0
           and indeg[10] == 0 and indeg[11] == 0)
-    check("학습에 있던 값은 차수 > 0", indeg[8] > 0 and indeg[9] > 0)
+    check("value seen in training -> degree > 0", indeg[8] > 0 and indeg[9] > 0)
 
-    print("\n결측은 잇지 않는다")
+    print("\nmissing values are never connected")
     v = np.array(["-", "-", "-", "A", "A", "A", "-", "-", "A"])
     e = attach_new(v, 6, 2, 42)
     indeg = np.bincount(e[1], minlength=9) if e.shape[1] else np.zeros(9, int)
-    check("결측 토큰을 가진 새 flow 는 차수 0", indeg[6] == 0 and indeg[7] == 0)
-    check("유효값을 가진 새 flow 는 차수 > 0", indeg[8] > 0)
+    check("new flow with a missing token -> degree 0", indeg[6] == 0 and indeg[7] == 0)
+    check("new flow with a valid value -> degree > 0", indeg[8] > 0)
 
-    print("\n값 그룹을 넘지 않는다")
+    print("\nedges stay inside value groups")
     v = np.array(["A"] * 4 + ["B"] * 4 + ["A", "B", "A", "B"])
     e = attach_new(v, 8, 2, 42)
-    check("모든 엣지가 같은 값끼리",
+    check("every edge joins equal values",
           all(v[s] == v[t] for s, t in zip(e[0], e[1])))
 
-    print("\n구성이 결정론이다")
-    check("같은 입력이 같은 배열", np.array_equal(attach_new(v, 8, 2, 42),
+    print("\nconstruction is deterministic")
+    check("same input -> same array", np.array_equal(attach_new(v, 8, 2, 42),
                                             attach_new(v, 8, 2, 42)))
 
-    print("\n부착 엣지는 한 방향이다")
-    check("자기 루프 없음", all(a != b for a, b in zip(e[0], e[1])))
-    check("새 flow 가 source 인 엣지가 없다", int((e[0] >= 8).sum()) == 0)
-    check("모든 target 이 새 flow", bool((e[1] >= 8).all()))
+    print("\nattachment edges are one-directional")
+    check("no self-loops", all(a != b for a, b in zip(e[0], e[1])))
+    check("no edge has a new flow as source", int((e[0] >= 8).sum()) == 0)
+    check("every target is a new flow", bool((e[1] >= 8).all()))
 
-    print("\n두 층 경로로도 새-새가 이어지지 않는다")
-    # 새_i -> 학습_k -> 새_j 경로. 새가 source 가 아니면 구조상 0 이다.
+    print("\nno new-new path through two layers")
+    # new_i -> train_k -> new_j paths; structurally 0 when no new flow is a source.
     ins = {}
     outs = {}
     for a, b in zip(e[0].tolist(), e[1].tolist()):
@@ -80,10 +80,10 @@ def main() -> int:
         if b >= 8:
             outs.setdefault(a, []).append(b)
     paths = sum(len(ins.get(k, [])) * len(v) for k, v in outs.items())
-    check("2홉 새-새 경로 0", paths == 0)
+    check("2-hop new-new paths == 0", paths == 0)
 
-    print("\n규칙이 깨지면 잡아낸다")
-    # build 가 새-새 엣지를 발견하면 종료해야 한다. 일부러 만들어 확인한다.
+    print("\nviolations are caught")
+    # The build must stop on a new-new edge; create one on purpose to check.
     meta = pd.DataFrame({"src_ip": ["a"] * 6, "sport": range(6),
                          "dst_ip": ["b"] * 6, "dport": range(6),
                          "ts": range(6), "sni": ["A"] * 6})
@@ -91,7 +91,7 @@ def main() -> int:
     try:
         import inductive_eval as IE
         real = IE.attach_new
-        # 새 flow 를 source 로 두는 역방향 엣지. 예전 판이 이렇게 냈다.
+        # A reversed edge with a new flow as source, as an earlier version produced.
         IE.attach_new = lambda *a, **k: np.array([[4, 0], [0, 4]], dtype=np.int64)
         try:
             build(meta, [3, 1, 2], ["via_sni"], 42, 2, 300.0)
@@ -99,7 +99,7 @@ def main() -> int:
             IE.attach_new = real
     except SystemExit:
         caught = True
-    check("역방향 엣지를 넣으면 종료한다", caught)
+    check("a reversed edge stops the build", caught)
 
     print()
     if FAIL:

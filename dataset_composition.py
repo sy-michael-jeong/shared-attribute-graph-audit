@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Class and campaign composition of each dataset (Sec. 3.1, 3.4, 6.5).
+"""Class and campaign composition of each dataset (Sec. 3.1, 4.4, 6.3).
 
 Every count the paper quotes about how a dataset is made up is produced here,
 so that a reader can check a stated flow count without rebuilding a graph.

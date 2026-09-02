@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-"""Validation-based configuration selection (Sec. 5.2, 6.3).
+"""Validation-based configuration selection (Sec. 5.4, 6.5).
 
 Trains every configuration covered by the search once (seed 42) and ranks
-the configurations by validation macro-F1. Selection rule (Sec. 5.2): the
+the configurations by validation macro-F1. Selection rule (Sec. 5.4): the
 smallest configuration whose validation macro-F1 lies within 0.005 of the
 best score, taking the highest-scoring configuration at that size; exact
-ties fall back to the stability criterion of Sec. 6.3. Test scores are
+ties fall back to the stability criterion of Sec. 6.5. Test scores are
 recorded only for the stage-wise comparison printed at the end.
 
 Each summary file holds one dataset, so run the script once per dataset and
@@ -24,7 +24,7 @@ import yaml
 # `train` pulls in torch and PyG. --reuse-scores does not train anything, so
 # the import happens where it is used and the reuse path runs without a GPU.
 
-# Sec. 5.2: a configuration counts as tied with the best when its validation
+# Sec. 5.4: a configuration counts as tied with the best when its validation
 # macro-F1 is within this margin.
 TOL = 0.005
 

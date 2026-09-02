@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-"""How large an availability score chance alone produces (Sec. 3.3).
+"""How large an availability score chance alone produces (Sec. 6.2).
 
-The availability row of Table 3 names, for each dataset, the field whose
+The field-presence rule of Sec. 6.2 names, for each dataset, the field whose
 presence rule scores highest. That field is picked by its test score, so the
 row is a maximum over the fields of the dataset. A maximum over nine candidates
 is larger than any single candidate would be, even when no field carries any

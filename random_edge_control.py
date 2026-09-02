@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""A relation built from nothing, at matched edge count and degree (Sec. 6.2).
+"""A relation built from nothing, at matched edge count and degree (Sec. 5.3, 6.2).
 
 The other three controls take edges away or change what they carry. None of
 them puts edges in. That leaves one question open. A graph model may gain over
@@ -47,9 +47,9 @@ from common import SPLITS, is_valid
 KEY_COLS = ("src_ip", "sport", "dst_ip", "dport", "ts")
 RELATION = "via_random"
 COLUMN = "random_bucket"
-MISSING = "-"   # 빌더의 결측 표기
+MISSING = "-"   # the builder's missing-value marker
 
-# 다른 실험이 읽는 루트. 여기에 열을 쓰면 그 실험의 입력이 바뀐다.
+# Roots read by other experiments. Writing a column there would change their input.
 PROTECTED = {
     "processed_deg2",
     "processed_deg2_bccc10",
@@ -102,17 +102,18 @@ def run(root: Path, name: str, group_size: int, seed: int, degree: int,
     salt = np.uint64((int(seed) * 0x9E3779B97F4A7C15) & 0xFFFFFFFFFFFFFFFF)
     k = keys(rows) ^ salt
 
-    # 커버리지를 맞출 열이 주어지면, 그 열이 값을 가진 flow 에만 버킷을 준다.
+    # If a coverage column is given, only flows with a value in it get a bucket.
     #
-    # 이것이 없으면 무작위 통제는 모든 flow 에 버킷을 주므로 고립 노드가 하나도
-    # 없고, 그래서 실제 관계보다 촘촘한 그래프가 된다. 실제 관계는 필드가 없는
-    # flow 를 고립시키는데, 엣지 수의 차이는 대부분 거기서 온다 — BCCC-DoH 의
-    # CertValidity 는 토큰을 되돌리면 flow 의 71%가 고립되고 엣지가 59% 준다.
-    # 버킷 크기만 바꿔서는 그 상태에 닿을 수 없다. 값이 있는 flow 의 집합을
-    # 그대로 빌려 와야 "같은 밀도의 무의미한 그래프" 가 된다.
+    # Without it the random control gives every flow a bucket, leaves no node
+    # isolated, and is therefore denser than the real relation, which isolates
+    # the flows that lack the field; most of the edge-count difference comes from
+    # there (after token reversion, BCCC-DoH CertValidity isolates 71% of flows
+    # and loses 59% of its edges). No bucket size reaches that state; borrowing
+    # the set of flows that carry a value is what makes a "meaningless graph of
+    # the same density".
     #
-    # 빌려 오는 것은 **어느 flow 가 값을 갖는가** 하나이고 값 자체는 아니다.
-    # 그래서 이 통제는 여전히 값의 의미를 지운다.
+    # Only **which flows carry a value** is borrowed, never the values, so the
+    # control still erases value semantics.
     covered = np.ones(n, dtype=bool)
     if match_column:
         if match_column not in rows.columns:
@@ -158,8 +159,8 @@ def main() -> int:
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--degree", type=int, default=2)
     ap.add_argument("--match-coverage-from", default="",
-                    help="이 메타 열이 값을 가진 flow 에만 버킷을 준다. "
-                         "실제 관계와 같은 고립 구조를 만들 때 쓴다")
+                    help="give buckets only to flows with a value in this meta column, "
+                         "reproducing the isolation structure of the real relation")
     args = ap.parse_args()
 
     root = Path(args.data)

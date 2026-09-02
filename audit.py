@@ -199,7 +199,7 @@ def _counter_like(col: np.ndarray) -> bool:
 def audit_features(args):
     """The feature matrix itself, before any model is run.
 
-    Sec. 7.5 asks for two things of every feature column, and asking them of a
+    Sec. 5.5 asks for two things of every feature column, and asking them of a
     trained score is too late: by then a leaked column has already been paid
     for. Both are decidable from the matrix alone.
 

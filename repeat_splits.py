@@ -56,12 +56,13 @@ from common import ALL_RELATIONS, SELECTED
 RELATIONS = list(ALL_RELATIONS)
 
 MODEL_SETS = {"full": ["hgb", "mlp", "gcn", "han", "egs"],
-              # 분할마다 3분해를 내는 데 필요한 최소 집합. HGB 는 결정적이라
-              # 분할이 같은지 확인하는 데 쓰이고, 나머지 셋이 분해를 만든다.
+              # Minimum set for a per-split decomposition. HGB is deterministic
+              # and serves to confirm the split is identical; the other three
+              # produce the decomposition.
               "decomp": ["hgb", "mlp", "noedge", "han"],
               "light": ["hgb", "han"]}
 
-# HAN selected set of Table 7, shared by both split protocols. The sets live
+# HAN reported configuration (Table 4), shared by both split protocols. The sets live
 # in common.py so that a change reaches every script that uses them.
 SELECTED_SET = {k: "+".join(v) for k, v in SELECTED.items()}
 
@@ -77,12 +78,12 @@ SUMMARY_NAME = {
     "mlp": "mlp_baseline_summary.json",
     "gcn": "homogeneous_gcn_summary.json",
     "han": "multiseed_summary.json",
-    "noedge": "%s/multiseed_summary.json",   # <out>/<dataset>/ 아래
+    "noedge": "%s/multiseed_summary.json",   # under <out>/<dataset>/
     "egs": "egraphsage_summary.json",
 }
 
 BASE_SEED, BASE_TEST, BASE_VAL = 42, 0.20, 0.10
-DROPOUT = 0.5      # shared by the four neural models, Table 6
+DROPOUT = 0.5      # shared by the four neural models, Sec. 5.1
 
 
 class StepFailed(RuntimeError):
@@ -132,11 +133,11 @@ def check_materialized(vdir: Path, ds: str, expect_n):
 
 
 def summary_path(rdir, model, dataset):
-    """모델이 실제로 쓰는 요약 파일의 경로.
+    """Path of the summary file a model actually writes.
 
-    `no_edge_han.py` 만 `<out>/<dataset>/` 아래에 쓴다. 나머지는 `--runs` 바로
-    아래다. 이 차이를 한 곳에 모아 두지 않으면 자기루프 결과를 찾지 못한 채
-    "파일 없음" 으로 멈춘다.
+    Only `no_edge_han.py` writes under `<out>/<dataset>/`; the others write
+    directly under `--runs`. Keeping that difference in one place avoids a
+    "file not found" stop when the self-loop result is looked up.
     """
     tail = SUMMARY_NAME[model]
     return rdir / model / (tail % dataset if "%s" in tail else tail)
@@ -278,7 +279,7 @@ def main():
     ap.add_argument("--rank", action="store_true")
     ap.add_argument("--keep-data", action="store_true")
     ap.add_argument("--fresh", action="store_true",
-                    help="이어받지 않고 요약을 처음부터 다시 만든다")
+                    help="rebuild the summary from scratch instead of resuming")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--check", action="store_true",
                     help="take one variant end to end and stop")
@@ -315,17 +316,17 @@ def main():
                   % (t, m, s, ts, es, mat))
         return
 
-    # 이어받기. 변형 하나가 끝날 때마다 요약을 다시 쓰므로, 중간에 끊긴
-    # 실행의 결과는 디스크에 남아 있다. 그런데 인자를 줄여 남은 것만 돌릴 수는
-    # 없다 — `variants()` 가 난수 생성기 하나를 순서대로 쓰기 때문에
-    # `--n-random` 을 바꾸면 그 뒤에 뽑히는 엣지 시드 값 자체가 달라진다.
-    # 그래서 인자는 그대로 두고, 이미 요약에 있는 변형만 건너뛴다.
-    # BCCC-DoH 는 변형 하나가 캡처 13,754 개의 재추출을 요구하므로 이 차이가 크다.
+    # Resume. The summary is rewritten after every variant, so an interrupted
+    # run leaves its finished variants on disk. The arguments cannot simply be
+    # reduced to the remaining variants, because `variants()` draws from one
+    # generator in order and changing `--n-random` changes the edge seeds drawn
+    # after it. So the arguments stay and variants already in the summary are
+    # skipped. For BCCC-DoH each variant re-extracts 13,754 captures, so this matters.
     sfile = out / "repeat_summary.json"
     report = json.load(open(sfile)) if (sfile.exists() and not args.fresh) else {}
     done = {d: set(v) for d, v in report.items()}
     if done:
-        print("이어받기: 이미 끝난 변형 %s"
+        print("resuming: variants already done %s"
               % {d: len(v) for d, v in done.items()})
     try:
         for ds in args.datasets:
@@ -333,7 +334,7 @@ def main():
             report.setdefault(ds, {})
             for tag, mode, sseed, tsize, eseed, mat in vs:
                 if tag in done.get(ds, ()):
-                    print("\n== %s / %s  [건너뜀 — 이미 있음]" % (ds, tag))
+                    print("\n== %s / %s  [skipped: already present]" % (ds, tag))
                     continue
                 vdir = work / ("%s__%s" % (ds, tag))
                 rdir = out / ds / tag
@@ -344,8 +345,8 @@ def main():
                     cfg_p = write_cfg(args.config,
                                       tmpcfg / ("%s_%s_split.yaml" % (ds, tag)),
                                       sseed, tsize)
-                    # 원본에서 분할을 다시 뽑고 엣지를 만든다. build_graph.py
-                    # 가 두 단계를 다 한다(materialize + build).
+                    # Re-draw the split from the source and build the edges;
+                    # build_graph.py does both (materialize + build).
                     cmd = [py, "-u", "build_graph.py", "--datasets", ds,
                            "--raw", args.raw, "--out", str(vdir),
                            "--config", str(cfg_p), "--split-mode", mode]
@@ -359,10 +360,11 @@ def main():
                     cfg_p = write_cfg(args.config,
                                       tmpcfg / ("%s_%s_edge.yaml" % (ds, tag)),
                                       eseed, tsize)
-                    # 분할은 그대로 두고 엣지만 다른 시드로 다시 만든다.
-                    # 분할 파일은 위에서 복사했으므로 다시 만들지 않는다.
-                    # --skip-materialize 를 빼면 분할이 새로 뽑혀 이 변형이
-                    # 재는 것(엣지 시드만 바뀐 그래프)이 아니게 된다.
+                    # Keep the split and rebuild only the edges with another
+                    # seed. The split files were copied above and are not
+                    # regenerated; without --skip-materialize the split would be
+                    # redrawn and the variant would no longer measure an
+                    # edge-seed-only change.
                     sh([py, "-u", "build_graph.py", "--datasets", ds,
                         "--out", str(vdir), "--config", str(cfg_p),
                         "--split-mode", mode, "--skip-materialize"], False)
@@ -373,9 +375,9 @@ def main():
                                   tmpcfg / ("%s_%s_run.yaml" % (ds, tag)),
                                   eseed, tsize)
                 seeds = [str(s) for s in args.seeds]
-                # 다섯 모델이 모두 train.py 를 지난다. 모델마다 다른
-                # 스크립트를 부르면 어느 하나가 다른 설정으로 도는 것을
-                # 알아채지 못한다.
+                # All five models go through train.py. Calling a different
+                # script per model would hide one of them running with a
+                # different configuration.
                 def runner(model, extra=()):
                     return [py, "-u", "train.py", "--model", model,
                             "--datasets", ds, "--data", str(vdir),
@@ -389,14 +391,14 @@ def main():
                     "gcn": runner("gcn"),
                     "han": runner("han", ("--sets", SELECTED_SET[ds])),
                     "egs": runner("egs"),
-                    # 자기루프 통제. `train.py` 가 아니라 전용 스크립트를 지나는
-                    # 유일한 모델인데, 그 스크립트가 같은 config 와 같은 관계
-                    # 목록을 쓰므로 다른 설정으로 도는 일은 없다.
+                    # Self-loop control: the only model that goes through a
+                    # dedicated script rather than train.py; it uses the same
+                    # config and the same relation list.
                     #
-                    # 이것이 목록에 있어야 분할마다 3분해를 낼 수 있다. HAN 과
-                    # MLP 만 있으면 마진은 나오지만 그 마진이 아키텍처에서 왔는지
-                    # 엣지에서 왔는지는 나오지 않는다 — 논문의 헤드라인이 바로
-                    # 그 비율이다.
+                    # It must be in the list for a per-split decomposition. HAN
+                    # and MLP alone give the margin but not whether it came from
+                    # the architecture or the edges, and that ratio is the paper's
+                    # headline.
                     "noedge": [py, "-u", "no_edge_han.py",
                                "--datasets", ds, "--data", str(vdir),
                                "--out", str(rdir / "noedge"),

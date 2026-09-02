@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""HAN on a graph with no relation edges (Sec. 5.1, 6.1).
+"""HAN on a graph with no relation edges (Sec. 5.3, 6.1).
 
 HAN scores above a feature-only MLP on every dataset, and that gap is read as
 evidence that the relations carry signal. The gap also has a second possible
@@ -8,10 +8,16 @@ parameter count as well as in what they read. This control separates the two.
 
 Every relation keeps its name and its place in the metadata, so the model is
 constructed identically, but each relation's edge list is replaced by self
-loops. Attention therefore has the same shape to work with and nothing to
-aggregate except the node's own features. Whatever score remains belongs to
-the architecture, and the difference against the reported HAN score is what
-the edges contribute.
+loops on all nodes. Attention therefore has the same shape to work with and
+nothing to aggregate except the node's own features.
+
+This is an operational architecture control, not a pure edge ablation. Because
+self-loops are assigned to every node, including flows that do not carry the
+field, the control removes inter-node messages *and* the field-presence
+structure that relation availability encodes. The difference against the
+reported HAN score is therefore read in the paper as the combined contribution
+of neighbors and field presence (Sections 5.3 and 7.2), which value permutation
+then splits further.
 
 The reported HAN configuration of each dataset is used, so the comparison is
 against the number in the main table rather than against a different graph.
@@ -96,7 +102,7 @@ def main():
                     help="relations joined by '+'. Without it the reported "
                          "configuration of the dataset is used. The control "
                          "has to be able to follow a configuration that is not "
-                         "the reported one, because Sec. 6.5 runs the same "
+                         "the reported one, because Sec. 6.6 runs the same "
                          "decomposition on a configuration taken from the "
                          "literature, and a control that silently used the "
                          "reported relations instead would be comparing two "

@@ -40,13 +40,19 @@ RELATION_COLUMN = {
 }
 ALL_RELATIONS = list(RELATION_COLUMN)
 
-# The seven TLS relations and the three host relations, kept apart because the
-# three-way ablation of Section 5.1 runs each group on its own.
+# Relation families as the paper defines them (Section 3.2): the TLS family of
+# seven relations and the auxiliary family of two host relations plus one
+# temporal relation. The family comparison of Section 6.5 runs TLS against the
+# two host relations. `via_ja3` is the legacy column name of the paper's
+# VersionCipher relation (see README, "Internal naming note").
 TLS_RELATIONS = ["via_sni", "via_ja3", "via_cert_subject", "via_alpn",
                  "via_cert_issuer", "via_tls_cipher_group", "via_cert_validity"]
-HOST_RELATIONS = ["via_src_host", "via_dst_host", "via_timebin"]
+HOST_RELATIONS = ["via_src_host", "via_dst_host"]
+TEMPORAL_RELATIONS = ["via_timebin"]
+AUX_RELATIONS = HOST_RELATIONS + TEMPORAL_RELATIONS
 
-# HAN selected set of Table 7. The same set is used under both split protocols.
+# HAN reported configuration (Table 4 and every control). The same set is used
+# under both split protocols.
 # Every entry is an explicit list. CIC-AndMal was written as None here at one
 # point, meaning "no subset was selected", and the three scripts that read this
 # table resolved that None differently: one to the seven TLS relations, one to

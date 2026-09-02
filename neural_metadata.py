@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-"""The same-source metadata features inside the neural pipeline (Sec. 6.1, 8).
+"""The same-source metadata features inside the neural pipeline (Sec. 5.1, 6.1).
 
-The tabular comparison of Table 7 uses gradient boosting. This script hands the
+The tabular comparison of Table 4 uses gradient boosting. This script hands the
 same features to an MLP, so that the metadata is held constant and the learner
 is the only thing that changes.
 

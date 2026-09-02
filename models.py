@@ -172,12 +172,13 @@ class EGraphSAGE(nn.Module):
             summed.index_add_(0, d2, m)
             last = (k == self.num_layers - 1)
             if self.exclude_self and last:
-                # 엣지 e 의 두 방향 메시지는 m[:n_e](dst 로) 와 m[n_e:](src 로) 다.
-                # 각 끝점의 합에서 그 하나를 빼고 남은 차수로 다시 평균 낸다.
+                # The two directed messages of edge e are m[:n_e] (to dst) and
+                # m[n_e:] (to src). Subtract that one from each endpoint's sum and
+                # re-average over the remaining degree.
                 d_rest = (deg - 1.0)
                 a_dst = (summed[dst] - m[:n_e]) / d_rest[dst].clamp(min=1.0)
                 a_src = (summed[src] - m[n_e:]) / d_rest[src].clamp(min=1.0)
-                # 이웃이 남지 않은 끝점은 노드 상태를 그대로 쓴다.
+                # An endpoint with no neighbour left keeps its node state.
                 alone_d = (d_rest[dst] <= 0).float()
                 alone_s = (d_rest[src] <= 0).float()
                 h_dst = F.relu(self.apl[k](torch.cat([h[dst], a_dst], dim=1)))

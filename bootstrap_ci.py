@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Bootstrap intervals for the model comparisons (Sec. 5.3, 6.1).
+"""Bootstrap intervals for the model comparisons (Sec. 5.5, 6.1).
 
 With only five seeds the Wilcoxon signed-rank test cannot produce a p-value
 below 0.0625, so effect sizes and intervals are reported instead of
@@ -106,15 +106,16 @@ def first_seeds(paths, dataset: str, metric: str):
 
 
 def perm_seeds(paths, dataset: str, metric: str):
-    """순열 통제의 관측치. 순열 시드 하나가 관측치 하나다.
+    """Observations of the permutation control: one permutation seed = one observation.
 
-    다른 모델은 그래프 하나 위에서 학습 시드 다섯을 돌린 것이라 관측치가 학습
-    시드다. 순열은 그래프 자체가 순열 시드마다 다르므로, 학습 시드 다섯을 먼저
-    평균 내 그 순열의 값을 만들고 순열 시드를 가로질러 다섯 개를 모은다. 그래야
-    다른 모델과 짝을 지을 때 같은 것을 짝지은 것이 된다.
+    The other models train five seeds on one graph, so their unit is the training
+    seed. The permutation control has a different graph per permutation seed, so
+    the five training seeds are averaged first to give that permutation's value,
+    and the five permutation seeds are then collected. Only then does pairing with
+    the other models pair like with like.
 
-    순열 시드 다섯이 다 있는 데이터셋만 돌려준다. 넷만 있는 것을 다섯인 척
-    쓰면 쌍체 비교가 조용히 어긋난다.
+    Only datasets with all five permutation seeds are returned. Treating four as
+    five would silently misalign the paired comparison.
     """
     vals = []
     for p in paths:
@@ -143,10 +144,10 @@ def collect(root: Path, metric: str = "macro_f1"):
                            root / "main" / "egraphsage" / ds / "egraphsage_summary.json"],
             "mlp": [root / "main" / "mlp_summary.json",
                     root / "main" / "mlp" / "mlp_baseline_summary.json"],
-            # 값 순열은 다섯 시드가 아니라 다섯 **순열 시드**로 돌았고, 시드마다
-            # 그래프가 다르다. 한 순열의 다섯 학습 시드를 평균 내면 그래프
-            # 하나에 대한 값이 되므로, 순열 시드를 가로질러 그 평균들을 모은다.
-            # 그러면 관측치 다섯 개가 되어 다른 모델과 같은 방식으로 다룰 수 있다.
+            # Value permutation ran over five **permutation seeds**, each with its
+            # own graph. Averaging the five training seeds of one permutation gives
+            # the value for that graph; collecting those averages across permutation
+            # seeds yields five observations handled like the other models.
             "permuted": [root / "permutation" / ds / ("seed_%d" % s)
                          / "multiseed_summary.json" for s in PERM_SEEDS],
         }
@@ -227,16 +228,16 @@ def main():
     for i, metric in enumerate(m for m in METRICS if m != "macro_f1"):
         run(PAIRS + CONTROL_PAIRS, metric, np.random.default_rng(args.seed + 2 + i))
 
-    # HAN 이 MLP 를 넘는 마진을 세 항으로 가른다. 논문이 인용하는 것이 이것이다.
+    # Split the HAN-over-MLP margin into three terms. This is what the paper quotes.
     #
-    #   아키텍처    = 자기루프 − MLP     구조와 파라미터 수가 주는 몫
-    #   가용성·연결 = 순열     − 자기루프  값이 무엇이든 상관없는 연결의 몫
-    #   값 의미     = HAN      − 순열     값의 정체가 주는 몫
+    #   architecture              = self-loop   - MLP        depth, attention, parameters
+    #   availability/connectivity = permutation - self-loop  connections regardless of value
+    #   value semantics           = HAN         - permutation the identity of the values
     #
-    # 세 항의 합이 마진이다. 점추정만 내면 분모가 작을 때 몇 퍼센트라는 말이
-    # 얼마나 단단한지 알 수 없다 — HIKARI 의 마진은 0.0081 이다. 그래서 각 항과
-    # 각 비율에 부트스트랩 구간을 붙인다. 재표집 대상은 다른 비교와 같은
-    # 관측치, 곧 시드다.
+    # The three terms sum to the margin. A point estimate alone does not say how
+    # firm a percentage is when the denominator is small (HIKARI's margin is
+    # 0.0081), so every term and every ratio gets a bootstrap interval. The
+    # resampling unit is the same as elsewhere: the seed.
     shares = {}
     rng_share = np.random.default_rng(args.seed + 100)
     for metric in METRICS:
@@ -260,7 +261,7 @@ def main():
                      "n_seeds": {"han": len(h), "noedge": len(sl),
                                  "mlp": len(ml)}}
 
-            # 세 항으로 가르려면 순열이 있어야 한다. 없으면 두 항까지만 낸다.
+            # Three terms need the permutation control; without it only two are reported.
             if pm and len(pm) == len(h) == len(sl):
                 mpm = float(np.mean(pm))
                 block.update({
@@ -273,17 +274,17 @@ def main():
                         abs((msl - mml) + (mpm - msl) + (mh - mpm) - total) < 1e-9)})
                 block["n_seeds"]["permuted"] = len(pm)
 
-                # 각 항과 각 비율의 구간.
+                # Intervals for each term and each ratio.
                 #
-                # 쌍을 지을 수 있는 것과 없는 것을 구별해야 한다. MLP·자기루프·
-                # HAN 의 관측치는 **학습 시드**이고 같은 시드끼리 짝이 된다.
-                # 순열의 관측치는 **순열 시드**다 — 순열 시드 하나가 그래프
-                # 하나이고, 그 안에서 학습 시드 다섯을 이미 평균 냈다. 순열
-                # 시드 3 과 학습 시드 3 은 아무 관계도 없다.
+                # Pairable and non-pairable units must be kept apart. MLP, self-loop
+                # and HAN observations are **training seeds** and pair by seed. The
+                # permutation observation is a **permutation seed** (one graph, five
+                # training seeds already averaged); permutation seed 3 and training
+                # seed 3 are unrelated.
                 #
-                # 그래서 학습 시드 셋은 인덱스 하나로 함께 뽑고(쌍체), 순열은
-                # 독립적으로 뽑는다. 이 구별을 하지 않고 인덱스 하나를 넷에 다
-                # 쓰면 짝이 아닌 것을 짝으로 세어 구간이 실제보다 좁아진다.
+                # So the three training-seed series are resampled with one index
+                # (paired) and the permutation series independently. Using one index
+                # for all four would pair unrelated draws and shrink the interval.
                 a, b, c, d = (np.asarray(ml, float), np.asarray(sl, float),
                               np.asarray(pm, float), np.asarray(h, float))
                 n, R = len(a), args.resamples

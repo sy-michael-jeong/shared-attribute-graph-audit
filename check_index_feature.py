@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Effect of an index-like feature column on HIKARI (Sec. 5.4).
+"""Effect of an index-like feature column on HIKARI (Sec. 4.4).
 
 The released HIKARI CSV carries row-number columns, 'Unnamed: 0' and
 'Unnamed: 0.1'. Row position tracks the capture schedule, so a pipeline that
@@ -90,7 +90,7 @@ def main():
     ap.add_argument("--split-seed", type=int, default=42)
     ap.add_argument("--seeds", nargs="+", type=int, default=SEEDS)
     ap.add_argument("--ports", nargs="+", default=["originp", "responp"],
-                    help="포트 열 이름. 세 번째 구성에서 함께 뺀다")
+                    help="port column names, removed together in the third configuration")
     ap.add_argument("--out", required=True)
     args = ap.parse_args()
 
@@ -119,8 +119,9 @@ def main():
                               "test": int(len(idx_te))},
               "runs": {}}
 
-    # 세 번째 구성. 행 번호를 뺀 상태에서 포트 두 열까지 뺀다. 행 번호와 같은
-    # 종류의 열이다 — flow 가 무엇을 날랐는지가 아니라 어디에 놓였는지를 말한다.
+    # Third configuration: with the row number already removed, also drop the two
+    # port columns. They are the same kind of column as the row number: they say
+    # where a flow sat, not what it carried.
     trval = np.concatenate([idx_tr, idx_va])
     variants = (("keep_index_col", True, ()),
                 ("drop_index_col", False, ()),

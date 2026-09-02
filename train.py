@@ -9,7 +9,7 @@ import torch
 import yaml
 from sklearn.metrics import f1_score
 
-from common import graph_fingerprint, is_valid
+from common import graph_fingerprint, is_valid, SELECTED
 from models import HAN, GCN, MLP, EGraphSAGE, seed_all, pick_device, metrics, agg, class_weights
 
 SEEDS = [41, 42, 43, 44, 45]
@@ -207,11 +207,20 @@ def run_egs(data_dir, cfg, seed, exclude_self=False):
 
 
 def han_sets(args, name):
-    # which relation sets to evaluate: manual --sets, or the best single /
-    # best combination / full pool picked from the search summary
+    """Which relation sets to evaluate for HAN.
+
+    Precedence: an explicit --sets string; otherwise the reported configuration
+    in common.SELECTED (the set every table in the paper is computed with);
+    otherwise, only when --summary names a beam-search summary, the best
+    single relation / best combination / full pool read from that search.
+    """
     if args.sets:
         return {"manual_%d" % (i + 1): [m.strip() for m in chunk.split("+") if m.strip()]
                 for i, chunk in enumerate(args.sets.split(";"))}
+    if not args.summary:
+        if name not in SELECTED:
+            raise SystemExit("%s has no entry in common.SELECTED; pass --sets or --summary" % name)
+        return {"reported": list(SELECTED[name])}
     grand = json.load(open(args.summary))
     if name not in grand:
         raise SystemExit("%s not in %s" % (name, args.summary))
@@ -230,9 +239,9 @@ def main():
     ap = argparse.ArgumentParser(allow_abbrev=False)
     ap.add_argument("--model", choices=["han", "gcn", "mlp", "hgb", "egs"], required=True)
     ap.add_argument("--egs-exclude-self", action="store_true",
-                    help="E-GraphSAGE 에서 flow 자신의 엣지를 그 flow 의 "
-                         "예측에서 뺀다. 마지막 층만 막으므로 우회 경로의 "
-                         "하한을 준다")
+                    help="E-GraphSAGE only: remove a flow's own edge from that flow's "
+                         "prediction at the last layer. Earlier layers are untouched, so "
+                         "the effect is a lower bound on the self-prediction bypass")
     ap.add_argument("--datasets", nargs="+", required=True)
     ap.add_argument("--data", default="data/processed")
     ap.add_argument("--runs", default="runs")
@@ -240,8 +249,11 @@ def main():
     ap.add_argument("--seeds", nargs="+", type=int, default=SEEDS)
     ap.add_argument("--sets", default=None,
                     help='han only: "rel1+rel2;rel3" (";" separates sets)')
-    ap.add_argument("--summary", default="results/beam_val/combinatorial_grand_summary.json",
-                    help="han only: search summary used when --sets is not given")
+    ap.add_argument("--summary", default=None,
+                    help="han only: a beam-search summary (e.g. results/saturation/<dataset>/"
+                         "combinatorial_grand_summary.json) to derive best-single / best-combo / "
+                         "full-pool sets from. Without --sets and --summary the reported "
+                         "configuration in common.SELECTED is used")
     ap.add_argument("--fit-train-only", action="store_true",
                     help="hgb only: fit on train instead of train+val")
     args = ap.parse_args()
