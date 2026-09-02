@@ -1,0 +1,21 @@
+{
+  "dataset": "hikari",
+  "rule": "smallest configuration within 0.005 of the best validation score",
+  "best_validation_macro_f1": 0.5372,
+  "n_configurations_searched": 163,
+  "n_distinct_graphs": 3,
+  "n_tied_at_ceiling": 1,
+  "tied_at_ceiling": [
+    [
+      "dst_host"
+    ]
+  ],
+  "selected": [
+    "dst_host"
+  ],
+  "selected_validation_macro_f1": 0.5372,
+  "by_relation_count": {
+    "1": 0.5372,
+    "2": 0.536
+  }
+}

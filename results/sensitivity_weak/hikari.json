@@ -1,0 +1,120 @@
+{
+  "hikari": {
+    "data_root": "data/_k4_weak",
+    "seeds": [
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "sets": {
+      "manual_1": {
+        "metapaths": [
+          "via_dst_host"
+        ],
+        "per_seed": [
+          {
+            "accuracy": 0.6045472963846743,
+            "macro_f1": 0.4518237618936551,
+            "weighted_f1": 0.701882560724126,
+            "minority_f1": 0.16248069111505234,
+            "minority_recall": 0.5650616792678074,
+            "best_val": 0.537362336769596,
+            "seed": 41,
+            "relations": [
+              "via_dst_host"
+            ]
+          },
+          {
+            "accuracy": 0.6047544009724911,
+            "macro_f1": 0.45194472021303633,
+            "weighted_f1": 0.7020464362521588,
+            "minority_f1": 0.16255198992635556,
+            "minority_recall": 0.5650616792678074,
+            "best_val": 0.537540853704265,
+            "seed": 42,
+            "relations": [
+              "via_dst_host"
+            ]
+          },
+          {
+            "accuracy": 0.6048084282562695,
+            "macro_f1": 0.4519762759002756,
+            "weighted_f1": 0.7020891799988861,
+            "minority_f1": 0.16257059990841094,
+            "minority_recall": 0.5650616792678074,
+            "best_val": 0.537540853704265,
+            "seed": 43,
+            "relations": [
+              "via_dst_host"
+            ]
+          },
+          {
+            "accuracy": 0.6045923191211562,
+            "macro_f1": 0.4518500564872912,
+            "weighted_f1": 0.7019181891453001,
+            "minority_f1": 0.1624961855355508,
+            "minority_recall": 0.5650616792678074,
+            "best_val": 0.5372985932984837,
+            "seed": 44,
+            "relations": [
+              "via_dst_host"
+            ]
+          },
+          {
+            "accuracy": 0.6045022736481923,
+            "macro_f1": 0.4517974676841527,
+            "weighted_f1": 0.7018469304656283,
+            "minority_f1": 0.1624651996491362,
+            "minority_recall": 0.5650616792678074,
+            "best_val": 0.5375025957016342,
+            "seed": 45,
+            "relations": [
+              "via_dst_host"
+            ]
+          }
+        ],
+        "macro_f1": {
+          "mean": 0.4519,
+          "std": 0.0001,
+          "std_sample": 0.0001,
+          "n": 5,
+          "values": [
+            0.4518,
+            0.4519,
+            0.452,
+            0.4519,
+            0.4518
+          ]
+        },
+        "minority_f1": {
+          "mean": 0.1625,
+          "std": 0.0,
+          "std_sample": 0.0,
+          "n": 5,
+          "values": [
+            0.1625,
+            0.1626,
+            0.1626,
+            0.1625,
+            0.1625
+          ]
+        },
+        "weighted_f1": {
+          "mean": 0.702,
+          "std": 0.0001,
+          "std_sample": 0.0001,
+          "n": 5,
+          "values": [
+            0.7019,
+            0.702,
+            0.7021,
+            0.7019,
+            0.7018
+          ]
+        }
+      }
+    }
+  }
+}

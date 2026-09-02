@@ -1,0 +1,65 @@
+{
+  "cic_andmal": {
+    "data_root": "data/_k4_weak",
+    "seeds": [
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "sets": {
+      "manual_1": {
+        "metapaths": [
+          "via_sni",
+          "via_ja3",
+          "via_cert_subject",
+          "via_alpn",
+          "via_cert_issuer",
+          "via_tls_cipher_group",
+          "via_cert_validity"
+        ],
+        "per_seed": [
+          {
+            "seed": 41,
+            "macro_f1": -1.0
+          },
+          {
+            "seed": 42,
+            "macro_f1": -1.0
+          },
+          {
+            "seed": 43,
+            "macro_f1": -1.0
+          },
+          {
+            "seed": 44,
+            "macro_f1": -1.0
+          },
+          {
+            "seed": 45,
+            "macro_f1": -1.0
+          }
+        ],
+        "macro_f1": {
+          "mean": -1.0,
+          "std": 0.0,
+          "std_sample": 0.0,
+          "n": 0
+        },
+        "minority_f1": {
+          "mean": -1.0,
+          "std": 0.0,
+          "std_sample": 0.0,
+          "n": 0
+        },
+        "weighted_f1": {
+          "mean": -1.0,
+          "std": 0.0,
+          "std_sample": 0.0,
+          "n": 0
+        }
+      }
+    }
+  }
+}

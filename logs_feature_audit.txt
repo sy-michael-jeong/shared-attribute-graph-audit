@@ -1,0 +1,21 @@
+== bccc_dohbrw  features 25, rows 505040, ordering axis timestamp
+   no column counts rows or tracks the timestamp
+== iscx_vpn  features 24, rows 891, ordering axis timestamp
+   no column counts rows or tracks the timestamp
+== hikari  features 81, rows 555278, ordering axis row order (not visible here)
+   the time test cannot run on a processed directory for this dataset; check_index_feature.py reads the raw table instead
+   no column counts rows or tracks the timestamp
+== cic_andmal  features 24, rows 400524, ordering axis timestamp
+   no column counts rows or tracks the timestamp
+== vnat  features 23, rows 2197, ordering axis timestamp
+   no column counts rows or tracks the timestamp
+== detector self-test
+   row number, contiguous           expected True  detected True  ok
+   row number, 70% of the rows kept expected True  detected True  ok
+   row number, 20% of the rows kept expected True  detected True  ok
+   duration in seconds              expected False detected False ok
+   packet count                     expected False detected False ok
+   byte count                       expected False detected False ok
+   timestamp in whole seconds       expected False detected False ok
+   port number                      expected False detected False ok
+[saved] results/feature_audit/feature_matrix_audit.json

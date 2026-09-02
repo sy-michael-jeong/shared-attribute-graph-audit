@@ -1,0 +1,28 @@
+{
+  "title": "shared-attribute-graph-audit: reproducibility artifact for 'Where Do the Gains Come From? Auditing Shared-Attribute Heterogeneous Graphs for Encrypted Traffic Intrusion Detection'",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Jeong, Sooyong",
+      "affiliation": "Korea Institute of Science and Technology Information (KISTI)"
+    }
+  ],
+  "keywords": [
+    "encrypted traffic",
+    "intrusion detection",
+    "TLS metadata",
+    "heterogeneous information network",
+    "evaluation methodology",
+    "shortcut learning"
+  ],
+  "description": "Scripts, configuration, graph-construction records, and per-seed results that reproduce every table in the paper: pre-training relation profiling, split audits, five edge-only controls, the three-component decomposition of graph gains, repeated-split variants, and the inductive deployment evaluation on five public encrypted-traffic benchmarks. Raw datasets are not redistributed; see README for extraction.",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/sy-michael-jeong/shared-attribute-graph-audit",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    }
+  ]
+}

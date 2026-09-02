@@ -1,0 +1,1940 @@
+{
+  "data_root": "data/processed_deg2",
+  "n_splits": 3,
+  "size_tolerance": 0.3,
+  "target_fractions": [
+    0.7,
+    0.1,
+    0.2
+  ],
+  "random_restarts": 1000,
+  "datasets": {
+    "bccc_dohbrw": {
+      "via_sni": {
+        "n_flows": 505040,
+        "n_missing": 505037,
+        "n_usable": 3,
+        "n_groups": 3,
+        "largest_group": 1,
+        "largest_group_share": 0.3333,
+        "groups_per_class": {
+          "benign_or_nondoh": {
+            "n_flows_dataset": 358090,
+            "n_flows_on_axis": 2,
+            "n_groups": 2
+          },
+          "malicious_doh": {
+            "n_flows_dataset": 146950,
+            "n_flows_on_axis": 1,
+            "n_groups": 1
+          }
+        },
+        "classes_absent_from_axis": [],
+        "classes_with_too_few_groups": [
+          "benign_or_nondoh",
+          "malicious_doh"
+        ],
+        "smallest_target_partition": 0,
+        "largest_group_exceeds_smallest_partition": true,
+        "realized_folds": null,
+        "splitter_refused": "ValueError: n_splits=3 cannot be greater than the number of members in each class.",
+        "random_restarts": 1000,
+        "restarts_preserving_class_coverage": 0,
+        "best_attempt": {
+          "covered": false,
+          "max_size_deviation": 1.0,
+          "partition_sizes": [
+            2,
+            0,
+            1
+          ],
+          "target_sizes": [
+            2,
+            0,
+            0
+          ],
+          "missing_classes": [
+            [
+              "malicious_doh"
+            ],
+            [
+              "benign_or_nondoh",
+              "malicious_doh"
+            ],
+            [
+              "benign_or_nondoh"
+            ]
+          ]
+        },
+        "feasible_under_search": false,
+        "feasible": false,
+        "reason": "classes present in fewer than 3 groups: benign_or_nondoh, malicious_doh; the splitter refused to build 3 folds (ValueError: n_splits=3 cannot be greater than the number of members in each class.); no assignment out of 1000 preserved every class in every partition"
+      },
+      "via_ja3": {
+        "n_flows": 505040,
+        "n_missing": 7795,
+        "n_usable": 497245,
+        "n_groups": 31,
+        "largest_group": 178740,
+        "largest_group_share": 0.3595,
+        "groups_per_class": {
+          "benign_or_nondoh": {
+            "n_flows_dataset": 358090,
+            "n_flows_on_axis": 358090,
+            "n_groups": 31
+          },
+          "malicious_doh": {
+            "n_flows_dataset": 146950,
+            "n_flows_on_axis": 139155,
+            "n_groups": 3
+          }
+        },
+        "classes_absent_from_axis": [],
+        "classes_with_too_few_groups": [],
+        "smallest_target_partition": 49724,
+        "largest_group_exceeds_smallest_partition": true,
+        "realized_folds": [
+          {
+            "n": 149098,
+            "benign_or_nondoh": 149058,
+            "malicious_doh": 40,
+            "missing_classes": []
+          },
+          {
+            "n": 269533,
+            "benign_or_nondoh": 142476,
+            "malicious_doh": 127057,
+            "missing_classes": []
+          },
+          {
+            "n": 78614,
+            "benign_or_nondoh": 66556,
+            "malicious_doh": 12058,
+            "missing_classes": []
+          }
+        ],
+        "splitter_refused": null,
+        "random_restarts": 1000,
+        "restarts_preserving_class_coverage": 0,
+        "best_attempt": {
+          "covered": false,
+          "max_size_deviation": 0.0676,
+          "partition_sizes": [
+            340871,
+            53085,
+            103289
+          ],
+          "target_sizes": [
+            348071,
+            49724,
+            99449
+          ],
+          "missing_classes": [
+            [],
+            [
+              "malicious_doh"
+            ],
+            []
+          ]
+        },
+        "feasible_under_search": false,
+        "feasible": false,
+        "reason": "fold sizes deviate from the target by more than 30%; no assignment out of 1000 preserved every class in every partition"
+      },
+      "via_cert_subject": {
+        "n_flows": 505040,
+        "n_missing": 359022,
+        "n_usable": 146018,
+        "n_groups": 7754,
+        "largest_group": 4538,
+        "largest_group_share": 0.0311,
+        "groups_per_class": {
+          "benign_or_nondoh": {
+            "n_flows_dataset": 358090,
+            "n_flows_on_axis": 146007,
+            "n_groups": 7754
+          },
+          "malicious_doh": {
+            "n_flows_dataset": 146950,
+            "n_flows_on_axis": 11,
+            "n_groups": 1
+          }
+        },
+        "classes_absent_from_axis": [],
+        "classes_with_too_few_groups": [
+          "malicious_doh"
+        ],
+        "smallest_target_partition": 14601,
+        "largest_group_exceeds_smallest_partition": false,
+        "realized_folds": [
+          {
+            "n": 49622,
+            "benign_or_nondoh": 49622,
+            "malicious_doh": 0,
+            "missing_classes": [
+              "malicious_doh"
+            ]
+          },
+          {
+            "n": 48996,
+            "benign_or_nondoh": 48985,
+            "malicious_doh": 11,
+            "missing_classes": []
+          },
+          {
+            "n": 47400,
+            "benign_or_nondoh": 47400,
+            "malicious_doh": 0,
+            "missing_classes": [
+              "malicious_doh"
+            ]
+          }
+        ],
+        "splitter_refused": null,
+        "random_restarts": 1000,
+        "restarts_preserving_class_coverage": 0,
+        "best_attempt": {
+          "covered": false,
+          "max_size_deviation": 0.0,
+          "partition_sizes": [
+            102212,
+            14602,
+            29204
+          ],
+          "target_sizes": [
+            102212,
+            14601,
+            29203
+          ],
+          "missing_classes": [
+            [
+              "malicious_doh"
+            ],
+            [],
+            [
+              "malicious_doh"
+            ]
+          ]
+        },
+        "feasible_under_search": false,
+        "feasible": false,
+        "reason": "classes present in fewer than 3 groups: malicious_doh; folds losing a class entirely: [0, 2]; no assignment out of 1000 preserved every class in every partition"
+      },
+      "via_src_host": {
+        "n_flows": 505040,
+        "n_missing": 0,
+        "n_usable": 505040,
+        "n_groups": 14,
+        "largest_group": 238636,
+        "largest_group_share": 0.4725,
+        "groups_per_class": {
+          "benign_or_nondoh": {
+            "n_flows_dataset": 358090,
+            "n_flows_on_axis": 358090,
+            "n_groups": 4
+          },
+          "malicious_doh": {
+            "n_flows_dataset": 146950,
+            "n_flows_on_axis": 146950,
+            "n_groups": 10
+          }
+        },
+        "classes_absent_from_axis": [],
+        "classes_with_too_few_groups": [],
+        "smallest_target_partition": 50504,
+        "largest_group_exceeds_smallest_partition": true,
+        "realized_folds": [
+          {
+            "n": 85567,
+            "benign_or_nondoh": 32121,
+            "malicious_doh": 53446,
+            "missing_classes": []
+          },
+          {
+            "n": 350053,
+            "benign_or_nondoh": 325969,
+            "malicious_doh": 24084,
+            "missing_classes": []
+          },
+          {
+            "n": 69420,
+            "benign_or_nondoh": 0,
+            "malicious_doh": 69420,
+            "missing_classes": [
+              "benign_or_nondoh"
+            ]
+          }
+        ],
+        "splitter_refused": null,
+        "random_restarts": 1000,
+        "restarts_preserving_class_coverage": 280,
+        "best_attempt": {
+          "covered": true,
+          "max_size_deviation": 0.023,
+          "partition_sizes": [
+            353603,
+            49341,
+            102096
+          ],
+          "target_sizes": [
+            353528,
+            50504,
+            101008
+          ],
+          "missing_classes": [
+            [],
+            [],
+            []
+          ]
+        },
+        "feasible_under_search": true,
+        "feasible": false,
+        "reason": "folds losing a class entirely: [2]; fold sizes deviate from the target by more than 30%"
+      },
+      "via_dst_host": {
+        "n_flows": 505040,
+        "n_missing": 0,
+        "n_usable": 505040,
+        "n_groups": 30087,
+        "largest_group": 121703,
+        "largest_group_share": 0.241,
+        "groups_per_class": {
+          "benign_or_nondoh": {
+            "n_flows_dataset": 358090,
+            "n_flows_on_axis": 358090,
+            "n_groups": 30086
+          },
+          "malicious_doh": {
+            "n_flows_dataset": 146950,
+            "n_flows_on_axis": 146950,
+            "n_groups": 7
+          }
+        },
+        "classes_absent_from_axis": [],
+        "classes_with_too_few_groups": [],
+        "smallest_target_partition": 50504,
+        "largest_group_exceeds_smallest_partition": true,
+        "realized_folds": [
+          {
+            "n": 96416,
+            "benign_or_nondoh": 96291,
+            "malicious_doh": 125,
+            "missing_classes": []
+          },
+          {
+            "n": 264012,
+            "benign_or_nondoh": 128384,
+            "malicious_doh": 135628,
+            "missing_classes": []
+          },
+          {
+            "n": 144612,
+            "benign_or_nondoh": 133415,
+            "malicious_doh": 11197,
+            "missing_classes": []
+          }
+        ],
+        "splitter_refused": null,
+        "random_restarts": 1000,
+        "restarts_preserving_class_coverage": 330,
+        "best_attempt": {
+          "covered": true,
+          "max_size_deviation": 0.0,
+          "partition_sizes": [
+            353528,
+            50504,
+            101008
+          ],
+          "target_sizes": [
+            353528,
+            50504,
+            101008
+          ],
+          "missing_classes": [
+            [],
+            [],
+            []
+          ]
+        },
+        "feasible_under_search": true,
+        "feasible": false,
+        "reason": "fold sizes deviate from the target by more than 30%"
+      },
+      "via_timebin": {
+        "n_flows": 505040,
+        "n_missing": 0,
+        "n_usable": 505040,
+        "n_groups": 9153,
+        "largest_group": 2210,
+        "largest_group_share": 0.0044,
+        "groups_per_class": {
+          "benign_or_nondoh": {
+            "n_flows_dataset": 358090,
+            "n_flows_on_axis": 358090,
+            "n_groups": 5982
+          },
+          "malicious_doh": {
+            "n_flows_dataset": 146950,
+            "n_flows_on_axis": 146950,
+            "n_groups": 3171
+          }
+        },
+        "classes_absent_from_axis": [],
+        "classes_with_too_few_groups": [],
+        "smallest_target_partition": 50504,
+        "largest_group_exceeds_smallest_partition": false,
+        "realized_folds": [
+          {
+            "n": 169403,
+            "benign_or_nondoh": 119293,
+            "malicious_doh": 50110,
+            "missing_classes": []
+          },
+          {
+            "n": 166493,
+            "benign_or_nondoh": 119818,
+            "malicious_doh": 46675,
+            "missing_classes": []
+          },
+          {
+            "n": 169144,
+            "benign_or_nondoh": 118979,
+            "malicious_doh": 50165,
+            "missing_classes": []
+          }
+        ],
+        "splitter_refused": null,
+        "random_restarts": 1000,
+        "restarts_preserving_class_coverage": 1000,
+        "best_attempt": {
+          "covered": true,
+          "max_size_deviation": 0.0,
+          "partition_sizes": [
+            353528,
+            50504,
+            101008
+          ],
+          "target_sizes": [
+            353528,
+            50504,
+            101008
+          ],
+          "missing_classes": [
+            [],
+            [],
+            []
+          ]
+        },
+        "feasible_under_search": true,
+        "feasible": true,
+        "reason": "no obstacle found"
+      }
+    },
+    "iscx_vpn": {
+      "via_sni": {
+        "n_flows": 891,
+        "n_missing": 161,
+        "n_usable": 730,
+        "n_groups": 83,
+        "largest_group": 100,
+        "largest_group_share": 0.137,
+        "groups_per_class": {
+          "bulk": {
+            "n_flows_dataset": 861,
+            "n_flows_on_axis": 721,
+            "n_groups": 79
+          },
+          "realtime": {
+            "n_flows_dataset": 30,
+            "n_flows_on_axis": 9,
+            "n_groups": 5
+          }
+        },
+        "classes_absent_from_axis": [],
+        "classes_with_too_few_groups": [],
+        "smallest_target_partition": 73,
+        "largest_group_exceeds_smallest_partition": true,
+        "realized_folds": [
+          {
+            "n": 136,
+            "bulk": 133,
+            "realtime": 3,
+            "missing_classes": []
+          },
+          {
+            "n": 341,
+            "bulk": 339,
+            "realtime": 2,
+            "missing_classes": []
+          },
+          {
+            "n": 253,
+            "bulk": 249,
+            "realtime": 4,
+            "missing_classes": []
+          }
+        ],
+        "splitter_refused": null,
+        "random_restarts": 1000,
+        "restarts_preserving_class_coverage": 382,
+        "best_attempt": {
+          "covered": true,
+          "max_size_deviation": 0.0,
+          "partition_sizes": [
+            511,
+            73,
+            146
+          ],
+          "target_sizes": [
+            510,
+            73,
+            146
+          ],
+          "missing_classes": [
+            [],
+            [],
+            []
+          ]
+        },
+        "feasible_under_search": true,
+        "feasible": false,
+        "reason": "fold sizes deviate from the target by more than 30%"
+      },
+      "via_ja3": {
+        "n_flows": 891,
+        "n_missing": 6,
+        "n_usable": 885,
+        "n_groups": 21,
+        "largest_group": 395,
+        "largest_group_share": 0.4463,
+        "groups_per_class": {
+          "bulk": {
+            "n_flows_dataset": 861,
+            "n_flows_on_axis": 855,
+            "n_groups": 19
+          },
+          "realtime": {
+            "n_flows_dataset": 30,
+            "n_flows_on_axis": 30,
+            "n_groups": 5
+          }
+        },
+        "classes_absent_from_axis": [],
+        "classes_with_too_few_groups": [],
+        "smallest_target_partition": 88,
+        "largest_group_exceeds_smallest_partition": true,
+        "realized_folds": [
+          {
+            "n": 97,
+            "bulk": 93,
+            "realtime": 4,
+            "missing_classes": []
+          },
+          {
+            "n": 67,
+            "bulk": 66,
+            "realtime": 1,
+            "missing_classes": []
+          },
+          {
+            "n": 721,
+            "bulk": 696,
+            "realtime": 25,
+            "missing_classes": []
+          }
+        ],
+        "splitter_refused": null,
+        "random_restarts": 1000,
+        "restarts_preserving_class_coverage": 665,
+        "best_attempt": {
+          "covered": true,
+          "max_size_deviation": 0.0056,
+          "partition_sizes": [
+            620,
+            88,
+            177
+          ],
+          "target_sizes": [
+            619,
+            88,
+            177
+          ],
+          "missing_classes": [
+            [],
+            [],
+            []
+          ]
+        },
+        "feasible_under_search": true,
+        "feasible": false,
+        "reason": "fold sizes deviate from the target by more than 30%"
+      },
+      "via_cert_subject": {
+        "n_flows": 891,
+        "n_missing": 366,
+        "n_usable": 525,
+        "n_groups": 44,
+        "largest_group": 206,
+        "largest_group_share": 0.3924,
+        "groups_per_class": {
+          "bulk": {
+            "n_flows_dataset": 861,
+            "n_flows_on_axis": 498,
+            "n_groups": 39
+          },
+          "realtime": {
+            "n_flows_dataset": 30,
+            "n_flows_on_axis": 27,
+            "n_groups": 6
+          }
+        },
+        "classes_absent_from_axis": [],
+        "classes_with_too_few_groups": [],
+        "smallest_target_partition": 52,
+        "largest_group_exceeds_smallest_partition": true,
+        "realized_folds": [
+          {
+            "n": 33,
+            "bulk": 12,
+            "realtime": 21,
+            "missing_classes": []
+          },
+          {
+            "n": 140,
+            "bulk": 137,
+            "realtime": 3,
+            "missing_classes": []
+          },
+          {
+            "n": 352,
+            "bulk": 349,
+            "realtime": 3,
+            "missing_classes": []
+          }
+        ],
+        "splitter_refused": null,
+        "random_restarts": 1000,
+        "restarts_preserving_class_coverage": 693,
+        "best_attempt": {
+          "covered": true,
+          "max_size_deviation": 0.0095,
+          "partition_sizes": [
+            368,
+            52,
+            105
+          ],
+          "target_sizes": [
+            367,
+            52,
+            105
+          ],
+          "missing_classes": [
+            [],
+            [],
+            []
+          ]
+        },
+        "feasible_under_search": true,
+        "feasible": false,
+        "reason": "fold sizes deviate from the target by more than 30%"
+      },
+      "via_src_host": {
+        "n_flows": 891,
+        "n_missing": 0,
+        "n_usable": 891,
+        "n_groups": 11,
+        "largest_group": 259,
+        "largest_group_share": 0.2907,
+        "groups_per_class": {
+          "bulk": {
+            "n_flows_dataset": 861,
+            "n_flows_on_axis": 861,
+            "n_groups": 9
+          },
+          "realtime": {
+            "n_flows_dataset": 30,
+            "n_flows_on_axis": 30,
+            "n_groups": 2
+          }
+        },
+        "classes_absent_from_axis": [],
+        "classes_with_too_few_groups": [
+          "realtime"
+        ],
+        "smallest_target_partition": 89,
+        "largest_group_exceeds_smallest_partition": true,
+        "realized_folds": [
+          {
+            "n": 80,
+            "bulk": 65,
+            "realtime": 15,
+            "missing_classes": []
+          },
+          {
+            "n": 337,
+            "bulk": 337,
+            "realtime": 0,
+            "missing_classes": [
+              "realtime"
+            ]
+          },
+          {
+            "n": 474,
+            "bulk": 459,
+            "realtime": 15,
+            "missing_classes": []
+          }
+        ],
+        "splitter_refused": null,
+        "random_restarts": 1000,
+        "restarts_preserving_class_coverage": 0,
+        "best_attempt": {
+          "covered": false,
+          "max_size_deviation": 0.0213,
+          "partition_sizes": [
+            623,
+            91,
+            177
+          ],
+          "target_sizes": [
+            623,
+            89,
+            178
+          ],
+          "missing_classes": [
+            [
+              "realtime"
+            ],
+            [
+              "realtime"
+            ],
+            []
+          ]
+        },
+        "feasible_under_search": false,
+        "feasible": false,
+        "reason": "classes present in fewer than 3 groups: realtime; folds losing a class entirely: [1]; fold sizes deviate from the target by more than 30%; no assignment out of 1000 preserved every class in every partition"
+      },
+      "via_dst_host": {
+        "n_flows": 891,
+        "n_missing": 0,
+        "n_usable": 891,
+        "n_groups": 193,
+        "largest_group": 82,
+        "largest_group_share": 0.092,
+        "groups_per_class": {
+          "bulk": {
+            "n_flows_dataset": 861,
+            "n_flows_on_axis": 861,
+            "n_groups": 188
+          },
+          "realtime": {
+            "n_flows_dataset": 30,
+            "n_flows_on_axis": 30,
+            "n_groups": 6
+          }
+        },
+        "classes_absent_from_axis": [],
+        "classes_with_too_few_groups": [],
+        "smallest_target_partition": 89,
+        "largest_group_exceeds_smallest_partition": false,
+        "realized_folds": [
+          {
+            "n": 323,
+            "bulk": 301,
+            "realtime": 22,
+            "missing_classes": []
+          },
+          {
+            "n": 258,
+            "bulk": 254,
+            "realtime": 4,
+            "missing_classes": []
+          },
+          {
+            "n": 310,
+            "bulk": 306,
+            "realtime": 4,
+            "missing_classes": []
+          }
+        ],
+        "splitter_refused": null,
+        "random_restarts": 1000,
+        "restarts_preserving_class_coverage": 445,
+        "best_attempt": {
+          "covered": true,
+          "max_size_deviation": 0.0011,
+          "partition_sizes": [
+            624,
+            89,
+            178
+          ],
+          "target_sizes": [
+            623,
+            89,
+            178
+          ],
+          "missing_classes": [
+            [],
+            [],
+            []
+          ]
+        },
+        "feasible_under_search": true,
+        "feasible": true,
+        "reason": "no obstacle found"
+      },
+      "via_timebin": {
+        "n_flows": 891,
+        "n_missing": 0,
+        "n_usable": 891,
+        "n_groups": 108,
+        "largest_group": 72,
+        "largest_group_share": 0.0808,
+        "groups_per_class": {
+          "bulk": {
+            "n_flows_dataset": 861,
+            "n_flows_on_axis": 861,
+            "n_groups": 98
+          },
+          "realtime": {
+            "n_flows_dataset": 30,
+            "n_flows_on_axis": 30,
+            "n_groups": 10
+          }
+        },
+        "classes_absent_from_axis": [],
+        "classes_with_too_few_groups": [],
+        "smallest_target_partition": 89,
+        "largest_group_exceeds_smallest_partition": false,
+        "realized_folds": [
+          {
+            "n": 281,
+            "bulk": 261,
+            "realtime": 20,
+            "missing_classes": []
+          },
+          {
+            "n": 349,
+            "bulk": 347,
+            "realtime": 2,
+            "missing_classes": []
+          },
+          {
+            "n": 261,
+            "bulk": 253,
+            "realtime": 8,
+            "missing_classes": []
+          }
+        ],
+        "splitter_refused": null,
+        "random_restarts": 1000,
+        "restarts_preserving_class_coverage": 682,
+        "best_attempt": {
+          "covered": true,
+          "max_size_deviation": 0.0011,
+          "partition_sizes": [
+            624,
+            89,
+            178
+          ],
+          "target_sizes": [
+            623,
+            89,
+            178
+          ],
+          "missing_classes": [
+            [],
+            [],
+            []
+          ]
+        },
+        "feasible_under_search": true,
+        "feasible": true,
+        "reason": "no obstacle found"
+      }
+    },
+    "hikari": {
+      "via_sni": {
+        "n_flows": 555278,
+        "n_missing": 555278,
+        "n_usable": 0,
+        "feasible": false,
+        "classes_absent_from_axis": [
+          "benign_or_background",
+          "attack"
+        ],
+        "reason": "the field is empty on every flow",
+        "random_restarts": 0,
+        "restarts_preserving_class_coverage": 0,
+        "feasible_under_search": false
+      },
+      "via_ja3": {
+        "n_flows": 555278,
+        "n_missing": 555278,
+        "n_usable": 0,
+        "feasible": false,
+        "classes_absent_from_axis": [
+          "benign_or_background",
+          "attack"
+        ],
+        "reason": "the field is empty on every flow",
+        "random_restarts": 0,
+        "restarts_preserving_class_coverage": 0,
+        "feasible_under_search": false
+      },
+      "via_cert_subject": {
+        "n_flows": 555278,
+        "n_missing": 555278,
+        "n_usable": 0,
+        "feasible": false,
+        "classes_absent_from_axis": [
+          "benign_or_background",
+          "attack"
+        ],
+        "reason": "the field is empty on every flow",
+        "random_restarts": 0,
+        "restarts_preserving_class_coverage": 0,
+        "feasible_under_search": false
+      },
+      "via_src_host": {
+        "n_flows": 555278,
+        "n_missing": 0,
+        "n_usable": 555278,
+        "n_groups": 2899,
+        "largest_group": 213520,
+        "largest_group_share": 0.3845,
+        "groups_per_class": {
+          "benign_or_background": {
+            "n_flows_dataset": 517582,
+            "n_flows_on_axis": 517582,
+            "n_groups": 2899
+          },
+          "attack": {
+            "n_flows_dataset": 37696,
+            "n_flows_on_axis": 37696,
+            "n_groups": 3
+          }
+        },
+        "classes_absent_from_axis": [],
+        "classes_with_too_few_groups": [],
+        "smallest_target_partition": 55527,
+        "largest_group_exceeds_smallest_partition": true,
+        "realized_folds": [
+          {
+            "n": 1,
+            "benign_or_background": 1,
+            "attack": 0,
+            "missing_classes": [
+              "attack"
+            ]
+          },
+          {
+            "n": 1,
+            "benign_or_background": 1,
+            "attack": 0,
+            "missing_classes": [
+              "attack"
+            ]
+          },
+          {
+            "n": 555276,
+            "benign_or_background": 517580,
+            "attack": 37696,
+            "missing_classes": []
+          }
+        ],
+        "splitter_refused": null,
+        "random_restarts": 1000,
+        "restarts_preserving_class_coverage": 0,
+        "best_attempt": {
+          "covered": false,
+          "max_size_deviation": 0.0449,
+          "partition_sizes": [
+            396151,
+            53033,
+            106094
+          ],
+          "target_sizes": [
+            388694,
+            55527,
+            111055
+          ],
+          "missing_classes": [
+            [],
+            [
+              "attack"
+            ],
+            []
+          ]
+        },
+        "feasible_under_search": false,
+        "feasible": false,
+        "reason": "folds losing a class entirely: [0, 1]; fold sizes deviate from the target by more than 30%; no assignment out of 1000 preserved every class in every partition"
+      },
+      "via_dst_host": {
+        "n_flows": 555278,
+        "n_missing": 0,
+        "n_usable": 555278,
+        "n_groups": 7991,
+        "largest_group": 189666,
+        "largest_group_share": 0.3416,
+        "groups_per_class": {
+          "benign_or_background": {
+            "n_flows_dataset": 517582,
+            "n_flows_on_axis": 517582,
+            "n_groups": 7991
+          },
+          "attack": {
+            "n_flows_dataset": 37696,
+            "n_flows_on_axis": 37696,
+            "n_groups": 3
+          }
+        },
+        "classes_absent_from_axis": [],
+        "classes_with_too_few_groups": [],
+        "smallest_target_partition": 55527,
+        "largest_group_exceeds_smallest_partition": true,
+        "realized_folds": [
+          {
+            "n": 4,
+            "benign_or_background": 4,
+            "attack": 0,
+            "missing_classes": [
+              "attack"
+            ]
+          },
+          {
+            "n": 206930,
+            "benign_or_background": 173189,
+            "attack": 33741,
+            "missing_classes": []
+          },
+          {
+            "n": 348344,
+            "benign_or_background": 344389,
+            "attack": 3955,
+            "missing_classes": []
+          }
+        ],
+        "splitter_refused": null,
+        "random_restarts": 1000,
+        "restarts_preserving_class_coverage": 77,
+        "best_attempt": {
+          "covered": true,
+          "max_size_deviation": 0.0,
+          "partition_sizes": [
+            388696,
+            55527,
+            111055
+          ],
+          "target_sizes": [
+            388694,
+            55527,
+            111055
+          ],
+          "missing_classes": [
+            [],
+            [],
+            []
+          ]
+        },
+        "feasible_under_search": true,
+        "feasible": false,
+        "reason": "folds losing a class entirely: [0]; fold sizes deviate from the target by more than 30%"
+      },
+      "via_timebin": {
+        "n_flows": 555278,
+        "n_missing": 555278,
+        "n_usable": 0,
+        "feasible": false,
+        "classes_absent_from_axis": [
+          "benign_or_background",
+          "attack"
+        ],
+        "reason": "the field is empty on every flow",
+        "random_restarts": 0,
+        "restarts_preserving_class_coverage": 0,
+        "feasible_under_search": false
+      }
+    },
+    "cic_andmal": {
+      "via_sni": {
+        "n_flows": 400524,
+        "n_missing": 18568,
+        "n_usable": 381956,
+        "n_groups": 1222,
+        "largest_group": 11846,
+        "largest_group_share": 0.031,
+        "groups_per_class": {
+          "benign": {
+            "n_flows_dataset": 180091,
+            "n_flows_on_axis": 169399,
+            "n_groups": 726
+          },
+          "attack": {
+            "n_flows_dataset": 220433,
+            "n_flows_on_axis": 212557,
+            "n_groups": 945
+          }
+        },
+        "classes_absent_from_axis": [],
+        "classes_with_too_few_groups": [],
+        "smallest_target_partition": 38195,
+        "largest_group_exceeds_smallest_partition": false,
+        "realized_folds": [
+          {
+            "n": 182311,
+            "benign": 82504,
+            "attack": 99807,
+            "missing_classes": []
+          },
+          {
+            "n": 104977,
+            "benign": 45255,
+            "attack": 59722,
+            "missing_classes": []
+          },
+          {
+            "n": 94668,
+            "benign": 41640,
+            "attack": 53028,
+            "missing_classes": []
+          }
+        ],
+        "splitter_refused": null,
+        "random_restarts": 1000,
+        "restarts_preserving_class_coverage": 1000,
+        "best_attempt": {
+          "covered": true,
+          "max_size_deviation": 0.0002,
+          "partition_sizes": [
+            267375,
+            38203,
+            76378
+          ],
+          "target_sizes": [
+            267369,
+            38195,
+            76391
+          ],
+          "missing_classes": [
+            [],
+            [],
+            []
+          ]
+        },
+        "feasible_under_search": true,
+        "feasible": false,
+        "reason": "fold sizes deviate from the target by more than 30%"
+      },
+      "via_ja3": {
+        "n_flows": 400524,
+        "n_missing": 0,
+        "n_usable": 400524,
+        "n_groups": 29,
+        "largest_group": 226758,
+        "largest_group_share": 0.5662,
+        "groups_per_class": {
+          "benign": {
+            "n_flows_dataset": 180091,
+            "n_flows_on_axis": 180091,
+            "n_groups": 28
+          },
+          "attack": {
+            "n_flows_dataset": 220433,
+            "n_flows_on_axis": 220433,
+            "n_groups": 26
+          }
+        },
+        "classes_absent_from_axis": [],
+        "classes_with_too_few_groups": [],
+        "smallest_target_partition": 40052,
+        "largest_group_exceeds_smallest_partition": true,
+        "realized_folds": [
+          {
+            "n": 1844,
+            "benign": 765,
+            "attack": 1079,
+            "missing_classes": []
+          },
+          {
+            "n": 386271,
+            "benign": 175825,
+            "attack": 210446,
+            "missing_classes": []
+          },
+          {
+            "n": 12409,
+            "benign": 3501,
+            "attack": 8908,
+            "missing_classes": []
+          }
+        ],
+        "splitter_refused": null,
+        "random_restarts": 1000,
+        "restarts_preserving_class_coverage": 1000,
+        "best_attempt": {
+          "covered": true,
+          "max_size_deviation": 0.0016,
+          "partition_sizes": [
+            280203,
+            40088,
+            80233
+          ],
+          "target_sizes": [
+            280366,
+            40052,
+            80104
+          ],
+          "missing_classes": [
+            [],
+            [],
+            []
+          ]
+        },
+        "feasible_under_search": true,
+        "feasible": false,
+        "reason": "fold sizes deviate from the target by more than 30%"
+      },
+      "via_cert_subject": {
+        "n_flows": 400524,
+        "n_missing": 98425,
+        "n_usable": 302099,
+        "n_groups": 606,
+        "largest_group": 31484,
+        "largest_group_share": 0.1042,
+        "groups_per_class": {
+          "benign": {
+            "n_flows_dataset": 180091,
+            "n_flows_on_axis": 137565,
+            "n_groups": 353
+          },
+          "attack": {
+            "n_flows_dataset": 220433,
+            "n_flows_on_axis": 164534,
+            "n_groups": 472
+          }
+        },
+        "classes_absent_from_axis": [],
+        "classes_with_too_few_groups": [],
+        "smallest_target_partition": 30209,
+        "largest_group_exceeds_smallest_partition": true,
+        "realized_folds": [
+          {
+            "n": 103724,
+            "benign": 47953,
+            "attack": 55771,
+            "missing_classes": []
+          },
+          {
+            "n": 103949,
+            "benign": 46466,
+            "attack": 57483,
+            "missing_classes": []
+          },
+          {
+            "n": 94426,
+            "benign": 43146,
+            "attack": 51280,
+            "missing_classes": []
+          }
+        ],
+        "splitter_refused": null,
+        "random_restarts": 1000,
+        "restarts_preserving_class_coverage": 1000,
+        "best_attempt": {
+          "covered": true,
+          "max_size_deviation": 0.0009,
+          "partition_sizes": [
+            211439,
+            30184,
+            60476
+          ],
+          "target_sizes": [
+            211469,
+            30209,
+            60419
+          ],
+          "missing_classes": [
+            [],
+            [],
+            []
+          ]
+        },
+        "feasible_under_search": true,
+        "feasible": true,
+        "reason": "no obstacle found"
+      },
+      "via_src_host": {
+        "n_flows": 400524,
+        "n_missing": 0,
+        "n_usable": 400524,
+        "n_groups": 3,
+        "largest_group": 177657,
+        "largest_group_share": 0.4436,
+        "groups_per_class": {
+          "benign": {
+            "n_flows_dataset": 180091,
+            "n_flows_on_axis": 180091,
+            "n_groups": 3
+          },
+          "attack": {
+            "n_flows_dataset": 220433,
+            "n_flows_on_axis": 220433,
+            "n_groups": 3
+          }
+        },
+        "classes_absent_from_axis": [],
+        "classes_with_too_few_groups": [],
+        "smallest_target_partition": 40052,
+        "largest_group_exceeds_smallest_partition": true,
+        "realized_folds": [
+          {
+            "n": 118611,
+            "benign": 40753,
+            "attack": 77858,
+            "missing_classes": []
+          },
+          {
+            "n": 177657,
+            "benign": 75547,
+            "attack": 102110,
+            "missing_classes": []
+          },
+          {
+            "n": 104256,
+            "benign": 63791,
+            "attack": 40465,
+            "missing_classes": []
+          }
+        ],
+        "splitter_refused": null,
+        "random_restarts": 1000,
+        "restarts_preserving_class_coverage": 0,
+        "best_attempt": {
+          "covered": false,
+          "max_size_deviation": 1.0,
+          "partition_sizes": [
+            296268,
+            0,
+            104256
+          ],
+          "target_sizes": [
+            280366,
+            40052,
+            80104
+          ],
+          "missing_classes": [
+            [],
+            [
+              "benign",
+              "attack"
+            ],
+            []
+          ]
+        },
+        "feasible_under_search": false,
+        "feasible": false,
+        "reason": "fold sizes deviate from the target by more than 30%; no assignment out of 1000 preserved every class in every partition"
+      },
+      "via_dst_host": {
+        "n_flows": 400524,
+        "n_missing": 0,
+        "n_usable": 400524,
+        "n_groups": 6626,
+        "largest_group": 6000,
+        "largest_group_share": 0.015,
+        "groups_per_class": {
+          "benign": {
+            "n_flows_dataset": 180091,
+            "n_flows_on_axis": 180091,
+            "n_groups": 3818
+          },
+          "attack": {
+            "n_flows_dataset": 220433,
+            "n_flows_on_axis": 220433,
+            "n_groups": 5348
+          }
+        },
+        "classes_absent_from_axis": [],
+        "classes_with_too_few_groups": [],
+        "smallest_target_partition": 40052,
+        "largest_group_exceeds_smallest_partition": false,
+        "realized_folds": [
+          {
+            "n": 119305,
+            "benign": 51901,
+            "attack": 67404,
+            "missing_classes": []
+          },
+          {
+            "n": 150246,
+            "benign": 68114,
+            "attack": 82132,
+            "missing_classes": []
+          },
+          {
+            "n": 130973,
+            "benign": 60076,
+            "attack": 70897,
+            "missing_classes": []
+          }
+        ],
+        "splitter_refused": null,
+        "random_restarts": 1000,
+        "restarts_preserving_class_coverage": 1000,
+        "best_attempt": {
+          "covered": true,
+          "max_size_deviation": 0.0,
+          "partition_sizes": [
+            280367,
+            40053,
+            80104
+          ],
+          "target_sizes": [
+            280366,
+            40052,
+            80104
+          ],
+          "missing_classes": [
+            [],
+            [],
+            []
+          ]
+        },
+        "feasible_under_search": true,
+        "feasible": true,
+        "reason": "no obstacle found"
+      },
+      "via_timebin": {
+        "n_flows": 400524,
+        "n_missing": 0,
+        "n_usable": 400524,
+        "n_groups": 6399,
+        "largest_group": 446,
+        "largest_group_share": 0.0011,
+        "groups_per_class": {
+          "benign": {
+            "n_flows_dataset": 180091,
+            "n_flows_on_axis": 180091,
+            "n_groups": 3695
+          },
+          "attack": {
+            "n_flows_dataset": 220433,
+            "n_flows_on_axis": 220433,
+            "n_groups": 2780
+          }
+        },
+        "classes_absent_from_axis": [],
+        "classes_with_too_few_groups": [],
+        "smallest_target_partition": 40052,
+        "largest_group_exceeds_smallest_partition": false,
+        "realized_folds": [
+          {
+            "n": 130460,
+            "benign": 59947,
+            "attack": 70513,
+            "missing_classes": []
+          },
+          {
+            "n": 132347,
+            "benign": 58029,
+            "attack": 74318,
+            "missing_classes": []
+          },
+          {
+            "n": 137717,
+            "benign": 62115,
+            "attack": 75602,
+            "missing_classes": []
+          }
+        ],
+        "splitter_refused": null,
+        "random_restarts": 1000,
+        "restarts_preserving_class_coverage": 1000,
+        "best_attempt": {
+          "covered": true,
+          "max_size_deviation": 0.0,
+          "partition_sizes": [
+            280367,
+            40051,
+            80106
+          ],
+          "target_sizes": [
+            280366,
+            40052,
+            80104
+          ],
+          "missing_classes": [
+            [],
+            [],
+            []
+          ]
+        },
+        "feasible_under_search": true,
+        "feasible": true,
+        "reason": "no obstacle found"
+      }
+    },
+    "vnat": {
+      "via_sni": {
+        "n_flows": 2197,
+        "n_missing": 510,
+        "n_usable": 1687,
+        "n_groups": 247,
+        "largest_group": 76,
+        "largest_group_share": 0.0451,
+        "groups_per_class": {
+          "bulk": {
+            "n_flows_dataset": 100,
+            "n_flows_on_axis": 100,
+            "n_groups": 4
+          },
+          "realtime": {
+            "n_flows_dataset": 2097,
+            "n_flows_on_axis": 1587,
+            "n_groups": 243
+          }
+        },
+        "classes_absent_from_axis": [],
+        "classes_with_too_few_groups": [],
+        "smallest_target_partition": 168,
+        "largest_group_exceeds_smallest_partition": false,
+        "realized_folds": [
+          {
+            "n": 562,
+            "bulk": 18,
+            "realtime": 544,
+            "missing_classes": []
+          },
+          {
+            "n": 564,
+            "bulk": 0,
+            "realtime": 564,
+            "missing_classes": [
+              "bulk"
+            ]
+          },
+          {
+            "n": 561,
+            "bulk": 82,
+            "realtime": 479,
+            "missing_classes": []
+          }
+        ],
+        "splitter_refused": null,
+        "random_restarts": 1000,
+        "restarts_preserving_class_coverage": 120,
+        "best_attempt": {
+          "covered": true,
+          "max_size_deviation": 0.0018,
+          "partition_sizes": [
+            1180,
+            169,
+            338
+          ],
+          "target_sizes": [
+            1180,
+            168,
+            337
+          ],
+          "missing_classes": [
+            [],
+            [],
+            []
+          ]
+        },
+        "feasible_under_search": true,
+        "feasible": false,
+        "reason": "folds losing a class entirely: [1]"
+      },
+      "via_ja3": {
+        "n_flows": 2197,
+        "n_missing": 510,
+        "n_usable": 1687,
+        "n_groups": 13,
+        "largest_group": 818,
+        "largest_group_share": 0.4849,
+        "groups_per_class": {
+          "bulk": {
+            "n_flows_dataset": 100,
+            "n_flows_on_axis": 100,
+            "n_groups": 1
+          },
+          "realtime": {
+            "n_flows_dataset": 2097,
+            "n_flows_on_axis": 1587,
+            "n_groups": 13
+          }
+        },
+        "classes_absent_from_axis": [],
+        "classes_with_too_few_groups": [
+          "bulk"
+        ],
+        "smallest_target_partition": 168,
+        "largest_group_exceeds_smallest_partition": true,
+        "realized_folds": [
+          {
+            "n": 347,
+            "bulk": 100,
+            "realtime": 247,
+            "missing_classes": []
+          },
+          {
+            "n": 495,
+            "bulk": 0,
+            "realtime": 495,
+            "missing_classes": [
+              "bulk"
+            ]
+          },
+          {
+            "n": 845,
+            "bulk": 0,
+            "realtime": 845,
+            "missing_classes": [
+              "bulk"
+            ]
+          }
+        ],
+        "splitter_refused": null,
+        "random_restarts": 1000,
+        "restarts_preserving_class_coverage": 0,
+        "best_attempt": {
+          "covered": false,
+          "max_size_deviation": 0.0018,
+          "partition_sizes": [
+            1180,
+            169,
+            338
+          ],
+          "target_sizes": [
+            1180,
+            168,
+            337
+          ],
+          "missing_classes": [
+            [],
+            [
+              "bulk"
+            ],
+            [
+              "bulk"
+            ]
+          ]
+        },
+        "feasible_under_search": false,
+        "feasible": false,
+        "reason": "classes present in fewer than 3 groups: bulk; folds losing a class entirely: [1, 2]; fold sizes deviate from the target by more than 30%; no assignment out of 1000 preserved every class in every partition"
+      },
+      "via_cert_subject": {
+        "n_flows": 2197,
+        "n_missing": 1490,
+        "n_usable": 707,
+        "n_groups": 113,
+        "largest_group": 88,
+        "largest_group_share": 0.1245,
+        "groups_per_class": {
+          "bulk": {
+            "n_flows_dataset": 100,
+            "n_flows_on_axis": 100,
+            "n_groups": 2
+          },
+          "realtime": {
+            "n_flows_dataset": 2097,
+            "n_flows_on_axis": 607,
+            "n_groups": 111
+          }
+        },
+        "classes_absent_from_axis": [],
+        "classes_with_too_few_groups": [
+          "bulk"
+        ],
+        "smallest_target_partition": 70,
+        "largest_group_exceeds_smallest_partition": true,
+        "realized_folds": [
+          {
+            "n": 149,
+            "bulk": 0,
+            "realtime": 149,
+            "missing_classes": [
+              "bulk"
+            ]
+          },
+          {
+            "n": 297,
+            "bulk": 100,
+            "realtime": 197,
+            "missing_classes": []
+          },
+          {
+            "n": 261,
+            "bulk": 0,
+            "realtime": 261,
+            "missing_classes": [
+              "bulk"
+            ]
+          }
+        ],
+        "splitter_refused": null,
+        "random_restarts": 1000,
+        "restarts_preserving_class_coverage": 0,
+        "best_attempt": {
+          "covered": false,
+          "max_size_deviation": 0.0042,
+          "partition_sizes": [
+            495,
+            71,
+            141
+          ],
+          "target_sizes": [
+            494,
+            70,
+            141
+          ],
+          "missing_classes": [
+            [],
+            [
+              "bulk"
+            ],
+            []
+          ]
+        },
+        "feasible_under_search": false,
+        "feasible": false,
+        "reason": "classes present in fewer than 3 groups: bulk; folds losing a class entirely: [0, 2]; fold sizes deviate from the target by more than 30%; no assignment out of 1000 preserved every class in every partition"
+      },
+      "via_src_host": {
+        "n_flows": 2197,
+        "n_missing": 0,
+        "n_usable": 2197,
+        "n_groups": 4,
+        "largest_group": 1587,
+        "largest_group_share": 0.7223,
+        "groups_per_class": {
+          "bulk": {
+            "n_flows_dataset": 100,
+            "n_flows_on_axis": 100,
+            "n_groups": 2
+          },
+          "realtime": {
+            "n_flows_dataset": 2097,
+            "n_flows_on_axis": 2097,
+            "n_groups": 2
+          }
+        },
+        "classes_absent_from_axis": [],
+        "classes_with_too_few_groups": [
+          "bulk",
+          "realtime"
+        ],
+        "smallest_target_partition": 219,
+        "largest_group_exceeds_smallest_partition": true,
+        "realized_folds": [
+          {
+            "n": 88,
+            "bulk": 88,
+            "realtime": 0,
+            "missing_classes": [
+              "realtime"
+            ]
+          },
+          {
+            "n": 2097,
+            "bulk": 0,
+            "realtime": 2097,
+            "missing_classes": [
+              "bulk"
+            ]
+          },
+          {
+            "n": 12,
+            "bulk": 12,
+            "realtime": 0,
+            "missing_classes": [
+              "realtime"
+            ]
+          }
+        ],
+        "splitter_refused": null,
+        "random_restarts": 1000,
+        "restarts_preserving_class_coverage": 0,
+        "best_attempt": {
+          "covered": false,
+          "max_size_deviation": 0.5448,
+          "partition_sizes": [
+            1587,
+            100,
+            510
+          ],
+          "target_sizes": [
+            1537,
+            219,
+            439
+          ],
+          "missing_classes": [
+            [
+              "bulk"
+            ],
+            [
+              "realtime"
+            ],
+            [
+              "bulk"
+            ]
+          ]
+        },
+        "feasible_under_search": false,
+        "feasible": false,
+        "reason": "classes present in fewer than 3 groups: bulk, realtime; folds losing a class entirely: [0, 1, 2]; fold sizes deviate from the target by more than 30%; no assignment out of 1000 preserved every class in every partition"
+      },
+      "via_dst_host": {
+        "n_flows": 2197,
+        "n_missing": 0,
+        "n_usable": 2197,
+        "n_groups": 19,
+        "largest_group": 1587,
+        "largest_group_share": 0.7223,
+        "groups_per_class": {
+          "bulk": {
+            "n_flows_dataset": 100,
+            "n_flows_on_axis": 100,
+            "n_groups": 2
+          },
+          "realtime": {
+            "n_flows_dataset": 2097,
+            "n_flows_on_axis": 2097,
+            "n_groups": 17
+          }
+        },
+        "classes_absent_from_axis": [],
+        "classes_with_too_few_groups": [
+          "bulk"
+        ],
+        "smallest_target_partition": 219,
+        "largest_group_exceeds_smallest_partition": true,
+        "realized_folds": [
+          {
+            "n": 2,
+            "bulk": 0,
+            "realtime": 2,
+            "missing_classes": [
+              "bulk"
+            ]
+          },
+          {
+            "n": 1627,
+            "bulk": 12,
+            "realtime": 1615,
+            "missing_classes": []
+          },
+          {
+            "n": 568,
+            "bulk": 88,
+            "realtime": 480,
+            "missing_classes": []
+          }
+        ],
+        "splitter_refused": null,
+        "random_restarts": 1000,
+        "restarts_preserving_class_coverage": 0,
+        "best_attempt": {
+          "covered": false,
+          "max_size_deviation": 0.0897,
+          "partition_sizes": [
+            1587,
+            210,
+            400
+          ],
+          "target_sizes": [
+            1537,
+            219,
+            439
+          ],
+          "missing_classes": [
+            [
+              "bulk"
+            ],
+            [
+              "bulk"
+            ],
+            []
+          ]
+        },
+        "feasible_under_search": false,
+        "feasible": false,
+        "reason": "classes present in fewer than 3 groups: bulk; folds losing a class entirely: [0]; fold sizes deviate from the target by more than 30%; no assignment out of 1000 preserved every class in every partition"
+      },
+      "via_timebin": {
+        "n_flows": 2197,
+        "n_missing": 0,
+        "n_usable": 2197,
+        "n_groups": 78,
+        "largest_group": 439,
+        "largest_group_share": 0.1998,
+        "groups_per_class": {
+          "bulk": {
+            "n_flows_dataset": 100,
+            "n_flows_on_axis": 100,
+            "n_groups": 28
+          },
+          "realtime": {
+            "n_flows_dataset": 2097,
+            "n_flows_on_axis": 2097,
+            "n_groups": 50
+          }
+        },
+        "classes_absent_from_axis": [],
+        "classes_with_too_few_groups": [],
+        "smallest_target_partition": 219,
+        "largest_group_exceeds_smallest_partition": true,
+        "realized_folds": [
+          {
+            "n": 684,
+            "bulk": 21,
+            "realtime": 663,
+            "missing_classes": []
+          },
+          {
+            "n": 762,
+            "bulk": 35,
+            "realtime": 727,
+            "missing_classes": []
+          },
+          {
+            "n": 751,
+            "bulk": 44,
+            "realtime": 707,
+            "missing_classes": []
+          }
+        ],
+        "splitter_refused": null,
+        "random_restarts": 1000,
+        "restarts_preserving_class_coverage": 984,
+        "best_attempt": {
+          "covered": true,
+          "max_size_deviation": 0.0014,
+          "partition_sizes": [
+            1537,
+            220,
+            440
+          ],
+          "target_sizes": [
+            1537,
+            219,
+            439
+          ],
+          "missing_classes": [
+            [],
+            [],
+            []
+          ]
+        },
+        "feasible_under_search": true,
+        "feasible": true,
+        "reason": "no obstacle found"
+      }
+    }
+  }
+}

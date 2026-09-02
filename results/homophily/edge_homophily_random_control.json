@@ -1,0 +1,102 @@
+{
+  "bccc_dohbrw": {
+    "n_flows": 505040,
+    "class_counts": {
+      "0": 358090,
+      "1": 146950
+    },
+    "chance_homophily": 0.5874,
+    "relations": {
+      "via_random": {
+        "n_edges": 1010080,
+        "homophily": 0.5874,
+        "lift_over_chance": 0.0,
+        "cross_partition": 0.4603,
+        "mean_degree": 2.0,
+        "isolated_nodes": 0,
+        "normalised_homophily": 0.0,
+        "reach": 1.0
+      }
+    }
+  },
+  "iscx_vpn": {
+    "n_flows": 891,
+    "class_counts": {
+      "0": 861,
+      "1": 30
+    },
+    "chance_homophily": 0.9349,
+    "relations": {
+      "via_random": {
+        "n_edges": 1782,
+        "homophily": 0.9327,
+        "lift_over_chance": -0.0023,
+        "cross_partition": 0.4646,
+        "mean_degree": 2.0,
+        "isolated_nodes": 0,
+        "normalised_homophily": -0.0338,
+        "reach": 1.0
+      }
+    }
+  },
+  "hikari": {
+    "n_flows": 555278,
+    "class_counts": {
+      "0": 517582,
+      "1": 37696
+    },
+    "chance_homophily": 0.8734,
+    "relations": {
+      "via_random": {
+        "n_edges": 1110556,
+        "homophily": 0.8735,
+        "lift_over_chance": 0.0001,
+        "cross_partition": 0.4589,
+        "mean_degree": 2.0,
+        "isolated_nodes": 0,
+        "normalised_homophily": 0.0008,
+        "reach": 1.0
+      }
+    }
+  },
+  "cic_andmal": {
+    "n_flows": 400524,
+    "class_counts": {
+      "0": 180091,
+      "1": 220433
+    },
+    "chance_homophily": 0.5051,
+    "relations": {
+      "via_random": {
+        "n_edges": 801048,
+        "homophily": 0.504,
+        "lift_over_chance": -0.0011,
+        "cross_partition": 0.4596,
+        "mean_degree": 2.0,
+        "isolated_nodes": 0,
+        "normalised_homophily": -0.0022,
+        "reach": 1.0
+      }
+    }
+  },
+  "vnat": {
+    "n_flows": 2197,
+    "class_counts": {
+      "0": 100,
+      "1": 2097
+    },
+    "chance_homophily": 0.9131,
+    "relations": {
+      "via_random": {
+        "n_edges": 4394,
+        "homophily": 0.9135,
+        "lift_over_chance": 0.0004,
+        "cross_partition": 0.462,
+        "mean_degree": 2.0,
+        "isolated_nodes": 0,
+        "normalised_homophily": 0.0046,
+        "reach": 1.0
+      }
+    }
+  }
+}

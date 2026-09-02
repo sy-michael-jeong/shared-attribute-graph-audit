@@ -1,0 +1,446 @@
+{
+  "protocol": "random",
+  "data_root": "data/processed_random_v2",
+  "datasets": {
+    "bccc_dohbrw": {
+      "n_flows": 505040,
+      "n_by_split": {
+        "train": 353528,
+        "val": 50504,
+        "test": 101008
+      },
+      "fields": {
+        "via_sni": {
+          "column": "sni",
+          "coverage_train": 0.0,
+          "coverage_test": 0.0,
+          "n_test_flows_covered": 0,
+          "distinct_train": 2,
+          "distinct_test": 0,
+          "overlap_by_value": null,
+          "overlap_by_flow": null
+        },
+        "via_ja3": {
+          "column": "ja3",
+          "coverage_train": 0.9845,
+          "coverage_test": 0.9849,
+          "n_test_flows_covered": 99480,
+          "distinct_train": 30,
+          "distinct_test": 30,
+          "overlap_by_value": 0.9667,
+          "overlap_by_flow": 1.0
+        },
+        "via_cert_subject": {
+          "column": "cert_subject",
+          "coverage_train": 0.289,
+          "coverage_test": 0.2898,
+          "n_test_flows_covered": 29270,
+          "distinct_train": 7390,
+          "distinct_test": 5281,
+          "overlap_by_value": 0.9451,
+          "overlap_by_flow": 0.9876
+        },
+        "via_alpn": {
+          "column": "alpn",
+          "coverage_train": 0.3263,
+          "coverage_test": 0.3255,
+          "n_test_flows_covered": 32874,
+          "distinct_train": 2,
+          "distinct_test": 2,
+          "overlap_by_value": 1.0,
+          "overlap_by_flow": 1.0
+        },
+        "via_cert_issuer": {
+          "column": "cert_issuer_org",
+          "coverage_train": 0.289,
+          "coverage_test": 0.2898,
+          "n_test_flows_covered": 29270,
+          "distinct_train": 12,
+          "distinct_test": 12,
+          "overlap_by_value": 1.0,
+          "overlap_by_flow": 1.0
+        },
+        "via_tls_cipher_group": {
+          "column": "tls_cipher_group",
+          "coverage_train": 0.9845,
+          "coverage_test": 0.9849,
+          "n_test_flows_covered": 99480,
+          "distinct_train": 10,
+          "distinct_test": 10,
+          "overlap_by_value": 1.0,
+          "overlap_by_flow": 1.0
+        },
+        "via_cert_validity": {
+          "column": "cert_validity_bucket",
+          "coverage_train": 0.7091,
+          "coverage_test": 0.7091,
+          "n_test_flows_covered": 71621,
+          "distinct_train": 6,
+          "distinct_test": 6,
+          "overlap_by_value": 1.0,
+          "overlap_by_flow": 1.0
+        },
+        "via_timebin": {
+          "column": "ts",
+          "coverage_train": 1.0,
+          "coverage_test": 1.0,
+          "n_test_flows_covered": 101008,
+          "distinct_train": 8829,
+          "distinct_test": 6279,
+          "overlap_by_value": 0.9597,
+          "overlap_by_flow": 0.9964
+        },
+        "via_src_host": {
+          "column": "src_ip",
+          "coverage_train": 1.0,
+          "coverage_test": 1.0,
+          "n_test_flows_covered": 101008,
+          "distinct_train": 14,
+          "distinct_test": 14,
+          "overlap_by_value": 1.0,
+          "overlap_by_flow": 1.0
+        },
+        "via_dst_host": {
+          "column": "dst_ip",
+          "coverage_train": 1.0,
+          "coverage_test": 1.0,
+          "n_test_flows_covered": 101008,
+          "distinct_train": 27424,
+          "distinct_test": 17031,
+          "overlap_by_value": 0.8883,
+          "overlap_by_flow": 0.9777
+        }
+      }
+    },
+    "iscx_vpn": {
+      "n_flows": 891,
+      "n_by_split": {
+        "train": 623,
+        "val": 89,
+        "test": 179
+      },
+      "fields": {
+        "via_sni": {
+          "column": "sni",
+          "coverage_train": 0.8186,
+          "coverage_test": 0.8436,
+          "n_test_flows_covered": 151,
+          "distinct_train": 70,
+          "distinct_test": 43,
+          "overlap_by_value": 0.7907,
+          "overlap_by_flow": 0.9338
+        },
+        "via_ja3": {
+          "column": "ja3",
+          "coverage_train": 0.9952,
+          "coverage_test": 0.9888,
+          "n_test_flows_covered": 177,
+          "distinct_train": 20,
+          "distinct_test": 13,
+          "overlap_by_value": 0.9231,
+          "overlap_by_flow": 0.9944
+        },
+        "via_cert_subject": {
+          "column": "cert_subject",
+          "coverage_train": 0.5795,
+          "coverage_test": 0.6257,
+          "n_test_flows_covered": 112,
+          "distinct_train": 38,
+          "distinct_test": 26,
+          "overlap_by_value": 0.8846,
+          "overlap_by_flow": 0.9643
+        },
+        "via_alpn": {
+          "column": "alpn",
+          "coverage_train": 0.4767,
+          "coverage_test": 0.514,
+          "n_test_flows_covered": 92,
+          "distinct_train": 5,
+          "distinct_test": 4,
+          "overlap_by_value": 1.0,
+          "overlap_by_flow": 1.0
+        },
+        "via_cert_issuer": {
+          "column": "cert_issuer_org",
+          "coverage_train": 0.5795,
+          "coverage_test": 0.6257,
+          "n_test_flows_covered": 112,
+          "distinct_train": 3,
+          "distinct_test": 4,
+          "overlap_by_value": 0.75,
+          "overlap_by_flow": 0.9911
+        },
+        "via_tls_cipher_group": {
+          "column": "tls_cipher_group",
+          "coverage_train": 0.9952,
+          "coverage_test": 0.9888,
+          "n_test_flows_covered": 177,
+          "distinct_train": 6,
+          "distinct_test": 6,
+          "overlap_by_value": 1.0,
+          "overlap_by_flow": 1.0
+        },
+        "via_cert_validity": {
+          "column": "cert_validity_bucket",
+          "coverage_train": 0.9952,
+          "coverage_test": 0.9832,
+          "n_test_flows_covered": 176,
+          "distinct_train": 5,
+          "distinct_test": 5,
+          "overlap_by_value": 1.0,
+          "overlap_by_flow": 1.0
+        },
+        "via_timebin": {
+          "column": "ts",
+          "coverage_train": 1.0,
+          "coverage_test": 1.0,
+          "n_test_flows_covered": 179,
+          "distinct_train": 93,
+          "distinct_test": 60,
+          "overlap_by_value": 0.8167,
+          "overlap_by_flow": 0.9274
+        },
+        "via_src_host": {
+          "column": "src_ip",
+          "coverage_train": 1.0,
+          "coverage_test": 1.0,
+          "n_test_flows_covered": 179,
+          "distinct_train": 10,
+          "distinct_test": 10,
+          "overlap_by_value": 1.0,
+          "overlap_by_flow": 1.0
+        },
+        "via_dst_host": {
+          "column": "dst_ip",
+          "coverage_train": 1.0,
+          "coverage_test": 1.0,
+          "n_test_flows_covered": 179,
+          "distinct_train": 161,
+          "distinct_test": 90,
+          "overlap_by_value": 0.7556,
+          "overlap_by_flow": 0.8603
+        }
+      }
+    },
+    "hikari": {
+      "n_flows": 555278,
+      "n_by_split": {
+        "train": 388694,
+        "val": 55528,
+        "test": 111056
+      },
+      "fields": {
+        "via_sni": {
+          "column": "sni",
+          "coverage_train": 0.0,
+          "coverage_test": 0.0,
+          "n_test_flows_covered": 0,
+          "distinct_train": 0,
+          "distinct_test": 0,
+          "overlap_by_value": null,
+          "overlap_by_flow": null
+        },
+        "via_ja3": {
+          "column": "ja3",
+          "coverage_train": 0.0,
+          "coverage_test": 0.0,
+          "n_test_flows_covered": 0,
+          "distinct_train": 0,
+          "distinct_test": 0,
+          "overlap_by_value": null,
+          "overlap_by_flow": null
+        },
+        "via_cert_subject": {
+          "column": "cert_subject",
+          "coverage_train": 0.0,
+          "coverage_test": 0.0,
+          "n_test_flows_covered": 0,
+          "distinct_train": 0,
+          "distinct_test": 0,
+          "overlap_by_value": null,
+          "overlap_by_flow": null
+        },
+        "via_alpn": {
+          "column": "alpn",
+          "coverage_train": 0.0,
+          "coverage_test": 0.0,
+          "n_test_flows_covered": 0,
+          "distinct_train": 0,
+          "distinct_test": 0,
+          "overlap_by_value": null,
+          "overlap_by_flow": null
+        },
+        "via_cert_issuer": {
+          "column": "cert_issuer_org",
+          "coverage_train": 0.0,
+          "coverage_test": 0.0,
+          "n_test_flows_covered": 0,
+          "distinct_train": 0,
+          "distinct_test": 0,
+          "overlap_by_value": null,
+          "overlap_by_flow": null
+        },
+        "via_tls_cipher_group": {
+          "column": "tls_cipher_group",
+          "coverage_train": 0.0,
+          "coverage_test": 0.0,
+          "n_test_flows_covered": 0,
+          "distinct_train": 0,
+          "distinct_test": 0,
+          "overlap_by_value": null,
+          "overlap_by_flow": null
+        },
+        "via_cert_validity": {
+          "column": "cert_validity_bucket",
+          "coverage_train": 0.0,
+          "coverage_test": 0.0,
+          "n_test_flows_covered": 0,
+          "distinct_train": 0,
+          "distinct_test": 0,
+          "overlap_by_value": null,
+          "overlap_by_flow": null
+        },
+        "via_timebin": {
+          "column": "ts",
+          "coverage_train": 0.0,
+          "coverage_test": 0.0,
+          "n_test_flows_covered": 0,
+          "distinct_train": 0,
+          "distinct_test": 0,
+          "overlap_by_value": null,
+          "overlap_by_flow": null
+        },
+        "via_src_host": {
+          "column": "src_ip",
+          "coverage_train": 1.0,
+          "coverage_test": 1.0,
+          "n_test_flows_covered": 111056,
+          "distinct_train": 2315,
+          "distinct_test": 917,
+          "overlap_by_value": 0.5627,
+          "overlap_by_flow": 0.9962
+        },
+        "via_dst_host": {
+          "column": "dst_ip",
+          "coverage_train": 1.0,
+          "coverage_test": 1.0,
+          "n_test_flows_covered": 111056,
+          "distinct_train": 6933,
+          "distinct_test": 3692,
+          "overlap_by_value": 0.8009,
+          "overlap_by_flow": 0.9926
+        }
+      }
+    },
+    "vnat": {
+      "n_flows": 2197,
+      "n_by_split": {
+        "train": 1537,
+        "val": 220,
+        "test": 440
+      },
+      "fields": {
+        "via_sni": {
+          "column": "sni",
+          "coverage_train": 0.7827,
+          "coverage_test": 0.7341,
+          "n_test_flows_covered": 323,
+          "distinct_train": 230,
+          "distinct_test": 120,
+          "overlap_by_value": 0.925,
+          "overlap_by_flow": 0.969
+        },
+        "via_ja3": {
+          "column": "ja3",
+          "coverage_train": 0.7827,
+          "coverage_test": 0.7341,
+          "n_test_flows_covered": 323,
+          "distinct_train": 12,
+          "distinct_test": 11,
+          "overlap_by_value": 0.9091,
+          "overlap_by_flow": 0.9969
+        },
+        "via_cert_subject": {
+          "column": "cert_subject",
+          "coverage_train": 0.3286,
+          "coverage_test": 0.2932,
+          "n_test_flows_covered": 129,
+          "distinct_train": 103,
+          "distinct_test": 59,
+          "overlap_by_value": 0.8814,
+          "overlap_by_flow": 0.9457
+        },
+        "via_alpn": {
+          "column": "alpn",
+          "coverage_train": 0.3748,
+          "coverage_test": 0.3295,
+          "n_test_flows_covered": 145,
+          "distinct_train": 2,
+          "distinct_test": 2,
+          "overlap_by_value": 1.0,
+          "overlap_by_flow": 1.0
+        },
+        "via_cert_issuer": {
+          "column": "cert_issuer_org",
+          "coverage_train": 0.3286,
+          "coverage_test": 0.2932,
+          "n_test_flows_covered": 129,
+          "distinct_train": 9,
+          "distinct_test": 9,
+          "overlap_by_value": 1.0,
+          "overlap_by_flow": 1.0
+        },
+        "via_tls_cipher_group": {
+          "column": "tls_cipher_group",
+          "coverage_train": 0.7827,
+          "coverage_test": 0.7341,
+          "n_test_flows_covered": 323,
+          "distinct_train": 6,
+          "distinct_test": 5,
+          "overlap_by_value": 0.8,
+          "overlap_by_flow": 0.9969
+        },
+        "via_cert_validity": {
+          "column": "cert_validity_bucket",
+          "coverage_train": 0.782,
+          "coverage_test": 0.7341,
+          "n_test_flows_covered": 323,
+          "distinct_train": 6,
+          "distinct_test": 6,
+          "overlap_by_value": 1.0,
+          "overlap_by_flow": 1.0
+        },
+        "via_timebin": {
+          "column": "ts",
+          "coverage_train": 1.0,
+          "coverage_test": 1.0,
+          "n_test_flows_covered": 440,
+          "distinct_train": 72,
+          "distinct_test": 58,
+          "overlap_by_value": 0.9655,
+          "overlap_by_flow": 0.9955
+        },
+        "via_src_host": {
+          "column": "src_ip",
+          "coverage_train": 1.0,
+          "coverage_test": 1.0,
+          "n_test_flows_covered": 440,
+          "distinct_train": 4,
+          "distinct_test": 4,
+          "overlap_by_value": 1.0,
+          "overlap_by_flow": 1.0
+        },
+        "via_dst_host": {
+          "column": "dst_ip",
+          "coverage_train": 1.0,
+          "coverage_test": 1.0,
+          "n_test_flows_covered": 440,
+          "distinct_train": 18,
+          "distinct_test": 15,
+          "overlap_by_value": 0.9333,
+          "overlap_by_flow": 0.9955
+        }
+      }
+    }
+  }
+}

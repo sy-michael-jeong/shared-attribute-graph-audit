@@ -1,0 +1,156 @@
+{
+  "cic_andmal": {
+    "data_root": "data/_nounk_cic",
+    "seeds": [
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "sets": {
+      "manual_1": {
+        "metapaths": [
+          "via_sni",
+          "via_ja3",
+          "via_cert_subject",
+          "via_alpn",
+          "via_cert_issuer",
+          "via_tls_cipher_group",
+          "via_cert_validity"
+        ],
+        "per_seed": [
+          {
+            "accuracy": 0.5706884713813121,
+            "macro_f1": 0.5700794344847235,
+            "weighted_f1": 0.5717093909419616,
+            "minority_f1": 0.5538980412504865,
+            "minority_recall": 0.5927591759675718,
+            "best_val": 0.5740771396520968,
+            "seed": 41,
+            "relations": [
+              "via_sni",
+              "via_ja3",
+              "via_cert_subject",
+              "via_alpn",
+              "via_cert_issuer",
+              "via_tls_cipher_group",
+              "via_cert_validity"
+            ]
+          },
+          {
+            "accuracy": 0.5832345047125648,
+            "macro_f1": 0.5828816044871137,
+            "weighted_f1": 0.584103729774309,
+            "minority_f1": 0.5707489553198328,
+            "minority_recall": 0.6162196679438059,
+            "best_val": 0.5794005170037515,
+            "seed": 42,
+            "relations": [
+              "via_sni",
+              "via_ja3",
+              "via_cert_subject",
+              "via_alpn",
+              "via_cert_issuer",
+              "via_tls_cipher_group",
+              "via_cert_validity"
+            ]
+          },
+          {
+            "accuracy": 0.5845328006990824,
+            "macro_f1": 0.5811508908131986,
+            "weighted_f1": 0.5849420315285635,
+            "minority_f1": 0.5435143401868133,
+            "minority_recall": 0.5500860680770726,
+            "best_val": 0.5761063343839783,
+            "seed": 43,
+            "relations": [
+              "via_sni",
+              "via_ja3",
+              "via_cert_subject",
+              "via_alpn",
+              "via_cert_issuer",
+              "via_tls_cipher_group",
+              "via_cert_validity"
+            ]
+          },
+          {
+            "accuracy": 0.5864178266025841,
+            "macro_f1": 0.5837966836349342,
+            "weighted_f1": 0.5871237251019733,
+            "minority_f1": 0.5507674784400933,
+            "minority_recall": 0.5638569604086845,
+            "best_val": 0.5824036084370625,
+            "seed": 44,
+            "relations": [
+              "via_sni",
+              "via_ja3",
+              "via_cert_subject",
+              "via_alpn",
+              "via_cert_issuer",
+              "via_tls_cipher_group",
+              "via_cert_validity"
+            ]
+          },
+          {
+            "accuracy": 0.568453904250671,
+            "macro_f1": 0.566414360855982,
+            "weighted_f1": 0.569409824207228,
+            "minority_f1": 0.5366768975084103,
+            "minority_recall": 0.5558609584096841,
+            "best_val": 0.5691108977223135,
+            "seed": 45,
+            "relations": [
+              "via_sni",
+              "via_ja3",
+              "via_cert_subject",
+              "via_alpn",
+              "via_cert_issuer",
+              "via_tls_cipher_group",
+              "via_cert_validity"
+            ]
+          }
+        ],
+        "macro_f1": {
+          "mean": 0.5769,
+          "std": 0.0072,
+          "std_sample": 0.008,
+          "n": 5,
+          "values": [
+            0.5701,
+            0.5829,
+            0.5812,
+            0.5838,
+            0.5664
+          ]
+        },
+        "minority_f1": {
+          "mean": 0.5511,
+          "std": 0.0115,
+          "std_sample": 0.0128,
+          "n": 5,
+          "values": [
+            0.5539,
+            0.5707,
+            0.5435,
+            0.5508,
+            0.5367
+          ]
+        },
+        "weighted_f1": {
+          "mean": 0.5795,
+          "std": 0.0074,
+          "std_sample": 0.0082,
+          "n": 5,
+          "values": [
+            0.5717,
+            0.5841,
+            0.5849,
+            0.5871,
+            0.5694
+          ]
+        }
+      }
+    }
+  }
+}

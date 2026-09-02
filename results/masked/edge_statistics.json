@@ -1,0 +1,610 @@
+{
+  "bccc_dohbrw": {
+    "n_train": 353528,
+    "n_val": 50504,
+    "n_test": 101008,
+    "relations": {
+      "via_alpn": {
+        "raw": 329418,
+        "kept": 165468,
+        "cross_ratio": 0.4977,
+        "by_partition_pair": {
+          "tr-tr": 144902,
+          "tr-va": 24159,
+          "tr-te": 49631,
+          "va-tr": 24159,
+          "va-va": 3910,
+          "va-te": 8185,
+          "te-tr": 49631,
+          "te-va": 8185,
+          "te-te": 16656
+        }
+      },
+      "via_cert_issuer": {
+        "raw": 292036,
+        "kept": 124514,
+        "cross_ratio": 0.5736,
+        "by_partition_pair": {
+          "tr-tr": 93376,
+          "tr-va": 22863,
+          "tr-te": 48981,
+          "va-tr": 22863,
+          "va-va": 5572,
+          "va-te": 11917,
+          "te-tr": 48981,
+          "te-va": 11917,
+          "te-te": 25566
+        }
+      },
+      "via_cert_subject": {
+        "raw": 288312,
+        "kept": 137836,
+        "cross_ratio": 0.5219,
+        "by_partition_pair": {
+          "tr-tr": 98918,
+          "tr-va": 20944,
+          "tr-te": 42475,
+          "va-tr": 20944,
+          "va-va": 7416,
+          "va-te": 11819,
+          "te-tr": 42475,
+          "te-va": 11819,
+          "te-te": 31502
+        }
+      },
+      "via_cert_validity": {
+        "raw": 716222,
+        "kept": 401226,
+        "cross_ratio": 0.4398,
+        "by_partition_pair": {
+          "tr-tr": 360060,
+          "tr-va": 47606,
+          "tr-te": 93702,
+          "va-tr": 47606,
+          "va-va": 7822,
+          "va-te": 16190,
+          "te-tr": 93702,
+          "te-va": 16190,
+          "te-te": 33344
+        }
+      },
+      "via_ja3": {
+        "raw": 994488,
+        "kept": 537250,
+        "cross_ratio": 0.4598,
+        "by_partition_pair": {
+          "tr-tr": 485082,
+          "tr-va": 69691,
+          "tr-te": 138415,
+          "va-tr": 69691,
+          "va-va": 10576,
+          "va-te": 20513,
+          "te-tr": 138415,
+          "te-va": 20513,
+          "te-te": 41592
+        }
+      },
+      "via_tls_cipher_group": {
+        "raw": 994490,
+        "kept": 536166,
+        "cross_ratio": 0.4609,
+        "by_partition_pair": {
+          "tr-tr": 484716,
+          "tr-va": 69616,
+          "tr-te": 138858,
+          "va-tr": 69616,
+          "va-va": 10476,
+          "va-te": 20688,
+          "te-tr": 138858,
+          "te-va": 20688,
+          "te-te": 40974
+        }
+      }
+    },
+    "nodes_with_edge_before": 497245,
+    "nodes_with_edge_after": 452352,
+    "test_nodes_with_edge_before": 100260,
+    "test_nodes_with_edge_after": 77903
+  },
+  "iscx_vpn": {
+    "n_train": 624,
+    "n_val": 89,
+    "n_test": 178,
+    "relations": {
+      "via_alpn": {
+        "raw": 856,
+        "kept": 712,
+        "cross_ratio": 0.1682,
+        "by_partition_pair": {
+          "tr-tr": 640,
+          "tr-va": 64,
+          "tr-te": 6,
+          "va-tr": 64,
+          "va-va": 72,
+          "va-te": 2,
+          "te-tr": 6,
+          "te-va": 2
+        }
+      },
+      "via_cert_issuer": {
+        "raw": 1048,
+        "kept": 656,
+        "cross_ratio": 0.374,
+        "by_partition_pair": {
+          "tr-tr": 634,
+          "tr-va": 62,
+          "tr-te": 124,
+          "va-tr": 62,
+          "va-va": 12,
+          "va-te": 10,
+          "te-tr": 124,
+          "te-va": 10,
+          "te-te": 10
+        }
+      },
+      "via_cert_subject": {
+        "raw": 1012,
+        "kept": 804,
+        "cross_ratio": 0.2055,
+        "by_partition_pair": {
+          "tr-tr": 700,
+          "tr-va": 66,
+          "tr-te": 33,
+          "va-tr": 66,
+          "va-va": 10,
+          "va-te": 5,
+          "te-tr": 33,
+          "te-va": 5,
+          "te-te": 94
+        }
+      },
+      "via_cert_validity": {
+        "raw": 1768,
+        "kept": 1004,
+        "cross_ratio": 0.4321,
+        "by_partition_pair": {
+          "tr-tr": 888,
+          "tr-va": 128,
+          "tr-te": 228,
+          "va-tr": 128,
+          "va-va": 14,
+          "va-te": 26,
+          "te-tr": 228,
+          "te-va": 26,
+          "te-te": 102
+        }
+      },
+      "via_dst_host": {
+        "raw": 1556,
+        "kept": 1462,
+        "cross_ratio": 0.0604,
+        "by_partition_pair": {
+          "tr-tr": 1034,
+          "tr-va": 17,
+          "tr-te": 21,
+          "va-tr": 17,
+          "va-va": 126,
+          "va-te": 9,
+          "te-tr": 21,
+          "te-va": 9,
+          "te-te": 302
+        }
+      },
+      "via_ja3": {
+        "raw": 1754,
+        "kept": 1214,
+        "cross_ratio": 0.3079,
+        "by_partition_pair": {
+          "tr-tr": 990,
+          "tr-va": 118,
+          "tr-te": 126,
+          "va-tr": 118,
+          "va-va": 22,
+          "va-te": 26,
+          "te-tr": 126,
+          "te-va": 26,
+          "te-te": 202
+        }
+      },
+      "via_sni": {
+        "raw": 1384,
+        "kept": 1126,
+        "cross_ratio": 0.1864,
+        "by_partition_pair": {
+          "tr-tr": 806,
+          "tr-va": 118,
+          "tr-te": 11,
+          "va-tr": 118,
+          "va-va": 34,
+          "te-tr": 11,
+          "te-te": 286
+        }
+      },
+      "via_src_host": {
+        "raw": 1780,
+        "kept": 1598,
+        "cross_ratio": 0.1022,
+        "by_partition_pair": {
+          "tr-tr": 1198,
+          "tr-va": 43,
+          "tr-te": 7,
+          "va-tr": 43,
+          "va-va": 94,
+          "va-te": 41,
+          "te-tr": 7,
+          "te-va": 41,
+          "te-te": 306
+        }
+      },
+      "via_timebin": {
+        "raw": 1694,
+        "kept": 1668,
+        "cross_ratio": 0.0153,
+        "by_partition_pair": {
+          "tr-tr": 1176,
+          "tr-va": 11,
+          "va-tr": 11,
+          "va-va": 144,
+          "va-te": 2,
+          "te-va": 2,
+          "te-te": 348
+        }
+      },
+      "via_tls_cipher_group": {
+        "raw": 1770,
+        "kept": 1038,
+        "cross_ratio": 0.4136,
+        "by_partition_pair": {
+          "tr-tr": 920,
+          "tr-va": 106,
+          "tr-te": 220,
+          "va-tr": 106,
+          "va-va": 22,
+          "va-te": 40,
+          "te-tr": 220,
+          "te-va": 40,
+          "te-te": 96
+        }
+      }
+    },
+    "nodes_with_edge_before": 891,
+    "nodes_with_edge_after": 884,
+    "test_nodes_with_edge_before": 178,
+    "test_nodes_with_edge_after": 176
+  },
+  "hikari": {
+    "n_train": 388695,
+    "n_val": 55528,
+    "n_test": 111055,
+    "relations": {
+      "via_dst_host": {
+        "raw": 1101398,
+        "kept": 712778,
+        "cross_ratio": 0.3528,
+        "by_partition_pair": {
+          "tr-tr": 612054,
+          "tr-va": 53853,
+          "tr-te": 104653,
+          "va-tr": 53853,
+          "va-va": 20664,
+          "va-te": 35804,
+          "te-tr": 104653,
+          "te-va": 35804,
+          "te-te": 80060
+        }
+      },
+      "via_src_host": {
+        "raw": 1106008,
+        "kept": 851896,
+        "cross_ratio": 0.2298,
+        "by_partition_pair": {
+          "tr-tr": 705896,
+          "tr-va": 20638,
+          "tr-te": 47237,
+          "va-tr": 20638,
+          "va-va": 31008,
+          "va-te": 59181,
+          "te-tr": 47237,
+          "te-va": 59181,
+          "te-te": 114992
+        }
+      }
+    },
+    "nodes_with_edge_before": 555278,
+    "nodes_with_edge_after": 515694,
+    "test_nodes_with_edge_before": 111055,
+    "test_nodes_with_edge_after": 98386
+  },
+  "cic_andmal": {
+    "n_train": 280367,
+    "n_val": 40052,
+    "n_test": 80105,
+    "relations": {
+      "via_alpn": {
+        "raw": 507868,
+        "kept": 272248,
+        "cross_ratio": 0.4639,
+        "by_partition_pair": {
+          "tr-tr": 244862,
+          "tr-va": 34728,
+          "tr-te": 72204,
+          "va-tr": 34728,
+          "va-va": 5208,
+          "va-te": 10878,
+          "te-tr": 72204,
+          "te-va": 10878,
+          "te-te": 22178
+        }
+      },
+      "via_cert_issuer": {
+        "raw": 604198,
+        "kept": 328812,
+        "cross_ratio": 0.4558,
+        "by_partition_pair": {
+          "tr-tr": 298690,
+          "tr-va": 41129,
+          "tr-te": 84747,
+          "va-tr": 41129,
+          "va-va": 5752,
+          "va-te": 11817,
+          "te-tr": 84747,
+          "te-va": 11817,
+          "te-te": 24370
+        }
+      },
+      "via_cert_subject": {
+        "raw": 603826,
+        "kept": 352904,
+        "cross_ratio": 0.4156,
+        "by_partition_pair": {
+          "tr-tr": 313176,
+          "tr-va": 37099,
+          "tr-te": 74035,
+          "va-tr": 37099,
+          "va-va": 7242,
+          "va-te": 14327,
+          "te-tr": 74035,
+          "te-va": 14327,
+          "te-te": 32486
+        }
+      },
+      "via_cert_validity": {
+        "raw": 801048,
+        "kept": 433374,
+        "cross_ratio": 0.459,
+        "by_partition_pair": {
+          "tr-tr": 393126,
+          "tr-va": 55723,
+          "tr-te": 111885,
+          "va-tr": 55723,
+          "va-va": 8152,
+          "va-te": 16229,
+          "te-tr": 111885,
+          "te-va": 16229,
+          "te-te": 32096
+        }
+      },
+      "via_ja3": {
+        "raw": 801044,
+        "kept": 434254,
+        "cross_ratio": 0.4579,
+        "by_partition_pair": {
+          "tr-tr": 393544,
+          "tr-va": 55732,
+          "tr-te": 111455,
+          "va-tr": 55732,
+          "va-va": 8164,
+          "va-te": 16208,
+          "te-tr": 111455,
+          "te-va": 16208,
+          "te-te": 32546
+        }
+      },
+      "via_sni": {
+        "raw": 762992,
+        "kept": 438802,
+        "cross_ratio": 0.4249,
+        "by_partition_pair": {
+          "tr-tr": 391078,
+          "tr-va": 48696,
+          "tr-te": 96226,
+          "va-tr": 48696,
+          "va-va": 9380,
+          "va-te": 17173,
+          "te-tr": 96226,
+          "te-va": 17173,
+          "te-te": 38344
+        }
+      },
+      "via_tls_cipher_group": {
+        "raw": 801048,
+        "kept": 433298,
+        "cross_ratio": 0.4591,
+        "by_partition_pair": {
+          "tr-tr": 392716,
+          "tr-va": 55985,
+          "tr-te": 112033,
+          "va-tr": 55985,
+          "va-va": 8262,
+          "va-te": 15857,
+          "te-tr": 112033,
+          "te-va": 15857,
+          "te-te": 32320
+        }
+      }
+    },
+    "nodes_with_edge_before": 400524,
+    "nodes_with_edge_after": 384532,
+    "test_nodes_with_edge_before": 80105,
+    "test_nodes_with_edge_after": 74851
+  },
+  "vnat": {
+    "n_train": 1538,
+    "n_val": 220,
+    "n_test": 439,
+    "relations": {
+      "via_alpn": {
+        "raw": 1588,
+        "kept": 1014,
+        "cross_ratio": 0.3615,
+        "by_partition_pair": {
+          "tr-tr": 968,
+          "tr-va": 165,
+          "tr-te": 105,
+          "va-tr": 165,
+          "va-va": 38,
+          "va-te": 17,
+          "te-tr": 105,
+          "te-va": 17,
+          "te-te": 8
+        }
+      },
+      "via_cert_issuer": {
+        "raw": 1414,
+        "kept": 942,
+        "cross_ratio": 0.3338,
+        "by_partition_pair": {
+          "tr-tr": 846,
+          "tr-va": 138,
+          "tr-te": 80,
+          "va-tr": 138,
+          "va-va": 76,
+          "va-te": 18,
+          "te-tr": 80,
+          "te-va": 18,
+          "te-te": 20
+        }
+      },
+      "via_cert_subject": {
+        "raw": 1306,
+        "kept": 916,
+        "cross_ratio": 0.2986,
+        "by_partition_pair": {
+          "tr-tr": 814,
+          "tr-va": 117,
+          "tr-te": 58,
+          "va-tr": 117,
+          "va-va": 70,
+          "va-te": 20,
+          "te-tr": 58,
+          "te-va": 20,
+          "te-te": 32
+        }
+      },
+      "via_cert_validity": {
+        "raw": 3372,
+        "kept": 2230,
+        "cross_ratio": 0.3387,
+        "by_partition_pair": {
+          "tr-tr": 2130,
+          "tr-va": 329,
+          "tr-te": 209,
+          "va-tr": 329,
+          "va-va": 76,
+          "va-te": 33,
+          "te-tr": 209,
+          "te-va": 33,
+          "te-te": 24
+        }
+      },
+      "via_dst_host": {
+        "raw": 4380,
+        "kept": 2700,
+        "cross_ratio": 0.3836,
+        "by_partition_pair": {
+          "tr-tr": 2258,
+          "tr-va": 362,
+          "tr-te": 448,
+          "va-tr": 362,
+          "va-va": 48,
+          "va-te": 30,
+          "te-tr": 448,
+          "te-va": 30,
+          "te-te": 394
+        }
+      },
+      "via_ja3": {
+        "raw": 3370,
+        "kept": 2228,
+        "cross_ratio": 0.3389,
+        "by_partition_pair": {
+          "tr-tr": 2130,
+          "tr-va": 339,
+          "tr-te": 195,
+          "va-tr": 339,
+          "va-va": 64,
+          "va-te": 37,
+          "te-tr": 195,
+          "te-va": 37,
+          "te-te": 34
+        }
+      },
+      "via_sni": {
+        "raw": 3144,
+        "kept": 2380,
+        "cross_ratio": 0.243,
+        "by_partition_pair": {
+          "tr-tr": 2174,
+          "tr-va": 201,
+          "tr-te": 145,
+          "va-tr": 201,
+          "va-va": 142,
+          "va-te": 36,
+          "te-tr": 145,
+          "te-va": 36,
+          "te-te": 64
+        }
+      },
+      "via_src_host": {
+        "raw": 4394,
+        "kept": 2684,
+        "cross_ratio": 0.3892,
+        "by_partition_pair": {
+          "tr-tr": 2258,
+          "tr-va": 357,
+          "tr-te": 461,
+          "va-tr": 357,
+          "va-va": 46,
+          "va-te": 37,
+          "te-tr": 461,
+          "te-va": 37,
+          "te-te": 380
+        }
+      },
+      "via_timebin": {
+        "raw": 4350,
+        "kept": 4030,
+        "cross_ratio": 0.0736,
+        "by_partition_pair": {
+          "tr-tr": 2898,
+          "tr-va": 146,
+          "va-tr": 146,
+          "va-va": 278,
+          "va-te": 14,
+          "te-va": 14,
+          "te-te": 854
+        }
+      },
+      "via_tls_cipher_group": {
+        "raw": 3372,
+        "kept": 2168,
+        "cross_ratio": 0.3571,
+        "by_partition_pair": {
+          "tr-tr": 2090,
+          "tr-va": 356,
+          "tr-te": 220,
+          "va-tr": 356,
+          "va-va": 58,
+          "va-te": 26,
+          "te-tr": 220,
+          "te-va": 26,
+          "te-te": 20
+        }
+      }
+    },
+    "nodes_with_edge_before": 2197,
+    "nodes_with_edge_after": 2193,
+    "test_nodes_with_edge_before": 439,
+    "test_nodes_with_edge_after": 438
+  }
+}

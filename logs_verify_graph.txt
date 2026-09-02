@@ -1,0 +1,92 @@
+
+== bccc_dohbrw
+/HDD/home/jeong/NIDS/artifact_v3/build_graph.py:175: DtypeWarning: Columns (7,9,11) have mixed types. Specify dtype option on import or set low_memory=False.
+  meta = pd.concat([pd.read_csv(out_dir / ("meta_%s.csv" % p))
+  via_ja3: 994488 edges
+  via_cert_subject: 288312 edges
+  via_alpn: 329418 edges
+  via_cert_issuer: 292036 edges
+  via_tls_cipher_group: 994490 edges
+  via_cert_validity: 716222 edges
+  not requested for bccc_dohbrw: ['via_src_host', 'via_dst_host', 'via_timebin']
+   via_ja3                  출하   994488  재생성   994488  일치
+   via_cert_subject         출하   288312  재생성   288312  일치
+   via_alpn                 출하   329418  재생성   329418  일치
+   via_cert_issuer          출하   292036  재생성   292036  일치
+   via_tls_cipher_group     출하   994490  재생성   994490  일치
+   via_cert_validity        출하   716222  재생성   716222  일치
+   -> 전부 일치
+
+== iscx_vpn
+  via_sni: 1384 edges
+  via_ja3: 1754 edges
+  via_cert_subject: 1012 edges
+  via_alpn: 856 edges
+  via_cert_issuer: 1048 edges
+  via_tls_cipher_group: 1770 edges
+  via_cert_validity: 1768 edges
+  via_src_host: 1780 edges
+  via_dst_host: 1556 edges
+  via_timebin: 1694 edges
+   via_sni                  출하     1384  재생성     1384  일치
+   via_ja3                  출하     1754  재생성     1754  일치
+   via_cert_subject         출하     1012  재생성     1012  일치
+   via_alpn                 출하      856  재생성      856  일치
+   via_cert_issuer          출하     1048  재생성     1048  일치
+   via_tls_cipher_group     출하     1770  재생성     1770  일치
+   via_cert_validity        출하     1768  재생성     1768  일치
+   via_src_host             출하     1780  재생성     1780  일치
+   via_dst_host             출하     1556  재생성     1556  일치
+   via_timebin              출하     1694  재생성     1694  일치
+   -> 전부 일치
+
+== hikari
+  via_src_host: 1106008 edges
+  via_dst_host: 1101398 edges
+   via_src_host             출하  1106008  재생성  1106008  일치
+   via_dst_host             출하  1101398  재생성  1101398  일치
+   -> 전부 일치
+
+== cic_andmal
+  via_sni: 762992 edges
+  via_ja3: 801044 edges
+  via_cert_subject: 603826 edges
+  via_alpn: 507868 edges
+  via_cert_issuer: 604198 edges
+  via_tls_cipher_group: 801048 edges
+  via_cert_validity: 801048 edges
+  not requested for cic_andmal: ['via_src_host', 'via_dst_host', 'via_timebin']
+   via_sni                  출하   762992  재생성   762992  일치
+   via_ja3                  출하   801044  재생성   801044  일치
+   via_cert_subject         출하   603826  재생성   603826  일치
+   via_alpn                 출하   507868  재생성   507868  일치
+   via_cert_issuer          출하   604198  재생성   604198  일치
+   via_tls_cipher_group     출하   801048  재생성   801048  일치
+   via_cert_validity        출하   801048  재생성   801048  일치
+   -> 전부 일치
+
+== vnat
+  via_sni: 3144 edges
+  via_ja3: 3370 edges
+  via_cert_subject: 1306 edges
+  via_alpn: 1588 edges
+  via_cert_issuer: 1414 edges
+  via_tls_cipher_group: 3372 edges
+  via_cert_validity: 3372 edges
+  via_src_host: 4394 edges
+  via_dst_host: 4380 edges
+  via_timebin: 4350 edges
+   via_sni                  출하     3144  재생성     3144  일치
+   via_ja3                  출하     3370  재생성     3370  일치
+   via_cert_subject         출하     1306  재생성     1306  일치
+   via_alpn                 출하     1588  재생성     1588  일치
+   via_cert_issuer          출하     1414  재생성     1414  일치
+   via_tls_cipher_group     출하     3372  재생성     3372  일치
+   via_cert_validity        출하     3372  재생성     3372  일치
+   via_src_host             출하     4394  재생성     4394  일치
+   via_dst_host             출하     4380  재생성     4380  일치
+   via_timebin              출하     4350  재생성     4350  일치
+   -> 전부 일치
+
+이 코드가 출하된 그래프를 그대로 다시 만든다
+[saved] results/structure/verify_graph.json

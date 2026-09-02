@@ -1,0 +1,113 @@
+{
+  "kendall": "tau-a, ties contribute nothing to agreement",
+  "ranking": {
+    "iscx_vpn": {
+      "relations": [
+        "via_alpn",
+        "via_cert_issuer",
+        "via_cert_subject",
+        "via_cert_validity",
+        "via_dst_host",
+        "via_ja3",
+        "via_sni",
+        "via_src_host",
+        "via_timebin",
+        "via_tls_cipher_group"
+      ],
+      "n_variants": 20,
+      "random_pairwise_tau_mean": 0.5407,
+      "random_n_pairs": 45,
+      "cutoff_pairwise_tau_mean": 0.7156,
+      "cutoff_n_pairs": 10,
+      "consensus_tau_random_vs_cutoff": 0.4667,
+      "top_counts": {
+        "via_dst_host": 1,
+        "via_src_host": 17,
+        "via_timebin": 3
+      },
+      "n_relations_ever_top": 3,
+      "n_relations_unique_top": 3,
+      "n_variants_ending_in_a_tie": 1
+    },
+    "vnat": {
+      "relations": [
+        "via_alpn",
+        "via_cert_issuer",
+        "via_cert_subject",
+        "via_cert_validity",
+        "via_dst_host",
+        "via_ja3",
+        "via_sni",
+        "via_src_host",
+        "via_timebin",
+        "via_tls_cipher_group"
+      ],
+      "n_variants": 20,
+      "random_pairwise_tau_mean": 0.0005,
+      "random_n_pairs": 45,
+      "cutoff_pairwise_tau_mean": 0.4511,
+      "cutoff_n_pairs": 10,
+      "consensus_tau_random_vs_cutoff": 0.2444,
+      "top_counts": {
+        "via_alpn": 1,
+        "via_cert_issuer": 4,
+        "via_cert_subject": 8,
+        "via_cert_validity": 2,
+        "via_dst_host": 4,
+        "via_ja3": 3,
+        "via_sni": 1,
+        "via_src_host": 8,
+        "via_timebin": 8
+      },
+      "n_relations_ever_top": 9,
+      "n_relations_unique_top": 7,
+      "n_variants_ending_in_a_tie": 9
+    }
+  },
+  "diagnostics": {
+    "dataset_level": {
+      "rows": [
+        {
+          "dataset": "bccc_dohbrw",
+          "normalised_homophily": 1.0,
+          "n_relations_at_this_value": 1,
+          "reach": 0.3261,
+          "edge_share_pct": 87.3
+        },
+        {
+          "dataset": "iscx_vpn",
+          "normalised_homophily": 1.0,
+          "n_relations_at_this_value": 3,
+          "reach": 0.4804,
+          "edge_share_pct": 85.5
+        },
+        {
+          "dataset": "hikari",
+          "normalised_homophily": 0.2575,
+          "n_relations_at_this_value": 1,
+          "reach": 0.9943,
+          "edge_share_pct": 5.9
+        },
+        {
+          "dataset": "cic_andmal",
+          "normalised_homophily": 0.0744,
+          "n_relations_at_this_value": 1,
+          "reach": 0.9528,
+          "edge_share_pct": 8.1
+        },
+        {
+          "dataset": "vnat",
+          "normalised_homophily": 1.0,
+          "n_relations_at_this_value": 6,
+          "reach": 0.3614,
+          "edge_share_pct": 12.1
+        }
+      ],
+      "spearman": 0.7826,
+      "p_permutation": 0.2,
+      "exhaustive": true,
+      "n_permutations": 120,
+      "n": 5
+    }
+  }
+}

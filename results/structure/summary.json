@@ -1,0 +1,657 @@
+{
+  "bccc_dohbrw": {
+    "n_flows": 505040,
+    "relations": {
+      "via_alpn": {
+        "edges": 329418,
+        "covered_flows": 164709,
+        "incident_nodes": 164709,
+        "incident_rate_covered": 1.0,
+        "incident_rate_all": 0.3261,
+        "isolated_rate": 0.6739,
+        "mean_degree": 2.0,
+        "degree_by_class": {
+          "0": 0.92,
+          "1": 0.0
+        },
+        "components": 340333,
+        "component_max": 99339,
+        "component_median": 1,
+        "edge_homophily": 1.0,
+        "cross_partition_rate": 0.4977
+      },
+      "via_cert_issuer": {
+        "edges": 292036,
+        "covered_flows": 146018,
+        "incident_nodes": 146018,
+        "incident_rate_covered": 1.0,
+        "incident_rate_all": 0.2891,
+        "isolated_rate": 0.7109,
+        "mean_degree": 2.0,
+        "degree_by_class": {
+          "0": 0.82,
+          "1": 0.0
+        },
+        "components": 359034,
+        "component_max": 62412,
+        "component_median": 1,
+        "edge_homophily": 0.9998,
+        "cross_partition_rate": 0.5736
+      },
+      "via_cert_subject": {
+        "edges": 288312,
+        "covered_flows": 146018,
+        "incident_nodes": 145212,
+        "incident_rate_covered": 0.9945,
+        "incident_rate_all": 0.2875,
+        "isolated_rate": 0.7125,
+        "mean_degree": 1.99,
+        "degree_by_class": {
+          "0": 0.81,
+          "1": 0.0
+        },
+        "components": 366776,
+        "component_max": 4538,
+        "component_median": 1,
+        "edge_homophily": 0.9999,
+        "cross_partition_rate": 0.5219
+      },
+      "via_cert_validity": {
+        "edges": 716222,
+        "covered_flows": 358112,
+        "incident_nodes": 358112,
+        "incident_rate_covered": 1.0,
+        "incident_rate_all": 0.7091,
+        "isolated_rate": 0.2909,
+        "mean_degree": 2.0,
+        "degree_by_class": {
+          "0": 2.0,
+          "1": 0.0
+        },
+        "components": 146934,
+        "component_max": 212094,
+        "component_median": 1,
+        "edge_homophily": 0.9999,
+        "cross_partition_rate": 0.4398
+      },
+      "via_ja3": {
+        "edges": 994488,
+        "covered_flows": 497245,
+        "incident_nodes": 497244,
+        "incident_rate_covered": 1.0,
+        "incident_rate_all": 0.9846,
+        "isolated_rate": 0.0154,
+        "mean_degree": 2.0,
+        "degree_by_class": {
+          "0": 2.0,
+          "1": 1.89
+        },
+        "components": 7826,
+        "component_max": 178740,
+        "component_median": 1,
+        "edge_homophily": 0.8109,
+        "cross_partition_rate": 0.4598
+      },
+      "via_tls_cipher_group": {
+        "edges": 994490,
+        "covered_flows": 497245,
+        "incident_nodes": 497245,
+        "incident_rate_covered": 1.0,
+        "incident_rate_all": 0.9846,
+        "isolated_rate": 0.0154,
+        "mean_degree": 2.0,
+        "degree_by_class": {
+          "0": 2.0,
+          "1": 1.89
+        },
+        "components": 7805,
+        "component_max": 257224,
+        "component_median": 1,
+        "edge_homophily": 0.7426,
+        "cross_partition_rate": 0.4609
+      }
+    }
+  },
+  "cic_andmal": {
+    "n_flows": 400524,
+    "relations": {
+      "via_alpn": {
+        "edges": 507868,
+        "covered_flows": 253934,
+        "incident_nodes": 253934,
+        "incident_rate_covered": 1.0,
+        "incident_rate_all": 0.634,
+        "isolated_rate": 0.366,
+        "mean_degree": 2.0,
+        "degree_by_class": {
+          "0": 1.23,
+          "1": 1.3
+        },
+        "components": 146594,
+        "component_max": 156894,
+        "component_median": 1,
+        "edge_homophily": 0.507,
+        "cross_partition_rate": 0.4639
+      },
+      "via_cert_issuer": {
+        "edges": 604198,
+        "covered_flows": 302099,
+        "incident_nodes": 302099,
+        "incident_rate_covered": 1.0,
+        "incident_rate_all": 0.7543,
+        "isolated_rate": 0.2457,
+        "mean_degree": 2.0,
+        "degree_by_class": {
+          "0": 1.53,
+          "1": 1.49
+        },
+        "components": 98435,
+        "component_max": 170391,
+        "component_median": 1,
+        "edge_homophily": 0.5042,
+        "cross_partition_rate": 0.4558
+      },
+      "via_cert_subject": {
+        "edges": 603826,
+        "covered_flows": 302099,
+        "incident_nodes": 301975,
+        "incident_rate_covered": 0.9996,
+        "incident_rate_all": 0.7539,
+        "isolated_rate": 0.2461,
+        "mean_degree": 2.0,
+        "degree_by_class": {
+          "0": 1.53,
+          "1": 1.49
+        },
+        "components": 99031,
+        "component_max": 31484,
+        "component_median": 1,
+        "edge_homophily": 0.5341,
+        "cross_partition_rate": 0.4156
+      },
+      "via_cert_validity": {
+        "edges": 801048,
+        "covered_flows": 400524,
+        "incident_nodes": 400524,
+        "incident_rate_covered": 1.0,
+        "incident_rate_all": 1.0,
+        "isolated_rate": 0.0,
+        "mean_degree": 2.0,
+        "degree_by_class": {
+          "0": 2.0,
+          "1": 2.0
+        },
+        "components": 6,
+        "component_max": 111122,
+        "component_median": 72060,
+        "edge_homophily": 0.5084,
+        "cross_partition_rate": 0.459
+      },
+      "via_ja3": {
+        "edges": 801044,
+        "covered_flows": 400524,
+        "incident_nodes": 400523,
+        "incident_rate_covered": 1.0,
+        "incident_rate_all": 1.0,
+        "isolated_rate": 0.0,
+        "mean_degree": 2.0,
+        "degree_by_class": {
+          "0": 2.0,
+          "1": 2.0
+        },
+        "components": 29,
+        "component_max": 226758,
+        "component_median": 891,
+        "edge_homophily": 0.5116,
+        "cross_partition_rate": 0.4579
+      },
+      "via_sni": {
+        "edges": 762992,
+        "covered_flows": 381956,
+        "incident_nodes": 381612,
+        "incident_rate_covered": 0.9991,
+        "incident_rate_all": 0.9528,
+        "isolated_rate": 0.0472,
+        "mean_degree": 2.0,
+        "degree_by_class": {
+          "0": 1.88,
+          "1": 1.93
+        },
+        "components": 19790,
+        "component_max": 11846,
+        "component_median": 1,
+        "edge_homophily": 0.5419,
+        "cross_partition_rate": 0.4249
+      },
+      "via_tls_cipher_group": {
+        "edges": 801048,
+        "covered_flows": 400524,
+        "incident_nodes": 400524,
+        "incident_rate_covered": 1.0,
+        "incident_rate_all": 1.0,
+        "isolated_rate": 0.0,
+        "mean_degree": 2.0,
+        "degree_by_class": {
+          "0": 2.0,
+          "1": 2.0
+        },
+        "components": 9,
+        "component_max": 283837,
+        "component_median": 7591,
+        "edge_homophily": 0.508,
+        "cross_partition_rate": 0.4591
+      }
+    }
+  },
+  "iscx_vpn": {
+    "n_flows": 891,
+    "relations": {
+      "via_alpn": {
+        "edges": 856,
+        "covered_flows": 428,
+        "incident_nodes": 428,
+        "incident_rate_covered": 1.0,
+        "incident_rate_all": 0.4804,
+        "isolated_rate": 0.5196,
+        "mean_degree": 2.0,
+        "degree_by_class": {
+          "0": 0.99,
+          "1": 0.0
+        },
+        "components": 468,
+        "component_max": 147,
+        "component_median": 1,
+        "edge_homophily": 1.0,
+        "cross_partition_rate": 0.1682
+      },
+      "via_cert_issuer": {
+        "edges": 1048,
+        "covered_flows": 525,
+        "incident_nodes": 524,
+        "incident_rate_covered": 0.9981,
+        "incident_rate_all": 0.5881,
+        "isolated_rate": 0.4119,
+        "mean_degree": 2.0,
+        "degree_by_class": {
+          "0": 1.15,
+          "1": 1.8
+        },
+        "components": 370,
+        "component_max": 371,
+        "component_median": 1,
+        "edge_homophily": 0.9046,
+        "cross_partition_rate": 0.374
+      },
+      "via_cert_subject": {
+        "edges": 1012,
+        "covered_flows": 525,
+        "incident_nodes": 514,
+        "incident_rate_covered": 0.979,
+        "incident_rate_all": 0.5769,
+        "isolated_rate": 0.4231,
+        "mean_degree": 1.97,
+        "degree_by_class": {
+          "0": 1.12,
+          "1": 1.53
+        },
+        "components": 410,
+        "component_max": 206,
+        "component_median": 1,
+        "edge_homophily": 0.996,
+        "cross_partition_rate": 0.2055
+      },
+      "via_cert_validity": {
+        "edges": 1768,
+        "covered_flows": 884,
+        "incident_nodes": 884,
+        "incident_rate_covered": 1.0,
+        "incident_rate_all": 0.9921,
+        "isolated_rate": 0.0079,
+        "mean_degree": 2.0,
+        "degree_by_class": {
+          "0": 1.98,
+          "1": 2.0
+        },
+        "components": 12,
+        "component_max": 359,
+        "component_median": 1,
+        "edge_homophily": 0.9638,
+        "cross_partition_rate": 0.4321
+      },
+      "via_dst_host": {
+        "edges": 1556,
+        "covered_flows": 891,
+        "incident_nodes": 809,
+        "incident_rate_covered": 0.908,
+        "incident_rate_all": 0.908,
+        "isolated_rate": 0.092,
+        "mean_degree": 1.92,
+        "degree_by_class": {
+          "0": 1.74,
+          "1": 1.8
+        },
+        "components": 193,
+        "component_max": 82,
+        "component_median": 2,
+        "edge_homophily": 0.9974,
+        "cross_partition_rate": 0.0604
+      },
+      "via_ja3": {
+        "edges": 1754,
+        "covered_flows": 885,
+        "incident_nodes": 880,
+        "incident_rate_covered": 0.9944,
+        "incident_rate_all": 0.9877,
+        "isolated_rate": 0.0123,
+        "mean_degree": 1.99,
+        "degree_by_class": {
+          "0": 1.97,
+          "1": 1.93
+        },
+        "components": 27,
+        "component_max": 395,
+        "component_median": 2,
+        "edge_homophily": 0.9863,
+        "cross_partition_rate": 0.3079
+      },
+      "via_sni": {
+        "edges": 1384,
+        "covered_flows": 730,
+        "incident_nodes": 703,
+        "incident_rate_covered": 0.963,
+        "incident_rate_all": 0.789,
+        "isolated_rate": 0.211,
+        "mean_degree": 1.97,
+        "degree_by_class": {
+          "0": 1.59,
+          "1": 0.37
+        },
+        "components": 244,
+        "component_max": 100,
+        "component_median": 1,
+        "edge_homophily": 0.9986,
+        "cross_partition_rate": 0.1864
+      },
+      "via_src_host": {
+        "edges": 1780,
+        "covered_flows": 891,
+        "incident_nodes": 890,
+        "incident_rate_covered": 0.9989,
+        "incident_rate_all": 0.9989,
+        "isolated_rate": 0.0011,
+        "mean_degree": 2.0,
+        "degree_by_class": {
+          "0": 2.0,
+          "1": 2.0
+        },
+        "components": 11,
+        "component_max": 259,
+        "component_median": 65,
+        "edge_homophily": 1.0,
+        "cross_partition_rate": 0.1022
+      },
+      "via_timebin": {
+        "edges": 1694,
+        "covered_flows": 891,
+        "incident_nodes": 866,
+        "incident_rate_covered": 0.9719,
+        "incident_rate_all": 0.9719,
+        "isolated_rate": 0.0281,
+        "mean_degree": 1.96,
+        "degree_by_class": {
+          "0": 1.91,
+          "1": 1.6
+        },
+        "components": 108,
+        "component_max": 72,
+        "component_median": 3,
+        "edge_homophily": 1.0,
+        "cross_partition_rate": 0.0153
+      },
+      "via_tls_cipher_group": {
+        "edges": 1770,
+        "covered_flows": 885,
+        "incident_nodes": 885,
+        "incident_rate_covered": 1.0,
+        "incident_rate_all": 0.9933,
+        "isolated_rate": 0.0067,
+        "mean_degree": 2.0,
+        "degree_by_class": {
+          "0": 1.99,
+          "1": 2.0
+        },
+        "components": 12,
+        "component_max": 580,
+        "component_median": 3,
+        "edge_homophily": 0.948,
+        "cross_partition_rate": 0.4136
+      }
+    }
+  },
+  "hikari": {
+    "n_flows": 555278,
+    "relations": {
+      "via_dst_host": {
+        "edges": 1101398,
+        "covered_flows": 555278,
+        "incident_nodes": 552138,
+        "incident_rate_covered": 0.9943,
+        "incident_rate_all": 0.9943,
+        "isolated_rate": 0.0057,
+        "mean_degree": 1.99,
+        "degree_by_class": {
+          "0": 1.98,
+          "1": 2.0
+        },
+        "components": 7991,
+        "component_max": 189666,
+        "component_median": 2,
+        "edge_homophily": 0.906,
+        "cross_partition_rate": 0.3528
+      },
+      "via_src_host": {
+        "edges": 1106008,
+        "covered_flows": 555278,
+        "incident_nodes": 553367,
+        "incident_rate_covered": 0.9966,
+        "incident_rate_all": 0.9966,
+        "isolated_rate": 0.0034,
+        "mean_degree": 2.0,
+        "degree_by_class": {
+          "0": 1.99,
+          "1": 2.0
+        },
+        "components": 2899,
+        "component_max": 213520,
+        "component_median": 1,
+        "edge_homophily": 0.8831,
+        "cross_partition_rate": 0.2298
+      }
+    }
+  },
+  "vnat": {
+    "n_flows": 2197,
+    "relations": {
+      "via_alpn": {
+        "edges": 1588,
+        "covered_flows": 794,
+        "incident_nodes": 794,
+        "incident_rate_covered": 1.0,
+        "incident_rate_all": 0.3614,
+        "isolated_rate": 0.6386,
+        "mean_degree": 2.0,
+        "degree_by_class": {
+          "0": 0.0,
+          "1": 0.76
+        },
+        "components": 1405,
+        "component_max": 504,
+        "component_median": 1,
+        "edge_homophily": 1.0,
+        "cross_partition_rate": 0.3615
+      },
+      "via_cert_issuer": {
+        "edges": 1414,
+        "covered_flows": 707,
+        "incident_nodes": 707,
+        "incident_rate_covered": 1.0,
+        "incident_rate_all": 0.3218,
+        "isolated_rate": 0.6782,
+        "mean_degree": 2.0,
+        "degree_by_class": {
+          "0": 2.0,
+          "1": 0.58
+        },
+        "components": 1499,
+        "component_max": 219,
+        "component_median": 1,
+        "edge_homophily": 0.8784,
+        "cross_partition_rate": 0.3338
+      },
+      "via_cert_subject": {
+        "edges": 1306,
+        "covered_flows": 707,
+        "incident_nodes": 675,
+        "incident_rate_covered": 0.9547,
+        "incident_rate_all": 0.3072,
+        "isolated_rate": 0.6928,
+        "mean_degree": 1.93,
+        "degree_by_class": {
+          "0": 2.0,
+          "1": 0.53
+        },
+        "components": 1603,
+        "component_max": 88,
+        "component_median": 1,
+        "edge_homophily": 1.0,
+        "cross_partition_rate": 0.2986
+      },
+      "via_cert_validity": {
+        "edges": 3372,
+        "covered_flows": 1686,
+        "incident_nodes": 1686,
+        "incident_rate_covered": 1.0,
+        "incident_rate_all": 0.7674,
+        "isolated_rate": 0.2326,
+        "mean_degree": 2.0,
+        "degree_by_class": {
+          "0": 2.0,
+          "1": 1.51
+        },
+        "components": 517,
+        "component_max": 979,
+        "component_median": 1,
+        "edge_homophily": 0.9146,
+        "cross_partition_rate": 0.3387
+      },
+      "via_dst_host": {
+        "edges": 4380,
+        "covered_flows": 2197,
+        "incident_nodes": 2197,
+        "incident_rate_covered": 1.0,
+        "incident_rate_all": 1.0,
+        "isolated_rate": 0.0,
+        "mean_degree": 1.99,
+        "degree_by_class": {
+          "0": 2.0,
+          "1": 1.99
+        },
+        "components": 19,
+        "component_max": 1587,
+        "component_median": 6,
+        "edge_homophily": 1.0,
+        "cross_partition_rate": 0.3836
+      },
+      "via_ja3": {
+        "edges": 3370,
+        "covered_flows": 1687,
+        "incident_nodes": 1686,
+        "incident_rate_covered": 0.9994,
+        "incident_rate_all": 0.7674,
+        "isolated_rate": 0.2326,
+        "mean_degree": 2.0,
+        "degree_by_class": {
+          "0": 2.0,
+          "1": 1.51
+        },
+        "components": 523,
+        "component_max": 818,
+        "component_median": 1,
+        "edge_homophily": 0.9181,
+        "cross_partition_rate": 0.3389
+      },
+      "via_sni": {
+        "edges": 3144,
+        "covered_flows": 1687,
+        "incident_nodes": 1614,
+        "incident_rate_covered": 0.9567,
+        "incident_rate_all": 0.7346,
+        "isolated_rate": 0.2654,
+        "mean_degree": 1.95,
+        "degree_by_class": {
+          "0": 2.0,
+          "1": 1.4
+        },
+        "components": 757,
+        "component_max": 76,
+        "component_median": 1,
+        "edge_homophily": 1.0,
+        "cross_partition_rate": 0.243
+      },
+      "via_src_host": {
+        "edges": 4394,
+        "covered_flows": 2197,
+        "incident_nodes": 2197,
+        "incident_rate_covered": 1.0,
+        "incident_rate_all": 1.0,
+        "isolated_rate": 0.0,
+        "mean_degree": 2.0,
+        "degree_by_class": {
+          "0": 2.0,
+          "1": 2.0
+        },
+        "components": 4,
+        "component_max": 1587,
+        "component_median": 299,
+        "edge_homophily": 1.0,
+        "cross_partition_rate": 0.3892
+      },
+      "via_timebin": {
+        "edges": 4350,
+        "covered_flows": 2197,
+        "incident_nodes": 2184,
+        "incident_rate_covered": 0.9941,
+        "incident_rate_all": 0.9941,
+        "isolated_rate": 0.0059,
+        "mean_degree": 1.99,
+        "degree_by_class": {
+          "0": 1.58,
+          "1": 2.0
+        },
+        "components": 78,
+        "component_max": 439,
+        "component_median": 11,
+        "edge_homophily": 1.0,
+        "cross_partition_rate": 0.0736
+      },
+      "via_tls_cipher_group": {
+        "edges": 3372,
+        "covered_flows": 1687,
+        "incident_nodes": 1686,
+        "incident_rate_covered": 0.9994,
+        "incident_rate_all": 0.7674,
+        "isolated_rate": 0.2326,
+        "mean_degree": 2.0,
+        "degree_by_class": {
+          "0": 2.0,
+          "1": 1.51
+        },
+        "components": 517,
+        "component_max": 1431,
+        "component_median": 1,
+        "edge_homophily": 0.8861,
+        "cross_partition_rate": 0.3571
+      }
+    }
+  }
+}

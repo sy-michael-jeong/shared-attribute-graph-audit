@@ -1,0 +1,106 @@
+{
+  "iscx_vpn": {
+    "data_root": "data/_iscx_dstdisj",
+    "seeds": [
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "control": "every relation edge list replaced by self loops",
+    "graph": {
+      "n_train": 624,
+      "n_val": 89,
+      "n_test": 178,
+      "edges": {
+        "via_alpn": 856,
+        "via_cert_issuer": 1048,
+        "via_cert_subject": 1012,
+        "via_cert_validity": 1768,
+        "via_dst_host": 1556,
+        "via_ja3": 1754,
+        "via_sni": 1384,
+        "via_src_host": 1780,
+        "via_timebin": 1694,
+        "via_tls_cipher_group": 1770
+      }
+    },
+    "sets": {
+      "manual_1": {
+        "set_tag": "manual_1",
+        "metapaths": [
+          "via_src_host"
+        ],
+        "per_seed": [
+          {
+            "seed": 41,
+            "macro_f1": 0.8304761904761905,
+            "minority_f1": 0.7142857142857143,
+            "weighted_f1": 0.9179454253611558
+          },
+          {
+            "seed": 42,
+            "macro_f1": 0.8476288306796782,
+            "minority_f1": 0.7457627118644068,
+            "weighted_f1": 0.9243145605743206
+          },
+          {
+            "seed": 43,
+            "macro_f1": 0.7885658214119713,
+            "minority_f1": 0.6567164179104478,
+            "weighted_f1": 0.8878232375310958
+          },
+          {
+            "seed": 44,
+            "macro_f1": 0.838719420114769,
+            "minority_f1": 0.7272727272727273,
+            "weighted_f1": 0.9226174922542835
+          },
+          {
+            "seed": 45,
+            "macro_f1": 0.8476288306796782,
+            "minority_f1": 0.7457627118644068,
+            "weighted_f1": 0.9243145605743206
+          }
+        ],
+        "macro_f1": {
+          "mean": 0.8306,
+          "std": 0.022,
+          "n": 5,
+          "values": [
+            0.8305,
+            0.8476,
+            0.7886,
+            0.8387,
+            0.8476
+          ]
+        },
+        "minority_f1": {
+          "mean": 0.718,
+          "std": 0.0329,
+          "n": 5,
+          "values": [
+            0.7143,
+            0.7458,
+            0.6567,
+            0.7273,
+            0.7458
+          ]
+        },
+        "weighted_f1": {
+          "mean": 0.9154,
+          "std": 0.014,
+          "n": 5,
+          "values": [
+            0.9179,
+            0.9243,
+            0.8878,
+            0.9226,
+            0.9243
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "protocol": "random",
+  "data_root": "data/processed",
+  "datasets": {
+    "cic_andmal": {
+      "n_flows": 400524,
+      "n_by_split": {
+        "train": 280366,
+        "val": 40053,
+        "test": 80105
+      },
+      "fields": {
+        "via_sni": {
+          "column": "sni",
+          "coverage_train": 0.9534,
+          "coverage_test": 0.9544,
+          "n_test_flows_covered": 76456,
+          "distinct_train": 1117,
+          "distinct_test": 781,
+          "overlap_by_value": 0.904,
+          "overlap_by_flow": 0.9988
+        },
+        "via_ja3": {
+          "column": "ja3",
+          "coverage_train": 1.0,
+          "coverage_test": 1.0,
+          "n_test_flows_covered": 80105,
+          "distinct_train": 29,
+          "distinct_test": 27,
+          "overlap_by_value": 1.0,
+          "overlap_by_flow": 1.0
+        },
+        "via_cert_subject": {
+          "column": "cert_subject",
+          "coverage_train": 0.7547,
+          "coverage_test": 0.7547,
+          "n_test_flows_covered": 60453,
+          "distinct_train": 564,
+          "distinct_test": 413,
+          "overlap_by_value": 0.9225,
+          "overlap_by_flow": 0.9994
+        },
+        "via_alpn": {
+          "column": "alpn",
+          "coverage_train": 0.6332,
+          "coverage_test": 0.6345,
+          "n_test_flows_covered": 50825,
+          "distinct_train": 4,
+          "distinct_test": 4,
+          "overlap_by_value": 1.0,
+          "overlap_by_flow": 1.0
+        },
+        "via_cert_issuer": {
+          "column": "cert_issuer_org",
+          "coverage_train": 0.7547,
+          "coverage_test": 0.7547,
+          "n_test_flows_covered": 60453,
+          "distinct_train": 10,
+          "distinct_test": 9,
+          "overlap_by_value": 1.0,
+          "overlap_by_flow": 1.0
+        },
+        "via_tls_cipher_group": {
+          "column": "tls_cipher_group",
+          "coverage_train": 1.0,
+          "coverage_test": 1.0,
+          "n_test_flows_covered": 80105,
+          "distinct_train": 9,
+          "distinct_test": 9,
+          "overlap_by_value": 1.0,
+          "overlap_by_flow": 1.0
+        },
+        "via_cert_validity": {
+          "column": "cert_validity_bucket",
+          "coverage_train": 1.0,
+          "coverage_test": 1.0,
+          "n_test_flows_covered": 80105,
+          "distinct_train": 6,
+          "distinct_test": 5,
+          "overlap_by_value": 1.0,
+          "overlap_by_flow": 1.0
+        },
+        "via_timebin": {
+          "column": "ts",
+          "coverage_train": 1.0,
+          "coverage_test": 1.0,
+          "n_test_flows_covered": 80105,
+          "distinct_train": 6151,
+          "distinct_test": 5422,
+          "overlap_by_value": 0.9661,
+          "overlap_by_flow": 0.9974
+        },
+        "via_src_host": {
+          "column": "src_ip",
+          "coverage_train": 1.0,
+          "coverage_test": 1.0,
+          "n_test_flows_covered": 80105,
+          "distinct_train": 3,
+          "distinct_test": 3,
+          "overlap_by_value": 1.0,
+          "overlap_by_flow": 1.0
+        },
+        "via_dst_host": {
+          "column": "dst_ip",
+          "coverage_train": 1.0,
+          "coverage_test": 1.0,
+          "n_test_flows_covered": 80105,
+          "distinct_train": 6062,
+          "distinct_test": 4039,
+          "overlap_by_value": 0.9029,
+          "overlap_by_flow": 0.9944
+        }
+      }
+    }
+  }
+}

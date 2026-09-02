@@ -1,0 +1,91 @@
+{
+  "vnat": {
+    "data_root": "data/_tb60",
+    "seeds": [
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "sets": {
+      "manual_1": {
+        "set_tag": "manual_1",
+        "metapaths": [
+          "via_timebin"
+        ],
+        "per_seed": [
+          {
+            "seed": 41,
+            "macro_f1": 1.0,
+            "minority_f1": 1.0,
+            "weighted_f1": 1.0
+          },
+          {
+            "seed": 42,
+            "macro_f1": 1.0,
+            "minority_f1": 1.0,
+            "weighted_f1": 1.0
+          },
+          {
+            "seed": 43,
+            "macro_f1": 1.0,
+            "minority_f1": 1.0,
+            "weighted_f1": 1.0
+          },
+          {
+            "seed": 44,
+            "macro_f1": 0.9633198718841387,
+            "minority_f1": 0.9302325581395349,
+            "weighted_f1": 0.9933923962214893
+          },
+          {
+            "seed": 45,
+            "macro_f1": 1.0,
+            "minority_f1": 1.0,
+            "weighted_f1": 1.0
+          }
+        ],
+        "macro_f1": {
+          "mean": 0.9927,
+          "std": 0.0147,
+          "std_sample": 0.0164,
+          "n": 5,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            0.9633,
+            1.0
+          ]
+        },
+        "minority_f1": {
+          "mean": 0.986,
+          "std": 0.0279,
+          "std_sample": 0.0312,
+          "n": 5,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            0.9302,
+            1.0
+          ]
+        },
+        "weighted_f1": {
+          "mean": 0.9987,
+          "std": 0.0026,
+          "std_sample": 0.003,
+          "n": 5,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            0.9934,
+            1.0
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "csv": "data/raw/hikari/ALLFLOWMETER_HIKARI2021.csv",
+  "n_rows": 555278,
+  "timestamp_column": null,
+  "test_size": 0.2,
+  "val_size": 0.1,
+  "split_sizes": {
+    "train": 388695,
+    "val": 55528,
+    "test": 111055
+  },
+  "category_by_split": {
+    "Background": {
+      "train": 170151,
+      "val": 0,
+      "test": 0,
+      "total": 170151
+    },
+    "Benign": {
+      "train": 192157,
+      "val": 51758,
+      "test": 103516,
+      "total": 347431
+    },
+    "Bruteforce": {
+      "train": 5884,
+      "val": 0,
+      "test": 0,
+      "total": 5884
+    },
+    "Bruteforce-XML": {
+      "train": 5145,
+      "val": 0,
+      "test": 0,
+      "total": 5145
+    },
+    "Probing": {
+      "train": 15358,
+      "val": 3770,
+      "test": 4260,
+      "total": 23388
+    },
+    "XMRIGCC CryptoMiner": {
+      "train": 0,
+      "val": 0,
+      "test": 3279,
+      "total": 3279
+    }
+  },
+  "attack_types_train": [
+    "Bruteforce",
+    "Bruteforce-XML",
+    "Probing"
+  ],
+  "attack_types_test": [
+    "Probing",
+    "XMRIGCC CryptoMiner"
+  ],
+  "test_only_attack_types": [
+    "XMRIGCC CryptoMiner"
+  ],
+  "test_attack_flows": 7539,
+  "open_set_test_attack_flows": 3279,
+  "open_set_rate": 0.4349
+}

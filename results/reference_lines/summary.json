@@ -1,0 +1,464 @@
+{
+  "bccc_dohbrw": {
+    "n_flows_total": 505040,
+    "n_test": 101008,
+    "test_class_counts": {
+      "0": 71618,
+      "1": 29390
+    },
+    "majority_macro_f1": 0.4149,
+    "availability_per_field": {
+      "SNI": {
+        "present_ratio": 0.0,
+        "status": "constant"
+      },
+      "JA3": {
+        "present_ratio": 0.9926,
+        "polarity": "present_major",
+        "train_macro_f1": {
+          "present_major": 0.4828,
+          "present_minor": 0.2134
+        },
+        "macro_f1": 0.4415,
+        "macro_f1_both_polarities_on_test": {
+          "present_major": 0.4415,
+          "present_minor": 0.2209
+        },
+        "status": "ok"
+      },
+      "CertSubject": {
+        "present_ratio": 0.428,
+        "polarity": "present_major",
+        "train_macro_f1": {
+          "present_major": 0.523,
+          "present_minor": 0.3223
+        },
+        "macro_f1": 0.7136,
+        "macro_f1_both_polarities_on_test": {
+          "present_major": 0.7136,
+          "present_minor": 0.2194
+        },
+        "status": "ok"
+      },
+      "ALPN": {
+        "present_ratio": 0.3686,
+        "polarity": "present_major",
+        "train_macro_f1": {
+          "present_major": 0.6001,
+          "present_minor": 0.2856
+        },
+        "macro_f1": 0.6575,
+        "macro_f1_both_polarities_on_test": {
+          "present_major": 0.6575,
+          "present_minor": 0.2539
+        },
+        "status": "ok"
+      },
+      "CertIssuerOrg": {
+        "present_ratio": 0.428,
+        "polarity": "present_major",
+        "train_macro_f1": {
+          "present_major": 0.523,
+          "present_minor": 0.3223
+        },
+        "macro_f1": 0.7136,
+        "macro_f1_both_polarities_on_test": {
+          "present_major": 0.7136,
+          "present_minor": 0.2194
+        },
+        "status": "ok"
+      },
+      "TLSCipherGroup": {
+        "present_ratio": 0.9926,
+        "polarity": "present_major",
+        "train_macro_f1": {
+          "present_major": 0.4828,
+          "present_minor": 0.2134
+        },
+        "macro_f1": 0.4415,
+        "macro_f1_both_polarities_on_test": {
+          "present_major": 0.4415,
+          "present_minor": 0.2209
+        },
+        "status": "ok"
+      },
+      "CertValidity": {
+        "present_ratio": 0.709,
+        "polarity": "present_major",
+        "train_macro_f1": {
+          "present_major": 0.9999,
+          "present_minor": 0.0001
+        },
+        "macro_f1": 1.0,
+        "macro_f1_both_polarities_on_test": {
+          "present_major": 1.0,
+          "present_minor": 0.0
+        },
+        "status": "ok"
+      },
+      "SrcHost": {
+        "present_ratio": 1.0,
+        "status": "constant"
+      },
+      "DstHost": {
+        "present_ratio": 1.0,
+        "status": "constant"
+      }
+    },
+    "availability_best": {
+      "field": "CertValidity",
+      "macro_f1": 1.0
+    }
+  },
+  "iscx_vpn": {
+    "n_flows_total": 891,
+    "n_test": 178,
+    "test_class_counts": {
+      "0": 172,
+      "1": 6
+    },
+    "majority_macro_f1": 0.4914,
+    "availability_per_field": {
+      "SNI": {
+        "present_ratio": 0.8539,
+        "polarity": "present_major",
+        "train_macro_f1": {
+          "present_major": 0.5489,
+          "present_minor": 0.1638
+        },
+        "macro_f1": 0.6223,
+        "macro_f1_both_polarities_on_test": {
+          "present_major": 0.6223,
+          "present_minor": 0.1124
+        },
+        "status": "ok"
+      },
+      "JA3": {
+        "present_ratio": 1.0,
+        "status": "constant"
+      },
+      "CertSubject": {
+        "present_ratio": 0.4045,
+        "polarity": "present_major",
+        "train_macro_f1": {
+          "present_major": 0.4004,
+          "present_minor": 0.299
+        },
+        "macro_f1": 0.2705,
+        "macro_f1_both_polarities_on_test": {
+          "present_major": 0.2705,
+          "present_minor": 0.4582
+        },
+        "status": "ok"
+      },
+      "ALPN": {
+        "present_ratio": 0.0225,
+        "polarity": "present_major",
+        "train_macro_f1": {
+          "present_major": 0.443,
+          "present_minor": 0.2844
+        },
+        "macro_f1": 0.0561,
+        "macro_f1_both_polarities_on_test": {
+          "present_major": 0.0561,
+          "present_minor": 0.4855
+        },
+        "status": "ok"
+      },
+      "CertIssuerOrg": {
+        "present_ratio": 0.4045,
+        "polarity": "present_major",
+        "train_macro_f1": {
+          "present_major": 0.4004,
+          "present_minor": 0.299
+        },
+        "macro_f1": 0.2705,
+        "macro_f1_both_polarities_on_test": {
+          "present_major": 0.2705,
+          "present_minor": 0.4582
+        },
+        "status": "ok"
+      },
+      "TLSCipherGroup": {
+        "present_ratio": 1.0,
+        "status": "constant"
+      },
+      "CertValidity": {
+        "present_ratio": 1.0,
+        "status": "constant"
+      },
+      "SrcHost": {
+        "present_ratio": 1.0,
+        "status": "constant"
+      },
+      "DstHost": {
+        "present_ratio": 1.0,
+        "status": "constant"
+      }
+    },
+    "availability_best": {
+      "field": "SNI",
+      "macro_f1": 0.6223
+    }
+  },
+  "hikari": {
+    "n_flows_total": 555278,
+    "n_test": 111055,
+    "test_class_counts": {
+      "0": 103516,
+      "1": 7539
+    },
+    "majority_macro_f1": 0.4824,
+    "availability_per_field": {
+      "SNI": {
+        "present_ratio": 0.0,
+        "status": "constant"
+      },
+      "JA3": {
+        "present_ratio": 0.0,
+        "status": "constant"
+      },
+      "CertSubject": {
+        "present_ratio": 0.0,
+        "status": "constant"
+      },
+      "ALPN": {
+        "present_ratio": 0.0,
+        "status": "constant"
+      },
+      "CertIssuerOrg": {
+        "present_ratio": 0.0,
+        "status": "constant"
+      },
+      "TLSCipherGroup": {
+        "present_ratio": 0.0,
+        "status": "constant"
+      },
+      "CertValidity": {
+        "present_ratio": 0.0,
+        "status": "constant"
+      },
+      "SrcHost": {
+        "present_ratio": 1.0,
+        "status": "constant"
+      },
+      "DstHost": {
+        "present_ratio": 1.0,
+        "status": "constant"
+      }
+    },
+    "availability_best": null
+  },
+  "cic_andmal": {
+    "n_flows_total": 400524,
+    "n_test": 80105,
+    "test_class_counts": {
+      "0": 36018,
+      "1": 44087
+    },
+    "majority_macro_f1": 0.355,
+    "availability_per_field": {
+      "SNI": {
+        "present_ratio": 0.9484,
+        "polarity": "present_major",
+        "train_macro_f1": {
+          "present_major": 0.3993,
+          "present_minor": 0.3363
+        },
+        "macro_f1": 0.4214,
+        "macro_f1_both_polarities_on_test": {
+          "present_major": 0.4214,
+          "present_minor": 0.3282
+        },
+        "status": "ok"
+      },
+      "JA3": {
+        "present_ratio": 1.0,
+        "status": "constant"
+      },
+      "CertSubject": {
+        "present_ratio": 0.7548,
+        "polarity": "present_major",
+        "train_macro_f1": {
+          "present_major": 0.4704,
+          "present_minor": 0.4563
+        },
+        "macro_f1": 0.4557,
+        "macro_f1_both_polarities_on_test": {
+          "present_major": 0.4557,
+          "present_minor": 0.4715
+        },
+        "status": "ok"
+      },
+      "ALPN": {
+        "present_ratio": 0.657,
+        "polarity": "present_major",
+        "train_macro_f1": {
+          "present_major": 0.5107,
+          "present_minor": 0.4707
+        },
+        "macro_f1": 0.5025,
+        "macro_f1_both_polarities_on_test": {
+          "present_major": 0.5025,
+          "present_minor": 0.47
+        },
+        "status": "ok"
+      },
+      "CertIssuerOrg": {
+        "present_ratio": 0.7548,
+        "polarity": "present_major",
+        "train_macro_f1": {
+          "present_major": 0.4704,
+          "present_minor": 0.4563
+        },
+        "macro_f1": 0.4557,
+        "macro_f1_both_polarities_on_test": {
+          "present_major": 0.4557,
+          "present_minor": 0.4715
+        },
+        "status": "ok"
+      },
+      "TLSCipherGroup": {
+        "present_ratio": 1.0,
+        "status": "constant"
+      },
+      "CertValidity": {
+        "present_ratio": 1.0,
+        "status": "constant"
+      },
+      "SrcHost": {
+        "present_ratio": 1.0,
+        "status": "constant"
+      },
+      "DstHost": {
+        "present_ratio": 1.0,
+        "status": "constant"
+      }
+    },
+    "availability_best": {
+      "field": "ALPN",
+      "macro_f1": 0.5025
+    }
+  },
+  "vnat": {
+    "n_flows_total": 2197,
+    "n_test": 439,
+    "test_class_counts": {
+      "0": 20,
+      "1": 419
+    },
+    "majority_macro_f1": 0.4883,
+    "availability_per_field": {
+      "SNI": {
+        "present_ratio": 0.303,
+        "polarity": "present_major",
+        "train_macro_f1": {
+          "present_major": 0.4511,
+          "present_minor": 0.1719
+        },
+        "macro_f1": 0.2047,
+        "macro_f1_both_polarities_on_test": {
+          "present_major": 0.2047,
+          "present_minor": 0.5528
+        },
+        "status": "ok"
+      },
+      "JA3": {
+        "present_ratio": 0.303,
+        "polarity": "present_major",
+        "train_macro_f1": {
+          "present_major": 0.4511,
+          "present_minor": 0.1719
+        },
+        "macro_f1": 0.2047,
+        "macro_f1_both_polarities_on_test": {
+          "present_major": 0.2047,
+          "present_minor": 0.5528
+        },
+        "status": "ok"
+      },
+      "CertSubject": {
+        "present_ratio": 0.1344,
+        "polarity": "present_minor",
+        "train_macro_f1": {
+          "present_major": 0.231,
+          "present_minor": 0.5229
+        },
+        "macro_f1": 0.7288,
+        "macro_f1_both_polarities_on_test": {
+          "present_major": 0.0816,
+          "present_minor": 0.7288
+        },
+        "status": "ok"
+      },
+      "ALPN": {
+        "present_ratio": 0.1481,
+        "polarity": "present_major",
+        "train_macro_f1": {
+          "present_major": 0.3674,
+          "present_minor": 0.3557
+        },
+        "macro_f1": 0.1851,
+        "macro_f1_both_polarities_on_test": {
+          "present_major": 0.1851,
+          "present_minor": 0.4464
+        },
+        "status": "ok"
+      },
+      "CertIssuerOrg": {
+        "present_ratio": 0.1344,
+        "polarity": "present_minor",
+        "train_macro_f1": {
+          "present_major": 0.231,
+          "present_minor": 0.5229
+        },
+        "macro_f1": 0.7288,
+        "macro_f1_both_polarities_on_test": {
+          "present_major": 0.0816,
+          "present_minor": 0.7288
+        },
+        "status": "ok"
+      },
+      "TLSCipherGroup": {
+        "present_ratio": 0.303,
+        "polarity": "present_major",
+        "train_macro_f1": {
+          "present_major": 0.4511,
+          "present_minor": 0.1719
+        },
+        "macro_f1": 0.2047,
+        "macro_f1_both_polarities_on_test": {
+          "present_major": 0.2047,
+          "present_minor": 0.5528
+        },
+        "status": "ok"
+      },
+      "CertValidity": {
+        "present_ratio": 0.303,
+        "polarity": "present_major",
+        "train_macro_f1": {
+          "present_major": 0.4511,
+          "present_minor": 0.1719
+        },
+        "macro_f1": 0.2047,
+        "macro_f1_both_polarities_on_test": {
+          "present_major": 0.2047,
+          "present_minor": 0.5528
+        },
+        "status": "ok"
+      },
+      "SrcHost": {
+        "present_ratio": 1.0,
+        "status": "constant"
+      },
+      "DstHost": {
+        "present_ratio": 1.0,
+        "status": "constant"
+      }
+    },
+    "availability_best": {
+      "field": "CertSubject",
+      "macro_f1": 0.7288
+    }
+  }
+}

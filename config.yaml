@@ -1,0 +1,52 @@
+seed: 42
+device: auto
+
+data:
+  test_size: 0.20
+  val_size: 0.10
+
+hin:
+  # 요청하는 관계는 데이터셋마다 다르다. BCCC-DoH 와 CIC-AndMal 은 TLS 관계만
+  # 요청한다. 두 코퍼스에서 호스트 관계는 캡처 구성이 만든 것이지 트래픽이 만든
+  # 것이 아니고(감염 호스트가 소수의 주소에 몰려 있다), 시간 관계는 캡처 일정을
+  # 그대로 읽는다. 그 셋을 요청하면 그래프가 데이터가 아니라 수집 절차를
+  # 학습한다. 나머지 세 데이터셋은 열 가지를 전부 요청하고, 실현되지 않는 것은
+  # build_graph.py 가 hin_summary.json 의 skipped 에 사유와 함께 남긴다.
+  #
+  # 이 구분을 적어 두지 않으면 "관계가 실현되지 않았다" 와 "애초에 요청하지
+  # 않았다" 가 결과 파일에서 구별되지 않는다.
+  metapaths:
+    - via_sni
+    - via_ja3
+    - via_cert_subject
+    - via_alpn
+    - via_cert_issuer
+    - via_tls_cipher_group
+    - via_cert_validity
+    - via_src_host
+    - via_dst_host
+    - via_timebin
+  metapaths_by_dataset:
+    bccc_dohbrw: &tls_only
+      - via_sni
+      - via_ja3
+      - via_cert_subject
+      - via_alpn
+      - via_cert_issuer
+      - via_tls_cipher_group
+      - via_cert_validity
+    cic_andmal: *tls_only
+  max_degree_per_value: 2
+  timebin_seconds: 300
+
+classifier:
+  hidden: 128
+  num_layers: 2
+  heads: 4
+  dropout: 0.5
+  residual: true
+  lr: 0.005
+  weight_decay: 0.0005
+  epochs: 100
+  patience: 15
+  class_weight: balanced

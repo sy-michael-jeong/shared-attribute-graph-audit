@@ -1,0 +1,19 @@
+# The versions the reported results were produced with. Python 3.10.20.
+numpy==1.26.4
+pandas==2.3.3
+scikit-learn==1.7.2
+scipy==1.15.3
+pyyaml==6.0.3
+requests==2.34.2
+
+# Install torch first, matching the CUDA build of the machine. The results were
+# produced with the cu121 wheels on an NVIDIA RTX 3090, driver 535.309.01.
+#   pip install torch==2.2.1 --index-url https://download.pytorch.org/whl/cu121
+torch==2.2.1
+torch-geometric==2.8.0
+
+# Flow extraction uses Zeek 8.2.0 when it is on PATH and falls back to scapy.
+# Zeek is installed outside pip. That version exports no ja3 column, so the
+# fingerprint relation is built over the TLS version and cipher suite.
+scapy==2.7.0
+matplotlib==3.10.9

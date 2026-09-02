@@ -1,0 +1,126 @@
+{
+  "bccc_dohbrw": {
+    "data_root": "data/_perm_reta43",
+    "seeds": [
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "sets": {
+      "manual_1": {
+        "metapaths": [
+          "via_ja3",
+          "via_cert_subject"
+        ],
+        "per_seed": [
+          {
+            "accuracy": 0.9828825439569143,
+            "macro_f1": 0.9794708616584695,
+            "weighted_f1": 0.9829696235910709,
+            "minority_f1": 0.9711019371228962,
+            "minority_recall": 0.9884654644436883,
+            "best_val": 0.9837396401820778,
+            "seed": 41,
+            "relations": [
+              "via_ja3",
+              "via_cert_subject"
+            ]
+          },
+          {
+            "accuracy": 0.9836349596071599,
+            "macro_f1": 0.9803857633113204,
+            "weighted_f1": 0.9837232413872784,
+            "minority_f1": 0.9724026245054009,
+            "minority_recall": 0.9908812521265736,
+            "best_val": 0.984854788016756,
+            "seed": 42,
+            "relations": [
+              "via_ja3",
+              "via_cert_subject"
+            ]
+          },
+          {
+            "accuracy": 0.9831102486931729,
+            "macro_f1": 0.9797769678533874,
+            "weighted_f1": 0.9832094147735606,
+            "minority_f1": 0.9715666666666667,
+            "minority_recall": 0.9917318815923784,
+            "best_val": 0.9849553330482446,
+            "seed": 43,
+            "relations": [
+              "via_ja3",
+              "via_cert_subject"
+            ]
+          },
+          {
+            "accuracy": 0.9825657373673372,
+            "macro_f1": 0.979031839227221,
+            "weighted_f1": 0.9826305912628356,
+            "minority_f1": 0.9704237416234192,
+            "minority_recall": 0.982987410683906,
+            "best_val": 0.984497108599019,
+            "seed": 44,
+            "relations": [
+              "via_ja3",
+              "via_cert_subject"
+            ]
+          },
+          {
+            "accuracy": 0.9819915254237288,
+            "macro_f1": 0.9783648928620445,
+            "weighted_f1": 0.9820680832819405,
+            "minority_f1": 0.969506982046167,
+            "minority_recall": 0.9839060905069752,
+            "best_val": 0.984122361685908,
+            "seed": 45,
+            "relations": [
+              "via_ja3",
+              "via_cert_subject"
+            ]
+          }
+        ],
+        "macro_f1": {
+          "mean": 0.9794,
+          "std": 0.0007,
+          "std_sample": 0.0008,
+          "n": 5,
+          "values": [
+            0.9795,
+            0.9804,
+            0.9798,
+            0.979,
+            0.9784
+          ]
+        },
+        "minority_f1": {
+          "mean": 0.971,
+          "std": 0.001,
+          "std_sample": 0.0011,
+          "n": 5,
+          "values": [
+            0.9711,
+            0.9724,
+            0.9716,
+            0.9704,
+            0.9695
+          ]
+        },
+        "weighted_f1": {
+          "mean": 0.9829,
+          "std": 0.0006,
+          "std_sample": 0.0006,
+          "n": 5,
+          "values": [
+            0.983,
+            0.9837,
+            0.9832,
+            0.9826,
+            0.9821
+          ]
+        }
+      }
+    }
+  }
+}

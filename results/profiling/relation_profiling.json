@@ -1,0 +1,357 @@
+{
+  "protocol": "conventional stratified random split",
+  "mi_label": "binary task label",
+  "datasets": {
+    "bccc_dohbrw": {
+      "dataset": "bccc_dohbrw",
+      "n_flows": 505040,
+      "n_classes": 2,
+      "fields": {
+        "sni": {
+          "coverage": 5.940123554569935e-06,
+          "distinct": 3,
+          "top10_dominance": 1.0,
+          "class_mi_nats": 0.6365141682948128,
+          "train_test_overlap": 0.0
+        },
+        "ja3": {
+          "coverage": 0.9845655789640424,
+          "distinct": 31,
+          "top10_dominance": 0.9874367766392824,
+          "class_mi_nats": 0.3081884141721937,
+          "train_test_overlap": 0.9666666666666667
+        },
+        "cert_subject": {
+          "coverage": 0.2891216537303976,
+          "distinct": 7754,
+          "top10_dominance": 0.11184922406826556,
+          "class_mi_nats": 0.0006620336068810993,
+          "train_test_overlap": 0.945096554335479
+        },
+        "alpn": {
+          "coverage": 0.32613060351655315,
+          "distinct": 2,
+          "top10_dominance": 1.0,
+          "class_mi_nats": 0.0,
+          "train_test_overlap": 1.0
+        },
+        "cert_issuer_org": {
+          "coverage": 0.2891216537303976,
+          "distinct": 12,
+          "top10_dominance": 0.999787697407169,
+          "class_mi_nats": 0.00018370100924996506,
+          "train_test_overlap": 1.0
+        },
+        "tls_cipher_group": {
+          "coverage": 0.9845655789640424,
+          "distinct": 10,
+          "top10_dominance": 1.0,
+          "class_mi_nats": 0.2352033973706968,
+          "train_test_overlap": 1.0
+        },
+        "cert_validity_bucket": {
+          "coverage": 0.7090765087913828,
+          "distinct": 6,
+          "top10_dominance": 1.0,
+          "class_mi_nats": 2.9767985285978543e-05,
+          "train_test_overlap": 1.0
+        },
+        "src_ip": {
+          "coverage": 1.0,
+          "distinct": 14,
+          "top10_dominance": 0.9107080627277048,
+          "class_mi_nats": 0.603015296138356,
+          "train_test_overlap": 1.0
+        },
+        "dst_ip": {
+          "coverage": 1.0,
+          "distinct": 30087,
+          "top10_dominance": 0.35826073182322193,
+          "class_mi_nats": 0.5734022610458803,
+          "train_test_overlap": 0.8881389752919773
+        }
+      }
+    },
+    "iscx_vpn": {
+      "dataset": "iscx_vpn",
+      "n_flows": 891,
+      "n_classes": 2,
+      "fields": {
+        "sni": {
+          "coverage": 0.819304,
+          "distinct": 83,
+          "top10_dominance": 0.630137,
+          "class_mi_nats": 0.064548,
+          "train_test_overlap": 0.790698
+        },
+        "ja3": {
+          "coverage": 0.993266,
+          "distinct": 21,
+          "top10_dominance": 0.972881,
+          "class_mi_nats": 0.126189,
+          "train_test_overlap": 0.923077
+        },
+        "cert_subject": {
+          "coverage": 0.589226,
+          "distinct": 44,
+          "top10_dominance": 0.809524,
+          "class_mi_nats": 0.190652,
+          "train_test_overlap": 0.884615
+        },
+        "alpn": {
+          "coverage": 0.480359,
+          "distinct": 5,
+          "top10_dominance": 1.0,
+          "class_mi_nats": 0.0,
+          "train_test_overlap": 1.0
+        },
+        "cert_issuer_org": {
+          "coverage": 0.589226,
+          "distinct": 4,
+          "top10_dominance": 1.0,
+          "class_mi_nats": 0.018429,
+          "train_test_overlap": 0.75
+        },
+        "tls_cipher_group": {
+          "coverage": 0.993266,
+          "distinct": 6,
+          "top10_dominance": 1.0,
+          "class_mi_nats": 0.062904,
+          "train_test_overlap": 1.0
+        },
+        "cert_validity_bucket": {
+          "coverage": 0.992144,
+          "distinct": 5,
+          "top10_dominance": 1.0,
+          "class_mi_nats": 0.074789,
+          "train_test_overlap": 1.0
+        },
+        "src_ip": {
+          "coverage": 1.0,
+          "distinct": 11,
+          "top10_dominance": 0.998878,
+          "class_mi_nats": 0.147277,
+          "train_test_overlap": 1.0
+        },
+        "dst_ip": {
+          "coverage": 1.0,
+          "distinct": 193,
+          "top10_dominance": 0.410774,
+          "class_mi_nats": 0.143628,
+          "train_test_overlap": 0.755556
+        }
+      },
+      "label_entropy_nats": 0.1473
+    },
+    "hikari": {
+      "dataset": "hikari",
+      "n_flows": 555278,
+      "n_classes": 2,
+      "fields": {
+        "sni": {
+          "coverage": 0.0,
+          "distinct": 0,
+          "top10_dominance": 0.0,
+          "class_mi_nats": 0.0,
+          "train_test_overlap": 0.0
+        },
+        "ja3": {
+          "coverage": 0.0,
+          "distinct": 0,
+          "top10_dominance": 0.0,
+          "class_mi_nats": 0.0,
+          "train_test_overlap": 0.0
+        },
+        "cert_subject": {
+          "coverage": 0.0,
+          "distinct": 0,
+          "top10_dominance": 0.0,
+          "class_mi_nats": 0.0,
+          "train_test_overlap": 0.0
+        },
+        "alpn": {
+          "coverage": 0.0,
+          "distinct": 0,
+          "top10_dominance": 0.0,
+          "class_mi_nats": 0.0,
+          "train_test_overlap": 0.0
+        },
+        "cert_issuer_org": {
+          "coverage": 0.0,
+          "distinct": 0,
+          "top10_dominance": 0.0,
+          "class_mi_nats": 0.0,
+          "train_test_overlap": 0.0
+        },
+        "tls_cipher_group": {
+          "coverage": 0.0,
+          "distinct": 0,
+          "top10_dominance": 0.0,
+          "class_mi_nats": 0.0,
+          "train_test_overlap": 0.0
+        },
+        "cert_validity_bucket": {
+          "coverage": 0.0,
+          "distinct": 0,
+          "top10_dominance": 0.0,
+          "class_mi_nats": 0.0,
+          "train_test_overlap": 0.0
+        },
+        "src_ip": {
+          "coverage": 1.0,
+          "distinct": 2899,
+          "top10_dominance": 0.9299161861265889,
+          "class_mi_nats": 0.0368683603075676,
+          "train_test_overlap": 0.5627044711014176
+        },
+        "dst_ip": {
+          "coverage": 1.0,
+          "distinct": 7991,
+          "top10_dominance": 0.8430750002701349,
+          "class_mi_nats": 0.11132465870533499,
+          "train_test_overlap": 0.8009209100758397
+        }
+      }
+    },
+    "cic_andmal": {
+      "dataset": "cic_andmal",
+      "n_flows": 400524,
+      "n_classes": 2,
+      "fields": {
+        "sni": {
+          "coverage": 0.9536407306428578,
+          "distinct": 1222,
+          "top10_dominance": 0.17391270198661626,
+          "class_mi_nats": 0.046072923620691715,
+          "train_test_overlap": 0.9039692701664532
+        },
+        "ja3": {
+          "coverage": 1.0,
+          "distinct": 29,
+          "top10_dominance": 0.9656799592533781,
+          "class_mi_nats": 0.0078288972138544,
+          "train_test_overlap": 1.0
+        },
+        "cert_subject": {
+          "coverage": 0.7542594201595909,
+          "distinct": 606,
+          "top10_dominance": 0.4054895911605136,
+          "class_mi_nats": 0.03726557066844003,
+          "train_test_overlap": 0.9225181598062954
+        },
+        "alpn": {
+          "coverage": 0.6340044541650438,
+          "distinct": 4,
+          "top10_dominance": 1.0,
+          "class_mi_nats": 0.0017520724169704117,
+          "train_test_overlap": 1.0
+        },
+        "cert_issuer_org": {
+          "coverage": 0.7542594201595909,
+          "distinct": 10,
+          "top10_dominance": 1.0,
+          "class_mi_nats": 0.00041962051813159264,
+          "train_test_overlap": 1.0
+        },
+        "tls_cipher_group": {
+          "coverage": 1.0,
+          "distinct": 9,
+          "top10_dominance": 1.0,
+          "class_mi_nats": 0.004695973526883491,
+          "train_test_overlap": 1.0
+        },
+        "cert_validity_bucket": {
+          "coverage": 1.0,
+          "distinct": 6,
+          "top10_dominance": 1.0,
+          "class_mi_nats": 0.0029748694181407913,
+          "train_test_overlap": 1.0
+        },
+        "src_ip": {
+          "coverage": 1.0,
+          "distinct": 3,
+          "top10_dominance": 1.0,
+          "class_mi_nats": 0.021202658546715415,
+          "train_test_overlap": 1.0
+        },
+        "dst_ip": {
+          "coverage": 1.0,
+          "distinct": 6626,
+          "top10_dominance": 0.11028053250242183,
+          "class_mi_nats": 0.07867517320191922,
+          "train_test_overlap": 0.902946273830156
+        }
+      }
+    },
+    "vnat": {
+      "dataset": "vnat",
+      "n_flows": null,
+      "n_classes": null,
+      "fields": {
+        "sni": {
+          "coverage": 0.767865,
+          "distinct": 247,
+          "top10_dominance": 0.273266,
+          "class_mi_nats": 0.224973,
+          "train_test_overlap": 0.673913
+        },
+        "ja3": {
+          "coverage": 0.767865,
+          "distinct": 13,
+          "top10_dominance": 0.995258,
+          "class_mi_nats": 0.101452,
+          "train_test_overlap": 1.0
+        },
+        "cert_subject": {
+          "coverage": 0.321802,
+          "distinct": 113,
+          "top10_dominance": 0.422914,
+          "class_mi_nats": 0.407574,
+          "train_test_overlap": 0.642857
+        },
+        "alpn": {
+          "coverage": 0.361402,
+          "distinct": 2,
+          "top10_dominance": 1.0,
+          "class_mi_nats": 0.0,
+          "train_test_overlap": 1.0
+        },
+        "cert_issuer_org": {
+          "coverage": 0.321802,
+          "distinct": 9,
+          "top10_dominance": 1.0,
+          "class_mi_nats": 0.22928,
+          "train_test_overlap": 1.0
+        },
+        "tls_cipher_group": {
+          "coverage": 0.767865,
+          "distinct": 7,
+          "top10_dominance": 1.0,
+          "class_mi_nats": 0.010084,
+          "train_test_overlap": 1.0
+        },
+        "cert_validity_bucket": {
+          "coverage": 0.76741,
+          "distinct": 6,
+          "top10_dominance": 1.0,
+          "class_mi_nats": 0.096887,
+          "train_test_overlap": 1.0
+        },
+        "src_ip": {
+          "coverage": 1.0,
+          "distinct": 4,
+          "top10_dominance": 1.0,
+          "class_mi_nats": 0.185096,
+          "train_test_overlap": 1.0
+        },
+        "dst_ip": {
+          "coverage": 1.0,
+          "distinct": 19,
+          "top10_dominance": 0.989986,
+          "class_mi_nats": 0.185096,
+          "train_test_overlap": 0.5
+        }
+      }
+    }
+  }
+}

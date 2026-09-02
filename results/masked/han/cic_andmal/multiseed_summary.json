@@ -1,0 +1,97 @@
+{
+  "cic_andmal": {
+    "data_root": "data/processed_deg2_masked",
+    "seeds": [
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "sets": {
+      "manual_1": {
+        "set_tag": "manual_1",
+        "metapaths": [
+          "via_sni",
+          "via_ja3",
+          "via_cert_subject",
+          "via_alpn",
+          "via_cert_issuer",
+          "via_tls_cipher_group",
+          "via_cert_validity"
+        ],
+        "per_seed": [
+          {
+            "seed": 41,
+            "macro_f1": 0.5696813015013258,
+            "minority_f1": 0.5249975622327162,
+            "weighted_f1": 0.574182307582824
+          },
+          {
+            "seed": 42,
+            "macro_f1": 0.582603102032552,
+            "minority_f1": 0.5617345597897503,
+            "weighted_f1": 0.5847051963756912
+          },
+          {
+            "seed": 43,
+            "macro_f1": 0.5782321120133085,
+            "minority_f1": 0.5812385343844514,
+            "weighted_f1": 0.577929274211514
+          },
+          {
+            "seed": 44,
+            "macro_f1": 0.5832997908837555,
+            "minority_f1": 0.5521298557607976,
+            "weighted_f1": 0.5864395475344907
+          },
+          {
+            "seed": 45,
+            "macro_f1": 0.5660116006521587,
+            "minority_f1": 0.5337055919721615,
+            "weighted_f1": 0.5692657943234514
+          }
+        ],
+        "macro_f1": {
+          "mean": 0.576,
+          "std": 0.007,
+          "std_sample": 0.0078,
+          "n": 5,
+          "values": [
+            0.5697,
+            0.5826,
+            0.5782,
+            0.5833,
+            0.566
+          ]
+        },
+        "minority_f1": {
+          "mean": 0.5508,
+          "std": 0.02,
+          "std_sample": 0.0224,
+          "n": 5,
+          "values": [
+            0.525,
+            0.5617,
+            0.5812,
+            0.5521,
+            0.5337
+          ]
+        },
+        "weighted_f1": {
+          "mean": 0.5785,
+          "std": 0.0064,
+          "std_sample": 0.0072,
+          "n": 5,
+          "values": [
+            0.5742,
+            0.5847,
+            0.5779,
+            0.5864,
+            0.5693
+          ]
+        }
+      }
+    }
+  }
+}

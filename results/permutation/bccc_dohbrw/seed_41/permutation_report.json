@@ -1,0 +1,37 @@
+{
+  "bccc_dohbrw": {
+    "permuted_fields": {
+      "cert_subject": 146018,
+      "cert_validity_bucket": 358112
+    },
+    "reference_lines": {
+      "test_size": 101008,
+      "class_counts": {
+        "0": 71618,
+        "1": 29390
+      },
+      "always_majority_macro_f1": 0.4149,
+      "availability_rule_cert_subject": {
+        "present_ratio": 0.428,
+        "macro_f1": 0.7136,
+        "present_class_mix": {
+          "0": 43232
+        },
+        "absent_class_mix": {
+          "0": 28386,
+          "1": 29390
+        }
+      },
+      "availability_rule_cert_validity_bucket": {
+        "present_ratio": 0.709,
+        "macro_f1": 1.0,
+        "present_class_mix": {
+          "0": 71618
+        },
+        "absent_class_mix": {
+          "1": 29390
+        }
+      }
+    }
+  }
+}

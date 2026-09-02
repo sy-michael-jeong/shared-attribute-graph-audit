@@ -1,0 +1,159 @@
+{
+  "iscx_vpn": {
+    "model": "gcn",
+    "data_root": "data/processed_deg2",
+    "metapath_pool": [
+      "via_sni",
+      "via_ja3",
+      "via_cert_subject",
+      "via_alpn",
+      "via_cert_issuer",
+      "via_tls_cipher_group",
+      "via_cert_validity",
+      "via_src_host",
+      "via_dst_host",
+      "via_timebin"
+    ],
+    "per_seed": [
+      {
+        "accuracy": 0.9438202247191011,
+        "macro_f1": 0.7351190476190477,
+        "weighted_f1": 0.9543873729266987,
+        "minority_recall": 0.8333333333333334,
+        "minority_f1": 0.5,
+        "seed": 41,
+        "metapaths_merged": [
+          "via_sni",
+          "via_ja3",
+          "via_cert_subject",
+          "via_alpn",
+          "via_cert_issuer",
+          "via_tls_cipher_group",
+          "via_cert_validity",
+          "via_src_host",
+          "via_dst_host",
+          "via_timebin"
+        ]
+      },
+      {
+        "accuracy": 0.9550561797752809,
+        "macro_f1": 0.7659434582511506,
+        "weighted_f1": 0.9621479068324358,
+        "minority_recall": 0.8333333333333334,
+        "minority_f1": 0.5555555555555556,
+        "seed": 42,
+        "metapaths_merged": [
+          "via_sni",
+          "via_ja3",
+          "via_cert_subject",
+          "via_alpn",
+          "via_cert_issuer",
+          "via_tls_cipher_group",
+          "via_cert_validity",
+          "via_src_host",
+          "via_dst_host",
+          "via_timebin"
+        ]
+      },
+      {
+        "accuracy": 0.9438202247191011,
+        "macro_f1": 0.7351190476190477,
+        "weighted_f1": 0.9543873729266987,
+        "minority_recall": 0.8333333333333334,
+        "minority_f1": 0.5,
+        "seed": 43,
+        "metapaths_merged": [
+          "via_sni",
+          "via_ja3",
+          "via_cert_subject",
+          "via_alpn",
+          "via_cert_issuer",
+          "via_tls_cipher_group",
+          "via_cert_validity",
+          "via_src_host",
+          "via_dst_host",
+          "via_timebin"
+        ]
+      },
+      {
+        "accuracy": 0.9382022471910112,
+        "macro_f1": 0.7216773276474768,
+        "weighted_f1": 0.950614503725354,
+        "minority_recall": 0.8333333333333334,
+        "minority_f1": 0.47619047619047616,
+        "seed": 44,
+        "metapaths_merged": [
+          "via_sni",
+          "via_ja3",
+          "via_cert_subject",
+          "via_alpn",
+          "via_cert_issuer",
+          "via_tls_cipher_group",
+          "via_cert_validity",
+          "via_src_host",
+          "via_dst_host",
+          "via_timebin"
+        ]
+      },
+      {
+        "accuracy": 0.9382022471910112,
+        "macro_f1": 0.7216773276474768,
+        "weighted_f1": 0.950614503725354,
+        "minority_recall": 0.8333333333333334,
+        "minority_f1": 0.47619047619047616,
+        "seed": 45,
+        "metapaths_merged": [
+          "via_sni",
+          "via_ja3",
+          "via_cert_subject",
+          "via_alpn",
+          "via_cert_issuer",
+          "via_tls_cipher_group",
+          "via_cert_validity",
+          "via_src_host",
+          "via_dst_host",
+          "via_timebin"
+        ]
+      }
+    ],
+    "macro_f1": {
+      "mean": 0.7359,
+      "std": 0.0162,
+      "std_sample": 0.0181,
+      "n": 5,
+      "values": [
+        0.7351,
+        0.7659,
+        0.7351,
+        0.7217,
+        0.7217
+      ]
+    },
+    "minority_f1": {
+      "mean": 0.5016,
+      "std": 0.029,
+      "std_sample": 0.0324,
+      "n": 5,
+      "values": [
+        0.5,
+        0.5556,
+        0.5,
+        0.4762,
+        0.4762
+      ]
+    },
+    "weighted_f1": {
+      "mean": 0.9544,
+      "std": 0.0042,
+      "std_sample": 0.0047,
+      "n": 5,
+      "values": [
+        0.9544,
+        0.9621,
+        0.9544,
+        0.9506,
+        0.9506
+      ]
+    }
+  }
+}

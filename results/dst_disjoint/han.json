@@ -1,0 +1,120 @@
+{
+  "iscx_vpn": {
+    "data_root": "data/_iscx_dstdisj",
+    "seeds": [
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "sets": {
+      "manual_1": {
+        "metapaths": [
+          "via_src_host"
+        ],
+        "per_seed": [
+          {
+            "accuracy": 0.9831460674157303,
+            "macro_f1": 0.9632307374509399,
+            "weighted_f1": 0.983602143674466,
+            "minority_f1": 0.9361702127659575,
+            "minority_recall": 1.0,
+            "best_val": 1.0,
+            "seed": 41,
+            "relations": [
+              "via_src_host"
+            ]
+          },
+          {
+            "accuracy": 0.9943820224719101,
+            "macro_f1": 0.9872811718470882,
+            "weighted_f1": 0.9944354123262322,
+            "minority_f1": 0.9777777777777777,
+            "minority_recall": 1.0,
+            "best_val": 1.0,
+            "seed": 42,
+            "relations": [
+              "via_src_host"
+            ]
+          },
+          {
+            "accuracy": 0.9943820224719101,
+            "macro_f1": 0.9872811718470882,
+            "weighted_f1": 0.9944354123262322,
+            "minority_f1": 0.9777777777777777,
+            "minority_recall": 1.0,
+            "best_val": 1.0,
+            "seed": 43,
+            "relations": [
+              "via_src_host"
+            ]
+          },
+          {
+            "accuracy": 0.9775280898876404,
+            "macro_f1": 0.9518398268398268,
+            "weighted_f1": 0.9783184979814193,
+            "minority_f1": 0.9166666666666666,
+            "minority_recall": 1.0,
+            "best_val": 1.0,
+            "seed": 44,
+            "relations": [
+              "via_src_host"
+            ]
+          },
+          {
+            "accuracy": 0.9887640449438202,
+            "macro_f1": 0.9750350631136044,
+            "weighted_f1": 0.9889720598200357,
+            "minority_f1": 0.9565217391304348,
+            "minority_recall": 1.0,
+            "best_val": 1.0,
+            "seed": 45,
+            "relations": [
+              "via_src_host"
+            ]
+          }
+        ],
+        "macro_f1": {
+          "mean": 0.9729,
+          "std": 0.0138,
+          "std_sample": 0.0155,
+          "n": 5,
+          "values": [
+            0.9632,
+            0.9873,
+            0.9873,
+            0.9518,
+            0.975
+          ]
+        },
+        "minority_f1": {
+          "mean": 0.953,
+          "std": 0.0238,
+          "std_sample": 0.0267,
+          "n": 5,
+          "values": [
+            0.9362,
+            0.9778,
+            0.9778,
+            0.9167,
+            0.9565
+          ]
+        },
+        "weighted_f1": {
+          "mean": 0.988,
+          "std": 0.0063,
+          "std_sample": 0.007,
+          "n": 5,
+          "values": [
+            0.9836,
+            0.9944,
+            0.9944,
+            0.9783,
+            0.989
+          ]
+        }
+      }
+    }
+  }
+}

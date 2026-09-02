@@ -1,0 +1,96 @@
+{
+  "cic_andmal": {
+    "permuted_fields": {
+      "sni": 381956,
+      "ja3": 400524,
+      "cert_subject": 302099,
+      "alpn": 253934,
+      "cert_issuer_org": 302099,
+      "tls_cipher_group": 400524,
+      "cert_validity_bucket": 400524
+    },
+    "reference_lines": {
+      "test_size": 80105,
+      "class_counts": {
+        "0": 36018,
+        "1": 44087
+      },
+      "always_majority_macro_f1": 0.355,
+      "availability_rule_sni": {
+        "present_ratio": 0.9484,
+        "macro_f1": 0.4214,
+        "present_class_mix": {
+          "0": 33352,
+          "1": 42622
+        },
+        "absent_class_mix": {
+          "0": 2666,
+          "1": 1465
+        }
+      },
+      "availability_rule_ja3": {
+        "present_ratio": 1.0,
+        "macro_f1": 0.355,
+        "present_class_mix": {
+          "0": 36018,
+          "1": 44087
+        },
+        "absent_class_mix": {}
+      },
+      "availability_rule_cert_subject": {
+        "present_ratio": 0.7548,
+        "macro_f1": 0.4557,
+        "present_class_mix": {
+          "0": 27961,
+          "1": 32506
+        },
+        "absent_class_mix": {
+          "0": 8057,
+          "1": 11581
+        }
+      },
+      "availability_rule_alpn": {
+        "present_ratio": 0.657,
+        "macro_f1": 0.5025,
+        "present_class_mix": {
+          "0": 23339,
+          "1": 29291
+        },
+        "absent_class_mix": {
+          "0": 12679,
+          "1": 14796
+        }
+      },
+      "availability_rule_cert_issuer_org": {
+        "present_ratio": 0.7548,
+        "macro_f1": 0.4557,
+        "present_class_mix": {
+          "0": 27961,
+          "1": 32506
+        },
+        "absent_class_mix": {
+          "0": 8057,
+          "1": 11581
+        }
+      },
+      "availability_rule_tls_cipher_group": {
+        "present_ratio": 1.0,
+        "macro_f1": 0.355,
+        "present_class_mix": {
+          "0": 36018,
+          "1": 44087
+        },
+        "absent_class_mix": {}
+      },
+      "availability_rule_cert_validity_bucket": {
+        "present_ratio": 1.0,
+        "macro_f1": 0.355,
+        "present_class_mix": {
+          "0": 36018,
+          "1": 44087
+        },
+        "absent_class_mix": {}
+      }
+    }
+  }
+}

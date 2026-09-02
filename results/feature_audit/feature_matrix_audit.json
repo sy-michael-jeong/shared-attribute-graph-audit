@@ -1,0 +1,1335 @@
+{
+  "data_root": "data/processed_deg2",
+  "thresholds": {
+    "unique_ratio": 0.99,
+    "abs_spearman": 0.99
+  },
+  "datasets": {
+    "bccc_dohbrw": {
+      "n_rows": 505040,
+      "n_features": 25,
+      "timestamp_available": true,
+      "ordering_axis": "timestamp",
+      "flagged": [],
+      "columns": [
+        {
+          "feature": "duration",
+          "unique_ratio": 0.812518,
+          "counter_like": false,
+          "spearman_with_ts": 0.0983,
+          "flags": []
+        },
+        {
+          "feature": "orig_bytes",
+          "unique_ratio": 0.00236,
+          "counter_like": false,
+          "spearman_with_ts": -0.0752,
+          "flags": []
+        },
+        {
+          "feature": "resp_bytes",
+          "unique_ratio": 0.184896,
+          "counter_like": false,
+          "spearman_with_ts": -0.1903,
+          "flags": []
+        },
+        {
+          "feature": "orig_pkts",
+          "unique_ratio": 0.000103,
+          "counter_like": false,
+          "spearman_with_ts": -0.1811,
+          "flags": []
+        },
+        {
+          "feature": "resp_pkts",
+          "unique_ratio": 0.015213,
+          "counter_like": false,
+          "spearman_with_ts": 0.0137,
+          "flags": []
+        },
+        {
+          "feature": "orig_ip_bytes",
+          "unique_ratio": 0.000356,
+          "counter_like": false,
+          "spearman_with_ts": -0.1802,
+          "flags": []
+        },
+        {
+          "feature": "resp_ip_bytes",
+          "unique_ratio": 0.177693,
+          "counter_like": false,
+          "spearman_with_ts": -0.0672,
+          "flags": []
+        },
+        {
+          "feature": "missed_bytes",
+          "unique_ratio": 0.002194,
+          "counter_like": false,
+          "spearman_with_ts": 0.0369,
+          "flags": []
+        },
+        {
+          "feature": "orig_pkt_rate",
+          "unique_ratio": 0.122806,
+          "counter_like": false,
+          "spearman_with_ts": -0.1887,
+          "flags": []
+        },
+        {
+          "feature": "resp_pkt_rate",
+          "unique_ratio": 0.764233,
+          "counter_like": false,
+          "spearman_with_ts": -0.1158,
+          "flags": []
+        },
+        {
+          "feature": "orig_byte_rate",
+          "unique_ratio": 0.056083,
+          "counter_like": false,
+          "spearman_with_ts": -0.075,
+          "flags": []
+        },
+        {
+          "feature": "resp_byte_rate",
+          "unique_ratio": 0.748333,
+          "counter_like": false,
+          "spearman_with_ts": -0.2127,
+          "flags": []
+        },
+        {
+          "feature": "orig_avg_pkt_size",
+          "unique_ratio": 0.002637,
+          "counter_like": false,
+          "spearman_with_ts": -0.0746,
+          "flags": []
+        },
+        {
+          "feature": "resp_avg_pkt_size",
+          "unique_ratio": 0.344979,
+          "counter_like": false,
+          "spearman_with_ts": -0.3137,
+          "flags": []
+        },
+        {
+          "feature": "proto_tcp",
+          "unique_ratio": 2e-06,
+          "counter_like": false,
+          "spearman_with_ts": 0.0,
+          "flags": []
+        },
+        {
+          "feature": "service_-",
+          "unique_ratio": 4e-06,
+          "counter_like": false,
+          "spearman_with_ts": -0.0008,
+          "flags": []
+        },
+        {
+          "feature": "conn_state_OTH",
+          "unique_ratio": 4e-06,
+          "counter_like": false,
+          "spearman_with_ts": 0.2169,
+          "flags": []
+        },
+        {
+          "feature": "conn_state_RSTRH",
+          "unique_ratio": 4e-06,
+          "counter_like": false,
+          "spearman_with_ts": 0.3793,
+          "flags": []
+        },
+        {
+          "feature": "conn_state_SHR",
+          "unique_ratio": 4e-06,
+          "counter_like": false,
+          "spearman_with_ts": -0.362,
+          "flags": []
+        },
+        {
+          "feature": "service_ssl",
+          "unique_ratio": 4e-06,
+          "counter_like": false,
+          "spearman_with_ts": 0.0008,
+          "flags": []
+        },
+        {
+          "feature": "conn_state_RSTO",
+          "unique_ratio": 4e-06,
+          "counter_like": false,
+          "spearman_with_ts": -0.0958,
+          "flags": []
+        },
+        {
+          "feature": "conn_state_RSTR",
+          "unique_ratio": 4e-06,
+          "counter_like": false,
+          "spearman_with_ts": -0.1467,
+          "flags": []
+        },
+        {
+          "feature": "conn_state_S3",
+          "unique_ratio": 4e-06,
+          "counter_like": false,
+          "spearman_with_ts": -0.0111,
+          "flags": []
+        },
+        {
+          "feature": "conn_state_SF",
+          "unique_ratio": 4e-06,
+          "counter_like": false,
+          "spearman_with_ts": -0.0022,
+          "flags": []
+        },
+        {
+          "feature": "conn_state_S1",
+          "unique_ratio": 4e-06,
+          "counter_like": false,
+          "spearman_with_ts": 0.0392,
+          "flags": []
+        }
+      ]
+    },
+    "iscx_vpn": {
+      "n_rows": 891,
+      "n_features": 24,
+      "timestamp_available": true,
+      "ordering_axis": "timestamp",
+      "flagged": [],
+      "columns": [
+        {
+          "feature": "duration",
+          "unique_ratio": 0.994388,
+          "counter_like": false,
+          "spearman_with_ts": -0.0505,
+          "flags": []
+        },
+        {
+          "feature": "orig_bytes",
+          "unique_ratio": 0.545455,
+          "counter_like": false,
+          "spearman_with_ts": -0.0544,
+          "flags": []
+        },
+        {
+          "feature": "resp_bytes",
+          "unique_ratio": 0.564534,
+          "counter_like": false,
+          "spearman_with_ts": -0.2027,
+          "flags": []
+        },
+        {
+          "feature": "orig_pkts",
+          "unique_ratio": 0.213244,
+          "counter_like": false,
+          "spearman_with_ts": -0.1408,
+          "flags": []
+        },
+        {
+          "feature": "resp_pkts",
+          "unique_ratio": 0.227834,
+          "counter_like": false,
+          "spearman_with_ts": 0.0092,
+          "flags": []
+        },
+        {
+          "feature": "orig_ip_bytes",
+          "unique_ratio": 0.683502,
+          "counter_like": false,
+          "spearman_with_ts": -0.0875,
+          "flags": []
+        },
+        {
+          "feature": "resp_ip_bytes",
+          "unique_ratio": 0.685746,
+          "counter_like": false,
+          "spearman_with_ts": -0.188,
+          "flags": []
+        },
+        {
+          "feature": "missed_bytes",
+          "unique_ratio": 0.003367,
+          "counter_like": false,
+          "spearman_with_ts": -0.0568,
+          "flags": []
+        },
+        {
+          "feature": "orig_pkt_rate",
+          "unique_ratio": 0.945006,
+          "counter_like": false,
+          "spearman_with_ts": 0.0122,
+          "flags": []
+        },
+        {
+          "feature": "resp_pkt_rate",
+          "unique_ratio": 0.953984,
+          "counter_like": false,
+          "spearman_with_ts": 0.0146,
+          "flags": []
+        },
+        {
+          "feature": "orig_byte_rate",
+          "unique_ratio": 0.937149,
+          "counter_like": false,
+          "spearman_with_ts": -0.0175,
+          "flags": []
+        },
+        {
+          "feature": "resp_byte_rate",
+          "unique_ratio": 0.93266,
+          "counter_like": false,
+          "spearman_with_ts": -0.0324,
+          "flags": []
+        },
+        {
+          "feature": "orig_avg_pkt_size",
+          "unique_ratio": 0.694725,
+          "counter_like": false,
+          "spearman_with_ts": -0.0713,
+          "flags": []
+        },
+        {
+          "feature": "resp_avg_pkt_size",
+          "unique_ratio": 0.683502,
+          "counter_like": false,
+          "spearman_with_ts": -0.186,
+          "flags": []
+        },
+        {
+          "feature": "proto_tcp",
+          "unique_ratio": 0.001122,
+          "counter_like": false,
+          "spearman_with_ts": 0.0,
+          "flags": []
+        },
+        {
+          "feature": "service_ssl",
+          "unique_ratio": 0.002245,
+          "counter_like": false,
+          "spearman_with_ts": -0.0205,
+          "flags": []
+        },
+        {
+          "feature": "conn_state_SF",
+          "unique_ratio": 0.002245,
+          "counter_like": false,
+          "spearman_with_ts": 0.132,
+          "flags": []
+        },
+        {
+          "feature": "conn_state_S1",
+          "unique_ratio": 0.002245,
+          "counter_like": false,
+          "spearman_with_ts": -0.1252,
+          "flags": []
+        },
+        {
+          "feature": "conn_state_RSTO",
+          "unique_ratio": 0.002245,
+          "counter_like": false,
+          "spearman_with_ts": -0.1111,
+          "flags": []
+        },
+        {
+          "feature": "service_ftp,ssl",
+          "unique_ratio": 0.002245,
+          "counter_like": false,
+          "spearman_with_ts": -0.0224,
+          "flags": []
+        },
+        {
+          "feature": "conn_state_S3",
+          "unique_ratio": 0.002245,
+          "counter_like": false,
+          "spearman_with_ts": 0.0382,
+          "flags": []
+        },
+        {
+          "feature": "service_-",
+          "unique_ratio": 0.002245,
+          "counter_like": false,
+          "spearman_with_ts": 0.0622,
+          "flags": []
+        },
+        {
+          "feature": "conn_state_OTH",
+          "unique_ratio": 0.002245,
+          "counter_like": false,
+          "spearman_with_ts": 0.0622,
+          "flags": []
+        },
+        {
+          "feature": "conn_state_RSTR",
+          "unique_ratio": 0.002245,
+          "counter_like": false,
+          "spearman_with_ts": -0.0379,
+          "flags": []
+        }
+      ]
+    },
+    "hikari": {
+      "n_rows": 555278,
+      "n_features": 81,
+      "timestamp_available": false,
+      "ordering_axis": "row order of the released file (not visible here)",
+      "flagged": [],
+      "columns": [
+        {
+          "feature": "originp",
+          "unique_ratio": 0.113251,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "responp",
+          "unique_ratio": 0.008207,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "flow_duration",
+          "unique_ratio": 0.343352,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "fwd_pkts_tot",
+          "unique_ratio": 0.002608,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "bwd_pkts_tot",
+          "unique_ratio": 0.002741,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "fwd_data_pkts_tot",
+          "unique_ratio": 0.001093,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "bwd_data_pkts_tot",
+          "unique_ratio": 0.002619,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "fwd_pkts_per_sec",
+          "unique_ratio": 0.237703,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "bwd_pkts_per_sec",
+          "unique_ratio": 0.240726,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "flow_pkts_per_sec",
+          "unique_ratio": 0.239111,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "down_up_ratio",
+          "unique_ratio": 0.014169,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "fwd_header_size_tot",
+          "unique_ratio": 0.009669,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "fwd_header_size_min",
+          "unique_ratio": 1.6e-05,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "fwd_header_size_max",
+          "unique_ratio": 2.3e-05,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "bwd_header_size_tot",
+          "unique_ratio": 0.006422,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "bwd_header_size_min",
+          "unique_ratio": 1.4e-05,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "bwd_header_size_max",
+          "unique_ratio": 2.3e-05,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "flow_FIN_flag_count",
+          "unique_ratio": 2.7e-05,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "flow_SYN_flag_count",
+          "unique_ratio": 3.4e-05,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "flow_RST_flag_count",
+          "unique_ratio": 8.3e-05,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "fwd_PSH_flag_count",
+          "unique_ratio": 0.00103,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "bwd_PSH_flag_count",
+          "unique_ratio": 0.001862,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "flow_ACK_flag_count",
+          "unique_ratio": 0.004313,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "fwd_URG_flag_count",
+          "unique_ratio": 9e-06,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "bwd_URG_flag_count",
+          "unique_ratio": 4e-06,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "flow_CWR_flag_count",
+          "unique_ratio": 9e-06,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "flow_ECE_flag_count",
+          "unique_ratio": 5e-06,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "fwd_pkts_payload.min",
+          "unique_ratio": 0.000315,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "fwd_pkts_payload.max",
+          "unique_ratio": 0.00346,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "fwd_pkts_payload.tot",
+          "unique_ratio": 0.019376,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "fwd_pkts_payload.avg",
+          "unique_ratio": 0.056116,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "fwd_pkts_payload.std",
+          "unique_ratio": 0.084376,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "bwd_pkts_payload.min",
+          "unique_ratio": 0.000546,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "bwd_pkts_payload.max",
+          "unique_ratio": 0.009357,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "bwd_pkts_payload.tot",
+          "unique_ratio": 0.051266,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "bwd_pkts_payload.avg",
+          "unique_ratio": 0.084084,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "bwd_pkts_payload.std",
+          "unique_ratio": 0.105313,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "flow_pkts_payload.min",
+          "unique_ratio": 0.000322,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "flow_pkts_payload.max",
+          "unique_ratio": 0.009685,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "flow_pkts_payload.tot",
+          "unique_ratio": 0.057204,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "flow_pkts_payload.avg",
+          "unique_ratio": 0.097092,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "flow_pkts_payload.std",
+          "unique_ratio": 0.116788,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "fwd_iat.min",
+          "unique_ratio": 0.038566,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "fwd_iat.max",
+          "unique_ratio": 0.256671,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "fwd_iat.tot",
+          "unique_ratio": 0.294649,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "fwd_iat.avg",
+          "unique_ratio": 0.294876,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "fwd_iat.std",
+          "unique_ratio": 0.299158,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "bwd_iat.min",
+          "unique_ratio": 0.045019,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "bwd_iat.max",
+          "unique_ratio": 0.245717,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "bwd_iat.tot",
+          "unique_ratio": 0.280323,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "bwd_iat.avg",
+          "unique_ratio": 0.312744,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "bwd_iat.std",
+          "unique_ratio": 0.28691,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "flow_iat.min",
+          "unique_ratio": 0.040389,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "flow_iat.max",
+          "unique_ratio": 0.293874,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "flow_iat.tot",
+          "unique_ratio": 0.343723,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "flow_iat.avg",
+          "unique_ratio": 0.329478,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "flow_iat.std",
+          "unique_ratio": 0.396265,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "payload_bytes_per_second",
+          "unique_ratio": 0.481937,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "fwd_subflow_pkts",
+          "unique_ratio": 0.006753,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "bwd_subflow_pkts",
+          "unique_ratio": 0.007038,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "fwd_subflow_bytes",
+          "unique_ratio": 0.028845,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "bwd_subflow_bytes",
+          "unique_ratio": 0.062738,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "fwd_bulk_bytes",
+          "unique_ratio": 0.002505,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "bwd_bulk_bytes",
+          "unique_ratio": 0.030304,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "fwd_bulk_packets",
+          "unique_ratio": 0.000376,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "bwd_bulk_packets",
+          "unique_ratio": 0.006237,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "fwd_bulk_rate",
+          "unique_ratio": 0.003867,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "bwd_bulk_rate",
+          "unique_ratio": 0.061027,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "active.min",
+          "unique_ratio": 0.323766,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "active.max",
+          "unique_ratio": 0.356967,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "active.tot",
+          "unique_ratio": 0.357792,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "active.avg",
+          "unique_ratio": 0.360057,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "active.std",
+          "unique_ratio": 0.06569,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "idle.min",
+          "unique_ratio": 0.070253,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "idle.max",
+          "unique_ratio": 0.068697,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "idle.tot",
+          "unique_ratio": 0.072578,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "idle.avg",
+          "unique_ratio": 0.070343,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "idle.std",
+          "unique_ratio": 0.032058,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "fwd_init_window_size",
+          "unique_ratio": 0.000927,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "bwd_init_window_size",
+          "unique_ratio": 0.000333,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        },
+        {
+          "feature": "fwd_last_window_size",
+          "unique_ratio": 0.006233,
+          "counter_like": false,
+          "spearman_with_ts": null,
+          "flags": []
+        }
+      ]
+    },
+    "cic_andmal": {
+      "n_rows": 400524,
+      "n_features": 24,
+      "timestamp_available": true,
+      "ordering_axis": "timestamp",
+      "flagged": [],
+      "columns": [
+        {
+          "feature": "duration",
+          "unique_ratio": 0.923173,
+          "counter_like": false,
+          "spearman_with_ts": 0.0372,
+          "flags": []
+        },
+        {
+          "feature": "orig_bytes",
+          "unique_ratio": 0.046881,
+          "counter_like": false,
+          "spearman_with_ts": 0.0278,
+          "flags": []
+        },
+        {
+          "feature": "resp_bytes",
+          "unique_ratio": 0.153599,
+          "counter_like": false,
+          "spearman_with_ts": 0.032,
+          "flags": []
+        },
+        {
+          "feature": "orig_pkts",
+          "unique_ratio": 0.003393,
+          "counter_like": false,
+          "spearman_with_ts": 0.0139,
+          "flags": []
+        },
+        {
+          "feature": "resp_pkts",
+          "unique_ratio": 0.004851,
+          "counter_like": false,
+          "spearman_with_ts": 0.0355,
+          "flags": []
+        },
+        {
+          "feature": "orig_ip_bytes",
+          "unique_ratio": 0.059894,
+          "counter_like": false,
+          "spearman_with_ts": 0.0173,
+          "flags": []
+        },
+        {
+          "feature": "resp_ip_bytes",
+          "unique_ratio": 0.17006,
+          "counter_like": false,
+          "spearman_with_ts": 0.0293,
+          "flags": []
+        },
+        {
+          "feature": "missed_bytes",
+          "unique_ratio": 0.002387,
+          "counter_like": false,
+          "spearman_with_ts": 0.1034,
+          "flags": []
+        },
+        {
+          "feature": "orig_pkt_rate",
+          "unique_ratio": 0.845587,
+          "counter_like": false,
+          "spearman_with_ts": -0.0312,
+          "flags": []
+        },
+        {
+          "feature": "resp_pkt_rate",
+          "unique_ratio": 0.749206,
+          "counter_like": false,
+          "spearman_with_ts": -0.0215,
+          "flags": []
+        },
+        {
+          "feature": "orig_byte_rate",
+          "unique_ratio": 0.842207,
+          "counter_like": false,
+          "spearman_with_ts": -0.0152,
+          "flags": []
+        },
+        {
+          "feature": "resp_byte_rate",
+          "unique_ratio": 0.695082,
+          "counter_like": false,
+          "spearman_with_ts": -0.0149,
+          "flags": []
+        },
+        {
+          "feature": "orig_avg_pkt_size",
+          "unique_ratio": 0.203658,
+          "counter_like": false,
+          "spearman_with_ts": 0.0193,
+          "flags": []
+        },
+        {
+          "feature": "resp_avg_pkt_size",
+          "unique_ratio": 0.276336,
+          "counter_like": false,
+          "spearman_with_ts": 0.0174,
+          "flags": []
+        },
+        {
+          "feature": "proto_tcp",
+          "unique_ratio": 2e-06,
+          "counter_like": false,
+          "spearman_with_ts": 0.0,
+          "flags": []
+        },
+        {
+          "feature": "service_ssl",
+          "unique_ratio": 5e-06,
+          "counter_like": false,
+          "spearman_with_ts": -0.0165,
+          "flags": []
+        },
+        {
+          "feature": "conn_state_RSTO",
+          "unique_ratio": 5e-06,
+          "counter_like": false,
+          "spearman_with_ts": -0.0141,
+          "flags": []
+        },
+        {
+          "feature": "conn_state_RSTR",
+          "unique_ratio": 5e-06,
+          "counter_like": false,
+          "spearman_with_ts": -0.0225,
+          "flags": []
+        },
+        {
+          "feature": "conn_state_S1",
+          "unique_ratio": 5e-06,
+          "counter_like": false,
+          "spearman_with_ts": -0.0116,
+          "flags": []
+        },
+        {
+          "feature": "conn_state_S3",
+          "unique_ratio": 5e-06,
+          "counter_like": false,
+          "spearman_with_ts": -0.0051,
+          "flags": []
+        },
+        {
+          "feature": "conn_state_SF",
+          "unique_ratio": 5e-06,
+          "counter_like": false,
+          "spearman_with_ts": 0.0311,
+          "flags": []
+        },
+        {
+          "feature": "conn_state_S2",
+          "unique_ratio": 5e-06,
+          "counter_like": false,
+          "spearman_with_ts": -0.0032,
+          "flags": []
+        },
+        {
+          "feature": "service_-",
+          "unique_ratio": 5e-06,
+          "counter_like": false,
+          "spearman_with_ts": -0.002,
+          "flags": []
+        },
+        {
+          "feature": "service_xmpp,ssl",
+          "unique_ratio": 5e-06,
+          "counter_like": false,
+          "spearman_with_ts": 0.0169,
+          "flags": []
+        }
+      ]
+    },
+    "vnat": {
+      "n_rows": 2197,
+      "n_features": 23,
+      "timestamp_available": true,
+      "ordering_axis": "timestamp",
+      "flagged": [],
+      "columns": [
+        {
+          "feature": "duration",
+          "unique_ratio": 0.862085,
+          "counter_like": false,
+          "spearman_with_ts": -0.1517,
+          "flags": []
+        },
+        {
+          "feature": "orig_bytes",
+          "unique_ratio": 0.452435,
+          "counter_like": false,
+          "spearman_with_ts": -0.1332,
+          "flags": []
+        },
+        {
+          "feature": "resp_bytes",
+          "unique_ratio": 0.471552,
+          "counter_like": false,
+          "spearman_with_ts": -0.0998,
+          "flags": []
+        },
+        {
+          "feature": "orig_pkts",
+          "unique_ratio": 0.116067,
+          "counter_like": false,
+          "spearman_with_ts": -0.1654,
+          "flags": []
+        },
+        {
+          "feature": "resp_pkts",
+          "unique_ratio": 0.125626,
+          "counter_like": false,
+          "spearman_with_ts": -0.1674,
+          "flags": []
+        },
+        {
+          "feature": "orig_ip_bytes",
+          "unique_ratio": 0.513427,
+          "counter_like": false,
+          "spearman_with_ts": -0.1412,
+          "flags": []
+        },
+        {
+          "feature": "resp_ip_bytes",
+          "unique_ratio": 0.521165,
+          "counter_like": false,
+          "spearman_with_ts": -0.1088,
+          "flags": []
+        },
+        {
+          "feature": "missed_bytes",
+          "unique_ratio": 0.005007,
+          "counter_like": false,
+          "spearman_with_ts": 0.0704,
+          "flags": []
+        },
+        {
+          "feature": "orig_pkt_rate",
+          "unique_ratio": 0.801092,
+          "counter_like": false,
+          "spearman_with_ts": 0.0372,
+          "flags": []
+        },
+        {
+          "feature": "resp_pkt_rate",
+          "unique_ratio": 0.761038,
+          "counter_like": false,
+          "spearman_with_ts": -0.0561,
+          "flags": []
+        },
+        {
+          "feature": "orig_byte_rate",
+          "unique_ratio": 0.764224,
+          "counter_like": false,
+          "spearman_with_ts": -0.0499,
+          "flags": []
+        },
+        {
+          "feature": "resp_byte_rate",
+          "unique_ratio": 0.755121,
+          "counter_like": false,
+          "spearman_with_ts": -0.0471,
+          "flags": []
+        },
+        {
+          "feature": "orig_avg_pkt_size",
+          "unique_ratio": 0.545289,
+          "counter_like": false,
+          "spearman_with_ts": -0.1023,
+          "flags": []
+        },
+        {
+          "feature": "resp_avg_pkt_size",
+          "unique_ratio": 0.532089,
+          "counter_like": false,
+          "spearman_with_ts": -0.0536,
+          "flags": []
+        },
+        {
+          "feature": "proto_tcp",
+          "unique_ratio": 0.000455,
+          "counter_like": false,
+          "spearman_with_ts": 0.0,
+          "flags": []
+        },
+        {
+          "feature": "service_http,ssl",
+          "unique_ratio": 0.00091,
+          "counter_like": false,
+          "spearman_with_ts": -0.2569,
+          "flags": []
+        },
+        {
+          "feature": "conn_state_RSTO",
+          "unique_ratio": 0.00091,
+          "counter_like": false,
+          "spearman_with_ts": -0.0325,
+          "flags": []
+        },
+        {
+          "feature": "conn_state_S1",
+          "unique_ratio": 0.00091,
+          "counter_like": false,
+          "spearman_with_ts": 0.0799,
+          "flags": []
+        },
+        {
+          "feature": "conn_state_SF",
+          "unique_ratio": 0.00091,
+          "counter_like": false,
+          "spearman_with_ts": -0.1367,
+          "flags": []
+        },
+        {
+          "feature": "service_ssl",
+          "unique_ratio": 0.00091,
+          "counter_like": false,
+          "spearman_with_ts": 0.2725,
+          "flags": []
+        },
+        {
+          "feature": "service_http",
+          "unique_ratio": 0.00091,
+          "counter_like": false,
+          "spearman_with_ts": -0.0257,
+          "flags": []
+        },
+        {
+          "feature": "service_-",
+          "unique_ratio": 0.00091,
+          "counter_like": false,
+          "spearman_with_ts": 0.1557,
+          "flags": []
+        },
+        {
+          "feature": "conn_state_S0",
+          "unique_ratio": 0.00091,
+          "counter_like": false,
+          "spearman_with_ts": 0.1557,
+          "flags": []
+        }
+      ]
+    }
+  },
+  "self_test": {
+    "row number, contiguous": {
+      "expected": true,
+      "detected": true,
+      "pass": true
+    },
+    "row number, 70% of the rows kept": {
+      "expected": true,
+      "detected": true,
+      "pass": true
+    },
+    "row number, 20% of the rows kept": {
+      "expected": true,
+      "detected": true,
+      "pass": true
+    },
+    "duration in seconds": {
+      "expected": false,
+      "detected": false,
+      "pass": true
+    },
+    "packet count": {
+      "expected": false,
+      "detected": false,
+      "pass": true
+    },
+    "byte count": {
+      "expected": false,
+      "detected": false,
+      "pass": true
+    },
+    "timestamp in whole seconds": {
+      "expected": false,
+      "detected": false,
+      "pass": true
+    },
+    "port number": {
+      "expected": false,
+      "detected": false,
+      "pass": true
+    }
+  }
+}

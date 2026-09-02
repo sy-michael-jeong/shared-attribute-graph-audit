@@ -1,0 +1,757 @@
+{
+  "bccc_dohbrw": {
+    "relations_full": [
+      "via_ja3",
+      "via_cert_subject",
+      "via_alpn",
+      "via_cert_issuer",
+      "via_tls_cipher_group",
+      "via_cert_validity"
+    ],
+    "relations_selected": [
+      "via_cert_subject",
+      "via_cert_validity"
+    ],
+    "n_features_full": 24,
+    "n_features_selected": 8,
+    "feature_names_selected": [
+      "cert_subject_present",
+      "cert_subject_train_freq",
+      "cert_subject_seen",
+      "cert_subject_group_size",
+      "cert_validity_present",
+      "cert_validity_train_freq",
+      "cert_validity_seen",
+      "cert_validity_group_size"
+    ],
+    "runs": {
+      "flow_only__fit_train": {
+        "macro_f1_mean": 0.9963,
+        "macro_f1_std": 0.0001,
+        "minority_f1_mean": 0.9948,
+        "per_seed": [
+          0.9964,
+          0.9964,
+          0.9962,
+          0.9964,
+          0.9962
+        ]
+      },
+      "meta_selected__fit_train": {
+        "macro_f1_mean": 1.0,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 1.0,
+        "per_seed": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "flow_plus_meta_selected__fit_train": {
+        "macro_f1_mean": 1.0,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 1.0,
+        "per_seed": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "meta_full__fit_train": {
+        "macro_f1_mean": 1.0,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 1.0,
+        "per_seed": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "flow_plus_meta_full__fit_train": {
+        "macro_f1_mean": 1.0,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 1.0,
+        "per_seed": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "flow_only__fit_trainval": {
+        "macro_f1_mean": 0.9964,
+        "macro_f1_std": 0.0001,
+        "minority_f1_mean": 0.9948,
+        "per_seed": [
+          0.9964,
+          0.9963,
+          0.9963,
+          0.9963,
+          0.9965
+        ]
+      },
+      "meta_selected__fit_trainval": {
+        "macro_f1_mean": 1.0,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 1.0,
+        "per_seed": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "flow_plus_meta_selected__fit_trainval": {
+        "macro_f1_mean": 1.0,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 1.0,
+        "per_seed": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "meta_full__fit_trainval": {
+        "macro_f1_mean": 1.0,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 1.0,
+        "per_seed": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "flow_plus_meta_full__fit_trainval": {
+        "macro_f1_mean": 1.0,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 1.0,
+        "per_seed": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    }
+  },
+  "iscx_vpn": {
+    "relations_full": [
+      "via_sni",
+      "via_ja3",
+      "via_cert_subject",
+      "via_alpn",
+      "via_cert_issuer",
+      "via_tls_cipher_group",
+      "via_cert_validity",
+      "via_timebin",
+      "via_src_host",
+      "via_dst_host"
+    ],
+    "relations_selected": [
+      "via_src_host"
+    ],
+    "n_features_full": 40,
+    "n_features_selected": 4,
+    "feature_names_selected": [
+      "src_host_present",
+      "src_host_train_freq",
+      "src_host_seen",
+      "src_host_group_size"
+    ],
+    "runs": {
+      "flow_only__fit_train": {
+        "macro_f1_mean": 1.0,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 1.0,
+        "per_seed": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "meta_selected__fit_train": {
+        "macro_f1_mean": 0.8593,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 0.7273,
+        "per_seed": [
+          0.8593,
+          0.8593,
+          0.8593,
+          0.8593,
+          0.8593
+        ]
+      },
+      "flow_plus_meta_selected__fit_train": {
+        "macro_f1_mean": 0.5257,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 0.1739,
+        "per_seed": [
+          0.5257,
+          0.5257,
+          0.5257,
+          0.5257,
+          0.5257
+        ]
+      },
+      "meta_full__fit_train": {
+        "macro_f1_mean": 0.9531,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 0.9091,
+        "per_seed": [
+          0.9531,
+          0.9531,
+          0.9531,
+          0.9531,
+          0.9531
+        ]
+      },
+      "flow_plus_meta_full__fit_train": {
+        "macro_f1_mean": 0.9531,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 0.9091,
+        "per_seed": [
+          0.9531,
+          0.9531,
+          0.9531,
+          0.9531,
+          0.9531
+        ]
+      },
+      "flow_only__fit_trainval": {
+        "macro_f1_mean": 1.0,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 1.0,
+        "per_seed": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "meta_selected__fit_trainval": {
+        "macro_f1_mean": 0.8593,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 0.7273,
+        "per_seed": [
+          0.8593,
+          0.8593,
+          0.8593,
+          0.8593,
+          0.8593
+        ]
+      },
+      "flow_plus_meta_selected__fit_trainval": {
+        "macro_f1_mean": 0.9601,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 0.9231,
+        "per_seed": [
+          0.9601,
+          0.9601,
+          0.9601,
+          0.9601,
+          0.9601
+        ]
+      },
+      "meta_full__fit_trainval": {
+        "macro_f1_mean": 0.9531,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 0.9091,
+        "per_seed": [
+          0.9531,
+          0.9531,
+          0.9531,
+          0.9531,
+          0.9531
+        ]
+      },
+      "flow_plus_meta_full__fit_trainval": {
+        "macro_f1_mean": 0.9531,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 0.9091,
+        "per_seed": [
+          0.9531,
+          0.9531,
+          0.9531,
+          0.9531,
+          0.9531
+        ]
+      }
+    }
+  },
+  "hikari": {
+    "relations_full": [
+      "via_src_host",
+      "via_dst_host"
+    ],
+    "relations_selected": [
+      "via_dst_host"
+    ],
+    "n_features_full": 8,
+    "n_features_selected": 4,
+    "feature_names_selected": [
+      "dst_host_present",
+      "dst_host_train_freq",
+      "dst_host_seen",
+      "dst_host_group_size"
+    ],
+    "runs": {
+      "flow_only__fit_train": {
+        "macro_f1_mean": 0.4536,
+        "macro_f1_std": 0.0009,
+        "minority_f1_mean": 0.1559,
+        "per_seed": [
+          0.4543,
+          0.4518,
+          0.4538,
+          0.4541,
+          0.4541
+        ]
+      },
+      "meta_selected__fit_train": {
+        "macro_f1_mean": 0.4824,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 0.0,
+        "per_seed": [
+          0.4824,
+          0.4824,
+          0.4824,
+          0.4824,
+          0.4824
+        ]
+      },
+      "flow_plus_meta_selected__fit_train": {
+        "macro_f1_mean": 0.4646,
+        "macro_f1_std": 0.0229,
+        "minority_f1_mean": 0.1418,
+        "per_seed": [
+          0.4526,
+          0.4529,
+          0.4527,
+          0.4545,
+          0.5103
+        ]
+      },
+      "meta_full__fit_train": {
+        "macro_f1_mean": 0.4778,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 0.0,
+        "per_seed": [
+          0.4778,
+          0.4778,
+          0.4778,
+          0.4778,
+          0.4778
+        ]
+      },
+      "flow_plus_meta_full__fit_train": {
+        "macro_f1_mean": 0.4732,
+        "macro_f1_std": 0.0165,
+        "minority_f1_mean": 0.1401,
+        "per_seed": [
+          0.4667,
+          0.4586,
+          0.4954,
+          0.4551,
+          0.4903
+        ]
+      },
+      "flow_only__fit_trainval": {
+        "macro_f1_mean": 0.457,
+        "macro_f1_std": 0.0005,
+        "minority_f1_mean": 0.143,
+        "per_seed": [
+          0.4576,
+          0.4568,
+          0.4561,
+          0.4571,
+          0.4573
+        ]
+      },
+      "meta_selected__fit_trainval": {
+        "macro_f1_mean": 0.4527,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 0.163,
+        "per_seed": [
+          0.4528,
+          0.4527,
+          0.4527,
+          0.4527,
+          0.4527
+        ]
+      },
+      "flow_plus_meta_selected__fit_trainval": {
+        "macro_f1_mean": 0.4638,
+        "macro_f1_std": 0.0044,
+        "minority_f1_mean": 0.011,
+        "per_seed": [
+          0.461,
+          0.469,
+          0.4596,
+          0.4602,
+          0.4692
+        ]
+      },
+      "meta_full__fit_trainval": {
+        "macro_f1_mean": 0.4528,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 0.163,
+        "per_seed": [
+          0.4528,
+          0.4528,
+          0.4528,
+          0.4528,
+          0.4528
+        ]
+      },
+      "flow_plus_meta_full__fit_trainval": {
+        "macro_f1_mean": 0.4652,
+        "macro_f1_std": 0.0021,
+        "minority_f1_mean": 0.0146,
+        "per_seed": [
+          0.4627,
+          0.4627,
+          0.4659,
+          0.468,
+          0.4666
+        ]
+      }
+    }
+  },
+  "cic_andmal": {
+    "relations_full": [
+      "via_sni",
+      "via_ja3",
+      "via_cert_subject",
+      "via_alpn",
+      "via_cert_issuer",
+      "via_tls_cipher_group",
+      "via_cert_validity"
+    ],
+    "relations_selected": [
+      "via_sni",
+      "via_ja3",
+      "via_cert_subject",
+      "via_alpn",
+      "via_cert_issuer",
+      "via_tls_cipher_group",
+      "via_cert_validity"
+    ],
+    "n_features_full": 28,
+    "n_features_selected": 28,
+    "feature_names_selected": [
+      "sni_present",
+      "sni_train_freq",
+      "sni_seen",
+      "sni_group_size",
+      "ja3_present",
+      "ja3_train_freq",
+      "ja3_seen",
+      "ja3_group_size",
+      "cert_subject_present",
+      "cert_subject_train_freq",
+      "cert_subject_seen",
+      "cert_subject_group_size",
+      "alpn_present",
+      "alpn_train_freq",
+      "alpn_seen",
+      "alpn_group_size",
+      "cert_issuer_present",
+      "cert_issuer_train_freq",
+      "cert_issuer_seen",
+      "cert_issuer_group_size",
+      "tls_cipher_group_present",
+      "tls_cipher_group_train_freq",
+      "tls_cipher_group_seen",
+      "tls_cipher_group_group_size",
+      "cert_validity_present",
+      "cert_validity_train_freq",
+      "cert_validity_seen",
+      "cert_validity_group_size"
+    ],
+    "runs": {
+      "flow_only__fit_train": {
+        "macro_f1_mean": 0.5995,
+        "macro_f1_std": 0.0012,
+        "minority_f1_mean": 0.5604,
+        "per_seed": [
+          0.5997,
+          0.6018,
+          0.5986,
+          0.5994,
+          0.5983
+        ]
+      },
+      "meta_selected__fit_train": {
+        "macro_f1_mean": 0.4921,
+        "macro_f1_std": 0.0062,
+        "minority_f1_mean": 0.3462,
+        "per_seed": [
+          0.4866,
+          0.4843,
+          0.4996,
+          0.4915,
+          0.4987
+        ]
+      },
+      "flow_plus_meta_selected__fit_train": {
+        "macro_f1_mean": 0.61,
+        "macro_f1_std": 0.0027,
+        "minority_f1_mean": 0.5335,
+        "per_seed": [
+          0.6114,
+          0.6066,
+          0.6092,
+          0.6145,
+          0.6082
+        ]
+      },
+      "meta_full__fit_train": {
+        "macro_f1_mean": 0.4921,
+        "macro_f1_std": 0.0062,
+        "minority_f1_mean": 0.3462,
+        "per_seed": [
+          0.4866,
+          0.4843,
+          0.4996,
+          0.4915,
+          0.4987
+        ]
+      },
+      "flow_plus_meta_full__fit_train": {
+        "macro_f1_mean": 0.61,
+        "macro_f1_std": 0.0027,
+        "minority_f1_mean": 0.5335,
+        "per_seed": [
+          0.6114,
+          0.6066,
+          0.6092,
+          0.6145,
+          0.6082
+        ]
+      },
+      "flow_only__fit_trainval": {
+        "macro_f1_mean": 0.6583,
+        "macro_f1_std": 0.0009,
+        "minority_f1_mean": 0.6345,
+        "per_seed": [
+          0.6584,
+          0.658,
+          0.658,
+          0.6573,
+          0.66
+        ]
+      },
+      "meta_selected__fit_trainval": {
+        "macro_f1_mean": 0.6445,
+        "macro_f1_std": 0.001,
+        "minority_f1_mean": 0.635,
+        "per_seed": [
+          0.6439,
+          0.6454,
+          0.6435,
+          0.6435,
+          0.6459
+        ]
+      },
+      "flow_plus_meta_selected__fit_trainval": {
+        "macro_f1_mean": 0.7028,
+        "macro_f1_std": 0.002,
+        "minority_f1_mean": 0.6856,
+        "per_seed": [
+          0.7016,
+          0.7066,
+          0.7011,
+          0.7028,
+          0.7018
+        ]
+      },
+      "meta_full__fit_trainval": {
+        "macro_f1_mean": 0.6445,
+        "macro_f1_std": 0.001,
+        "minority_f1_mean": 0.635,
+        "per_seed": [
+          0.6439,
+          0.6454,
+          0.6435,
+          0.6435,
+          0.6459
+        ]
+      },
+      "flow_plus_meta_full__fit_trainval": {
+        "macro_f1_mean": 0.7028,
+        "macro_f1_std": 0.002,
+        "minority_f1_mean": 0.6856,
+        "per_seed": [
+          0.7016,
+          0.7066,
+          0.7011,
+          0.7028,
+          0.7018
+        ]
+      }
+    }
+  },
+  "vnat": {
+    "relations_full": [
+      "via_sni",
+      "via_ja3",
+      "via_cert_subject",
+      "via_alpn",
+      "via_cert_issuer",
+      "via_tls_cipher_group",
+      "via_cert_validity",
+      "via_timebin",
+      "via_src_host",
+      "via_dst_host"
+    ],
+    "relations_selected": [
+      "via_timebin"
+    ],
+    "n_features_full": 40,
+    "n_features_selected": 4,
+    "feature_names_selected": [
+      "timebin_present",
+      "timebin_train_freq",
+      "timebin_seen",
+      "timebin_group_size"
+    ],
+    "runs": {
+      "flow_only__fit_train": {
+        "macro_f1_mean": 1.0,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 1.0,
+        "per_seed": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "meta_selected__fit_train": {
+        "macro_f1_mean": 0.6725,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 0.4167,
+        "per_seed": [
+          0.6725,
+          0.6725,
+          0.6725,
+          0.6725,
+          0.6725
+        ]
+      },
+      "flow_plus_meta_selected__fit_train": {
+        "macro_f1_mean": 1.0,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 1.0,
+        "per_seed": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "meta_full__fit_train": {
+        "macro_f1_mean": 1.0,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 1.0,
+        "per_seed": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "flow_plus_meta_full__fit_train": {
+        "macro_f1_mean": 1.0,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 1.0,
+        "per_seed": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "flow_only__fit_trainval": {
+        "macro_f1_mean": 1.0,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 1.0,
+        "per_seed": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "meta_selected__fit_trainval": {
+        "macro_f1_mean": 0.7491,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 0.5405,
+        "per_seed": [
+          0.7491,
+          0.7491,
+          0.7491,
+          0.7491,
+          0.7491
+        ]
+      },
+      "flow_plus_meta_selected__fit_trainval": {
+        "macro_f1_mean": 1.0,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 1.0,
+        "per_seed": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "meta_full__fit_trainval": {
+        "macro_f1_mean": 1.0,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 1.0,
+        "per_seed": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "flow_plus_meta_full__fit_trainval": {
+        "macro_f1_mean": 1.0,
+        "macro_f1_std": 0.0,
+        "minority_f1_mean": 1.0,
+        "per_seed": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    }
+  }
+}

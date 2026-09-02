@@ -1,0 +1,24 @@
+{
+  "hikari": {
+    "permuted_fields": {
+      "dst_ip": 555278
+    },
+    "reference_lines": {
+      "test_size": 111055,
+      "class_counts": {
+        "0": 103516,
+        "1": 7539
+      },
+      "always_majority_macro_f1": 0.4824,
+      "availability_rule_dst_ip": {
+        "present_ratio": 1.0,
+        "macro_f1": 0.4824,
+        "present_class_mix": {
+          "0": 103516,
+          "1": 7539
+        },
+        "absent_class_mix": {}
+      }
+    }
+  }
+}

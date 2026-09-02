@@ -1,0 +1,156 @@
+{
+  "vnat": {
+    "data_root": "data/processed_deg2",
+    "seeds": [
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "sets": {
+      "manual_1": {
+        "metapaths": [
+          "via_sni",
+          "via_ja3",
+          "via_cert_subject",
+          "via_alpn",
+          "via_cert_issuer",
+          "via_tls_cipher_group",
+          "via_cert_validity"
+        ],
+        "per_seed": [
+          {
+            "accuracy": 0.9749430523917996,
+            "macro_f1": 0.8811206026439526,
+            "weighted_f1": 0.9771081858475191,
+            "minority_f1": 0.7755102040816326,
+            "minority_recall": 0.95,
+            "best_val": 0.9749971587680417,
+            "seed": 41,
+            "relations": [
+              "via_sni",
+              "via_ja3",
+              "via_cert_subject",
+              "via_alpn",
+              "via_cert_issuer",
+              "via_tls_cipher_group",
+              "via_cert_validity"
+            ]
+          },
+          {
+            "accuracy": 0.9453302961275627,
+            "macro_f1": 0.7784693019343987,
+            "weighted_f1": 0.9532134927036177,
+            "minority_f1": 0.5862068965517241,
+            "minority_recall": 0.85,
+            "best_val": 0.7050240555248837,
+            "seed": 42,
+            "relations": [
+              "via_sni",
+              "via_ja3",
+              "via_cert_subject",
+              "via_alpn",
+              "via_cert_issuer",
+              "via_tls_cipher_group",
+              "via_cert_validity"
+            ]
+          },
+          {
+            "accuracy": 0.9772209567198178,
+            "macro_f1": 0.8749715197083618,
+            "weighted_f1": 0.9777360672337294,
+            "minority_f1": 0.7619047619047619,
+            "minority_recall": 0.8,
+            "best_val": 0.7607655502392344,
+            "seed": 43,
+            "relations": [
+              "via_sni",
+              "via_ja3",
+              "via_cert_subject",
+              "via_alpn",
+              "via_cert_issuer",
+              "via_tls_cipher_group",
+              "via_cert_validity"
+            ]
+          },
+          {
+            "accuracy": 0.9681093394077449,
+            "macro_f1": 0.8515458937198068,
+            "weighted_f1": 0.9711058290141186,
+            "minority_f1": 0.72,
+            "minority_recall": 0.9,
+            "best_val": 0.7407698350353495,
+            "seed": 44,
+            "relations": [
+              "via_sni",
+              "via_ja3",
+              "via_cert_subject",
+              "via_alpn",
+              "via_cert_issuer",
+              "via_tls_cipher_group",
+              "via_cert_validity"
+            ]
+          },
+          {
+            "accuracy": 0.9658314350797267,
+            "macro_f1": 0.8378917308781173,
+            "weighted_f1": 0.9687838897920715,
+            "minority_f1": 0.6938775510204082,
+            "minority_recall": 0.85,
+            "best_val": 0.6974697469746974,
+            "seed": 45,
+            "relations": [
+              "via_sni",
+              "via_ja3",
+              "via_cert_subject",
+              "via_alpn",
+              "via_cert_issuer",
+              "via_tls_cipher_group",
+              "via_cert_validity"
+            ]
+          }
+        ],
+        "macro_f1": {
+          "mean": 0.8448,
+          "std": 0.0367,
+          "std_sample": 0.041,
+          "n": 5,
+          "values": [
+            0.8811,
+            0.7785,
+            0.875,
+            0.8515,
+            0.8379
+          ]
+        },
+        "minority_f1": {
+          "mean": 0.7075,
+          "std": 0.0673,
+          "std_sample": 0.0752,
+          "n": 5,
+          "values": [
+            0.7755,
+            0.5862,
+            0.7619,
+            0.72,
+            0.6939
+          ]
+        },
+        "weighted_f1": {
+          "mean": 0.9696,
+          "std": 0.0089,
+          "std_sample": 0.0099,
+          "n": 5,
+          "values": [
+            0.9771,
+            0.9532,
+            0.9777,
+            0.9711,
+            0.9688
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "bccc_dohbrw": {
+    "data_root": "data/processed_deg2_bccc10",
+    "seeds": [
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "sets": {
+      "manual_1": {
+        "metapaths": [
+          "via_sni",
+          "via_ja3",
+          "via_cert_subject",
+          "via_alpn",
+          "via_cert_issuer",
+          "via_tls_cipher_group",
+          "via_cert_validity"
+        ],
+        "per_seed": [
+          {
+            "accuracy": 0.99986139711706,
+            "macro_f1": 0.9998320279982427,
+            "weighted_f1": 0.9998613915542002,
+            "minority_f1": 0.9997617913292044,
+            "minority_recall": 0.9996257230350459,
+            "best_val": 0.9999760054441872,
+            "seed": 41,
+            "relations": [
+              "via_ja3",
+              "via_cert_subject",
+              "via_alpn",
+              "via_cert_issuer",
+              "via_tls_cipher_group",
+              "via_cert_validity"
+            ]
+          },
+          {
+            "accuracy": 0.9995049897037859,
+            "macro_f1": 0.9993998951858434,
+            "weighted_f1": 0.99950488528056,
+            "minority_f1": 0.9991487623003847,
+            "minority_recall": 0.9984348417829194,
+            "best_val": 0.9998080165859315,
+            "seed": 42,
+            "relations": [
+              "via_ja3",
+              "via_cert_subject",
+              "via_alpn",
+              "via_cert_issuer",
+              "via_tls_cipher_group",
+              "via_cert_validity"
+            ]
+          },
+          {
+            "accuracy": 0.99986139711706,
+            "macro_f1": 0.9998320246272969,
+            "weighted_f1": 0.9998613901630163,
+            "minority_f1": 0.9997617832227327,
+            "minority_recall": 0.9995916978564138,
+            "best_val": 0.9999760054441872,
+            "seed": 43,
+            "relations": [
+              "via_ja3",
+              "via_cert_subject",
+              "via_alpn",
+              "via_cert_issuer",
+              "via_tls_cipher_group",
+              "via_cert_validity"
+            ]
+          },
+          {
+            "accuracy": 0.9995049897037859,
+            "macro_f1": 0.9993998951858434,
+            "weighted_f1": 0.99950488528056,
+            "minority_f1": 0.9991487623003847,
+            "minority_recall": 0.9984348417829194,
+            "best_val": 0.9998080165859315,
+            "seed": 44,
+            "relations": [
+              "via_ja3",
+              "via_cert_subject",
+              "via_alpn",
+              "via_cert_issuer",
+              "via_tls_cipher_group",
+              "via_cert_validity"
+            ]
+          },
+          {
+            "accuracy": 0.9999108981466814,
+            "macro_f1": 0.9998920190823175,
+            "weighted_f1": 0.9999108950176783,
+            "minority_f1": 0.9998468684600071,
+            "minority_recall": 0.9997277985709425,
+            "best_val": 0.9999760054441872,
+            "seed": 45,
+            "relations": [
+              "via_ja3",
+              "via_cert_subject",
+              "via_alpn",
+              "via_cert_issuer",
+              "via_tls_cipher_group",
+              "via_cert_validity"
+            ]
+          }
+        ],
+        "macro_f1": {
+          "mean": 0.9997,
+          "std": 0.0002,
+          "std_sample": 0.0002,
+          "n": 5,
+          "values": [
+            0.9998,
+            0.9994,
+            0.9998,
+            0.9994,
+            0.9999
+          ]
+        },
+        "minority_f1": {
+          "mean": 0.9995,
+          "std": 0.0003,
+          "std_sample": 0.0004,
+          "n": 5,
+          "values": [
+            0.9998,
+            0.9991,
+            0.9998,
+            0.9991,
+            0.9998
+          ]
+        },
+        "weighted_f1": {
+          "mean": 0.9997,
+          "std": 0.0002,
+          "std_sample": 0.0002,
+          "n": 5,
+          "values": [
+            0.9999,
+            0.9995,
+            0.9999,
+            0.9995,
+            0.9999
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,358 @@
+{
+  "data_root": "data/processed_deg2",
+  "config": "config.yaml",
+  "datasets": {
+    "bccc_dohbrw": {
+      "requested": [
+        "via_sni",
+        "via_ja3",
+        "via_cert_subject",
+        "via_alpn",
+        "via_cert_issuer",
+        "via_tls_cipher_group",
+        "via_cert_validity"
+      ],
+      "relations": {
+        "via_sni": {
+          "verdict": "둘 다 없음 (건너뜀)"
+        },
+        "via_ja3": {
+          "shipped_edges": 994488,
+          "rebuilt_edges": 994488,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_cert_subject": {
+          "shipped_edges": 288312,
+          "rebuilt_edges": 288312,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_alpn": {
+          "shipped_edges": 329418,
+          "rebuilt_edges": 329418,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_cert_issuer": {
+          "shipped_edges": 292036,
+          "rebuilt_edges": 292036,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_tls_cipher_group": {
+          "shipped_edges": 994490,
+          "rebuilt_edges": 994490,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_cert_validity": {
+          "shipped_edges": 716222,
+          "rebuilt_edges": 716222,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        }
+      },
+      "all_identical": true
+    },
+    "iscx_vpn": {
+      "requested": [
+        "via_sni",
+        "via_ja3",
+        "via_cert_subject",
+        "via_alpn",
+        "via_cert_issuer",
+        "via_tls_cipher_group",
+        "via_cert_validity",
+        "via_src_host",
+        "via_dst_host",
+        "via_timebin"
+      ],
+      "relations": {
+        "via_sni": {
+          "shipped_edges": 1384,
+          "rebuilt_edges": 1384,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_ja3": {
+          "shipped_edges": 1754,
+          "rebuilt_edges": 1754,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_cert_subject": {
+          "shipped_edges": 1012,
+          "rebuilt_edges": 1012,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_alpn": {
+          "shipped_edges": 856,
+          "rebuilt_edges": 856,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_cert_issuer": {
+          "shipped_edges": 1048,
+          "rebuilt_edges": 1048,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_tls_cipher_group": {
+          "shipped_edges": 1770,
+          "rebuilt_edges": 1770,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_cert_validity": {
+          "shipped_edges": 1768,
+          "rebuilt_edges": 1768,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_src_host": {
+          "shipped_edges": 1780,
+          "rebuilt_edges": 1780,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_dst_host": {
+          "shipped_edges": 1556,
+          "rebuilt_edges": 1556,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_timebin": {
+          "shipped_edges": 1694,
+          "rebuilt_edges": 1694,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        }
+      },
+      "all_identical": true
+    },
+    "hikari": {
+      "requested": [
+        "via_sni",
+        "via_ja3",
+        "via_cert_subject",
+        "via_alpn",
+        "via_cert_issuer",
+        "via_tls_cipher_group",
+        "via_cert_validity",
+        "via_src_host",
+        "via_dst_host",
+        "via_timebin"
+      ],
+      "relations": {
+        "via_sni": {
+          "verdict": "둘 다 없음 (건너뜀)"
+        },
+        "via_ja3": {
+          "verdict": "둘 다 없음 (건너뜀)"
+        },
+        "via_cert_subject": {
+          "verdict": "둘 다 없음 (건너뜀)"
+        },
+        "via_alpn": {
+          "verdict": "둘 다 없음 (건너뜀)"
+        },
+        "via_cert_issuer": {
+          "verdict": "둘 다 없음 (건너뜀)"
+        },
+        "via_tls_cipher_group": {
+          "verdict": "둘 다 없음 (건너뜀)"
+        },
+        "via_cert_validity": {
+          "verdict": "둘 다 없음 (건너뜀)"
+        },
+        "via_src_host": {
+          "shipped_edges": 1106008,
+          "rebuilt_edges": 1106008,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_dst_host": {
+          "shipped_edges": 1101398,
+          "rebuilt_edges": 1101398,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_timebin": {
+          "verdict": "둘 다 없음 (건너뜀)"
+        }
+      },
+      "all_identical": true
+    },
+    "cic_andmal": {
+      "requested": [
+        "via_sni",
+        "via_ja3",
+        "via_cert_subject",
+        "via_alpn",
+        "via_cert_issuer",
+        "via_tls_cipher_group",
+        "via_cert_validity"
+      ],
+      "relations": {
+        "via_sni": {
+          "shipped_edges": 762992,
+          "rebuilt_edges": 762992,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_ja3": {
+          "shipped_edges": 801044,
+          "rebuilt_edges": 801044,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_cert_subject": {
+          "shipped_edges": 603826,
+          "rebuilt_edges": 603826,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_alpn": {
+          "shipped_edges": 507868,
+          "rebuilt_edges": 507868,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_cert_issuer": {
+          "shipped_edges": 604198,
+          "rebuilt_edges": 604198,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_tls_cipher_group": {
+          "shipped_edges": 801048,
+          "rebuilt_edges": 801048,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_cert_validity": {
+          "shipped_edges": 801048,
+          "rebuilt_edges": 801048,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        }
+      },
+      "all_identical": true
+    },
+    "vnat": {
+      "requested": [
+        "via_sni",
+        "via_ja3",
+        "via_cert_subject",
+        "via_alpn",
+        "via_cert_issuer",
+        "via_tls_cipher_group",
+        "via_cert_validity",
+        "via_src_host",
+        "via_dst_host",
+        "via_timebin"
+      ],
+      "relations": {
+        "via_sni": {
+          "shipped_edges": 3144,
+          "rebuilt_edges": 3144,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_ja3": {
+          "shipped_edges": 3370,
+          "rebuilt_edges": 3370,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_cert_subject": {
+          "shipped_edges": 1306,
+          "rebuilt_edges": 1306,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_alpn": {
+          "shipped_edges": 1588,
+          "rebuilt_edges": 1588,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_cert_issuer": {
+          "shipped_edges": 1414,
+          "rebuilt_edges": 1414,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_tls_cipher_group": {
+          "shipped_edges": 3372,
+          "rebuilt_edges": 3372,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_cert_validity": {
+          "shipped_edges": 3372,
+          "rebuilt_edges": 3372,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_src_host": {
+          "shipped_edges": 4394,
+          "rebuilt_edges": 4394,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_dst_host": {
+          "shipped_edges": 4380,
+          "rebuilt_edges": 4380,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        },
+        "via_timebin": {
+          "shipped_edges": 4350,
+          "rebuilt_edges": 4350,
+          "identical_bytes": true,
+          "identical_values": true,
+          "verdict": "일치"
+        }
+      },
+      "all_identical": true
+    }
+  },
+  "verdict": "이 코드가 출하된 그래프를 그대로 다시 만든다"
+}

@@ -1,0 +1,91 @@
+{
+  "vnat": {
+    "data_root": "data/processed_deg2",
+    "seeds": [
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "sets": {
+      "manual_1": {
+        "set_tag": "manual_1",
+        "metapaths": [
+          "via_dst_host"
+        ],
+        "per_seed": [
+          {
+            "seed": 41,
+            "macro_f1": 1.0,
+            "minority_f1": 1.0,
+            "weighted_f1": 1.0
+          },
+          {
+            "seed": 42,
+            "macro_f1": 0.987207506483667,
+            "minority_f1": 0.975609756097561,
+            "weighted_f1": 0.9977485142377815
+          },
+          {
+            "seed": 43,
+            "macro_f1": 0.9749943039416724,
+            "minority_f1": 0.9523809523809523,
+            "weighted_f1": 0.9955472134467459
+          },
+          {
+            "seed": 44,
+            "macro_f1": 1.0,
+            "minority_f1": 1.0,
+            "weighted_f1": 1.0
+          },
+          {
+            "seed": 45,
+            "macro_f1": 0.9749943039416724,
+            "minority_f1": 0.9523809523809523,
+            "weighted_f1": 0.9955472134467459
+          }
+        ],
+        "macro_f1": {
+          "mean": 0.9874,
+          "std": 0.0112,
+          "std_sample": 0.0125,
+          "n": 5,
+          "values": [
+            1.0,
+            0.9872,
+            0.975,
+            1.0,
+            0.975
+          ]
+        },
+        "minority_f1": {
+          "mean": 0.9761,
+          "std": 0.0213,
+          "std_sample": 0.0238,
+          "n": 5,
+          "values": [
+            1.0,
+            0.9756,
+            0.9524,
+            1.0,
+            0.9524
+          ]
+        },
+        "weighted_f1": {
+          "mean": 0.9978,
+          "std": 0.002,
+          "std_sample": 0.0022,
+          "n": 5,
+          "values": [
+            1.0,
+            0.9977,
+            0.9955,
+            1.0,
+            0.9955
+          ]
+        }
+      }
+    }
+  }
+}

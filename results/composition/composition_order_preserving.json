@@ -1,0 +1,770 @@
+{
+  "data_root": "data/processed_deg2",
+  "datasets": {
+    "bccc_dohbrw": {
+      "binary": {
+        "n_classes": 2,
+        "n_flows": 505040,
+        "labels": {
+          "benign_or_nondoh": 358090,
+          "malicious_doh": 146950
+        },
+        "by_split": {
+          "train": {
+            "n": 353528,
+            "benign_or_nondoh": 250663,
+            "malicious_doh": 102865
+          },
+          "val": {
+            "n": 50504,
+            "benign_or_nondoh": 35809,
+            "malicious_doh": 14695
+          },
+          "test": {
+            "n": 101008,
+            "benign_or_nondoh": 71618,
+            "malicious_doh": 29390
+          }
+        },
+        "majority_macro_f1_test": 0.4149,
+        "minority_label": "malicious_doh",
+        "minority_rate": 0.291
+      },
+      "field_by_class": {
+        "sni": {
+          "coverage_overall": 6e-06,
+          "benign_or_nondoh": {
+            "n_flows": 358090,
+            "n_populated": 2,
+            "coverage": 6e-06
+          },
+          "malicious_doh": {
+            "n_flows": 146950,
+            "n_populated": 1,
+            "coverage": 7e-06
+          }
+        },
+        "ja3": {
+          "coverage_overall": 0.984566,
+          "benign_or_nondoh": {
+            "n_flows": 358090,
+            "n_populated": 358090,
+            "coverage": 1.0
+          },
+          "malicious_doh": {
+            "n_flows": 146950,
+            "n_populated": 139155,
+            "coverage": 0.946955
+          }
+        },
+        "cert_subject": {
+          "coverage_overall": 0.289122,
+          "benign_or_nondoh": {
+            "n_flows": 358090,
+            "n_populated": 146007,
+            "coverage": 0.407738
+          },
+          "malicious_doh": {
+            "n_flows": 146950,
+            "n_populated": 11,
+            "coverage": 7.5e-05
+          }
+        },
+        "alpn": {
+          "coverage_overall": 0.326131,
+          "benign_or_nondoh": {
+            "n_flows": 358090,
+            "n_populated": 164709,
+            "coverage": 0.459965
+          },
+          "malicious_doh": {
+            "n_flows": 146950,
+            "n_populated": 0,
+            "coverage": 0.0
+          }
+        },
+        "cert_issuer_org": {
+          "coverage_overall": 0.289122,
+          "benign_or_nondoh": {
+            "n_flows": 358090,
+            "n_populated": 146007,
+            "coverage": 0.407738
+          },
+          "malicious_doh": {
+            "n_flows": 146950,
+            "n_populated": 11,
+            "coverage": 7.5e-05
+          }
+        },
+        "tls_cipher_group": {
+          "coverage_overall": 0.984566,
+          "benign_or_nondoh": {
+            "n_flows": 358090,
+            "n_populated": 358090,
+            "coverage": 1.0
+          },
+          "malicious_doh": {
+            "n_flows": 146950,
+            "n_populated": 139155,
+            "coverage": 0.946955
+          }
+        },
+        "cert_validity_bucket": {
+          "coverage_overall": 0.709077,
+          "benign_or_nondoh": {
+            "n_flows": 358090,
+            "n_populated": 358090,
+            "coverage": 1.0
+          },
+          "malicious_doh": {
+            "n_flows": 146950,
+            "n_populated": 22,
+            "coverage": 0.00015
+          }
+        },
+        "src_ip": {
+          "coverage_overall": 1.0,
+          "benign_or_nondoh": {
+            "n_flows": 358090,
+            "n_populated": 358090,
+            "coverage": 1.0
+          },
+          "malicious_doh": {
+            "n_flows": 146950,
+            "n_populated": 146950,
+            "coverage": 1.0
+          }
+        },
+        "dst_ip": {
+          "coverage_overall": 1.0,
+          "benign_or_nondoh": {
+            "n_flows": 358090,
+            "n_populated": 358090,
+            "coverage": 1.0
+          },
+          "malicious_doh": {
+            "n_flows": 146950,
+            "n_populated": 146950,
+            "coverage": 1.0
+          }
+        }
+      },
+      "drift": {
+        "category_column": null,
+        "note": "no fine-grained category column in the metadata table"
+      }
+    },
+    "iscx_vpn": {
+      "binary": {
+        "n_classes": 2,
+        "n_flows": 891,
+        "labels": {
+          "bulk": 861,
+          "realtime": 30
+        },
+        "by_split": {
+          "train": {
+            "n": 624,
+            "bulk": 603,
+            "realtime": 21
+          },
+          "val": {
+            "n": 89,
+            "bulk": 86,
+            "realtime": 3
+          },
+          "test": {
+            "n": 178,
+            "bulk": 172,
+            "realtime": 6
+          }
+        },
+        "majority_macro_f1_test": 0.4914,
+        "minority_label": "realtime",
+        "minority_rate": 0.0337
+      },
+      "field_by_class": {
+        "sni": {
+          "coverage_overall": 0.819304,
+          "bulk": {
+            "n_flows": 861,
+            "n_populated": 721,
+            "coverage": 0.837398
+          },
+          "realtime": {
+            "n_flows": 30,
+            "n_populated": 9,
+            "coverage": 0.3
+          }
+        },
+        "ja3": {
+          "coverage_overall": 0.993266,
+          "bulk": {
+            "n_flows": 861,
+            "n_populated": 855,
+            "coverage": 0.993031
+          },
+          "realtime": {
+            "n_flows": 30,
+            "n_populated": 30,
+            "coverage": 1.0
+          }
+        },
+        "cert_subject": {
+          "coverage_overall": 0.589226,
+          "bulk": {
+            "n_flows": 861,
+            "n_populated": 498,
+            "coverage": 0.578397
+          },
+          "realtime": {
+            "n_flows": 30,
+            "n_populated": 27,
+            "coverage": 0.9
+          }
+        },
+        "alpn": {
+          "coverage_overall": 0.480359,
+          "bulk": {
+            "n_flows": 861,
+            "n_populated": 428,
+            "coverage": 0.497096
+          },
+          "realtime": {
+            "n_flows": 30,
+            "n_populated": 0,
+            "coverage": 0.0
+          }
+        },
+        "cert_issuer_org": {
+          "coverage_overall": 0.589226,
+          "bulk": {
+            "n_flows": 861,
+            "n_populated": 498,
+            "coverage": 0.578397
+          },
+          "realtime": {
+            "n_flows": 30,
+            "n_populated": 27,
+            "coverage": 0.9
+          }
+        },
+        "tls_cipher_group": {
+          "coverage_overall": 0.993266,
+          "bulk": {
+            "n_flows": 861,
+            "n_populated": 855,
+            "coverage": 0.993031
+          },
+          "realtime": {
+            "n_flows": 30,
+            "n_populated": 30,
+            "coverage": 1.0
+          }
+        },
+        "cert_validity_bucket": {
+          "coverage_overall": 0.992144,
+          "bulk": {
+            "n_flows": 861,
+            "n_populated": 854,
+            "coverage": 0.99187
+          },
+          "realtime": {
+            "n_flows": 30,
+            "n_populated": 30,
+            "coverage": 1.0
+          }
+        },
+        "src_ip": {
+          "coverage_overall": 1.0,
+          "bulk": {
+            "n_flows": 861,
+            "n_populated": 861,
+            "coverage": 1.0
+          },
+          "realtime": {
+            "n_flows": 30,
+            "n_populated": 30,
+            "coverage": 1.0
+          }
+        },
+        "dst_ip": {
+          "coverage_overall": 1.0,
+          "bulk": {
+            "n_flows": 861,
+            "n_populated": 861,
+            "coverage": 1.0
+          },
+          "realtime": {
+            "n_flows": 30,
+            "n_populated": 30,
+            "coverage": 1.0
+          }
+        }
+      },
+      "drift": {
+        "category_column": null,
+        "note": "no fine-grained category column in the metadata table"
+      }
+    },
+    "hikari": {
+      "binary": {
+        "n_classes": 2,
+        "n_flows": 555278,
+        "labels": {
+          "benign_or_background": 517582,
+          "attack": 37696
+        },
+        "by_split": {
+          "train": {
+            "n": 388695,
+            "benign_or_background": 362308,
+            "attack": 26387
+          },
+          "val": {
+            "n": 55528,
+            "benign_or_background": 51758,
+            "attack": 3770
+          },
+          "test": {
+            "n": 111055,
+            "benign_or_background": 103516,
+            "attack": 7539
+          }
+        },
+        "majority_macro_f1_test": 0.4824,
+        "minority_label": "attack",
+        "minority_rate": 0.0679
+      },
+      "field_by_class": {
+        "sni": {
+          "coverage_overall": 0.0,
+          "benign_or_background": {
+            "n_flows": 517582,
+            "n_populated": 0,
+            "coverage": 0.0
+          },
+          "attack": {
+            "n_flows": 37696,
+            "n_populated": 0,
+            "coverage": 0.0
+          }
+        },
+        "ja3": {
+          "coverage_overall": 0.0,
+          "benign_or_background": {
+            "n_flows": 517582,
+            "n_populated": 0,
+            "coverage": 0.0
+          },
+          "attack": {
+            "n_flows": 37696,
+            "n_populated": 0,
+            "coverage": 0.0
+          }
+        },
+        "cert_subject": {
+          "coverage_overall": 0.0,
+          "benign_or_background": {
+            "n_flows": 517582,
+            "n_populated": 0,
+            "coverage": 0.0
+          },
+          "attack": {
+            "n_flows": 37696,
+            "n_populated": 0,
+            "coverage": 0.0
+          }
+        },
+        "alpn": {
+          "coverage_overall": 0.0,
+          "benign_or_background": {
+            "n_flows": 517582,
+            "n_populated": 0,
+            "coverage": 0.0
+          },
+          "attack": {
+            "n_flows": 37696,
+            "n_populated": 0,
+            "coverage": 0.0
+          }
+        },
+        "cert_issuer_org": {
+          "coverage_overall": 0.0,
+          "benign_or_background": {
+            "n_flows": 517582,
+            "n_populated": 0,
+            "coverage": 0.0
+          },
+          "attack": {
+            "n_flows": 37696,
+            "n_populated": 0,
+            "coverage": 0.0
+          }
+        },
+        "tls_cipher_group": {
+          "coverage_overall": 0.0,
+          "benign_or_background": {
+            "n_flows": 517582,
+            "n_populated": 0,
+            "coverage": 0.0
+          },
+          "attack": {
+            "n_flows": 37696,
+            "n_populated": 0,
+            "coverage": 0.0
+          }
+        },
+        "cert_validity_bucket": {
+          "coverage_overall": 0.0,
+          "benign_or_background": {
+            "n_flows": 517582,
+            "n_populated": 0,
+            "coverage": 0.0
+          },
+          "attack": {
+            "n_flows": 37696,
+            "n_populated": 0,
+            "coverage": 0.0
+          }
+        },
+        "src_ip": {
+          "coverage_overall": 1.0,
+          "benign_or_background": {
+            "n_flows": 517582,
+            "n_populated": 517582,
+            "coverage": 1.0
+          },
+          "attack": {
+            "n_flows": 37696,
+            "n_populated": 37696,
+            "coverage": 1.0
+          }
+        },
+        "dst_ip": {
+          "coverage_overall": 1.0,
+          "benign_or_background": {
+            "n_flows": 517582,
+            "n_populated": 517582,
+            "coverage": 1.0
+          },
+          "attack": {
+            "n_flows": 37696,
+            "n_populated": 37696,
+            "coverage": 1.0
+          }
+        }
+      },
+      "drift": {
+        "category_column": null,
+        "note": "no fine-grained category column in the metadata table"
+      }
+    },
+    "cic_andmal": {
+      "binary": {
+        "n_classes": 2,
+        "n_flows": 400524,
+        "labels": {
+          "benign": 180091,
+          "attack": 220433
+        },
+        "by_split": {
+          "train": {
+            "n": 280367,
+            "benign": 126064,
+            "attack": 154303
+          },
+          "val": {
+            "n": 40052,
+            "benign": 18009,
+            "attack": 22043
+          },
+          "test": {
+            "n": 80105,
+            "benign": 36018,
+            "attack": 44087
+          }
+        },
+        "majority_macro_f1_test": 0.355,
+        "minority_label": "benign",
+        "minority_rate": 0.4496
+      },
+      "field_by_class": {
+        "sni": {
+          "coverage_overall": 0.953641,
+          "benign": {
+            "n_flows": 180091,
+            "n_populated": 169399,
+            "coverage": 0.94063
+          },
+          "attack": {
+            "n_flows": 220433,
+            "n_populated": 212557,
+            "coverage": 0.96427
+          }
+        },
+        "ja3": {
+          "coverage_overall": 1.0,
+          "benign": {
+            "n_flows": 180091,
+            "n_populated": 180091,
+            "coverage": 1.0
+          },
+          "attack": {
+            "n_flows": 220433,
+            "n_populated": 220433,
+            "coverage": 1.0
+          }
+        },
+        "cert_subject": {
+          "coverage_overall": 0.754259,
+          "benign": {
+            "n_flows": 180091,
+            "n_populated": 137565,
+            "coverage": 0.763864
+          },
+          "attack": {
+            "n_flows": 220433,
+            "n_populated": 164534,
+            "coverage": 0.746413
+          }
+        },
+        "alpn": {
+          "coverage_overall": 0.634004,
+          "benign": {
+            "n_flows": 180091,
+            "n_populated": 111035,
+            "coverage": 0.616549
+          },
+          "attack": {
+            "n_flows": 220433,
+            "n_populated": 142899,
+            "coverage": 0.648265
+          }
+        },
+        "cert_issuer_org": {
+          "coverage_overall": 0.754259,
+          "benign": {
+            "n_flows": 180091,
+            "n_populated": 137565,
+            "coverage": 0.763864
+          },
+          "attack": {
+            "n_flows": 220433,
+            "n_populated": 164534,
+            "coverage": 0.746413
+          }
+        },
+        "tls_cipher_group": {
+          "coverage_overall": 1.0,
+          "benign": {
+            "n_flows": 180091,
+            "n_populated": 180091,
+            "coverage": 1.0
+          },
+          "attack": {
+            "n_flows": 220433,
+            "n_populated": 220433,
+            "coverage": 1.0
+          }
+        },
+        "cert_validity_bucket": {
+          "coverage_overall": 1.0,
+          "benign": {
+            "n_flows": 180091,
+            "n_populated": 180091,
+            "coverage": 1.0
+          },
+          "attack": {
+            "n_flows": 220433,
+            "n_populated": 220433,
+            "coverage": 1.0
+          }
+        },
+        "src_ip": {
+          "coverage_overall": 1.0,
+          "benign": {
+            "n_flows": 180091,
+            "n_populated": 180091,
+            "coverage": 1.0
+          },
+          "attack": {
+            "n_flows": 220433,
+            "n_populated": 220433,
+            "coverage": 1.0
+          }
+        },
+        "dst_ip": {
+          "coverage_overall": 1.0,
+          "benign": {
+            "n_flows": 180091,
+            "n_populated": 180091,
+            "coverage": 1.0
+          },
+          "attack": {
+            "n_flows": 220433,
+            "n_populated": 220433,
+            "coverage": 1.0
+          }
+        }
+      },
+      "drift": {
+        "category_column": null,
+        "note": "no fine-grained category column in the metadata table"
+      }
+    },
+    "vnat": {
+      "binary": {
+        "n_classes": 2,
+        "n_flows": 2197,
+        "labels": {
+          "bulk": 100,
+          "realtime": 2097
+        },
+        "by_split": {
+          "train": {
+            "n": 1538,
+            "bulk": 70,
+            "realtime": 1468
+          },
+          "val": {
+            "n": 220,
+            "bulk": 10,
+            "realtime": 210
+          },
+          "test": {
+            "n": 439,
+            "bulk": 20,
+            "realtime": 419
+          }
+        },
+        "majority_macro_f1_test": 0.4883,
+        "minority_label": "bulk",
+        "minority_rate": 0.0455
+      },
+      "field_by_class": {
+        "sni": {
+          "coverage_overall": 0.767865,
+          "bulk": {
+            "n_flows": 100,
+            "n_populated": 100,
+            "coverage": 1.0
+          },
+          "realtime": {
+            "n_flows": 2097,
+            "n_populated": 1587,
+            "coverage": 0.756795
+          }
+        },
+        "ja3": {
+          "coverage_overall": 0.767865,
+          "bulk": {
+            "n_flows": 100,
+            "n_populated": 100,
+            "coverage": 1.0
+          },
+          "realtime": {
+            "n_flows": 2097,
+            "n_populated": 1587,
+            "coverage": 0.756795
+          }
+        },
+        "cert_subject": {
+          "coverage_overall": 0.321802,
+          "bulk": {
+            "n_flows": 100,
+            "n_populated": 100,
+            "coverage": 1.0
+          },
+          "realtime": {
+            "n_flows": 2097,
+            "n_populated": 607,
+            "coverage": 0.289461
+          }
+        },
+        "alpn": {
+          "coverage_overall": 0.361402,
+          "bulk": {
+            "n_flows": 100,
+            "n_populated": 0,
+            "coverage": 0.0
+          },
+          "realtime": {
+            "n_flows": 2097,
+            "n_populated": 794,
+            "coverage": 0.378636
+          }
+        },
+        "cert_issuer_org": {
+          "coverage_overall": 0.321802,
+          "bulk": {
+            "n_flows": 100,
+            "n_populated": 100,
+            "coverage": 1.0
+          },
+          "realtime": {
+            "n_flows": 2097,
+            "n_populated": 607,
+            "coverage": 0.289461
+          }
+        },
+        "tls_cipher_group": {
+          "coverage_overall": 0.767865,
+          "bulk": {
+            "n_flows": 100,
+            "n_populated": 100,
+            "coverage": 1.0
+          },
+          "realtime": {
+            "n_flows": 2097,
+            "n_populated": 1587,
+            "coverage": 0.756795
+          }
+        },
+        "cert_validity_bucket": {
+          "coverage_overall": 0.76741,
+          "bulk": {
+            "n_flows": 100,
+            "n_populated": 100,
+            "coverage": 1.0
+          },
+          "realtime": {
+            "n_flows": 2097,
+            "n_populated": 1586,
+            "coverage": 0.756319
+          }
+        },
+        "src_ip": {
+          "coverage_overall": 1.0,
+          "bulk": {
+            "n_flows": 100,
+            "n_populated": 100,
+            "coverage": 1.0
+          },
+          "realtime": {
+            "n_flows": 2097,
+            "n_populated": 2097,
+            "coverage": 1.0
+          }
+        },
+        "dst_ip": {
+          "coverage_overall": 1.0,
+          "bulk": {
+            "n_flows": 100,
+            "n_populated": 100,
+            "coverage": 1.0
+          },
+          "realtime": {
+            "n_flows": 2097,
+            "n_populated": 2097,
+            "coverage": 1.0
+          }
+        }
+      },
+      "drift": {
+        "category_column": null,
+        "note": "no fine-grained category column in the metadata table"
+      }
+    }
+  }
+}

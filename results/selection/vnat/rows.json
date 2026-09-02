@@ -1,0 +1,2844 @@
+[
+  {
+    "metapaths": [
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9749943039416724,
+    "metapaths_used": [
+      "via_sni"
+    ],
+    "size": 1
+  },
+  {
+    "metapaths": [
+      "via_ja3"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9749943039416724,
+    "metapaths_used": [
+      "via_ja3"
+    ],
+    "size": 1
+  },
+  {
+    "metapaths": [
+      "via_cert_subject"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9749943039416724,
+    "metapaths_used": [
+      "via_cert_subject"
+    ],
+    "size": 1
+  },
+  {
+    "metapaths": [
+      "via_alpn"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9213201218731597,
+    "metapaths_used": [
+      "via_alpn"
+    ],
+    "size": 1
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9633198718841387,
+    "metapaths_used": [
+      "via_cert_issuer"
+    ],
+    "size": 1
+  },
+  {
+    "metapaths": [
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.961622519451001,
+    "metapaths_used": [
+      "via_tls_cipher_group"
+    ],
+    "size": 1
+  },
+  {
+    "metapaths": [
+      "via_cert_validity"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9749943039416724,
+    "metapaths_used": [
+      "via_cert_validity"
+    ],
+    "size": 1
+  },
+  {
+    "metapaths": [
+      "via_src_host"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9749943039416724,
+    "metapaths_used": [
+      "via_src_host"
+    ],
+    "size": 1
+  },
+  {
+    "metapaths": [
+      "via_dst_host"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.987207506483667,
+    "metapaths_used": [
+      "via_dst_host"
+    ],
+    "size": 1
+  },
+  {
+    "metapaths": [
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.987207506483667,
+    "metapaths_used": [
+      "via_timebin"
+    ],
+    "size": 1
+  },
+  {
+    "metapaths": [
+      "via_ja3",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9633198718841387,
+    "metapaths_used": [
+      "via_ja3",
+      "via_sni"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_sni"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9521473730106824,
+    "metapaths_used": [
+      "via_alpn",
+      "via_sni"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.987207506483667,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_sni"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9738066825775655,
+    "metapaths_used": [
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_cert_validity",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.987207506483667,
+    "metapaths_used": [
+      "via_cert_validity",
+      "via_sni"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_sni",
+      "via_src_host"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9749943039416724,
+    "metapaths_used": [
+      "via_sni",
+      "via_src_host"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_dst_host",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9749943039416724,
+    "metapaths_used": [
+      "via_dst_host",
+      "via_sni"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_sni",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_sni",
+      "via_timebin"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_ja3"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_ja3"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_ja3"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9311768394648829,
+    "metapaths_used": [
+      "via_alpn",
+      "via_ja3"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_ja3"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.987207506483667,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_ja3"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_cert_validity",
+      "via_ja3"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9597506188686165,
+    "metapaths_used": [
+      "via_cert_validity",
+      "via_ja3"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_ja3",
+      "via_src_host"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9633198718841387,
+    "metapaths_used": [
+      "via_ja3",
+      "via_src_host"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_dst_host",
+      "via_ja3"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9476133651551313,
+    "metapaths_used": [
+      "via_dst_host",
+      "via_ja3"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_ja3",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.987207506483667,
+    "metapaths_used": [
+      "via_ja3",
+      "via_timebin"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_subject"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9633198718841387,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_subject"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_cert_subject"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_cert_subject"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_src_host"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_src_host"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_dst_host"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_dst_host"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_timebin"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9633198718841387,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9042947460213647,
+    "metapaths_used": [
+      "via_alpn",
+      "via_tls_cipher_group"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_validity"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9633198718841387,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_validity"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_src_host"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9749943039416724,
+    "metapaths_used": [
+      "via_alpn",
+      "via_src_host"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_dst_host"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9633198718841387,
+    "metapaths_used": [
+      "via_alpn",
+      "via_dst_host"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.987207506483667,
+    "metapaths_used": [
+      "via_alpn",
+      "via_timebin"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9865835396228722,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_tls_cipher_group"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_cert_validity"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_cert_validity"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_src_host"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.987207506483667,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_src_host"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_dst_host"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9749943039416724,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_dst_host"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_timebin"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_ja3",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9633198718841387,
+    "metapaths_used": [
+      "via_alpn",
+      "via_ja3",
+      "via_sni"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_ja3",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_ja3",
+      "via_sni"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9749943039416724,
+    "metapaths_used": [
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_dst_host",
+      "via_ja3",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9476133651551313,
+    "metapaths_used": [
+      "via_dst_host",
+      "via_ja3",
+      "via_sni"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.987207506483667,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_sni"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_sni"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9633198718841387,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9180205415499534,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_sni"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_sni",
+      "via_src_host"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_sni",
+      "via_src_host"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_dst_host",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_dst_host",
+      "via_sni"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_sni",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_sni",
+      "via_timebin"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9749943039416724,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_sni"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_validity",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9738066825775655,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_validity",
+      "via_sni"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_sni",
+      "via_src_host"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.987207506483667,
+    "metapaths_used": [
+      "via_alpn",
+      "via_sni",
+      "via_src_host"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_dst_host",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.987207506483667,
+    "metapaths_used": [
+      "via_alpn",
+      "via_dst_host",
+      "via_sni"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_sni",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_alpn",
+      "via_sni",
+      "via_timebin"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_sni",
+      "via_src_host"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.987207506483667,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_sni",
+      "via_src_host"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_dst_host",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_dst_host",
+      "via_sni"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_sni",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_sni",
+      "via_timebin"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_sni",
+      "via_timebin",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9865835396228722,
+    "metapaths_used": [
+      "via_sni",
+      "via_timebin",
+      "via_tls_cipher_group"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9749943039416724,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni"
+    ],
+    "size": 4
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni"
+    ],
+    "size": 4
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.987207506483667,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "size": 4
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9476133651551313,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni"
+    ],
+    "size": 4
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "size": 4
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_ja3",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.987207506483667,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_ja3",
+      "via_sni"
+    ],
+    "size": 4
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_alpn",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "size": 4
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.936037532418335,
+    "metapaths_used": [
+      "via_alpn",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni"
+    ],
+    "size": 4
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_alpn",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "size": 4
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9749943039416724,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "size": 4
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.936037532418335,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni"
+    ],
+    "size": 4
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "size": 4
+  },
+  {
+    "metapaths": [
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9476133651551313,
+    "metapaths_used": [
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "size": 4
+  },
+  {
+    "metapaths": [
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.987207506483667,
+    "metapaths_used": [
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_timebin"
+    ],
+    "size": 4
+  },
+  {
+    "metapaths": [
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9597506188686165,
+    "metapaths_used": [
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "size": 4
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni"
+    ],
+    "size": 5
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "size": 5
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.936037532418335,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni"
+    ],
+    "size": 5
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.987207506483667,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "size": 5
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "size": 5
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9476133651551313,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni"
+    ],
+    "size": 5
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "size": 5
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9476133651551313,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "size": 5
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_timebin"
+    ],
+    "size": 5
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9597506188686165,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "size": 5
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "size": 6
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9576758684963204,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni"
+    ],
+    "size": 6
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9749943039416724,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "size": 6
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9476133651551313,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni"
+    ],
+    "size": 6
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9749943039416724,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "size": 6
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9476133651551313,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "size": 6
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_timebin"
+    ],
+    "size": 6
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9476133651551313,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "size": 6
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9476133651551313,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "size": 6
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.987207506483667,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_timebin"
+    ],
+    "size": 6
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_timebin",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9865835396228722,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_timebin",
+      "via_tls_cipher_group"
+    ],
+    "size": 7
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9576758684963204,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "size": 7
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9865835396228722,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni"
+    ],
+    "size": 7
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9633198718841387,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "size": 7
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9597506188686165,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "size": 7
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9724937343358395,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "size": 7
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni",
+      "via_timebin",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9865835396228722,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni",
+      "via_timebin",
+      "via_tls_cipher_group"
+    ],
+    "size": 8
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.987207506483667,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_timebin"
+    ],
+    "size": 8
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_tls_cipher_group"
+    ],
+    "size": 8
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9597506188686165,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_timebin"
+    ],
+    "size": 8
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_timebin",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_timebin",
+      "via_tls_cipher_group"
+    ],
+    "size": 9
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_timebin",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9576758684963204,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_timebin",
+      "via_tls_cipher_group"
+    ],
+    "size": 9
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_timebin"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_timebin"
+    ],
+    "size": 9
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 1.0,
+    "test_macro_f1": 0.9865835396228722,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_tls_cipher_group"
+    ],
+    "size": 9
+  },
+  {
+    "metapaths": [
+      "via_ja3",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.9749971587680417,
+    "test_macro_f1": 0.9633198718841387,
+    "metapaths_used": [
+      "via_ja3",
+      "via_tls_cipher_group"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.9749971587680417,
+    "test_macro_f1": 0.9633198718841387,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_tls_cipher_group"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_ja3",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.9749971587680417,
+    "test_macro_f1": 0.9749943039416724,
+    "metapaths_used": [
+      "via_ja3",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.9749971587680417,
+    "test_macro_f1": 0.8763601915149652,
+    "metapaths_used": [
+      "via_alpn",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_cert_validity",
+      "via_sni"
+    ],
+    "val_macro_f1": 0.9749971587680417,
+    "test_macro_f1": 0.961622519451001,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_cert_validity",
+      "via_sni"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_sni",
+      "via_src_host",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.9749971587680417,
+    "test_macro_f1": 0.9180205415499534,
+    "metapaths_used": [
+      "via_sni",
+      "via_src_host",
+      "via_tls_cipher_group"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni"
+    ],
+    "val_macro_f1": 0.9749971587680417,
+    "test_macro_f1": 0.8410527781646011,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni"
+    ],
+    "size": 5
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_timebin"
+    ],
+    "val_macro_f1": 0.9749971587680417,
+    "test_macro_f1": 0.987207506483667,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_timebin"
+    ],
+    "size": 7
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.9724965620702588,
+    "test_macro_f1": 0.9724937343358395,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "size": 5
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.9724965620702588,
+    "test_macro_f1": 0.9256058295204203,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "size": 5
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.9724965620702588,
+    "test_macro_f1": 0.9082102035126847,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "size": 6
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_timebin",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.9724965620702588,
+    "test_macro_f1": 0.9724937343358395,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_timebin",
+      "via_tls_cipher_group"
+    ],
+    "size": 6
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.9724965620702588,
+    "test_macro_f1": 1.0,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_tls_cipher_group"
+    ],
+    "size": 6
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.9724965620702588,
+    "test_macro_f1": 0.9082102035126847,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "size": 7
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_timebin",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.9724965620702588,
+    "test_macro_f1": 0.9082102035126847,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_timebin",
+      "via_tls_cipher_group"
+    ],
+    "size": 8
+  },
+  {
+    "metapaths": [
+      "via_dst_host",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.9521531100478469,
+    "test_macro_f1": 0.9388664531402311,
+    "metapaths_used": [
+      "via_dst_host",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "val_macro_f1": 0.9521531100478469,
+    "test_macro_f1": 0.936037532418335,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "size": 8
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_ja3",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.9476190476190476,
+    "test_macro_f1": 0.9738066825775655,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_ja3",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "size": 4
+  },
+  {
+    "metapaths": [
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.9476190476190476,
+    "test_macro_f1": 0.856442119032047,
+    "metapaths_used": [
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "size": 4
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni"
+    ],
+    "val_macro_f1": 0.9420747761979988,
+    "test_macro_f1": 0.936037532418335,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni"
+    ],
+    "size": 4
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.9311854863934939,
+    "test_macro_f1": 0.961622519451001,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_cert_validity",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.9249914763041254,
+    "test_macro_f1": 0.9724937343358395,
+    "metapaths_used": [
+      "via_cert_validity",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.9249914763041254,
+    "test_macro_f1": 0.987207506483667,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "size": 4
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_ja3",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.9249914763041254,
+    "test_macro_f1": 0.9597506188686165,
+    "metapaths_used": [
+      "via_alpn",
+      "via_ja3",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "size": 4
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.9249914763041254,
+    "test_macro_f1": 0.9388664531402311,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_tls_cipher_group"
+    ],
+    "size": 5
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_timebin",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.9249914763041254,
+    "test_macro_f1": 0.961622519451001,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_timebin",
+      "via_tls_cipher_group"
+    ],
+    "size": 8
+  },
+  {
+    "metapaths": [
+      "via_cert_validity",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni"
+    ],
+    "val_macro_f1": 0.9082186065915727,
+    "test_macro_f1": 0.9256058295204203,
+    "metapaths_used": [
+      "via_cert_validity",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni"
+    ],
+    "size": 4
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "val_macro_f1": 0.9082186065915727,
+    "test_macro_f1": 0.9724937343358395,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "size": 5
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "val_macro_f1": 0.9082186065915727,
+    "test_macro_f1": 0.9576758684963204,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "size": 6
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "val_macro_f1": 0.9082186065915727,
+    "test_macro_f1": 0.9576758684963204,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "size": 6
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_cert_validity"
+    ],
+    "val_macro_f1": 0.9043062200956937,
+    "test_macro_f1": 0.9633198718841387,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_cert_validity"
+    ],
+    "size": 2
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni"
+    ],
+    "val_macro_f1": 0.9043062200956937,
+    "test_macro_f1": 0.9214200477326968,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni"
+    ],
+    "size": 6
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni"
+    ],
+    "val_macro_f1": 0.8952380952380953,
+    "test_macro_f1": 0.9476133651551313,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni"
+    ],
+    "size": 4
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni"
+    ],
+    "val_macro_f1": 0.8773690078037905,
+    "test_macro_f1": 0.9633198718841387,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni"
+    ],
+    "size": 5
+  },
+  {
+    "metapaths": [
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni"
+    ],
+    "val_macro_f1": 0.874985793840209,
+    "test_macro_f1": 0.9329176981143608,
+    "metapaths_used": [
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni"
+    ],
+    "size": 3
+  },
+  {
+    "metapaths": [
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "val_macro_f1": 0.874985793840209,
+    "test_macro_f1": 0.8378917308781173,
+    "metapaths_used": [
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "size": 4
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.874985793840209,
+    "test_macro_f1": 0.7987530943430825,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "size": 8
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_timebin",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.8677884615384616,
+    "test_macro_f1": 0.9476133651551313,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_timebin",
+      "via_tls_cipher_group"
+    ],
+    "size": 9
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "val_macro_f1": 0.8624828103512938,
+    "test_macro_f1": 0.9476133651551313,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "size": 5
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni"
+    ],
+    "val_macro_f1": 0.8564593301435407,
+    "test_macro_f1": 0.8457329317269077,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni"
+    ],
+    "size": 4
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.8515662650602409,
+    "test_macro_f1": 0.9213201218731597,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "size": 5
+  },
+  {
+    "metapaths": [
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_timebin",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.8515662650602409,
+    "test_macro_f1": 0.9282210595160236,
+    "metapaths_used": [
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_timebin",
+      "via_tls_cipher_group"
+    ],
+    "size": 5
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "val_macro_f1": 0.8515662650602409,
+    "test_macro_f1": 0.8999772157666894,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni",
+      "via_src_host"
+    ],
+    "size": 6
+  },
+  {
+    "metapaths": [
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni"
+    ],
+    "val_macro_f1": 0.8474341192787795,
+    "test_macro_f1": 0.7963327073898155,
+    "metapaths_used": [
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni"
+    ],
+    "size": 5
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.8428571428571429,
+    "test_macro_f1": 0.8749715197083618,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni",
+      "via_tls_cipher_group"
+    ],
+    "size": 7
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.8364920104050539,
+    "test_macro_f1": 0.9144130343963237,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_tls_cipher_group"
+    ],
+    "size": 6
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "val_macro_f1": 0.8364920104050539,
+    "test_macro_f1": 0.924982911825017,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_timebin"
+    ],
+    "size": 8
+  },
+  {
+    "metapaths": [
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.8211382113821137,
+    "test_macro_f1": 0.9213201218731597,
+    "metapaths_used": [
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_tls_cipher_group"
+    ],
+    "size": 4
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_timebin",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.764093137254902,
+    "test_macro_f1": 0.7676925219328784,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_dst_host",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_timebin",
+      "via_tls_cipher_group"
+    ],
+    "size": 10
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.725,
+    "test_macro_f1": 0.8618752247393024,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_tls_cipher_group"
+    ],
+    "size": 7
+  },
+  {
+    "metapaths": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_tls_cipher_group"
+    ],
+    "val_macro_f1": 0.7129186602870813,
+    "test_macro_f1": 0.8022381866894279,
+    "metapaths_used": [
+      "via_alpn",
+      "via_cert_issuer",
+      "via_cert_subject",
+      "via_cert_validity",
+      "via_ja3",
+      "via_sni",
+      "via_src_host",
+      "via_tls_cipher_group"
+    ],
+    "size": 8
+  }
+]

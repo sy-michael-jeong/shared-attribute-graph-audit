@@ -1,0 +1,24 @@
+{
+  "iscx_vpn": {
+    "permuted_fields": {
+      "src_ip": 891
+    },
+    "reference_lines": {
+      "test_size": 178,
+      "class_counts": {
+        "0": 172,
+        "1": 6
+      },
+      "always_majority_macro_f1": 0.4914,
+      "availability_rule_src_ip": {
+        "present_ratio": 1.0,
+        "macro_f1": 0.4914,
+        "present_class_mix": {
+          "0": 172,
+          "1": 6
+        },
+        "absent_class_mix": {}
+      }
+    }
+  }
+}

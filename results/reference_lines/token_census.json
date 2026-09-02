@@ -1,0 +1,141 @@
+{
+  "data_root": "data/processed_deg2_bccc10",
+  "question": "how much of what is counted as a value is a string the extractor wrote because it could not read one",
+  "missing_tokens": [
+    "",
+    "-",
+    "nan",
+    "None",
+    "(empty)",
+    "0"
+  ],
+  "synthetic_tokens": {
+    "cert_validity_bucket": [
+      "unknown",
+      "invalid_range"
+    ],
+    "tls_cipher_group": [
+      "Unknown"
+    ],
+    "cert_issuer_org": [
+      "Private_or_Unknown",
+      "PublicCA_Other"
+    ]
+  },
+  "datasets": {
+    "bccc_dohbrw": {
+      "n_flows": 505040,
+      "fields": {
+        "sni": {
+          "coverage": 0.0,
+          "n_valid": 3,
+          "n_missing": 505037,
+          "synthetic_tokens": {},
+          "n_synthetic": 0,
+          "coverage_after_reversal": 0.0,
+          "share_of_valid_that_is_synthetic": 0.0
+        },
+        "ja3": {
+          "coverage": 0.9846,
+          "n_valid": 497245,
+          "n_missing": 7795,
+          "synthetic_tokens": {},
+          "n_synthetic": 0,
+          "coverage_after_reversal": 0.9846,
+          "share_of_valid_that_is_synthetic": 0.0
+        },
+        "cert_subject": {
+          "coverage": 0.2891,
+          "n_valid": 146018,
+          "n_missing": 359022,
+          "synthetic_tokens": {},
+          "n_synthetic": 0,
+          "coverage_after_reversal": 0.2891,
+          "share_of_valid_that_is_synthetic": 0.0
+        },
+        "alpn": {
+          "coverage": 0.3261,
+          "n_valid": 164709,
+          "n_missing": 340331,
+          "synthetic_tokens": {},
+          "n_synthetic": 0,
+          "coverage_after_reversal": 0.3261,
+          "share_of_valid_that_is_synthetic": 0.0
+        },
+        "cert_issuer_org": {
+          "coverage": 0.2891,
+          "n_valid": 146018,
+          "n_missing": 359022,
+          "synthetic_tokens": {
+            "Private_or_Unknown": {
+              "n_flows": 19,
+              "share_of_valid": 0.0001,
+              "n_attack": 0
+            },
+            "PublicCA_Other": {
+              "n_flows": 9736,
+              "share_of_valid": 0.0667,
+              "n_attack": 0
+            }
+          },
+          "n_synthetic": 9755,
+          "coverage_after_reversal": 0.2698,
+          "share_of_valid_that_is_synthetic": 0.0668
+        },
+        "tls_cipher_group": {
+          "coverage": 0.9846,
+          "n_valid": 497245,
+          "n_missing": 7795,
+          "synthetic_tokens": {
+            "Unknown": {
+              "n_flows": 44,
+              "share_of_valid": 0.0001,
+              "n_attack": 0
+            }
+          },
+          "n_synthetic": 44,
+          "coverage_after_reversal": 0.9845,
+          "share_of_valid_that_is_synthetic": 0.0001
+        },
+        "cert_validity_bucket": {
+          "coverage": 0.7091,
+          "n_valid": 358112,
+          "n_missing": 146928,
+          "synthetic_tokens": {
+            "unknown": {
+              "n_flows": 212094,
+              "share_of_valid": 0.5923,
+              "n_attack": 11
+            },
+            "invalid_range": {
+              "n_flows": 0,
+              "share_of_valid": 0.0,
+              "n_attack": 0
+            }
+          },
+          "n_synthetic": 212094,
+          "coverage_after_reversal": 0.2891,
+          "share_of_valid_that_is_synthetic": 0.5923
+        },
+        "src_ip": {
+          "coverage": 1.0,
+          "n_valid": 505040,
+          "n_missing": 0,
+          "synthetic_tokens": {},
+          "n_synthetic": 0,
+          "coverage_after_reversal": 1.0,
+          "share_of_valid_that_is_synthetic": 0.0
+        },
+        "dst_ip": {
+          "coverage": 1.0,
+          "n_valid": 505040,
+          "n_missing": 0,
+          "synthetic_tokens": {},
+          "n_synthetic": 0,
+          "coverage_after_reversal": 1.0,
+          "share_of_valid_that_is_synthetic": 0.0
+        }
+      }
+    }
+  }
+}

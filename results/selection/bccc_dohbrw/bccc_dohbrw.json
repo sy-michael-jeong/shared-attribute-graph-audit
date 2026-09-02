@@ -1,0 +1,92 @@
+{
+  "dataset": "bccc_dohbrw",
+  "rule": "smallest configuration within 0.005 of the best validation score",
+  "best_validation_macro_f1": 1.0,
+  "n_configurations_searched": 71,
+  "n_distinct_graphs": 42,
+  "n_tied_at_ceiling": 12,
+  "tied_at_ceiling": [
+    [
+      "alpn",
+      "cert_issuer",
+      "cert_subject",
+      "cert_validity",
+      "ja3",
+      "tls_cipher_group"
+    ],
+    [
+      "alpn",
+      "cert_issuer",
+      "cert_subject",
+      "cert_validity",
+      "tls_cipher_group"
+    ],
+    [
+      "alpn",
+      "cert_issuer",
+      "cert_validity",
+      "ja3",
+      "tls_cipher_group"
+    ],
+    [
+      "alpn",
+      "cert_issuer",
+      "cert_validity",
+      "tls_cipher_group"
+    ],
+    [
+      "alpn",
+      "cert_subject",
+      "cert_validity",
+      "ja3",
+      "tls_cipher_group"
+    ],
+    [
+      "alpn",
+      "cert_subject",
+      "cert_validity",
+      "tls_cipher_group"
+    ],
+    [
+      "alpn",
+      "cert_validity",
+      "ja3"
+    ],
+    [
+      "alpn",
+      "cert_validity",
+      "ja3",
+      "tls_cipher_group"
+    ],
+    [
+      "alpn",
+      "cert_validity",
+      "tls_cipher_group"
+    ],
+    [
+      "cert_validity",
+      "ja3"
+    ],
+    [
+      "cert_validity",
+      "ja3",
+      "tls_cipher_group"
+    ],
+    [
+      "cert_validity",
+      "tls_cipher_group"
+    ]
+  ],
+  "selected": [
+    "cert_validity"
+  ],
+  "selected_validation_macro_f1": 0.9998,
+  "by_relation_count": {
+    "1": 0.9998,
+    "2": 1.0,
+    "3": 1.0,
+    "4": 1.0,
+    "5": 1.0,
+    "6": 1.0
+  }
+}

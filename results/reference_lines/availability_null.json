@@ -1,0 +1,56 @@
+{
+  "data_root": "data/processed_deg2",
+  "permutations": 1000,
+  "seed": 42,
+  "procedure": "labels permuted over all flows, partition boundaries and field presence held fixed, the maximum over fields recomputed each time",
+  "datasets": {
+    "bccc_dohbrw": {
+      "n_candidate_fields": 6,
+      "observed_best_field": "CertValidity",
+      "observed_macro_f1": 1.0,
+      "null_mean": 0.5001,
+      "null_std": 0.0014,
+      "null_p95": 0.5026,
+      "null_max": 0.5055,
+      "p_value": 0.0,
+      "exceeds_null_p95": true
+    },
+    "iscx_vpn": {
+      "n_candidate_fields": 4,
+      "observed_best_field": "SNI",
+      "observed_macro_f1": 0.6223,
+      "null_mean": 0.4809,
+      "null_std": 0.0288,
+      "null_p95": 0.5268,
+      "null_max": 0.6159,
+      "p_value": 0.0,
+      "exceeds_null_p95": true
+    },
+    "hikari": {
+      "n_candidate_fields": 0,
+      "note": "every field is constant, so no rule can be formed"
+    },
+    "cic_andmal": {
+      "n_candidate_fields": 4,
+      "observed_best_field": "ALPN",
+      "observed_macro_f1": 0.5025,
+      "null_mean": 0.494,
+      "null_std": 0.0018,
+      "null_p95": 0.497,
+      "null_max": 0.4993,
+      "p_value": 0.0,
+      "exceeds_null_p95": true
+    },
+    "vnat": {
+      "n_candidate_fields": 7,
+      "observed_best_field": "CertSubject",
+      "observed_macro_f1": 0.7288,
+      "null_mean": 0.4986,
+      "null_std": 0.0191,
+      "null_p95": 0.5324,
+      "null_max": 0.5638,
+      "p_value": 0.0,
+      "exceeds_null_p95": true
+    }
+  }
+}

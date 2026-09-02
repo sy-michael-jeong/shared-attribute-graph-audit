@@ -1,0 +1,31 @@
+{
+  "used": [
+    "via_sni",
+    "via_ja3",
+    "via_cert_subject",
+    "via_alpn",
+    "via_cert_issuer",
+    "via_tls_cipher_group",
+    "via_cert_validity",
+    "via_src_host",
+    "via_dst_host",
+    "via_timebin"
+  ],
+  "skipped": [],
+  "max_degree_per_value": 2,
+  "timebin_seconds": 300,
+  "seed": 42,
+  "n_flows": 2197,
+  "edges": {
+    "via_sni": 3144,
+    "via_ja3": 3370,
+    "via_cert_subject": 1306,
+    "via_alpn": 1588,
+    "via_cert_issuer": 1414,
+    "via_tls_cipher_group": 3372,
+    "via_cert_validity": 3372,
+    "via_src_host": 4394,
+    "via_dst_host": 4380,
+    "via_timebin": 4350
+  }
+}

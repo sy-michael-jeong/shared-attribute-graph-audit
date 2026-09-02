@@ -1,0 +1,99 @@
+{
+  "data_root": "data/processed_deg2_bccc10_nounk",
+  "scope_of_reported_score": "test",
+  "datasets": {
+    "bccc_dohbrw": {
+      "n_flows": 505040,
+      "n_attack": 146950,
+      "fields": {
+        "sni": {
+          "coverage": 0.0,
+          "macro_f1": 0.4149,
+          "macro_f1_by_scope": {
+            "test": 0.4149,
+            "val_and_test": 0.4149,
+            "all_flows": 0.4149
+          },
+          "presence_means_attack": true
+        },
+        "ja3": {
+          "coverage": 0.9846,
+          "macro_f1": 0.4415,
+          "macro_f1_by_scope": {
+            "test": 0.4415,
+            "val_and_test": 0.4354,
+            "all_flows": 0.469
+          },
+          "presence_means_attack": false
+        },
+        "cert_subject": {
+          "coverage": 0.2891,
+          "macro_f1": 0.7136,
+          "macro_f1_by_scope": {
+            "test": 0.7136,
+            "val_and_test": 0.7047,
+            "all_flows": 0.58
+          },
+          "presence_means_attack": false
+        },
+        "alpn": {
+          "coverage": 0.3261,
+          "macro_f1": 0.6575,
+          "macro_f1_by_scope": {
+            "test": 0.6575,
+            "val_and_test": 0.6545,
+            "all_flows": 0.6166
+          },
+          "presence_means_attack": false
+        },
+        "cert_issuer_org": {
+          "coverage": 0.2891,
+          "macro_f1": 0.7136,
+          "macro_f1_by_scope": {
+            "test": 0.7136,
+            "val_and_test": 0.7047,
+            "all_flows": 0.58
+          },
+          "presence_means_attack": false
+        },
+        "tls_cipher_group": {
+          "coverage": 0.9846,
+          "macro_f1": 0.4415,
+          "macro_f1_by_scope": {
+            "test": 0.4415,
+            "val_and_test": 0.4354,
+            "all_flows": 0.469
+          },
+          "presence_means_attack": false
+        },
+        "cert_validity_bucket": {
+          "coverage": 0.2891,
+          "macro_f1": 0.7136,
+          "macro_f1_by_scope": {
+            "test": 0.7136,
+            "val_and_test": 0.7047,
+            "all_flows": 0.58
+          },
+          "presence_means_attack": false
+        }
+      },
+      "best_field": "cert_subject",
+      "best_macro_f1": 0.7136,
+      "fields_tied_at_best": [
+        "cert_issuer_org",
+        "cert_subject",
+        "cert_validity_bucket"
+      ],
+      "attack_endpoints": {
+        "src_ip": {
+          "n_distinct_attack": 10,
+          "n_distinct_benign": 4
+        },
+        "dst_ip": {
+          "n_distinct_attack": 7,
+          "n_distinct_benign": 30086
+        }
+      }
+    }
+  }
+}

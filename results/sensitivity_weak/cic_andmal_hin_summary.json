@@ -1,0 +1,52 @@
+{
+  "config": "config.yaml",
+  "pool": [
+    "via_sni",
+    "via_ja3",
+    "via_cert_subject",
+    "via_alpn",
+    "via_cert_issuer",
+    "via_tls_cipher_group",
+    "via_cert_validity",
+    "via_src_host",
+    "via_dst_host",
+    "via_timebin"
+  ],
+  "not_requested": [
+    "via_src_host",
+    "via_dst_host",
+    "via_timebin"
+  ],
+  "requested": [
+    "via_sni",
+    "via_ja3",
+    "via_cert_subject",
+    "via_alpn",
+    "via_cert_issuer",
+    "via_tls_cipher_group",
+    "via_cert_validity"
+  ],
+  "used": [
+    "via_sni",
+    "via_ja3",
+    "via_cert_subject",
+    "via_alpn",
+    "via_cert_issuer",
+    "via_tls_cipher_group",
+    "via_cert_validity"
+  ],
+  "skipped": [],
+  "max_degree_per_value": 4,
+  "timebin_seconds": 300,
+  "seed": 42,
+  "n_flows": 400524,
+  "edges": {
+    "via_sni": 1525186,
+    "via_ja3": 1602086,
+    "via_cert_subject": 1207162,
+    "via_alpn": 1015736,
+    "via_cert_issuer": 1208392,
+    "via_tls_cipher_group": 1602096,
+    "via_cert_validity": 1602092
+  }
+}

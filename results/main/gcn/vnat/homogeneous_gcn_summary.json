@@ -1,0 +1,159 @@
+{
+  "vnat": {
+    "model": "gcn",
+    "data_root": "data/processed_deg2",
+    "metapath_pool": [
+      "via_sni",
+      "via_ja3",
+      "via_cert_subject",
+      "via_alpn",
+      "via_cert_issuer",
+      "via_tls_cipher_group",
+      "via_cert_validity",
+      "via_src_host",
+      "via_dst_host",
+      "via_timebin"
+    ],
+    "per_seed": [
+      {
+        "accuracy": 0.9840546697038725,
+        "macro_f1": 0.8958481613285885,
+        "weighted_f1": 0.9829630049962577,
+        "minority_recall": 0.7,
+        "minority_f1": 0.8,
+        "seed": 41,
+        "metapaths_merged": [
+          "via_sni",
+          "via_ja3",
+          "via_cert_subject",
+          "via_alpn",
+          "via_cert_issuer",
+          "via_tls_cipher_group",
+          "via_cert_validity",
+          "via_src_host",
+          "via_dst_host",
+          "via_timebin"
+        ]
+      },
+      {
+        "accuracy": 0.9931662870159453,
+        "macro_f1": 0.9597506188686165,
+        "weighted_f1": 0.9930827478455769,
+        "minority_recall": 0.9,
+        "minority_f1": 0.9230769230769231,
+        "seed": 42,
+        "metapaths_merged": [
+          "via_sni",
+          "via_ja3",
+          "via_cert_subject",
+          "via_alpn",
+          "via_cert_issuer",
+          "via_tls_cipher_group",
+          "via_cert_validity",
+          "via_src_host",
+          "via_dst_host",
+          "via_timebin"
+        ]
+      },
+      {
+        "accuracy": 0.9817767653758542,
+        "macro_f1": 0.8776136046835796,
+        "weighted_f1": 0.9802336074396724,
+        "minority_recall": 0.65,
+        "minority_f1": 0.7647058823529411,
+        "seed": 43,
+        "metapaths_merged": [
+          "via_sni",
+          "via_ja3",
+          "via_cert_subject",
+          "via_alpn",
+          "via_cert_issuer",
+          "via_tls_cipher_group",
+          "via_cert_validity",
+          "via_src_host",
+          "via_dst_host",
+          "via_timebin"
+        ]
+      },
+      {
+        "accuracy": 0.9772209567198178,
+        "macro_f1": 0.8378398345153664,
+        "weighted_f1": 0.974481278642089,
+        "minority_recall": 0.55,
+        "minority_f1": 0.6875,
+        "seed": 44,
+        "metapaths_merged": [
+          "via_sni",
+          "via_ja3",
+          "via_cert_subject",
+          "via_alpn",
+          "via_cert_issuer",
+          "via_tls_cipher_group",
+          "via_cert_validity",
+          "via_src_host",
+          "via_dst_host",
+          "via_timebin"
+        ]
+      },
+      {
+        "accuracy": 0.9886104783599089,
+        "macro_f1": 0.9294597808272006,
+        "weighted_f1": 0.9881690552439932,
+        "minority_recall": 0.8,
+        "minority_f1": 0.8648648648648649,
+        "seed": 45,
+        "metapaths_merged": [
+          "via_sni",
+          "via_ja3",
+          "via_cert_subject",
+          "via_alpn",
+          "via_cert_issuer",
+          "via_tls_cipher_group",
+          "via_cert_validity",
+          "via_src_host",
+          "via_dst_host",
+          "via_timebin"
+        ]
+      }
+    ],
+    "macro_f1": {
+      "mean": 0.9001,
+      "std": 0.042,
+      "std_sample": 0.047,
+      "n": 5,
+      "values": [
+        0.8958,
+        0.9598,
+        0.8776,
+        0.8378,
+        0.9295
+      ]
+    },
+    "minority_f1": {
+      "mean": 0.808,
+      "std": 0.0812,
+      "std_sample": 0.0907,
+      "n": 5,
+      "values": [
+        0.8,
+        0.9231,
+        0.7647,
+        0.6875,
+        0.8649
+      ]
+    },
+    "weighted_f1": {
+      "mean": 0.9838,
+      "std": 0.0064,
+      "std_sample": 0.0072,
+      "n": 5,
+      "values": [
+        0.983,
+        0.9931,
+        0.9802,
+        0.9745,
+        0.9882
+      ]
+    }
+  }
+}

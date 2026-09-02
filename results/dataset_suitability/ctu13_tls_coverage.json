@@ -1,0 +1,113 @@
+{
+  "purpose": "Whether a public benchmark can support a TLS relation graph at all. A relation exists only where the field is populated on both sides of the label, so a dataset whose attack traffic carries no TLS handshake cannot be used for this construction.",
+  "method": "Zeek ssl.log published with each CTU-13 scenario was read directly. Rows were assigned to the botnet, the normal or the background class by matching id.orig_h against the infected and normal addresses listed in the scenario README, which is how the dataset authors assign labels. An address in neither list is background, as it is in the published netflow labels. No pcap parsing was needed.",
+  "source": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-{42,44,45,49,50}/bro/ssl.log",
+  "label_source": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-<N>/README.html",
+  "normal_hosts": [
+    "147.32.84.170",
+    "147.32.84.134",
+    "147.32.84.164",
+    "147.32.87.36",
+    "147.32.80.9",
+    "147.32.87.11"
+  ],
+  "measured": "2026-08-26",
+  "scenarios": {
+    "Botnet-42": {
+      "malware": "Neris",
+      "ctu13_scenario": 1,
+      "infected_hosts": [
+        "147.32.84.165"
+      ],
+      "tls_sessions_total": 59904,
+      "botnet": 69,
+      "botnet_distinct_sni": 2,
+      "botnet_sni_values": [
+        "account.login.aol.com",
+        "my.screenname.aol.com"
+      ],
+      "normal": 1766,
+      "normal_distinct_sni": 54,
+      "background": 58069
+    },
+    "Botnet-44": {
+      "malware": "Rbot",
+      "ctu13_scenario": 3,
+      "infected_hosts": [
+        "147.32.84.165"
+      ],
+      "tls_sessions_total": 106558,
+      "botnet": 0,
+      "botnet_distinct_sni": 0,
+      "botnet_sni_values": [],
+      "normal": 6708,
+      "normal_distinct_sni": 39,
+      "background": 99850
+    },
+    "Botnet-45": {
+      "malware": "Rbot",
+      "ctu13_scenario": 4,
+      "infected_hosts": [
+        "147.32.84.165"
+      ],
+      "tls_sessions_total": 42662,
+      "botnet": 0,
+      "botnet_distinct_sni": 0,
+      "botnet_sni_values": [],
+      "normal": 2502,
+      "normal_distinct_sni": 55,
+      "background": 40160
+    },
+    "Botnet-49": {
+      "malware": "Murlo",
+      "ctu13_scenario": 8,
+      "infected_hosts": [
+        "147.32.84.165"
+      ],
+      "tls_sessions_total": 64424,
+      "botnet": 0,
+      "botnet_distinct_sni": 0,
+      "botnet_sni_values": [],
+      "normal": 4014,
+      "normal_distinct_sni": 84,
+      "background": 60410
+    },
+    "Botnet-50": {
+      "malware": "Neris",
+      "ctu13_scenario": 9,
+      "infected_hosts": [
+        "147.32.84.165",
+        "147.32.84.191",
+        "147.32.84.192",
+        "147.32.84.193",
+        "147.32.84.204",
+        "147.32.84.205",
+        "147.32.84.206",
+        "147.32.84.207",
+        "147.32.84.208",
+        "147.32.84.209"
+      ],
+      "tls_sessions_total": 54497,
+      "botnet": 3157,
+      "botnet_distinct_sni": 0,
+      "botnet_sni_values": [],
+      "normal": 3087,
+      "normal_distinct_sni": 58,
+      "background": 48253
+    }
+  },
+  "finding": "3 of the 5 scenarios contain no botnet TLS session. The 2 that do yield 2 and 0 distinct server names between them. The attack class therefore has no TLS metadata to build a relation from, and CTU-13 cannot support a TLS relation graph.",
+  "botnet_tls_sessions_total": 3226,
+  "scenarios_without_any_botnet_tls": [
+    "Botnet-44",
+    "Botnet-45",
+    "Botnet-49"
+  ],
+  "mcfp_survey": {
+    "directories_listed": 467,
+    "with_ssl_log": 259,
+    "largest": "CTU-Malware-Capture-Botnet-215-1",
+    "largest_ssl_log_bytes": 144394646,
+    "note": "The large captures are single-malware machines. Pairing them with a separate normal capture would make the capture source itself predict the label, which is the failure this paper measures. CTU-13 is the only collection that places infected and normal hosts on one network."
+  }
+}

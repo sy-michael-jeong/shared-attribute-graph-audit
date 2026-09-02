@@ -1,0 +1,19 @@
+{
+ "data_root": "data/processed_deg2_bccc10_nounk",
+ "permutations": 1000,
+ "seed": 42,
+ "procedure": "labels permuted over all flows, partition boundaries and field presence held fixed, the maximum over fields recomputed each time",
+ "datasets": {
+  "bccc_dohbrw": {
+   "n_candidate_fields": 6,
+   "observed_best_field": "CertSubject",
+   "observed_macro_f1": 0.7136,
+   "null_mean": 0.4966,
+   "null_std": 0.0015,
+   "null_p95": 0.4992,
+   "null_max": 0.5016,
+   "p_value": 0.0,
+   "exceeds_null_p95": true
+  }
+ }
+}

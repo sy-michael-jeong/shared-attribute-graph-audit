@@ -1,0 +1,107 @@
+{
+  "bccc_dohbrw": {
+    "data_root": "data/processed_deg2",
+    "protocol": "inductive",
+    "attach_rule": "new flows join training flows only, never each other",
+    "seeds": [
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "budget": 2,
+    "n_train": 353528,
+    "n_val": 50504,
+    "n_test": 101008,
+    "graph": {
+      "via_cert_validity": {
+        "n_train_edges": 501368,
+        "n_attach_edges": 214854,
+        "new_new_edges": 0,
+        "new_as_source_edges": 0,
+        "attach_rate": 0.709,
+        "attach_rate_test": 0.709,
+        "isolated_test": 29390,
+        "train_indegree_max_before": 2,
+        "train_indegree_max_after": 2,
+        "train_indegree_unchanged": true
+      }
+    },
+    "sets": {
+      "manual_1": {
+        "metapaths": [
+          "via_cert_validity"
+        ],
+        "per_seed": [
+          {
+            "seed": 41,
+            "macro_f1": 0.9997360863581621,
+            "minority_f1": 0.9996257739674763,
+            "weighted_f1": 0.9997822042065888
+          },
+          {
+            "seed": 42,
+            "macro_f1": 0.9997480849590659,
+            "minority_f1": 0.9996427903179166,
+            "weighted_f1": 0.9997921050575378
+          },
+          {
+            "seed": 43,
+            "macro_f1": 0.999772044859147,
+            "minority_f1": 0.9996767333049766,
+            "weighted_f1": 0.9998118913694185
+          },
+          {
+            "seed": 44,
+            "macro_f1": 0.9997960483215655,
+            "minority_f1": 0.9997107810612634,
+            "weighted_f1": 0.9998316956551236
+          },
+          {
+            "seed": 45,
+            "macro_f1": 0.999856026887623,
+            "minority_f1": 0.9997958280872494,
+            "weighted_f1": 0.9998811939530255
+          }
+        ],
+        "macro_f1": {
+          "mean": 0.9998,
+          "std": 0.0,
+          "n": 5,
+          "values": [
+            0.9997,
+            0.9997,
+            0.9998,
+            0.9998,
+            0.9999
+          ]
+        },
+        "minority_f1": {
+          "mean": 0.9997,
+          "std": 0.0001,
+          "n": 5,
+          "values": [
+            0.9996,
+            0.9996,
+            0.9997,
+            0.9997,
+            0.9998
+          ]
+        },
+        "weighted_f1": {
+          "mean": 0.9998,
+          "std": 0.0,
+          "n": 5,
+          "values": [
+            0.9998,
+            0.9998,
+            0.9998,
+            0.9998,
+            0.9999
+          ]
+        }
+      }
+    }
+  }
+}

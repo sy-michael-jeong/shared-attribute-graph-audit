@@ -1,0 +1,107 @@
+{
+  "vnat": {
+    "data_root": "data/processed_deg2",
+    "protocol": "inductive",
+    "attach_rule": "new flows join training flows only, never each other",
+    "seeds": [
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "budget": 2,
+    "n_train": 1538,
+    "n_val": 220,
+    "n_test": 439,
+    "graph": {
+      "via_timebin": {
+        "n_train_edges": 3044,
+        "n_attach_edges": 272,
+        "new_new_edges": 0,
+        "new_as_source_edges": 0,
+        "attach_rate": 0.2064,
+        "attach_rate_test": 0.0,
+        "isolated_test": 439,
+        "train_indegree_max_before": 2,
+        "train_indegree_max_after": 2,
+        "train_indegree_unchanged": true
+      }
+    },
+    "sets": {
+      "manual_1": {
+        "metapaths": [
+          "via_timebin"
+        ],
+        "per_seed": [
+          {
+            "seed": 41,
+            "macro_f1": 0.9521473730106824,
+            "minority_f1": 0.9090909090909091,
+            "weighted_f1": 0.9912806967099752
+          },
+          {
+            "seed": 42,
+            "macro_f1": 0.987207506483667,
+            "minority_f1": 0.975609756097561,
+            "weighted_f1": 0.9977485142377815
+          },
+          {
+            "seed": 43,
+            "macro_f1": 0.9311768394648829,
+            "minority_f1": 0.8695652173913043,
+            "weighted_f1": 0.9871746463153565
+          },
+          {
+            "seed": 44,
+            "macro_f1": 0.8618752247393024,
+            "minority_f1": 0.7407407407407407,
+            "weighted_f1": 0.971972398122961
+          },
+          {
+            "seed": 45,
+            "macro_f1": 0.987207506483667,
+            "minority_f1": 0.975609756097561,
+            "weighted_f1": 0.9977485142377815
+          }
+        ],
+        "macro_f1": {
+          "mean": 0.9439,
+          "std": 0.0463,
+          "n": 5,
+          "values": [
+            0.9521,
+            0.9872,
+            0.9312,
+            0.8619,
+            0.9872
+          ]
+        },
+        "minority_f1": {
+          "mean": 0.8941,
+          "std": 0.0868,
+          "n": 5,
+          "values": [
+            0.9091,
+            0.9756,
+            0.8696,
+            0.7407,
+            0.9756
+          ]
+        },
+        "weighted_f1": {
+          "mean": 0.9892,
+          "std": 0.0095,
+          "n": 5,
+          "values": [
+            0.9913,
+            0.9977,
+            0.9872,
+            0.972,
+            0.9977
+          ]
+        }
+      }
+    }
+  }
+}

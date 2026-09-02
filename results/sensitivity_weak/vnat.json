@@ -1,0 +1,120 @@
+{
+  "vnat": {
+    "data_root": "data/_k4_weak",
+    "seeds": [
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "sets": {
+      "manual_1": {
+        "metapaths": [
+          "via_timebin"
+        ],
+        "per_seed": [
+          {
+            "accuracy": 1.0,
+            "macro_f1": 1.0,
+            "weighted_f1": 1.0,
+            "minority_f1": 1.0,
+            "minority_recall": 1.0,
+            "best_val": 1.0,
+            "seed": 41,
+            "relations": [
+              "via_timebin"
+            ]
+          },
+          {
+            "accuracy": 1.0,
+            "macro_f1": 1.0,
+            "weighted_f1": 1.0,
+            "minority_f1": 1.0,
+            "minority_recall": 1.0,
+            "best_val": 1.0,
+            "seed": 42,
+            "relations": [
+              "via_timebin"
+            ]
+          },
+          {
+            "accuracy": 0.9977220956719818,
+            "macro_f1": 0.987207506483667,
+            "weighted_f1": 0.9977485142377815,
+            "minority_f1": 0.975609756097561,
+            "minority_recall": 1.0,
+            "best_val": 1.0,
+            "seed": 43,
+            "relations": [
+              "via_timebin"
+            ]
+          },
+          {
+            "accuracy": 1.0,
+            "macro_f1": 1.0,
+            "weighted_f1": 1.0,
+            "minority_f1": 1.0,
+            "minority_recall": 1.0,
+            "best_val": 1.0,
+            "seed": 44,
+            "relations": [
+              "via_timebin"
+            ]
+          },
+          {
+            "accuracy": 1.0,
+            "macro_f1": 1.0,
+            "weighted_f1": 1.0,
+            "minority_f1": 1.0,
+            "minority_recall": 1.0,
+            "best_val": 1.0,
+            "seed": 45,
+            "relations": [
+              "via_timebin"
+            ]
+          }
+        ],
+        "macro_f1": {
+          "mean": 0.9974,
+          "std": 0.0051,
+          "std_sample": 0.0057,
+          "n": 5,
+          "values": [
+            1.0,
+            1.0,
+            0.9872,
+            1.0,
+            1.0
+          ]
+        },
+        "minority_f1": {
+          "mean": 0.9951,
+          "std": 0.0098,
+          "std_sample": 0.0109,
+          "n": 5,
+          "values": [
+            1.0,
+            1.0,
+            0.9756,
+            1.0,
+            1.0
+          ]
+        },
+        "weighted_f1": {
+          "mean": 0.9995,
+          "std": 0.0009,
+          "std_sample": 0.001,
+          "n": 5,
+          "values": [
+            1.0,
+            1.0,
+            0.9977,
+            1.0,
+            1.0
+          ]
+        }
+      }
+    }
+  }
+}

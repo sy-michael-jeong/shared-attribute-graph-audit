@@ -1,0 +1,2884 @@
+{
+  "bccc_dohbrw__han_minus_mlp": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0613,
+    "paired_ci": [
+      0.0603,
+      0.0622
+    ],
+    "unpaired_ci": [
+      0.0602,
+      0.0623
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      0.9998,
+      0.9998,
+      0.9995,
+      0.9998,
+      0.9998
+    ],
+    "per_seed_mlp": [
+      0.9394,
+      0.9402,
+      0.9369,
+      0.9382,
+      0.9377
+    ]
+  },
+  "bccc_dohbrw__han_minus_gcn": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0561,
+    "paired_ci": [
+      0.0555,
+      0.0567
+    ],
+    "unpaired_ci": [
+      0.0555,
+      0.0568
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      0.9998,
+      0.9998,
+      0.9995,
+      0.9998,
+      0.9998
+    ],
+    "per_seed_gcn": [
+      0.9427,
+      0.9432,
+      0.9433,
+      0.9445,
+      0.9444
+    ]
+  },
+  "bccc_dohbrw__gcn_minus_mlp": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0052,
+    "paired_ci": [
+      0.0038,
+      0.0065
+    ],
+    "unpaired_ci": [
+      0.004,
+      0.0064
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_gcn": [
+      0.9427,
+      0.9432,
+      0.9433,
+      0.9445,
+      0.9444
+    ],
+    "per_seed_mlp": [
+      0.9394,
+      0.9402,
+      0.9369,
+      0.9382,
+      0.9377
+    ]
+  },
+  "bccc_dohbrw__han_minus_egraphsage": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.01,
+    "paired_ci": [
+      0.0038,
+      0.0151
+    ],
+    "unpaired_ci": [
+      0.0039,
+      0.0151
+    ],
+    "sign_consistency": 0.8,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      0.9998,
+      0.9998,
+      0.9995,
+      0.9998,
+      0.9998
+    ],
+    "per_seed_egraphsage": [
+      0.9847,
+      0.9847,
+      1.0,
+      0.9847,
+      0.9945
+    ]
+  },
+  "iscx_vpn__han_minus_mlp": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.4223,
+    "paired_ci": [
+      0.3995,
+      0.4609
+    ],
+    "unpaired_ci": [
+      0.3843,
+      0.4585
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      1.0,
+      0.9601,
+      0.9601,
+      0.9601,
+      0.8956
+    ],
+    "per_seed_mlp": [
+      0.5012,
+      0.5537,
+      0.5622,
+      0.5496,
+      0.4978
+    ]
+  },
+  "iscx_vpn__han_minus_gcn": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.2193,
+    "paired_ci": [
+      0.1909,
+      0.2463
+    ],
+    "unpaired_ci": [
+      0.1846,
+      0.249
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      1.0,
+      0.9601,
+      0.9601,
+      0.9601,
+      0.8956
+    ],
+    "per_seed_gcn": [
+      0.7351,
+      0.7659,
+      0.7351,
+      0.7217,
+      0.7217
+    ]
+  },
+  "iscx_vpn__gcn_minus_mlp": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.203,
+    "paired_ci": [
+      0.1805,
+      0.2255
+    ],
+    "unpaired_ci": [
+      0.176,
+      0.2311
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_gcn": [
+      0.7351,
+      0.7659,
+      0.7351,
+      0.7217,
+      0.7217
+    ],
+    "per_seed_mlp": [
+      0.5012,
+      0.5537,
+      0.5622,
+      0.5496,
+      0.4978
+    ]
+  },
+  "iscx_vpn__han_minus_egraphsage": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0826,
+    "paired_ci": [
+      -0.0108,
+      0.1884
+    ],
+    "unpaired_ci": [
+      -0.0059,
+      0.1929
+    ],
+    "sign_consistency": 0.8,
+    "paired_ci_includes_zero": true,
+    "unpaired_ci_includes_zero": true,
+    "per_seed_han": [
+      1.0,
+      0.9601,
+      0.9601,
+      0.9601,
+      0.8956
+    ],
+    "per_seed_egraphsage": [
+      0.9531,
+      0.826,
+      0.9531,
+      0.6773,
+      0.9531
+    ]
+  },
+  "hikari__han_minus_mlp": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0081,
+    "paired_ci": [
+      0.0072,
+      0.009
+    ],
+    "unpaired_ci": [
+      0.0072,
+      0.0091
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      0.4517,
+      0.4518,
+      0.4495,
+      0.4517,
+      0.4493
+    ],
+    "per_seed_mlp": [
+      0.4428,
+      0.4428,
+      0.4425,
+      0.4426,
+      0.4427
+    ]
+  },
+  "hikari__han_minus_gcn": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0721,
+    "paired_ci": [
+      0.0703,
+      0.0744
+    ],
+    "unpaired_ci": [
+      0.0701,
+      0.0742
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      0.4517,
+      0.4518,
+      0.4495,
+      0.4517,
+      0.4493
+    ],
+    "per_seed_gcn": [
+      0.3786,
+      0.3755,
+      0.3782,
+      0.3818,
+      0.3793
+    ]
+  },
+  "hikari__gcn_minus_mlp": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": -0.064,
+    "paired_ci": [
+      -0.0659,
+      -0.0621
+    ],
+    "unpaired_ci": [
+      -0.0659,
+      -0.0622
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_gcn": [
+      0.3786,
+      0.3755,
+      0.3782,
+      0.3818,
+      0.3793
+    ],
+    "per_seed_mlp": [
+      0.4428,
+      0.4428,
+      0.4425,
+      0.4426,
+      0.4427
+    ]
+  },
+  "hikari__han_minus_egraphsage": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0012,
+    "paired_ci": [
+      -0.0005,
+      0.003
+    ],
+    "unpaired_ci": [
+      -0.0002,
+      0.0027
+    ],
+    "sign_consistency": 0.6,
+    "paired_ci_includes_zero": true,
+    "unpaired_ci_includes_zero": true,
+    "per_seed_han": [
+      0.4517,
+      0.4518,
+      0.4495,
+      0.4517,
+      0.4493
+    ],
+    "per_seed_egraphsage": [
+      0.4475,
+      0.4496,
+      0.4506,
+      0.4503,
+      0.4502
+    ]
+  },
+  "cic_andmal__han_minus_mlp": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0181,
+    "paired_ci": [
+      0.0102,
+      0.0262
+    ],
+    "unpaired_ci": [
+      0.0098,
+      0.0261
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      0.5679,
+      0.5827,
+      0.5815,
+      0.5823,
+      0.5664
+    ],
+    "per_seed_mlp": [
+      0.5637,
+      0.5504,
+      0.5623,
+      0.5624,
+      0.5518
+    ]
+  },
+  "cic_andmal__han_minus_gcn": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.018,
+    "paired_ci": [
+      0.0134,
+      0.0225
+    ],
+    "unpaired_ci": [
+      0.0113,
+      0.0244
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      0.5679,
+      0.5827,
+      0.5815,
+      0.5823,
+      0.5664
+    ],
+    "per_seed_gcn": [
+      0.556,
+      0.5603,
+      0.5596,
+      0.5594,
+      0.5556
+    ]
+  },
+  "cic_andmal__gcn_minus_mlp": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0,
+    "paired_ci": [
+      -0.0048,
+      0.0061
+    ],
+    "unpaired_ci": [
+      -0.0051,
+      0.0056
+    ],
+    "sign_consistency": 0.6,
+    "paired_ci_includes_zero": true,
+    "unpaired_ci_includes_zero": true,
+    "per_seed_gcn": [
+      0.556,
+      0.5603,
+      0.5596,
+      0.5594,
+      0.5556
+    ],
+    "per_seed_mlp": [
+      0.5637,
+      0.5504,
+      0.5623,
+      0.5624,
+      0.5518
+    ]
+  },
+  "cic_andmal__han_minus_egraphsage": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0339,
+    "paired_ci": [
+      0.021,
+      0.0446
+    ],
+    "unpaired_ci": [
+      0.0185,
+      0.0463
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      0.5679,
+      0.5827,
+      0.5815,
+      0.5823,
+      0.5664
+    ],
+    "per_seed_egraphsage": [
+      0.5312,
+      0.5342,
+      0.5713,
+      0.5376,
+      0.5369
+    ]
+  },
+  "vnat__han_minus_mlp": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0423,
+    "paired_ci": [
+      0.0217,
+      0.0731
+    ],
+    "unpaired_ci": [
+      0.0172,
+      0.0783
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      1.0,
+      0.9872,
+      0.9872,
+      1.0,
+      1.0
+    ],
+    "per_seed_mlp": [
+      0.9633,
+      0.8855,
+      0.9633,
+      0.9872,
+      0.9633
+    ]
+  },
+  "vnat__han_minus_gcn": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0948,
+    "paired_ci": [
+      0.0581,
+      0.1333
+    ],
+    "unpaired_ci": [
+      0.0575,
+      0.1321
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      1.0,
+      0.9872,
+      0.9872,
+      1.0,
+      1.0
+    ],
+    "per_seed_gcn": [
+      0.8958,
+      0.9598,
+      0.8776,
+      0.8378,
+      0.9295
+    ]
+  },
+  "vnat__gcn_minus_mlp": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": -0.0524,
+    "paired_ci": [
+      -0.1112,
+      0.0139
+    ],
+    "unpaired_ci": [
+      -0.0983,
+      -0.0048
+    ],
+    "sign_consistency": 0.8,
+    "paired_ci_includes_zero": true,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_gcn": [
+      0.8958,
+      0.9598,
+      0.8776,
+      0.8378,
+      0.9295
+    ],
+    "per_seed_mlp": [
+      0.9633,
+      0.8855,
+      0.9633,
+      0.9872,
+      0.9633
+    ]
+  },
+  "vnat__han_minus_egraphsage": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": -0.0051,
+    "paired_ci": [
+      -0.0102,
+      0.0
+    ],
+    "unpaired_ci": [
+      -0.0102,
+      0.0
+    ],
+    "sign_consistency": 0.4,
+    "paired_ci_includes_zero": true,
+    "unpaired_ci_includes_zero": true,
+    "per_seed_han": [
+      1.0,
+      0.9872,
+      0.9872,
+      1.0,
+      1.0
+    ],
+    "per_seed_egraphsage": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "bccc_dohbrw__han_minus_noedge": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0535,
+    "paired_ci": [
+      0.0475,
+      0.0596
+    ],
+    "unpaired_ci": [
+      0.0475,
+      0.0595
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      0.9998,
+      0.9998,
+      0.9995,
+      0.9998,
+      0.9998
+    ],
+    "per_seed_noedge": [
+      0.9378,
+      0.9539,
+      0.9527,
+      0.9481,
+      0.9389
+    ]
+  },
+  "bccc_dohbrw__noedge_minus_mlp": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0078,
+    "paired_ci": [
+      0.0018,
+      0.0138
+    ],
+    "unpaired_ci": [
+      0.0018,
+      0.0138
+    ],
+    "sign_consistency": 0.8,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_noedge": [
+      0.9378,
+      0.9539,
+      0.9527,
+      0.9481,
+      0.9389
+    ],
+    "per_seed_mlp": [
+      0.9394,
+      0.9402,
+      0.9369,
+      0.9382,
+      0.9377
+    ]
+  },
+  "bccc_dohbrw__han_minus_masked": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0321,
+    "paired_ci": [
+      0.0302,
+      0.0343
+    ],
+    "unpaired_ci": [
+      0.0303,
+      0.0342
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      0.9998,
+      0.9998,
+      0.9995,
+      0.9998,
+      0.9998
+    ],
+    "per_seed_masked": [
+      0.9637,
+      0.9695,
+      0.9701,
+      0.9678,
+      0.9672
+    ]
+  },
+  "bccc_dohbrw__gcn_minus_noedge": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": -0.0026,
+    "paired_ci": [
+      -0.0087,
+      0.0035
+    ],
+    "unpaired_ci": [
+      -0.0086,
+      0.0033
+    ],
+    "sign_consistency": 0.6,
+    "paired_ci_includes_zero": true,
+    "unpaired_ci_includes_zero": true,
+    "per_seed_gcn": [
+      0.9427,
+      0.9432,
+      0.9433,
+      0.9445,
+      0.9444
+    ],
+    "per_seed_noedge": [
+      0.9378,
+      0.9539,
+      0.9527,
+      0.9481,
+      0.9389
+    ]
+  },
+  "iscx_vpn__han_minus_noedge": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.361,
+    "paired_ci": [
+      0.3352,
+      0.3848
+    ],
+    "unpaired_ci": [
+      0.3282,
+      0.3888
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      1.0,
+      0.9601,
+      0.9601,
+      0.9601,
+      0.8956
+    ],
+    "per_seed_noedge": [
+      0.6003,
+      0.5951,
+      0.5951,
+      0.6003,
+      0.5803
+    ]
+  },
+  "iscx_vpn__noedge_minus_mlp": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0613,
+    "paired_ci": [
+      0.0399,
+      0.0842
+    ],
+    "unpaired_ci": [
+      0.0371,
+      0.0869
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_noedge": [
+      0.6003,
+      0.5951,
+      0.5951,
+      0.6003,
+      0.5803
+    ],
+    "per_seed_mlp": [
+      0.5012,
+      0.5537,
+      0.5622,
+      0.5496,
+      0.4978
+    ]
+  },
+  "iscx_vpn__han_minus_masked": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.3019,
+    "paired_ci": [
+      0.2658,
+      0.343
+    ],
+    "unpaired_ci": [
+      0.2682,
+      0.3337
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      1.0,
+      0.9601,
+      0.9601,
+      0.9601,
+      0.8956
+    ],
+    "per_seed_masked": [
+      0.6292,
+      0.6724,
+      0.6724,
+      0.6356,
+      0.6566
+    ]
+  },
+  "iscx_vpn__gcn_minus_noedge": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.1417,
+    "paired_ci": [
+      0.1291,
+      0.1575
+    ],
+    "unpaired_ci": [
+      0.1281,
+      0.1586
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_gcn": [
+      0.7351,
+      0.7659,
+      0.7351,
+      0.7217,
+      0.7217
+    ],
+    "per_seed_noedge": [
+      0.6003,
+      0.5951,
+      0.5951,
+      0.6003,
+      0.5803
+    ]
+  },
+  "hikari__han_minus_noedge": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0005,
+    "paired_ci": [
+      -0.001,
+      0.0019
+    ],
+    "unpaired_ci": [
+      -0.0013,
+      0.0024
+    ],
+    "sign_consistency": 0.8,
+    "paired_ci_includes_zero": true,
+    "unpaired_ci_includes_zero": true,
+    "per_seed_han": [
+      0.4517,
+      0.4518,
+      0.4495,
+      0.4517,
+      0.4493
+    ],
+    "per_seed_noedge": [
+      0.4512,
+      0.4513,
+      0.4466,
+      0.4514,
+      0.4513
+    ]
+  },
+  "hikari__noedge_minus_mlp": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0077,
+    "paired_ci": [
+      0.0059,
+      0.0087
+    ],
+    "unpaired_ci": [
+      0.0058,
+      0.0087
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_noedge": [
+      0.4512,
+      0.4513,
+      0.4466,
+      0.4514,
+      0.4513
+    ],
+    "per_seed_mlp": [
+      0.4428,
+      0.4428,
+      0.4425,
+      0.4426,
+      0.4427
+    ]
+  },
+  "hikari__han_minus_masked": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": -0.0001,
+    "paired_ci": [
+      -0.0011,
+      0.0009
+    ],
+    "unpaired_ci": [
+      -0.0011,
+      0.0008
+    ],
+    "sign_consistency": 0.6,
+    "paired_ci_includes_zero": true,
+    "unpaired_ci_includes_zero": true,
+    "per_seed_han": [
+      0.4517,
+      0.4518,
+      0.4495,
+      0.4517,
+      0.4493
+    ],
+    "per_seed_masked": [
+      0.451,
+      0.4509,
+      0.4511,
+      0.4508,
+      0.4509
+    ]
+  },
+  "hikari__gcn_minus_noedge": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": -0.0717,
+    "paired_ci": [
+      -0.0739,
+      -0.0695
+    ],
+    "unpaired_ci": [
+      -0.0739,
+      -0.0692
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_gcn": [
+      0.3786,
+      0.3755,
+      0.3782,
+      0.3818,
+      0.3793
+    ],
+    "per_seed_noedge": [
+      0.4512,
+      0.4513,
+      0.4466,
+      0.4514,
+      0.4513
+    ]
+  },
+  "cic_andmal__han_minus_noedge": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0015,
+    "paired_ci": [
+      0.0001,
+      0.0028
+    ],
+    "unpaired_ci": [
+      -0.0075,
+      0.0106
+    ],
+    "sign_consistency": 0.8,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": true,
+    "per_seed_han": [
+      0.5679,
+      0.5827,
+      0.5815,
+      0.5823,
+      0.5664
+    ],
+    "per_seed_noedge": [
+      0.5644,
+      0.5798,
+      0.5808,
+      0.5812,
+      0.5673
+    ]
+  },
+  "cic_andmal__noedge_minus_mlp": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0166,
+    "paired_ci": [
+      0.0073,
+      0.0244
+    ],
+    "unpaired_ci": [
+      0.0084,
+      0.0247
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_noedge": [
+      0.5644,
+      0.5798,
+      0.5808,
+      0.5812,
+      0.5673
+    ],
+    "per_seed_mlp": [
+      0.5637,
+      0.5504,
+      0.5623,
+      0.5624,
+      0.5518
+    ]
+  },
+  "cic_andmal__han_minus_masked": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0002,
+    "paired_ci": [
+      -0.0012,
+      0.0019
+    ],
+    "unpaired_ci": [
+      -0.0087,
+      0.0089
+    ],
+    "sign_consistency": 0.6,
+    "paired_ci_includes_zero": true,
+    "unpaired_ci_includes_zero": true,
+    "per_seed_han": [
+      0.5679,
+      0.5827,
+      0.5815,
+      0.5823,
+      0.5664
+    ],
+    "per_seed_masked": [
+      0.5697,
+      0.5826,
+      0.5782,
+      0.5833,
+      0.566
+    ]
+  },
+  "cic_andmal__gcn_minus_noedge": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": -0.0166,
+    "paired_ci": [
+      -0.0212,
+      -0.0116
+    ],
+    "unpaired_ci": [
+      -0.0228,
+      -0.0098
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_gcn": [
+      0.556,
+      0.5603,
+      0.5596,
+      0.5594,
+      0.5556
+    ],
+    "per_seed_noedge": [
+      0.5644,
+      0.5798,
+      0.5808,
+      0.5812,
+      0.5673
+    ]
+  },
+  "vnat__han_minus_noedge": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0051,
+    "paired_ci": [
+      0.0,
+      0.0102
+    ],
+    "unpaired_ci": [
+      -0.0026,
+      0.0128
+    ],
+    "sign_consistency": 0.4,
+    "paired_ci_includes_zero": true,
+    "unpaired_ci_includes_zero": true,
+    "per_seed_han": [
+      1.0,
+      0.9872,
+      0.9872,
+      1.0,
+      1.0
+    ],
+    "per_seed_noedge": [
+      0.9872,
+      0.9872,
+      0.9872,
+      0.9872,
+      1.0
+    ]
+  },
+  "vnat__noedge_minus_mlp": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0372,
+    "paired_ci": [
+      0.0121,
+      0.0706
+    ],
+    "unpaired_ci": [
+      0.0121,
+      0.0709
+    ],
+    "sign_consistency": 0.8,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_noedge": [
+      0.9872,
+      0.9872,
+      0.9872,
+      0.9872,
+      1.0
+    ],
+    "per_seed_mlp": [
+      0.9633,
+      0.8855,
+      0.9633,
+      0.9872,
+      0.9633
+    ]
+  },
+  "vnat__han_minus_masked": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0,
+    "paired_ci": [
+      -0.0077,
+      0.0077
+    ],
+    "unpaired_ci": [
+      -0.0077,
+      0.0077
+    ],
+    "sign_consistency": 0.2,
+    "paired_ci_includes_zero": true,
+    "unpaired_ci_includes_zero": true,
+    "per_seed_han": [
+      1.0,
+      0.9872,
+      0.9872,
+      1.0,
+      1.0
+    ],
+    "per_seed_masked": [
+      1.0,
+      1.0,
+      0.9872,
+      1.0,
+      0.9872
+    ]
+  },
+  "vnat__gcn_minus_noedge": {
+    "metric": "macro_f1",
+    "n_seeds": 5,
+    "mean_diff": -0.0897,
+    "paired_ci": [
+      -0.1256,
+      -0.0533
+    ],
+    "unpaired_ci": [
+      -0.127,
+      -0.053
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_gcn": [
+      0.8958,
+      0.9598,
+      0.8776,
+      0.8378,
+      0.9295
+    ],
+    "per_seed_noedge": [
+      0.9872,
+      0.9872,
+      0.9872,
+      0.9872,
+      1.0
+    ]
+  },
+  "bccc_dohbrw__han_minus_mlp__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0839,
+    "paired_ci": [
+      0.0826,
+      0.0851
+    ],
+    "unpaired_ci": [
+      0.0825,
+      0.0852
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      0.9998,
+      0.9998,
+      0.9993,
+      0.9997,
+      0.9998
+    ],
+    "per_seed_mlp": [
+      0.9169,
+      0.918,
+      0.9136,
+      0.9153,
+      0.9148
+    ]
+  },
+  "bccc_dohbrw__han_minus_gcn__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0787,
+    "paired_ci": [
+      0.0779,
+      0.0795
+    ],
+    "unpaired_ci": [
+      0.0779,
+      0.0795
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      0.9998,
+      0.9998,
+      0.9993,
+      0.9997,
+      0.9998
+    ],
+    "per_seed_gcn": [
+      0.9197,
+      0.9204,
+      0.9204,
+      0.9222,
+      0.922
+    ]
+  },
+  "bccc_dohbrw__gcn_minus_mlp__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0052,
+    "paired_ci": [
+      0.0034,
+      0.007
+    ],
+    "unpaired_ci": [
+      0.0036,
+      0.0068
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_gcn": [
+      0.9197,
+      0.9204,
+      0.9204,
+      0.9222,
+      0.922
+    ],
+    "per_seed_mlp": [
+      0.9169,
+      0.918,
+      0.9136,
+      0.9153,
+      0.9148
+    ]
+  },
+  "bccc_dohbrw__han_minus_egraphsage__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0143,
+    "paired_ci": [
+      0.0054,
+      0.0216
+    ],
+    "unpaired_ci": [
+      0.0056,
+      0.0216
+    ],
+    "sign_consistency": 0.8,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      0.9998,
+      0.9998,
+      0.9993,
+      0.9997,
+      0.9998
+    ],
+    "per_seed_egraphsage": [
+      0.9782,
+      0.9781,
+      1.0,
+      0.9781,
+      0.9922
+    ]
+  },
+  "bccc_dohbrw__han_minus_noedge__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0736,
+    "paired_ci": [
+      0.0658,
+      0.0815
+    ],
+    "unpaired_ci": [
+      0.0659,
+      0.0812
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      0.9998,
+      0.9998,
+      0.9993,
+      0.9997,
+      0.9998
+    ],
+    "per_seed_noedge": [
+      0.915,
+      0.9361,
+      0.9344,
+      0.9281,
+      0.9165
+    ]
+  },
+  "bccc_dohbrw__noedge_minus_mlp__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0103,
+    "paired_ci": [
+      0.0025,
+      0.0181
+    ],
+    "unpaired_ci": [
+      0.0025,
+      0.018
+    ],
+    "sign_consistency": 0.8,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_noedge": [
+      0.915,
+      0.9361,
+      0.9344,
+      0.9281,
+      0.9165
+    ],
+    "per_seed_mlp": [
+      0.9169,
+      0.918,
+      0.9136,
+      0.9153,
+      0.9148
+    ]
+  },
+  "bccc_dohbrw__han_minus_masked__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0446,
+    "paired_ci": [
+      0.0421,
+      0.0476
+    ],
+    "unpaired_ci": [
+      0.0422,
+      0.0474
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      0.9998,
+      0.9998,
+      0.9993,
+      0.9997,
+      0.9998
+    ],
+    "per_seed_masked": [
+      0.9496,
+      0.9575,
+      0.9584,
+      0.9552,
+      0.9544
+    ]
+  },
+  "bccc_dohbrw__gcn_minus_noedge__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": -0.0051,
+    "paired_ci": [
+      -0.013,
+      0.0029
+    ],
+    "unpaired_ci": [
+      -0.0128,
+      0.0025
+    ],
+    "sign_consistency": 0.6,
+    "paired_ci_includes_zero": true,
+    "unpaired_ci_includes_zero": true,
+    "per_seed_gcn": [
+      0.9197,
+      0.9204,
+      0.9204,
+      0.9222,
+      0.922
+    ],
+    "per_seed_noedge": [
+      0.915,
+      0.9361,
+      0.9344,
+      0.9281,
+      0.9165
+    ]
+  },
+  "iscx_vpn__han_minus_mlp__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.6984,
+    "paired_ci": [
+      0.6469,
+      0.7633
+    ],
+    "unpaired_ci": [
+      0.6343,
+      0.7551
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      1.0,
+      0.9231,
+      0.9231,
+      0.9231,
+      0.8
+    ],
+    "per_seed_mlp": [
+      0.1846,
+      0.2353,
+      0.2449,
+      0.2308,
+      0.1818
+    ]
+  },
+  "iscx_vpn__han_minus_gcn__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.4123,
+    "paired_ci": [
+      0.3588,
+      0.4634
+    ],
+    "unpaired_ci": [
+      0.3453,
+      0.4681
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      1.0,
+      0.9231,
+      0.9231,
+      0.9231,
+      0.8
+    ],
+    "per_seed_gcn": [
+      0.5,
+      0.5556,
+      0.5,
+      0.4762,
+      0.4762
+    ]
+  },
+  "iscx_vpn__gcn_minus_mlp__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.2861,
+    "paired_ci": [
+      0.2591,
+      0.3131
+    ],
+    "unpaired_ci": [
+      0.2534,
+      0.3219
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_gcn": [
+      0.5,
+      0.5556,
+      0.5,
+      0.4762,
+      0.4762
+    ],
+    "per_seed_mlp": [
+      0.1846,
+      0.2353,
+      0.2449,
+      0.2308,
+      0.1818
+    ]
+  },
+  "iscx_vpn__han_minus_egraphsage__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.1551,
+    "paired_ci": [
+      -0.0199,
+      0.3631
+    ],
+    "unpaired_ci": [
+      -0.0106,
+      0.3538
+    ],
+    "sign_consistency": 0.8,
+    "paired_ci_includes_zero": true,
+    "unpaired_ci_includes_zero": true,
+    "per_seed_han": [
+      1.0,
+      0.9231,
+      0.9231,
+      0.9231,
+      0.8
+    ],
+    "per_seed_egraphsage": [
+      0.9091,
+      0.6667,
+      0.9091,
+      0.4,
+      0.9091
+    ]
+  },
+  "iscx_vpn__han_minus_noedge__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.6292,
+    "paired_ci": [
+      0.5749,
+      0.6779
+    ],
+    "unpaired_ci": [
+      0.5645,
+      0.6831
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      1.0,
+      0.9231,
+      0.9231,
+      0.9231,
+      0.8
+    ],
+    "per_seed_noedge": [
+      0.2927,
+      0.2857,
+      0.2857,
+      0.2927,
+      0.2667
+    ]
+  },
+  "iscx_vpn__noedge_minus_mlp__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0692,
+    "paired_ci": [
+      0.0489,
+      0.0919
+    ],
+    "unpaired_ci": [
+      0.0451,
+      0.0941
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_noedge": [
+      0.2927,
+      0.2857,
+      0.2857,
+      0.2927,
+      0.2667
+    ],
+    "per_seed_mlp": [
+      0.1846,
+      0.2353,
+      0.2449,
+      0.2308,
+      0.1818
+    ]
+  },
+  "iscx_vpn__han_minus_masked__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.5436,
+    "paired_ci": [
+      0.4757,
+      0.6148
+    ],
+    "unpaired_ci": [
+      0.4788,
+      0.6011
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      1.0,
+      0.9231,
+      0.9231,
+      0.9231,
+      0.8
+    ],
+    "per_seed_masked": [
+      0.3333,
+      0.4,
+      0.4,
+      0.3429,
+      0.375
+    ]
+  },
+  "iscx_vpn__gcn_minus_noedge__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.2169,
+    "paired_ci": [
+      0.1949,
+      0.2453
+    ],
+    "unpaired_ci": [
+      0.1938,
+      0.2467
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_gcn": [
+      0.5,
+      0.5556,
+      0.5,
+      0.4762,
+      0.4762
+    ],
+    "per_seed_noedge": [
+      0.2927,
+      0.2857,
+      0.2857,
+      0.2927,
+      0.2667
+    ]
+  },
+  "hikari__han_minus_mlp__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0046,
+    "paired_ci": [
+      0.0039,
+      0.0053
+    ],
+    "unpaired_ci": [
+      0.0039,
+      0.0054
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      0.1624,
+      0.1625,
+      0.1607,
+      0.1624,
+      0.1606
+    ],
+    "per_seed_mlp": [
+      0.1571,
+      0.1571,
+      0.157,
+      0.157,
+      0.1571
+    ]
+  },
+  "hikari__han_minus_gcn__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0335,
+    "paired_ci": [
+      0.0325,
+      0.0346
+    ],
+    "unpaired_ci": [
+      0.0325,
+      0.0344
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      0.1624,
+      0.1625,
+      0.1607,
+      0.1624,
+      0.1606
+    ],
+    "per_seed_gcn": [
+      0.1283,
+      0.1271,
+      0.1281,
+      0.1294,
+      0.1284
+    ]
+  },
+  "hikari__gcn_minus_mlp__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": -0.0288,
+    "paired_ci": [
+      -0.0296,
+      -0.0281
+    ],
+    "unpaired_ci": [
+      -0.0295,
+      -0.0281
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_gcn": [
+      0.1283,
+      0.1271,
+      0.1281,
+      0.1294,
+      0.1284
+    ],
+    "per_seed_mlp": [
+      0.1571,
+      0.1571,
+      0.157,
+      0.157,
+      0.1571
+    ]
+  },
+  "hikari__han_minus_egraphsage__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0005,
+    "paired_ci": [
+      -0.0006,
+      0.0016
+    ],
+    "unpaired_ci": [
+      -0.0005,
+      0.0015
+    ],
+    "sign_consistency": 0.6,
+    "paired_ci_includes_zero": true,
+    "unpaired_ci_includes_zero": true,
+    "per_seed_han": [
+      0.1624,
+      0.1625,
+      0.1607,
+      0.1624,
+      0.1606
+    ],
+    "per_seed_egraphsage": [
+      0.16,
+      0.1612,
+      0.1617,
+      0.1616,
+      0.1615
+    ]
+  },
+  "hikari__han_minus_noedge__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0001,
+    "paired_ci": [
+      -0.0008,
+      0.001
+    ],
+    "unpaired_ci": [
+      -0.0011,
+      0.0015
+    ],
+    "sign_consistency": 0.8,
+    "paired_ci_includes_zero": true,
+    "unpaired_ci_includes_zero": true,
+    "per_seed_han": [
+      0.1624,
+      0.1625,
+      0.1607,
+      0.1624,
+      0.1606
+    ],
+    "per_seed_noedge": [
+      0.1621,
+      0.1622,
+      0.1592,
+      0.1622,
+      0.1621
+    ]
+  },
+  "hikari__noedge_minus_mlp__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0045,
+    "paired_ci": [
+      0.0034,
+      0.0051
+    ],
+    "unpaired_ci": [
+      0.0033,
+      0.0051
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_noedge": [
+      0.1621,
+      0.1622,
+      0.1592,
+      0.1622,
+      0.1621
+    ],
+    "per_seed_mlp": [
+      0.1571,
+      0.1571,
+      0.157,
+      0.157,
+      0.1571
+    ]
+  },
+  "hikari__han_minus_masked__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": -0.0002,
+    "paired_ci": [
+      -0.001,
+      0.0005
+    ],
+    "unpaired_ci": [
+      -0.001,
+      0.0005
+    ],
+    "sign_consistency": 0.6,
+    "paired_ci_includes_zero": true,
+    "unpaired_ci_includes_zero": true,
+    "per_seed_han": [
+      0.1624,
+      0.1625,
+      0.1607,
+      0.1624,
+      0.1606
+    ],
+    "per_seed_masked": [
+      0.162,
+      0.1619,
+      0.162,
+      0.1619,
+      0.162
+    ]
+  },
+  "hikari__gcn_minus_noedge__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": -0.0333,
+    "paired_ci": [
+      -0.0344,
+      -0.0321
+    ],
+    "unpaired_ci": [
+      -0.0344,
+      -0.032
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_gcn": [
+      0.1283,
+      0.1271,
+      0.1281,
+      0.1294,
+      0.1284
+    ],
+    "per_seed_noedge": [
+      0.1621,
+      0.1622,
+      0.1592,
+      0.1622,
+      0.1621
+    ]
+  },
+  "cic_andmal__han_minus_mlp__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0578,
+    "paired_ci": [
+      0.0394,
+      0.0847
+    ],
+    "unpaired_ci": [
+      0.0382,
+      0.0782
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      0.5563,
+      0.5788,
+      0.5431,
+      0.5432,
+      0.5345
+    ],
+    "per_seed_mlp": [
+      0.5192,
+      0.4707,
+      0.5023,
+      0.4812,
+      0.4933
+    ]
+  },
+  "cic_andmal__han_minus_gcn__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0652,
+    "paired_ci": [
+      0.0538,
+      0.0778
+    ],
+    "unpaired_ci": [
+      0.0529,
+      0.0802
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      0.5563,
+      0.5788,
+      0.5431,
+      0.5432,
+      0.5345
+    ],
+    "per_seed_gcn": [
+      0.4814,
+      0.4925,
+      0.4882,
+      0.4823,
+      0.4854
+    ]
+  },
+  "cic_andmal__gcn_minus_mlp__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": -0.0074,
+    "paired_ci": [
+      -0.0253,
+      0.0099
+    ],
+    "unpaired_ci": [
+      -0.0227,
+      0.0074
+    ],
+    "sign_consistency": 0.6,
+    "paired_ci_includes_zero": true,
+    "unpaired_ci_includes_zero": true,
+    "per_seed_gcn": [
+      0.4814,
+      0.4925,
+      0.4882,
+      0.4823,
+      0.4854
+    ],
+    "per_seed_mlp": [
+      0.5192,
+      0.4707,
+      0.5023,
+      0.4812,
+      0.4933
+    ]
+  },
+  "cic_andmal__han_minus_egraphsage__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0619,
+    "paired_ci": [
+      0.0341,
+      0.0896
+    ],
+    "unpaired_ci": [
+      0.0365,
+      0.0855
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      0.5563,
+      0.5788,
+      0.5431,
+      0.5432,
+      0.5345
+    ],
+    "per_seed_egraphsage": [
+      0.5018,
+      0.4692,
+      0.5282,
+      0.4837,
+      0.4634
+    ]
+  },
+  "cic_andmal__han_minus_noedge__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0175,
+    "paired_ci": [
+      0.0089,
+      0.026
+    ],
+    "unpaired_ci": [
+      0.0025,
+      0.034
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      0.5563,
+      0.5788,
+      0.5431,
+      0.5432,
+      0.5345
+    ],
+    "per_seed_noedge": [
+      0.5264,
+      0.5514,
+      0.5302,
+      0.5279,
+      0.5327
+    ]
+  },
+  "cic_andmal__noedge_minus_mlp__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0404,
+    "paired_ci": [
+      0.0201,
+      0.0633
+    ],
+    "unpaired_ci": [
+      0.0238,
+      0.0572
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_noedge": [
+      0.5264,
+      0.5514,
+      0.5302,
+      0.5279,
+      0.5327
+    ],
+    "per_seed_mlp": [
+      0.5192,
+      0.4707,
+      0.5023,
+      0.4812,
+      0.4933
+    ]
+  },
+  "cic_andmal__han_minus_masked__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0004,
+    "paired_ci": [
+      -0.0206,
+      0.0199
+    ],
+    "unpaired_ci": [
+      -0.0214,
+      0.0225
+    ],
+    "sign_consistency": 0.6,
+    "paired_ci_includes_zero": true,
+    "unpaired_ci_includes_zero": true,
+    "per_seed_han": [
+      0.5563,
+      0.5788,
+      0.5431,
+      0.5432,
+      0.5345
+    ],
+    "per_seed_masked": [
+      0.525,
+      0.5617,
+      0.5812,
+      0.5521,
+      0.5337
+    ]
+  },
+  "cic_andmal__gcn_minus_noedge__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": -0.0478,
+    "paired_ci": [
+      -0.0536,
+      -0.0438
+    ],
+    "unpaired_ci": [
+      -0.0574,
+      -0.0403
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_gcn": [
+      0.4814,
+      0.4925,
+      0.4882,
+      0.4823,
+      0.4854
+    ],
+    "per_seed_noedge": [
+      0.5264,
+      0.5514,
+      0.5302,
+      0.5279,
+      0.5327
+    ]
+  },
+  "vnat__han_minus_mlp__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0801,
+    "paired_ci": [
+      0.0419,
+      0.1378
+    ],
+    "unpaired_ci": [
+      0.0328,
+      0.1476
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      1.0,
+      0.9756,
+      0.9756,
+      1.0,
+      1.0
+    ],
+    "per_seed_mlp": [
+      0.9302,
+      0.7843,
+      0.9302,
+      0.9756,
+      0.9302
+    ]
+  },
+  "vnat__han_minus_gcn__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.1822,
+    "paired_ci": [
+      0.1045,
+      0.2567
+    ],
+    "unpaired_ci": [
+      0.1105,
+      0.2542
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_han": [
+      1.0,
+      0.9756,
+      0.9756,
+      1.0,
+      1.0
+    ],
+    "per_seed_gcn": [
+      0.8,
+      0.9231,
+      0.7647,
+      0.6875,
+      0.8649
+    ]
+  },
+  "vnat__gcn_minus_mlp__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": -0.1021,
+    "paired_ci": [
+      -0.2146,
+      0.0243
+    ],
+    "unpaired_ci": [
+      -0.1914,
+      -0.0083
+    ],
+    "sign_consistency": 0.8,
+    "paired_ci_includes_zero": true,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_gcn": [
+      0.8,
+      0.9231,
+      0.7647,
+      0.6875,
+      0.8649
+    ],
+    "per_seed_mlp": [
+      0.9302,
+      0.7843,
+      0.9302,
+      0.9756,
+      0.9302
+    ]
+  },
+  "vnat__han_minus_egraphsage__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": -0.0098,
+    "paired_ci": [
+      -0.0195,
+      0.0
+    ],
+    "unpaired_ci": [
+      -0.0195,
+      0.0
+    ],
+    "sign_consistency": 0.4,
+    "paired_ci_includes_zero": true,
+    "unpaired_ci_includes_zero": true,
+    "per_seed_han": [
+      1.0,
+      0.9756,
+      0.9756,
+      1.0,
+      1.0
+    ],
+    "per_seed_egraphsage": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "vnat__han_minus_noedge__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0098,
+    "paired_ci": [
+      0.0,
+      0.0195
+    ],
+    "unpaired_ci": [
+      -0.0049,
+      0.0244
+    ],
+    "sign_consistency": 0.4,
+    "paired_ci_includes_zero": true,
+    "unpaired_ci_includes_zero": true,
+    "per_seed_han": [
+      1.0,
+      0.9756,
+      0.9756,
+      1.0,
+      1.0
+    ],
+    "per_seed_noedge": [
+      0.9756,
+      0.9756,
+      0.9756,
+      0.9756,
+      1.0
+    ]
+  },
+  "vnat__noedge_minus_mlp__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0704,
+    "paired_ci": [
+      0.023,
+      0.1329
+    ],
+    "unpaired_ci": [
+      0.023,
+      0.1378
+    ],
+    "sign_consistency": 0.8,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_noedge": [
+      0.9756,
+      0.9756,
+      0.9756,
+      0.9756,
+      1.0
+    ],
+    "per_seed_mlp": [
+      0.9302,
+      0.7843,
+      0.9302,
+      0.9756,
+      0.9302
+    ]
+  },
+  "vnat__han_minus_masked__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": 0.0,
+    "paired_ci": [
+      -0.0146,
+      0.0146
+    ],
+    "unpaired_ci": [
+      -0.0146,
+      0.0146
+    ],
+    "sign_consistency": 0.2,
+    "paired_ci_includes_zero": true,
+    "unpaired_ci_includes_zero": true,
+    "per_seed_han": [
+      1.0,
+      0.9756,
+      0.9756,
+      1.0,
+      1.0
+    ],
+    "per_seed_masked": [
+      1.0,
+      1.0,
+      0.9756,
+      1.0,
+      0.9756
+    ]
+  },
+  "vnat__gcn_minus_noedge__minority_f1": {
+    "metric": "minority_f1",
+    "n_seeds": 5,
+    "mean_diff": -0.1725,
+    "paired_ci": [
+      -0.2418,
+      -0.1088
+    ],
+    "unpaired_ci": [
+      -0.2431,
+      -0.1021
+    ],
+    "sign_consistency": 1.0,
+    "paired_ci_includes_zero": false,
+    "unpaired_ci_includes_zero": false,
+    "per_seed_gcn": [
+      0.8,
+      0.9231,
+      0.7647,
+      0.6875,
+      0.8649
+    ],
+    "per_seed_noedge": [
+      0.9756,
+      0.9756,
+      0.9756,
+      0.9756,
+      1.0
+    ]
+  },
+  "_edge_share": {
+    "bccc_dohbrw__macro_f1": {
+      "han": 0.9998,
+      "noedge": 0.9463,
+      "mlp": 0.9385,
+      "total_margin": 0.0613,
+      "architecture": 0.0078,
+      "edges": 0.0535,
+      "edge_share_pct": 87.3,
+      "n_seeds": {
+        "han": 5,
+        "noedge": 5,
+        "mlp": 5,
+        "permuted": 5
+      },
+      "permuted": 0.9997,
+      "availability_and_connection": 0.0535,
+      "value_identity": 0.0,
+      "availability_share_pct": 87.3,
+      "value_share_pct": 0.0,
+      "three_way_sums_to_margin": true,
+      "ci": {
+        "architecture": [
+          0.0018,
+          0.0138
+        ],
+        "architecture_pct": [
+          3.0,
+          22.5
+        ],
+        "availability_and_connection": [
+          0.0475,
+          0.0595
+        ],
+        "availability_and_connection_pct": [
+          77.6,
+          96.9
+        ],
+        "value_identity": [
+          -0.0001,
+          0.0001
+        ],
+        "value_identity_pct": [
+          -0.2,
+          0.2
+        ]
+      },
+      "note": "terms over training seeds are paired; the permutation arm is resampled independently because its observations are permutation seeds, not training seeds. the percentage interval is wide wherever the margin is small; the denominator is resampled with the numerator"
+    },
+    "iscx_vpn__macro_f1": {
+      "han": 0.9552,
+      "noedge": 0.5942,
+      "mlp": 0.5329,
+      "total_margin": 0.4223,
+      "architecture": 0.0613,
+      "edges": 0.361,
+      "edge_share_pct": 85.5,
+      "n_seeds": {
+        "han": 5,
+        "noedge": 5,
+        "mlp": 5,
+        "permuted": 5
+      },
+      "permuted": 0.6298,
+      "availability_and_connection": 0.0356,
+      "value_identity": 0.3254,
+      "availability_share_pct": 8.4,
+      "value_share_pct": 77.1,
+      "three_way_sums_to_margin": true,
+      "ci": {
+        "architecture": [
+          0.0399,
+          0.0842
+        ],
+        "architecture_pct": [
+          9.9,
+          18.8
+        ],
+        "availability_and_connection": [
+          0.0134,
+          0.0678
+        ],
+        "availability_and_connection_pct": [
+          3.1,
+          16.2
+        ],
+        "value_identity": [
+          0.2818,
+          0.3627
+        ],
+        "value_identity_pct": [
+          68.0,
+          84.6
+        ]
+      },
+      "note": "terms over training seeds are paired; the permutation arm is resampled independently because its observations are permutation seeds, not training seeds. the percentage interval is wide wherever the margin is small; the denominator is resampled with the numerator"
+    },
+    "hikari__macro_f1": {
+      "han": 0.4508,
+      "noedge": 0.4503,
+      "mlp": 0.4427,
+      "total_margin": 0.0081,
+      "architecture": 0.0077,
+      "edges": 0.0005,
+      "edge_share_pct": 5.9,
+      "n_seeds": {
+        "han": 5,
+        "noedge": 5,
+        "mlp": 5,
+        "permuted": 5
+      },
+      "permuted": 0.4492,
+      "availability_and_connection": -0.0012,
+      "value_identity": 0.0016,
+      "availability_share_pct": -14.2,
+      "value_share_pct": 20.0,
+      "three_way_sums_to_margin": true,
+      "ci": {
+        "architecture": [
+          0.0059,
+          0.0087
+        ],
+        "architecture_pct": [
+          75.5,
+          112.7
+        ],
+        "availability_and_connection": [
+          -0.0025,
+          0.0007
+        ],
+        "availability_and_connection_pct": [
+          -30.0,
+          9.9
+        ],
+        "value_identity": [
+          0.0005,
+          0.0028
+        ],
+        "value_identity_pct": [
+          6.7,
+          31.0
+        ]
+      },
+      "note": "terms over training seeds are paired; the permutation arm is resampled independently because its observations are permutation seeds, not training seeds. the percentage interval is wide wherever the margin is small; the denominator is resampled with the numerator"
+    },
+    "cic_andmal__macro_f1": {
+      "han": 0.5762,
+      "noedge": 0.5747,
+      "mlp": 0.5581,
+      "total_margin": 0.0181,
+      "architecture": 0.0166,
+      "edges": 0.0015,
+      "edge_share_pct": 8.1,
+      "n_seeds": {
+        "han": 5,
+        "noedge": 5,
+        "mlp": 5,
+        "permuted": 5
+      },
+      "permuted": 0.5744,
+      "availability_and_connection": -0.0003,
+      "value_identity": 0.0018,
+      "availability_share_pct": -1.6,
+      "value_share_pct": 9.7,
+      "three_way_sums_to_margin": true,
+      "ci": {
+        "architecture": [
+          0.0079,
+          0.0244
+        ],
+        "architecture_pct": [
+          77.6,
+          99.2
+        ],
+        "availability_and_connection": [
+          -0.0064,
+          0.0062
+        ],
+        "availability_and_connection_pct": [
+          -28.5,
+          60.1
+        ],
+        "value_identity": [
+          -0.0046,
+          0.008
+        ],
+        "value_identity_pct": [
+          -40.2,
+          34.4
+        ]
+      },
+      "note": "terms over training seeds are paired; the permutation arm is resampled independently because its observations are permutation seeds, not training seeds. the percentage interval is wide wherever the margin is small; the denominator is resampled with the numerator"
+    },
+    "vnat__macro_f1": {
+      "han": 0.9949,
+      "noedge": 0.9898,
+      "mlp": 0.9525,
+      "total_margin": 0.0423,
+      "architecture": 0.0372,
+      "edges": 0.0051,
+      "edge_share_pct": 12.1,
+      "n_seeds": {
+        "han": 5,
+        "noedge": 5,
+        "mlp": 5,
+        "permuted": 5
+      },
+      "permuted": 0.9766,
+      "availability_and_connection": -0.0132,
+      "value_identity": 0.0183,
+      "availability_share_pct": -31.2,
+      "value_share_pct": 43.2,
+      "three_way_sums_to_margin": true,
+      "ci": {
+        "architecture": [
+          0.0121,
+          0.0706
+        ],
+        "architecture_pct": [
+          54.2,
+          100.0
+        ],
+        "availability_and_connection": [
+          -0.0212,
+          -0.0066
+        ],
+        "availability_and_connection_pct": [
+          -71.5,
+          -12.2
+        ],
+        "value_identity": [
+          0.0104,
+          0.0264
+        ],
+        "value_identity_pct": [
+          17.1,
+          104.1
+        ]
+      },
+      "note": "terms over training seeds are paired; the permutation arm is resampled independently because its observations are permutation seeds, not training seeds. the percentage interval is wide wherever the margin is small; the denominator is resampled with the numerator"
+    },
+    "bccc_dohbrw__minority_f1": {
+      "han": 0.9997,
+      "noedge": 0.926,
+      "mlp": 0.9157,
+      "total_margin": 0.0839,
+      "architecture": 0.0103,
+      "edges": 0.0736,
+      "edge_share_pct": 87.7,
+      "n_seeds": {
+        "han": 5,
+        "noedge": 5,
+        "mlp": 5,
+        "permuted": 5
+      },
+      "permuted": 0.9996,
+      "availability_and_connection": 0.0736,
+      "value_identity": 0.0,
+      "availability_share_pct": 87.7,
+      "value_share_pct": 0.0,
+      "three_way_sums_to_margin": true,
+      "ci": {
+        "architecture": [
+          0.0025,
+          0.0181
+        ],
+        "architecture_pct": [
+          2.9,
+          21.6
+        ],
+        "availability_and_connection": [
+          0.0658,
+          0.0814
+        ],
+        "availability_and_connection_pct": [
+          78.5,
+          96.9
+        ],
+        "value_identity": [
+          -0.0002,
+          0.0001
+        ],
+        "value_identity_pct": [
+          -0.2,
+          0.2
+        ]
+      },
+      "note": "terms over training seeds are paired; the permutation arm is resampled independently because its observations are permutation seeds, not training seeds. the percentage interval is wide wherever the margin is small; the denominator is resampled with the numerator"
+    },
+    "iscx_vpn__minority_f1": {
+      "han": 0.9138,
+      "noedge": 0.2847,
+      "mlp": 0.2155,
+      "total_margin": 0.6984,
+      "architecture": 0.0692,
+      "edges": 0.6292,
+      "edge_share_pct": 90.1,
+      "n_seeds": {
+        "han": 5,
+        "noedge": 5,
+        "mlp": 5,
+        "permuted": 5
+      },
+      "permuted": 0.3328,
+      "availability_and_connection": 0.0481,
+      "value_identity": 0.5811,
+      "availability_share_pct": 6.9,
+      "value_share_pct": 83.2,
+      "three_way_sums_to_margin": true,
+      "ci": {
+        "architecture": [
+          0.0489,
+          0.0919
+        ],
+        "architecture_pct": [
+          7.1,
+          12.6
+        ],
+        "availability_and_connection": [
+          0.0133,
+          0.0994
+        ],
+        "availability_and_connection_pct": [
+          1.9,
+          14.4
+        ],
+        "value_identity": [
+          0.5078,
+          0.6475
+        ],
+        "value_identity_pct": [
+          75.3,
+          89.4
+        ]
+      },
+      "note": "terms over training seeds are paired; the permutation arm is resampled independently because its observations are permutation seeds, not training seeds. the percentage interval is wide wherever the margin is small; the denominator is resampled with the numerator"
+    },
+    "hikari__minority_f1": {
+      "han": 0.1617,
+      "noedge": 0.1616,
+      "mlp": 0.1571,
+      "total_margin": 0.0046,
+      "architecture": 0.0045,
+      "edges": 0.0001,
+      "edge_share_pct": 3.0,
+      "n_seeds": {
+        "han": 5,
+        "noedge": 5,
+        "mlp": 5,
+        "permuted": 5
+      },
+      "permuted": 0.1609,
+      "availability_and_connection": -0.0007,
+      "value_identity": 0.0009,
+      "availability_share_pct": -15.4,
+      "value_share_pct": 18.3,
+      "three_way_sums_to_margin": true,
+      "ci": {
+        "architecture": [
+          0.0034,
+          0.0051
+        ],
+        "architecture_pct": [
+          77.2,
+          119.8
+        ],
+        "availability_and_connection": [
+          -0.0016,
+          0.0006
+        ],
+        "availability_and_connection_pct": [
+          -33.4,
+          12.7
+        ],
+        "value_identity": [
+          -0.0,
+          0.0017
+        ],
+        "value_identity_pct": [
+          -0.3,
+          31.6
+        ]
+      },
+      "note": "terms over training seeds are paired; the permutation arm is resampled independently because its observations are permutation seeds, not training seeds. the percentage interval is wide wherever the margin is small; the denominator is resampled with the numerator"
+    },
+    "cic_andmal__minority_f1": {
+      "han": 0.5512,
+      "noedge": 0.5337,
+      "mlp": 0.4933,
+      "total_margin": 0.0578,
+      "architecture": 0.0404,
+      "edges": 0.0175,
+      "edge_share_pct": 30.2,
+      "n_seeds": {
+        "han": 5,
+        "noedge": 5,
+        "mlp": 5,
+        "permuted": 5
+      },
+      "permuted": 0.5493,
+      "availability_and_connection": 0.0155,
+      "value_identity": 0.0019,
+      "availability_share_pct": 26.8,
+      "value_share_pct": 3.3,
+      "three_way_sums_to_margin": true,
+      "ci": {
+        "architecture": [
+          0.0201,
+          0.0633
+        ],
+        "architecture_pct": [
+          48.9,
+          83.3
+        ],
+        "availability_and_connection": [
+          0.0056,
+          0.0234
+        ],
+        "availability_and_connection_pct": [
+          7.0,
+          54.7
+        ],
+        "value_identity": [
+          -0.0109,
+          0.0171
+        ],
+        "value_identity_pct": [
+          -23.9,
+          22.1
+        ]
+      },
+      "note": "terms over training seeds are paired; the permutation arm is resampled independently because its observations are permutation seeds, not training seeds. the percentage interval is wide wherever the margin is small; the denominator is resampled with the numerator"
+    },
+    "vnat__minority_f1": {
+      "han": 0.9902,
+      "noedge": 0.9805,
+      "mlp": 0.9101,
+      "total_margin": 0.0801,
+      "architecture": 0.0704,
+      "edges": 0.0098,
+      "edge_share_pct": 12.2,
+      "n_seeds": {
+        "han": 5,
+        "noedge": 5,
+        "mlp": 5,
+        "permuted": 5
+      },
+      "permuted": 0.9554,
+      "availability_and_connection": -0.025,
+      "value_identity": 0.0348,
+      "availability_share_pct": -31.3,
+      "value_share_pct": 43.4,
+      "three_way_sums_to_margin": true,
+      "ci": {
+        "architecture": [
+          0.023,
+          0.1329
+        ],
+        "architecture_pct": [
+          55.4,
+          100.0
+        ],
+        "availability_and_connection": [
+          -0.0401,
+          -0.0125
+        ],
+        "availability_and_connection_pct": [
+          -71.8,
+          -12.6
+        ],
+        "value_identity": [
+          0.0199,
+          0.0501
+        ],
+        "value_identity_pct": [
+          17.1,
+          102.9
+        ]
+      },
+      "note": "terms over training seeds are paired; the permutation arm is resampled independently because its observations are permutation seeds, not training seeds. the percentage interval is wide wherever the margin is small; the denominator is resampled with the numerator"
+    }
+  }
+}

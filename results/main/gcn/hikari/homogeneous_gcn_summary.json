@@ -1,0 +1,119 @@
+{
+  "hikari": {
+    "model": "gcn",
+    "data_root": "data/processed_deg2",
+    "metapath_pool": [
+      "via_sni",
+      "via_ja3",
+      "via_cert_subject",
+      "via_alpn",
+      "via_cert_issuer",
+      "via_tls_cipher_group",
+      "via_cert_validity",
+      "via_src_host",
+      "via_dst_host",
+      "via_timebin"
+    ],
+    "per_seed": [
+      {
+        "accuracy": 0.4794921435324839,
+        "macro_f1": 0.3786257115326658,
+        "weighted_f1": 0.5949867329890967,
+        "minority_recall": 0.5641331741610293,
+        "minority_f1": 0.12827434362322993,
+        "seed": 41,
+        "metapaths_merged": [
+          "via_src_host",
+          "via_dst_host"
+        ]
+      },
+      {
+        "accuracy": 0.4743865652154338,
+        "macro_f1": 0.37552489845798837,
+        "weighted_f1": 0.5902587837722062,
+        "minority_recall": 0.5634699562276164,
+        "minority_f1": 0.12705629000418736,
+        "seed": 42,
+        "metapaths_merged": [
+          "via_src_host",
+          "via_dst_host"
+        ]
+      },
+      {
+        "accuracy": 0.47870874791769846,
+        "macro_f1": 0.37816940551364797,
+        "weighted_f1": 0.5942586332801592,
+        "minority_recall": 0.5642658177477119,
+        "minority_f1": 0.12813253012048192,
+        "seed": 43,
+        "metapaths_merged": [
+          "via_src_host",
+          "via_dst_host"
+        ]
+      },
+      {
+        "accuracy": 0.48483184007924,
+        "macro_f1": 0.38178192045290915,
+        "weighted_f1": 0.5999161066414881,
+        "minority_recall": 0.5638678869876641,
+        "minority_f1": 0.12937882338618864,
+        "seed": 44,
+        "metapaths_merged": [
+          "via_src_host",
+          "via_dst_host"
+        ]
+      },
+      {
+        "accuracy": 0.4806357210391248,
+        "macro_f1": 0.3792639377009526,
+        "weighted_f1": 0.5960548566039527,
+        "minority_recall": 0.5636025998142989,
+        "minority_f1": 0.1284151353965184,
+        "seed": 45,
+        "metapaths_merged": [
+          "via_src_host",
+          "via_dst_host"
+        ]
+      }
+    ],
+    "macro_f1": {
+      "mean": 0.3787,
+      "std": 0.002,
+      "std_sample": 0.0022,
+      "n": 5,
+      "values": [
+        0.3786,
+        0.3755,
+        0.3782,
+        0.3818,
+        0.3793
+      ]
+    },
+    "minority_f1": {
+      "mean": 0.1283,
+      "std": 0.0007,
+      "std_sample": 0.0008,
+      "n": 5,
+      "values": [
+        0.1283,
+        0.1271,
+        0.1281,
+        0.1294,
+        0.1284
+      ]
+    },
+    "weighted_f1": {
+      "mean": 0.5951,
+      "std": 0.0031,
+      "std_sample": 0.0035,
+      "n": 5,
+      "values": [
+        0.595,
+        0.5903,
+        0.5943,
+        0.5999,
+        0.5961
+      ]
+    }
+  }
+}

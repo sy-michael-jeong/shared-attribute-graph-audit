@@ -1,0 +1,24 @@
+{
+  "vnat": {
+    "permuted_fields": {
+      "ts": 2197
+    },
+    "reference_lines": {
+      "test_size": 439,
+      "class_counts": {
+        "0": 20,
+        "1": 419
+      },
+      "always_majority_macro_f1": 0.4883,
+      "availability_rule_ts": {
+        "present_ratio": 1.0,
+        "macro_f1": 0.4883,
+        "present_class_mix": {
+          "0": 20,
+          "1": 419
+        },
+        "absent_class_mix": {}
+      }
+    }
+  }
+}

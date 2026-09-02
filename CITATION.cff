@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite the paper and the archived artifact."
+type: software
+title: "shared-attribute-graph-audit: reproducibility artifact for 'Where Do the Gains Come From? Auditing Shared-Attribute Heterogeneous Graphs for Encrypted Traffic Intrusion Detection'"
+authors:
+  - family-names: Jeong
+    given-names: Sooyong
+    affiliation: "Korea Institute of Science and Technology Information (KISTI)"
+    email: jsy8630@kisti.re.kr
+license: MIT
+repository-code: "https://github.com/sy-michael-jeong/shared-attribute-graph-audit"
+keywords:
+  - encrypted traffic
+  - intrusion detection
+  - TLS metadata
+  - heterogeneous information network
+  - evaluation methodology
+  - shortcut learning
+abstract: "Scripts, configuration, graph-construction records, and per-seed results that reproduce every table in the paper: pre-training relation profiling, split audits, five edge-only controls, the three-component decomposition of graph gains, repeated-split variants, and the inductive deployment evaluation on five public encrypted-traffic benchmarks."

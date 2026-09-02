@@ -1,0 +1,28 @@
+{
+  "used": [
+    "via_ja3",
+    "via_cert_subject",
+    "via_alpn",
+    "via_cert_issuer",
+    "via_tls_cipher_group",
+    "via_cert_validity"
+  ],
+  "skipped": [
+    {
+      "metapath": "via_sni",
+      "reason": "no within-value pairs found"
+    }
+  ],
+  "max_degree_per_value": 2,
+  "timebin_seconds": 300,
+  "seed": 42,
+  "n_flows": 505040,
+  "edges": {
+    "via_ja3": 994488,
+    "via_cert_subject": 288312,
+    "via_alpn": 329418,
+    "via_cert_issuer": 292036,
+    "via_tls_cipher_group": 994490,
+    "via_cert_validity": 716222
+  }
+}

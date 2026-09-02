@@ -1,0 +1,102 @@
+{
+  "bccc_dohbrw": {
+    "n_flows": 505040,
+    "class_counts": {
+      "0": 358090,
+      "1": 146950
+    },
+    "chance_homophily": 0.5874,
+    "relations": {
+      "via_alpn": {
+        "n_edges": 329418,
+        "homophily": 1.0,
+        "lift_over_chance": 0.4126,
+        "cross_partition": 0.4977,
+        "mean_degree": 0.652,
+        "isolated_nodes": 340331,
+        "normalised_homophily": 1.0,
+        "reach": 0.3261
+      },
+      "via_cert_issuer": {
+        "n_edges": 292036,
+        "homophily": 0.9998,
+        "lift_over_chance": 0.4125,
+        "cross_partition": 0.5736,
+        "mean_degree": 0.578,
+        "isolated_nodes": 359022,
+        "normalised_homophily": 0.9995,
+        "reach": 0.2891
+      },
+      "via_cert_subject": {
+        "n_edges": 288312,
+        "homophily": 0.9999,
+        "lift_over_chance": 0.4125,
+        "cross_partition": 0.5219,
+        "mean_degree": 0.571,
+        "isolated_nodes": 359828,
+        "normalised_homophily": 0.9998,
+        "reach": 0.2875
+      },
+      "via_cert_validity": {
+        "n_edges": 716222,
+        "homophily": 0.9999,
+        "lift_over_chance": 0.4125,
+        "cross_partition": 0.4398,
+        "mean_degree": 1.418,
+        "isolated_nodes": 146928,
+        "normalised_homophily": 0.9998,
+        "reach": 0.7091
+      },
+      "via_dst_host": {
+        "n_edges": 985586,
+        "homophily": 0.9802,
+        "lift_over_chance": 0.3928,
+        "cross_partition": 0.3682,
+        "mean_degree": 1.952,
+        "isolated_nodes": 6885,
+        "normalised_homophily": 0.952,
+        "reach": 0.9864
+      },
+      "via_ja3": {
+        "n_edges": 994488,
+        "homophily": 0.8109,
+        "lift_over_chance": 0.2235,
+        "cross_partition": 0.4598,
+        "mean_degree": 1.969,
+        "isolated_nodes": 7796,
+        "normalised_homophily": 0.5417,
+        "reach": 0.9846
+      },
+      "via_src_host": {
+        "n_edges": 1010080,
+        "homophily": 1.0,
+        "lift_over_chance": 0.4126,
+        "cross_partition": 0.4101,
+        "mean_degree": 2.0,
+        "isolated_nodes": 0,
+        "normalised_homophily": 1.0,
+        "reach": 1.0
+      },
+      "via_timebin": {
+        "n_edges": 1006962,
+        "homophily": 1.0,
+        "lift_over_chance": 0.4126,
+        "cross_partition": 0.0015,
+        "mean_degree": 1.994,
+        "isolated_nodes": 583,
+        "normalised_homophily": 1.0,
+        "reach": 0.9988
+      },
+      "via_tls_cipher_group": {
+        "n_edges": 994490,
+        "homophily": 0.7426,
+        "lift_over_chance": 0.1552,
+        "cross_partition": 0.4609,
+        "mean_degree": 1.969,
+        "isolated_nodes": 7795,
+        "normalised_homophily": 0.3762,
+        "reach": 0.9846
+      }
+    }
+  }
+}

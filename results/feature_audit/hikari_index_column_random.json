@@ -1,0 +1,126 @@
+{
+  "csv": "data/raw/hikari/ALLFLOWMETER_HIKARI2021.csv",
+  "split": "random",
+  "split_seed": 42,
+  "seeds": [
+    41,
+    42,
+    43,
+    44,
+    45
+  ],
+  "split_sizes": {
+    "train": 388694,
+    "val": 55528,
+    "test": 111056
+  },
+  "runs": {
+    "keep_index_col__fit_trainval": {
+      "macro_f1_mean": 1.0,
+      "macro_f1_std": 0.0,
+      "per_seed": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "n_features": 83,
+      "index_like_columns": [
+        "Unnamed: 0.1",
+        "Unnamed: 0"
+      ],
+      "port_columns": [
+        "originp",
+        "responp"
+      ]
+    },
+    "keep_index_col__fit_train": {
+      "macro_f1_mean": 1.0,
+      "macro_f1_std": 0.0,
+      "per_seed": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "n_features": 83,
+      "index_like_columns": [
+        "Unnamed: 0.1",
+        "Unnamed: 0"
+      ],
+      "port_columns": [
+        "originp",
+        "responp"
+      ]
+    },
+    "drop_index_col__fit_trainval": {
+      "macro_f1_mean": 0.7252,
+      "macro_f1_std": 0.0012,
+      "per_seed": [
+        0.7249,
+        0.7237,
+        0.7259,
+        0.7246,
+        0.7271
+      ],
+      "n_features": 81,
+      "index_like_columns": [],
+      "port_columns": [
+        "originp",
+        "responp"
+      ]
+    },
+    "drop_index_col__fit_train": {
+      "macro_f1_mean": 0.7258,
+      "macro_f1_std": 0.0007,
+      "per_seed": [
+        0.7269,
+        0.7253,
+        0.7258,
+        0.7259,
+        0.7249
+      ],
+      "n_features": 81,
+      "index_like_columns": [],
+      "port_columns": [
+        "originp",
+        "responp"
+      ]
+    },
+    "drop_index_and_ports__fit_trainval": {
+      "macro_f1_mean": 0.7103,
+      "macro_f1_std": 0.0002,
+      "per_seed": [
+        0.7105,
+        0.71,
+        0.7103,
+        0.7102,
+        0.7104
+      ],
+      "n_features": 79,
+      "index_like_columns": [],
+      "port_columns": []
+    },
+    "drop_index_and_ports__fit_train": {
+      "macro_f1_mean": 0.7101,
+      "macro_f1_std": 0.0002,
+      "per_seed": [
+        0.7099,
+        0.7104,
+        0.7098,
+        0.7101,
+        0.7101
+      ],
+      "n_features": 79,
+      "index_like_columns": [],
+      "port_columns": []
+    }
+  },
+  "inflation__fit_trainval": 0.2748,
+  "port_inflation__fit_trainval": 0.0149,
+  "inflation__fit_train": 0.2742,
+  "port_inflation__fit_train": 0.0157,
+  "note": "Two kinds of column describe where a flow sat rather than what it carried: the row numbers and the two port numbers. datasets.py moves the host addresses out of the feature matrix by renaming them and removes the row numbers explicitly, but the ports are neither renamed nor removed, so they are features in every reported HIKARI result."
+}
