@@ -11,3 +11,7 @@ runs/
 *.pcap
 *.pcapng
 *.npy
+
+# Flow-table cache written next to the raw captures (see datasets.extract_pcaps)
+_extracted_flows.pkl
+_extracted_flows.manifest.json

@@ -60,6 +60,12 @@ the edges.
         --raw data/raw --out data/processed_deg2 --config config.yaml \
         --split-mode time_stratified
 
+Extraction from pcaps is cached: the first pass writes
+`data/raw/<dataset>/_extracted_flows.pkl` (with a manifest of pcap names and
+sizes), and later materializations, including every random and cutoff variant
+of `repeat_splits.py`, reload it instead of running Zeek again. Delete the two
+cache files to force re-extraction.
+
 `--split-mode time_stratified` is the class-stratified order-preserving split
 the paper adopts (Section 4.2); the script's default, `random`, is the
 conventional split used only for the random-split comparisons below.

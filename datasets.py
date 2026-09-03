@@ -159,11 +159,33 @@ def frame_to_xy(df, drop_cols):
 
 
 def extract_pcaps(raw_dir, pcap_glob, label_fn):
+    """Flow table for every TLS flow in the pcaps under raw_dir.
+
+    Extraction is deterministic and independent of the split, so the
+    concatenated table is cached next to the captures
+    (`_extracted_flows.pkl` + `_extracted_flows.manifest.json`). The cache is
+    reused only when the sorted list of pcap paths and sizes is unchanged;
+    delete the two files to force re-extraction. Repeated-split variants
+    (repeat_splits.py) re-materialize from raw for every random or cutoff
+    variant, which without the cache means one full Zeek pass per variant.
+    """
+    import json as _json
     from extract_pcap import extract_flow_features
     pcaps = sorted(raw_dir.glob(pcap_glob))
     if not pcaps:
         raise FileNotFoundError("no pcap under %s/%s" % (raw_dir, pcap_glob))
     print("  found %d pcap files" % len(pcaps))
+    manifest = [[str(p.relative_to(raw_dir)), p.stat().st_size] for p in pcaps]
+    cache = raw_dir / "_extracted_flows.pkl"
+    cache_manifest = raw_dir / "_extracted_flows.manifest.json"
+    if cache.exists() and cache_manifest.exists():
+        try:
+            if _json.load(open(cache_manifest)) == manifest:
+                df = pd.read_pickle(cache)
+                print("  %d TLS flows loaded from cache %s" % (len(df), cache.name))
+                return df
+        except Exception as e:  # a damaged cache is re-extracted, never trusted
+            print("  [warn] cache unreadable (%s); re-extracting" % e)
     frames = []
     for p in pcaps:
         try:
@@ -183,6 +205,12 @@ def extract_pcaps(raw_dir, pcap_glob, label_fn):
         raise RuntimeError("no pcap produced any TLS flow")
     df = pd.concat(frames, ignore_index=True, sort=False)
     print("  %d TLS flows extracted" % len(df))
+    try:
+        df.to_pickle(cache)
+        _json.dump(manifest, open(cache_manifest, "w"))
+        print("  cached to %s" % cache.name)
+    except Exception as e:  # caching is an optimization only
+        print("  [warn] could not write cache: %s" % e)
     return df
 
 
