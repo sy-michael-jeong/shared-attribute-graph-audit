@@ -1,6 +1,16 @@
 {
   "bccc_dohbrw": {
     "random_s42": {
+      "protocol": {
+        "split_mode": "random",
+        "split_seed": 42,
+        "test_size": 0.2,
+        "edge_seed": 42,
+        "edge_seed_recorded": null,
+        "edge_seed_source": "tag (split seed equals the base edge seed)",
+        "legacy_coupled_seed": false,
+        "protocol_inferred": true
+      },
       "hgb": {
         "mean": 0.9991,
         "std": 0.0,
@@ -51,6 +61,16 @@
       }
     },
     "random_s2733": {
+      "protocol": {
+        "split_mode": "random",
+        "split_seed": 2733,
+        "test_size": 0.2,
+        "edge_seed": 2733,
+        "edge_seed_recorded": null,
+        "edge_seed_source": "none: run predates the seed decoupling",
+        "legacy_coupled_seed": true,
+        "protocol_inferred": true
+      },
       "hgb": {
         "mean": 0.9989,
         "std": 0.0001,
@@ -101,6 +121,16 @@
       }
     },
     "random_s9846": {
+      "protocol": {
+        "split_mode": "random",
+        "split_seed": 9846,
+        "test_size": 0.2,
+        "edge_seed": 9846,
+        "edge_seed_recorded": null,
+        "edge_seed_source": "none: run predates the seed decoupling",
+        "legacy_coupled_seed": true,
+        "protocol_inferred": true
+      },
       "hgb": {
         "mean": 0.9991,
         "std": 0.0001,
@@ -151,6 +181,16 @@
       }
     },
     "random_s3265": {
+      "protocol": {
+        "split_mode": "random",
+        "split_seed": 3265,
+        "test_size": 0.2,
+        "edge_seed": 3265,
+        "edge_seed_recorded": null,
+        "edge_seed_source": "none: run predates the seed decoupling",
+        "legacy_coupled_seed": true,
+        "protocol_inferred": true
+      },
       "hgb": {
         "mean": 0.999,
         "std": 0.0001,
@@ -201,6 +241,16 @@
       }
     },
     "random_s4860": {
+      "protocol": {
+        "split_mode": "random",
+        "split_seed": 4860,
+        "test_size": 0.2,
+        "edge_seed": 4860,
+        "edge_seed_recorded": null,
+        "edge_seed_source": "none: run predates the seed decoupling",
+        "legacy_coupled_seed": true,
+        "protocol_inferred": true
+      },
       "hgb": {
         "mean": 0.9991,
         "std": 0.0,
@@ -251,6 +301,16 @@
       }
     },
     "cutoff_t015": {
+      "protocol": {
+        "split_mode": "time_stratified",
+        "split_seed": 42,
+        "test_size": 0.15,
+        "edge_seed": 42,
+        "edge_seed_recorded": null,
+        "edge_seed_source": "tag",
+        "legacy_coupled_seed": false,
+        "protocol_inferred": true
+      },
       "hgb": {
         "mean": 0.9955,
         "std": 0.0001,
@@ -301,6 +361,16 @@
       }
     },
     "cutoff_t02": {
+      "protocol": {
+        "split_mode": "time_stratified",
+        "split_seed": 42,
+        "test_size": 0.2,
+        "edge_seed": 42,
+        "edge_seed_recorded": null,
+        "edge_seed_source": "tag",
+        "legacy_coupled_seed": false,
+        "protocol_inferred": true
+      },
       "hgb": {
         "mean": 0.9959,
         "std": 0.0006,
@@ -351,6 +421,16 @@
       }
     },
     "cutoff_t025": {
+      "protocol": {
+        "split_mode": "time_stratified",
+        "split_seed": 42,
+        "test_size": 0.25,
+        "edge_seed": 42,
+        "edge_seed_recorded": null,
+        "edge_seed_source": "tag",
+        "legacy_coupled_seed": false,
+        "protocol_inferred": true
+      },
       "hgb": {
         "mean": 0.9966,
         "std": 0.0001,
@@ -401,6 +481,16 @@
       }
     },
     "edgeseed_s42": {
+      "protocol": {
+        "split_mode": "time_stratified",
+        "split_seed": 42,
+        "test_size": 0.2,
+        "edge_seed": 42,
+        "edge_seed_recorded": null,
+        "edge_seed_source": "tag",
+        "legacy_coupled_seed": false,
+        "protocol_inferred": true
+      },
       "hgb": {
         "mean": 0.9961,
         "std": 0.0004,
@@ -451,6 +541,16 @@
       }
     },
     "edgeseed_s9226": {
+      "protocol": {
+        "split_mode": "time_stratified",
+        "split_seed": 42,
+        "test_size": 0.2,
+        "edge_seed": 9226,
+        "edge_seed_recorded": null,
+        "edge_seed_source": "tag",
+        "legacy_coupled_seed": false,
+        "protocol_inferred": true
+      },
       "hgb": {
         "mean": 0.9961,
         "std": 0.0004,
@@ -501,6 +601,16 @@
       }
     },
     "edgeseed_s7892": {
+      "protocol": {
+        "split_mode": "time_stratified",
+        "split_seed": 42,
+        "test_size": 0.2,
+        "edge_seed": 7892,
+        "edge_seed_recorded": null,
+        "edge_seed_source": "tag",
+        "legacy_coupled_seed": false,
+        "protocol_inferred": true
+      },
       "hgb": {
         "mean": 0.9961,
         "std": 0.0004,

@@ -28,12 +28,22 @@ Running a command is not treated as evidence that it worked. Each step checks
 its own output and stops when it does not match.
 
   1) After materialisation the flow count is compared with the reference
-     directory. The adapters of BCCC-DoH and CIC-AndMal default to the released
-     CSV in the development pipeline, so rebuilding them without --from-pcap
-     silently produces a different corpus from the one the paper reports.
+     directory. BCCC-DoH and CIC-AndMal are read from the packet captures
+     (the released CSVs hold a different corpus), so a count that differs
+     from the reference means the adapter read a different source.
   2) Edge construction is confirmed through the used list of hin_summary.json.
      An empty list leaves the graph model with no metapaths and it will still
-     exit cleanly.
+     exit cleanly. The seed recorded in hin_summary.json must equal the
+     variant's edge seed; this is the check that the split seed did not leak
+     into the edge sampling.
+
+--- provenance ---
+Every variant in repeat_summary.json carries a `protocol` block:
+split_mode, split_seed, edge_seed, test_size, and edge_seed_recorded (the seed
+read back from hin_summary.json after the build). --rebuild-summary restores
+the block from the `_cfg/` files of the run tree; a random-split variant from a
+run that predates the seed decoupling has no `_edge.yaml` and is marked
+legacy_coupled_seed=true instead of being guessed.
   3) Every model summary is checked for existence and for a valid macro-F1.
      A script can exit with status zero and leave a failed result behind.
 
@@ -74,7 +84,8 @@ SELECTED_SET = {k: "+".join(v) for k, v in SELECTED.items()}
 # BCCC-DoH and CIC-AndMal are rebuilt from the packet captures rather than from
 # the released CSV. The two disagree: the BCCC CSV holds 499,106 rows and the
 # captures yield 505,040 flows. `build_graph.py` always reads the captures for
-# these two, so repeating a split for them costs an extraction each time.
+# these two; the extracted flow table is cached next to the captures
+# (datasets.extract_pcaps), so only the first variant pays for the extraction.
 NEEDS_PCAP = {"bccc_dohbrw", "cic_andmal"}
 
 # Summary file each model script actually writes.
@@ -116,25 +127,32 @@ def canonical_counts(ref_root: Path, ds: str):
         return None
 
 
-def check_materialized(vdir: Path, ds: str, expect_n):
-    """Verify the flow count and that edges were built."""
+def check_materialized(vdir: Path, ds: str, expect_n, expect_edge_seed=None):
+    """Verify the flow count, that edges were built, and the edge seed used."""
     d = vdir / ds
     got = sum(len(np.load(d / ("y_%s.npy" % s))) for s in ("train", "val", "test"))
     if expect_n is not None and got != expect_n:
         raise StepFailed(
             "%s: %d flows against %d in the reference. The adapter read a "
-            "different source. Check whether this dataset needs --from-pcap."
-            % (ds, got, expect_n))
+            "different source (BCCC-DoH and CIC-AndMal must come from the "
+            "packet captures under --raw)." % (ds, got, expect_n))
     hs = d / "hin_summary.json"
     if not hs.is_file():
         raise StepFailed("%s: hin_summary.json missing" % ds)
-    used = json.load(open(hs)).get("used") or []
+    summ = json.load(open(hs))
+    used = summ.get("used") or []
     if not used:
         raise StepFailed("%s: no edges were built (used=[]). The metadata "
                          "has no column for any requested relation." % ds)
-    print("    [ok] flows=%d, relations=%d %s" % (got, len(used),
-                                                 [r.replace('via_', '') for r in used]))
-    return got, used
+    recorded = summ.get("seed")
+    if expect_edge_seed is not None and int(recorded) != int(expect_edge_seed):
+        raise StepFailed(
+            "%s: hin_summary.json records edge seed %s but the variant's edge "
+            "seed is %s. The split seed leaked into the edge sampling."
+            % (ds, recorded, expect_edge_seed))
+    print("    [ok] flows=%d, relations=%d %s, edge seed=%s"
+          % (got, len(used), [r.replace('via_', '') for r in used], recorded))
+    return got, used, recorded
 
 
 def summary_path(rdir, model, dataset):
@@ -192,6 +210,62 @@ def read_macro(path, dataset, required=True):
             "per_seed": [float(v) for v in vals]}
 
 
+def protocol_from_tag(tag):
+    """(split_mode, split_seed, test_size, edge_seed) implied by a variant tag.
+
+    The tag is the only name a variant has, so it must be decodable; the
+    inverse of the naming in `variants()`.
+    """
+    if tag.startswith("random_s"):
+        s = int(tag[len("random_s"):])
+        return "random", s, BASE_TEST, BASE_SEED
+    if tag.startswith("cutoff_t"):
+        digits = tag[len("cutoff_t"):]            # "015" -> 0.15, "0175" -> 0.175
+        return "time_stratified", BASE_SEED, float("0." + digits[1:]), BASE_SEED
+    if tag.startswith("edgeseed_s"):
+        return "time_stratified", BASE_SEED, BASE_TEST, int(tag[len("edgeseed_s"):])
+    raise StepFailed("unrecognised variant tag %s" % tag)
+
+
+def protocol_record(mode, sseed, tsize, eseed, recorded, source):
+    return {"split_mode": mode, "split_seed": int(sseed), "test_size": float(tsize),
+            "edge_seed": int(eseed),
+            "edge_seed_recorded": (None if recorded is None else int(recorded)),
+            "edge_seed_source": source,
+            "legacy_coupled_seed": False, "protocol_inferred": False}
+
+
+def restore_protocol(runs: Path, ds: str, tag: str):
+    """Protocol block for a variant of an existing run tree.
+
+    Preference order: the `_cfg/<ds>_<tag>_protocol.json` written by this
+    script at run time (exact); else the `_cfg/` yaml files. A random-split
+    variant whose split seed differs from the base seed and whose tree holds no
+    `_edge.yaml` was built before the seeds were decoupled, so its edges were
+    sampled with the split seed: recorded as legacy_coupled_seed=true rather
+    than guessed.
+    """
+    cfgdir = runs / "_cfg"
+    exact = cfgdir / ("%s_%s_protocol.json" % (ds, tag))
+    if exact.is_file():
+        return json.load(open(exact))
+    mode, sseed, tsize, eseed = protocol_from_tag(tag)
+    rec = protocol_record(mode, sseed, tsize, eseed, None, "tag")
+    rec["protocol_inferred"] = True
+    edge_yaml = cfgdir / ("%s_%s_edge.yaml" % (ds, tag))
+    if mode == "random" and int(sseed) != BASE_SEED:
+        if edge_yaml.is_file():
+            rec["edge_seed"] = int(yaml.safe_load(open(edge_yaml))["seed"])
+            rec["edge_seed_source"] = "_cfg/%s" % edge_yaml.name
+        else:
+            rec["edge_seed"] = int(sseed)
+            rec["edge_seed_source"] = "none: run predates the seed decoupling"
+            rec["legacy_coupled_seed"] = True
+    elif mode == "random":
+        rec["edge_seed_source"] = "tag (split seed equals the base edge seed)"
+    return rec
+
+
 def rebuild_summary(runs: Path, datasets, models):
     """Rewrite repeat_summary.json from a run tree that already exists.
 
@@ -199,7 +273,8 @@ def rebuild_summary(runs: Path, datasets, models):
     aggregate can be rebuilt without training anything. This is how a summary
     written before per_seed was recorded is brought up to date, and it is also
     the check that the aggregate really is a function of the run outputs and
-    not of anything that happened only once.
+    not of anything that happened only once. The protocol block is restored
+    from the `_cfg/` files (see restore_protocol).
     """
     report = {}
     for ds in datasets:
@@ -208,7 +283,7 @@ def rebuild_summary(runs: Path, datasets, models):
             raise StepFailed("no run directory for %s under %s" % (ds, runs))
         report[ds] = {}
         for vdir in sorted(p for p in dsdir.iterdir() if p.is_dir()):
-            res = {}
+            res = {"protocol": restore_protocol(runs, ds, vdir.name)}
             for m in models:
                 f = summary_path(vdir, m, ds)
                 if f.is_file():
@@ -224,11 +299,14 @@ def rebuild_summary(runs: Path, datasets, models):
                         rank[rel] = None
                 if any(v is not None for v in rank.values()):
                     res["rank"] = rank
-            if res:
+            if len(res) > 1:
                 report[ds][vdir.name] = res
-                print("  %-12s %-18s %s" % (ds, vdir.name,
-                                            " ".join(sorted(k for k in res
-                                                            if k != "rank"))))
+                pr = res["protocol"]
+                print("  %-12s %-18s %-22s split=%-5d edge=%-5d%s" % (
+                    ds, vdir.name,
+                    " ".join(sorted(k for k in res if k not in ("rank", "protocol"))),
+                    pr["split_seed"], pr["edge_seed"],
+                    "  LEGACY coupled seed" if pr["legacy_coupled_seed"] else ""))
     runs.mkdir(parents=True, exist_ok=True)
     out = runs / "repeat_summary.json"
     json.dump(report, open(out, "w"), indent=2)
@@ -314,7 +392,7 @@ def main():
     for ds in args.datasets:
         n = canonical_counts(ref, ds)
         print("  reference %s: %s flows%s" % (ds, n,
-              "  (--from-pcap required)" if ds in NEEDS_PCAP else ""))
+              "  (rebuilt from the captures under --raw)" if ds in NEEDS_PCAP else ""))
     if args.dry_run:
         for t, m, s, ts, es, mat in vs:
             print("  %-16s split=%-16s seed=%-5d test=%.3f edge=%-5d mat=%s"
@@ -326,7 +404,8 @@ def main():
     # reduced to the remaining variants, because `variants()` draws from one
     # generator in order and changing `--n-random` changes the edge seeds drawn
     # after it. So the arguments stay and variants already in the summary are
-    # skipped. For BCCC-DoH each variant re-extracts 13,754 captures, so this matters.
+    # skipped. For BCCC-DoH a variant rebuilds the split from 505,040 flows
+    # (the capture extraction itself is cached, see datasets.extract_pcaps).
     sfile = out / "repeat_summary.json"
     report = json.load(open(sfile)) if (sfile.exists() and not args.fresh) else {}
     done = {d: set(v) for d, v in report.items()}
@@ -387,7 +466,13 @@ def main():
                         "--out", str(vdir), "--config", str(cfg_p),
                         "--split-mode", mode, "--skip-materialize"], False)
 
-                check_materialized(vdir, ds, expect_n)
+                _, _, recorded = check_materialized(vdir, ds, expect_n, eseed)
+                # Provenance of this variant, written with the results and to
+                # _cfg/ so that --rebuild-summary can restore it exactly.
+                proto = protocol_record(mode, sseed, tsize, eseed, recorded,
+                                        "hin_summary.json")
+                json.dump(proto, open(tmpcfg / ("%s_%s_protocol.json" % (ds, tag)), "w"),
+                          indent=2)
 
                 cfg_p = write_cfg(args.config,
                                   tmpcfg / ("%s_%s_run.yaml" % (ds, tag)),
@@ -424,7 +509,7 @@ def main():
                                "--sets", SELECTED_SET[ds],
                                "--seeds"] + seeds,
                 }
-                res = {}
+                res = {"protocol": proto}
                 for m in models:
                     sh(runners[m], False)
                     res[m] = read_macro(summary_path(rdir, m, ds), ds)

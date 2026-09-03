@@ -281,10 +281,18 @@ def build_claims():
             - repeat_arm(d, "cutoff_", "mean"),
             src="repeated_splits/%s.json  difference of the two means" % ds)
 
-    add("Sec 6.3 HIKARI drop / random-split std (238x)", 238,
+    # The paper states "more than 200 times" (Table 8, Sec. 6.3); the exact
+    # ratio from unrounded variant means is 238. Both are checked: the exact
+    # value pins the artifact, the threshold pins the sentence.
+    add("Sec 6.3 HIKARI drop / random-split std (exact, 238x)", 238,
         lambda: (repeat_arm("hikari", "random_", "mean")
                  - repeat_arm("hikari", "cutoff_", "mean"))
         / repeat_arm("hikari", "random_", "std"), tol=1.0,
+        src="repeated_splits/hikari.json")
+    add("Sec 6.3 HIKARI drop is more than 200 times the random-split std", 1,
+        lambda: int((repeat_arm("hikari", "random_", "mean")
+                     - repeat_arm("hikari", "cutoff_", "mean"))
+                    / repeat_arm("hikari", "random_", "std") > 200), tol=0,
         src="repeated_splits/hikari.json")
 
     add("Sec 6.3 HIKARI HGB random-split mean (repeated)", 0.725,
@@ -566,6 +574,47 @@ def build_claims():
         lambda: int(max(np.mean(_decomp("cic_andmal.json", "cic_andmal", f))
                         for f in ("cutoff", "edgeseed", "random")) < 15), tol=0,
         src="repeat_decomp/cic_andmal.json")
+
+    # --- Table 8 BCCC-DoH row and the BCCC numbers of Sec 6.3 (repeat_decomp) ---
+    def _dc_arm(ds, path, prefix, what, model="han"):
+        d = json.load(open(ART / "repeat_decomp" / path))[ds]
+        v = [float(np.mean(d[k][model]["per_seed"])) for k in d if k.startswith(prefix)]
+        return {"mean": float(np.mean(v)), "std": float(np.std(v)), "n": len(v)}[what]
+
+    add("Table 8 BCCC random-split mean", 0.9993,
+        lambda: _dc_arm("bccc_dohbrw", "bccc_dohbrw.json", "random_", "mean"),
+        src="repeat_decomp/bccc_dohbrw.json  per_seed")
+    add("Table 8 BCCC random-split std", 0.0001,
+        lambda: _dc_arm("bccc_dohbrw", "bccc_dohbrw.json", "random_", "std"),
+        src="repeat_decomp/bccc_dohbrw.json  per_seed")
+    add("Table 8 BCCC random variants", 5,
+        lambda: _dc_arm("bccc_dohbrw", "bccc_dohbrw.json", "random_", "n"), tol=0.5,
+        src="repeat_decomp/bccc_dohbrw.json")
+    add("Table 8 BCCC cutoff mean", 0.9997,
+        lambda: _dc_arm("bccc_dohbrw", "bccc_dohbrw.json", "cutoff_", "mean"),
+        src="repeat_decomp/bccc_dohbrw.json  per_seed")
+    add("Table 8 BCCC cutoff std", 0.0000,
+        lambda: _dc_arm("bccc_dohbrw", "bccc_dohbrw.json", "cutoff_", "std"),
+        src="repeat_decomp/bccc_dohbrw.json  per_seed")
+    add("Table 8 BCCC cutoff variants", 3,
+        lambda: _dc_arm("bccc_dohbrw", "bccc_dohbrw.json", "cutoff_", "n"), tol=0.5,
+        src="repeat_decomp/bccc_dohbrw.json")
+    add("Table 8 BCCC drop", -0.0004,
+        lambda: _dc_arm("bccc_dohbrw", "bccc_dohbrw.json", "random_", "mean")
+        - _dc_arm("bccc_dohbrw", "bccc_dohbrw.json", "cutoff_", "mean"),
+        src="repeat_decomp/bccc_dohbrw.json  difference of the two means")
+    for _fam, _m, _v in (("random", "mlp", 0.8783), ("random", "noedge", 0.9586),
+                         ("cutoff", "mlp", 0.9384), ("cutoff", "noedge", 0.9505)):
+        add("Sec 6.3 BCCC %s mean under %s variants" % (_m, _fam), _v,
+            lambda f=_fam, m=_m: _dc_mean("bccc_dohbrw.json", "bccc_dohbrw", f, m),
+            src="repeat_decomp/bccc_dohbrw.json")
+    add("Sec 6.3 BCCC total margin under random variants", 0.1210,
+        lambda: _dc_mean("bccc_dohbrw.json", "bccc_dohbrw", "random", "han")
+        - _dc_mean("bccc_dohbrw.json", "bccc_dohbrw", "random", "mlp"),
+        src="repeat_decomp/bccc_dohbrw.json")
+    add("Sec 6.3 BCCC random-split architecture share (roughly two thirds)", 1,
+        lambda: int(0.60 <= 1 - np.mean(_decomp("bccc_dohbrw.json", "bccc_dohbrw", "random")) / 100 <= 0.72),
+        tol=0, src="repeat_decomp/bccc_dohbrw.json")
 
     # --- Sec 7.4: HIKARI port columns ---
     def _idx(run):

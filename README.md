@@ -12,7 +12,7 @@ from the TLS version and the cipher-suite list as a coarse stand-in
 CipherGroup and `via_timebin` its TimeBin. `verify_paper.py` carries the mapping.
 
 **Verify the paper's numbers.** `python verify_paper.py` recomputes every
-value the paper reports (Tables 4–14 and the numbers quoted in the text, 305
+value the paper reports (Tables 4–14 and the numbers quoted in the text, 320
 claims) from the shipped files in `results/` and prints PASS/FAIL per claim.
 
 Every number the paper reports comes from a file in `results/`, and every file
@@ -142,9 +142,24 @@ another experiment reads.
 
 ## Before training — what can be measured without a model
 
+The relation profile of Sec. 3.3 (coverage, cardinality, top-10 dominance,
+class MI, train–test value overlap) is a diagnostic that precedes the choice
+of split, so it is measured on the conventional stratified random split; the
+audited split is used everywhere else. Build that root first — it is also the
+random-split root that the CIC-AndMal protocol comparisons read later — and
+record the protocol in the output:
+
+    python build_graph.py --datasets bccc_dohbrw iscx_vpn hikari cic_andmal vnat \
+        --raw data/raw --out data/processed --config config.yaml --split-mode random
+
     python profile_relations.py --datasets bccc_dohbrw iscx_vpn hikari cic_andmal vnat \
-        --data data/processed_deg2 \
+        --data data/processed --protocol "conventional stratified random split" \
         --out results/profiling/relation_profiling.json
+
+Running `profile_relations.py` against `data/processed_deg2` instead measures
+overlap on the audited split (that is what Sec. 4.3 reports at the flow level,
+through `split_overlap_audit.py` below), and the `protocol` field of the output
+records which one a file holds.
 
     python dataset_composition.py --datasets bccc_dohbrw iscx_vpn hikari cic_andmal vnat \
         --data data/processed_deg2 \
@@ -397,17 +412,17 @@ when the model is trained. Each is a separate build of the same captures.
 
     python build_graph.py --datasets bccc_dohbrw iscx_vpn hikari vnat \
         --out data/processed_random_v2 --config config.yaml --split-mode random
-    python build_graph.py --datasets cic_andmal \
-        --out data/processed --config config.yaml --split-mode random
     python build_graph.py --datasets bccc_dohbrw \
         --out data/_bccc_random --config config.yaml --split-mode random
     python build_graph.py --datasets iscx_vpn \
         --out data/_iscx_dstdisj --config config.yaml --split-mode dst_ip_disjoint
 
-`processed_random_v2` and `_bccc_random` are the same protocol on the same
-dataset, built at different times. They are kept apart rather than merged
-because every result file records the root it read, and rewriting those strings
-would make the record say something that was not run.
+`data/processed` (all five datasets under the random split) was built in the
+profiling step above; the CIC-AndMal random-split comparisons read it.
+`processed_random_v2`, `processed` and `_bccc_random` are the same protocol on
+the same datasets, built at different times. They are kept apart rather than
+merged because every result file records the root it read, and rewriting those
+strings would make the record say something that was not run.
 
     python repeat_splits.py --datasets bccc_dohbrw iscx_vpn hikari vnat \
         --data data/processed_deg2 --runs runs/repeat
@@ -646,10 +661,23 @@ shipped summaries for ISCX-VPN, VNAT and HIKARI in `results/repeated_splits/`
 and for ISCX-VPN and CIC-AndMal in `results/repeat_decomp/` were produced with
 this rebuild step, every variant of a dataset (random, cutoff and edge-seed
 arms) in one invocation, so all three arms share one code version and one
-environment. The BCCC-DoH summaries predate the rebuild step and carry the
-split seed as edge seed as well; this is immaterial there because its reported
-relation has six values, so every edge seed yields the same graph
-(Section 6.3), and the edge-seed arm shows zero variation (Table 9).
+environment. Different edge seeds resample the individual ring edges of every relation
+(`value_rng(seed, value)` in `build_graph.py`), so a different seed is a
+different graph; what the audited edge-seed variants show is that for BCCC-DoH
+the scores do not move with it, to four decimal places (Table 9). The BCCC-DoH
+cutoff and edge-seed variants predate the rebuild step, which does not affect
+them (their split seed is the base seed). The BCCC-DoH random variants are
+being rerun with the rebuild step so that, as for the other datasets, the
+split and the edge sampling vary separately; until that summary is shipped,
+their `protocol` block says `legacy_coupled_seed: true`.
+
+Every variant in a shipped summary carries a `protocol` block — `split_mode`,
+`split_seed`, `edge_seed`, `test_size`, and `edge_seed_recorded`, the seed read
+back from `hin_summary.json` after the build. `repeat_splits.py` refuses a
+variant whose recorded edge seed differs from the one it asked for, and
+`--rebuild-summary` restores the block for an existing run tree from its
+`_cfg/` files; a random-split variant from a run that predates the decoupling
+is marked `legacy_coupled_seed: true` rather than guessed.
 
 ## Checks
 
