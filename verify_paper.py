@@ -240,21 +240,22 @@ def build_claims():
         src="typing_vs_pruning/han_full/hikari.json")
 
     # --- repeated splits (Table 8) ---
-    # Random-split variants: the shipped summaries for ISCX-VPN, VNAT, HIKARI and
-    # CIC-AndMal are to be regenerated with the decoupled edge seed (see README,
-    # "Random variants and edge seeds"). BCCC-DoH is not rerun: its reported
+    # The shipped summaries for ISCX-VPN, VNAT and HIKARI (repeated_splits/) and
+    # for ISCX-VPN and CIC-AndMal (repeat_decomp/) were regenerated with the
+    # decoupled edge seed, all variants in one invocation per dataset (see README,
+    # "Random variants and edge seeds"). BCCC-DoH was not rerun: its reported
     # relation has six values, so every edge seed yields the same graph and the
     # edge-seed arm shows zero variation (Table 9).
-    def repeat_arm(ds, prefix, what):
+    def repeat_arm(ds, prefix, what, model="han"):
         d = json.load(open(ART / "repeated_splits" / ("%s.json" % ds)))[ds]
-        v = [float(np.mean(d[k]["han"]["per_seed"]))
+        v = [float(np.mean(d[k][model]["per_seed"]))
              for k in d if k.startswith(prefix)]
         return {"mean": float(np.mean(v)), "std": float(np.std(v)),
                 "n": len(v)}[what]
 
-    T63 = {"iscx_vpn":   (0.9461, 0.0460, 10, 0.9290, 0.0520, 5,  0.0171),
-           "vnat":       (0.9843, 0.0172, 10, 0.9869, 0.0183, 5, -0.0026),
-           "hikari":     (0.7066, 0.0011, 10, 0.4549, 0.0034, 5,  0.2517)}
+    T63 = {"iscx_vpn":   (0.9502, 0.0400, 10, 0.9271, 0.0522, 5,  0.0231),
+           "vnat":       (0.9852, 0.0198, 10, 0.9869, 0.0183, 5, -0.0017),
+           "hikari":     (0.7065, 0.0011, 10, 0.4549, 0.0034, 5,  0.2516)}
     for ds, (rm, rs, rn, cm, cs, cn, drop) in T63.items():
         n = NAME[ds]
         add("Table 8 %s random-split mean" % n, rm,
@@ -280,21 +281,52 @@ def build_claims():
             - repeat_arm(d, "cutoff_", "mean"),
             src="repeated_splits/%s.json  difference of the two means" % ds)
 
-    add("Sec 6.3 HIKARI drop / random-split std (236x)", 236,
+    add("Sec 6.3 HIKARI drop / random-split std (238x)", 238,
         lambda: (repeat_arm("hikari", "random_", "mean")
                  - repeat_arm("hikari", "cutoff_", "mean"))
         / repeat_arm("hikari", "random_", "std"), tol=1.0,
         src="repeated_splits/hikari.json")
 
+    add("Sec 6.3 HIKARI HGB random-split mean (repeated)", 0.725,
+        lambda: repeat_arm("hikari", "random_", "mean", model="hgb"), tol=0.0006,
+        src="repeated_splits/hikari.json  per_seed")
+    add("Sec 6.3 HIKARI HGB random-split std (repeated)", 0.001,
+        lambda: repeat_arm("hikari", "random_", "std", model="hgb"), tol=0.0006,
+        src="repeated_splits/hikari.json  per_seed")
+    add("Sec 6.3 HIKARI HGB cutoff mean (repeated)", 0.458,
+        lambda: repeat_arm("hikari", "cutoff_", "mean", model="hgb"), tol=0.0006,
+        src="repeated_splits/hikari.json  per_seed")
+    add("Sec 6.3 HIKARI HGB cutoff std (repeated)", 0.008,
+        lambda: repeat_arm("hikari", "cutoff_", "std", model="hgb"), tol=0.0006,
+        src="repeated_splits/hikari.json  per_seed")
+    add("Sec 6.3 HIKARI HGB change / cutoff std (about 36x)", 36,
+        lambda: (repeat_arm("hikari", "random_", "mean", model="hgb")
+                 - repeat_arm("hikari", "cutoff_", "mean", model="hgb"))
+        / repeat_arm("hikari", "cutoff_", "std", model="hgb"), tol=1.0,
+        src="repeated_splits/hikari.json")
+    add("Sec 6.3 HIKARI HAN random-split mean (repeated, 3 places)", 0.707,
+        lambda: repeat_arm("hikari", "random_", "mean"), tol=0.0006,
+        src="repeated_splits/hikari.json  per_seed")
+    add("Sec 6.3 HIKARI HAN cutoff mean (repeated, 3 places)", 0.455,
+        lambda: repeat_arm("hikari", "cutoff_", "mean"), tol=0.0006,
+        src="repeated_splits/hikari.json  per_seed")
+
     # --- relation ranking stability (Sec 6.5) ---
+    def _rs(ds, key):
+        return json.load(open(ART / "rank_stability" / "rank_stability.json"))["ranking"][ds][key]
+
     def tau_consensus(ds):
         _, R, C, _ = ranks(ds)
         return kendall(np.mean(R, axis=0), np.mean(C, axis=0))
 
-    add("Sec 6.5 ISCX consensus tau random vs cutoff", 0.47, lambda: tau_consensus("iscx_vpn"), tol=0.006,
+    add("Sec 6.5 ISCX consensus tau random vs cutoff", 0.5111, lambda: tau_consensus("iscx_vpn"),
         src="repeated_splits, random 10 / cutoff 5, edge-seed variants excluded")
-    add("Sec 6.5 VNAT consensus tau random vs cutoff", 0.24, lambda: tau_consensus("vnat"), tol=0.006,
+    add("Sec 6.5 VNAT consensus tau random vs cutoff", 0.4667, lambda: tau_consensus("vnat"),
         src="repeated_splits, random 10 / cutoff 5, edge-seed variants excluded")
+    add("Sec 6.5 ISCX consensus tau (rank_stability.json)", 0.5111,
+        lambda: _rs("iscx_vpn", "consensus_tau_random_vs_cutoff"), src="rank_stability/rank_stability.json")
+    add("Sec 6.5 VNAT consensus tau (rank_stability.json)", 0.4667,
+        lambda: _rs("vnat", "consensus_tau_random_vs_cutoff"), src="rank_stability/rank_stability.json")
 
     def tau_pair(ds, kind):
         _, R, C, _ = ranks(ds)
@@ -302,26 +334,28 @@ def build_claims():
             return np.mean([kendall(a, b) for a, b in itertools.combinations(R, 2)])
         return np.mean([kendall(a, b) for a, b in itertools.product(R, C)])
 
-    add("Sec 6.5 ISCX pairwise tau among random splits", 0.54, lambda: tau_pair("iscx_vpn", "rr"), tol=0.006,
+    add("Sec 6.5 ISCX pairwise tau among random splits", 0.4602, lambda: tau_pair("iscx_vpn", "rr"),
         src="repeated_splits")
-    add("Sec 6.5 ISCX pairwise tau random vs cutoff", 0.37, lambda: tau_pair("iscx_vpn", "rc"),
-        tol=0.006, src="repeated_splits")
-
-    def top1_count(ds, rel):
-        rels, R, C, E = ranks(ds)
-        first = [rels[int(np.argmax(v))] for v in R + C + E]
-        return first.count(rel)
-
-    add("Sec 6.5 SrcHost first-place count (20 variants)", 17,
-        lambda: top1_count("iscx_vpn", "via_src_host"), tol=0.5,
-        src="repeated_splits, all 20 variants")
-
-    def n_first(ds):
-        rels, R, C, E = ranks(ds)
-        return len({rels[int(np.argmax(v))] for v in R + C + E})
-
-    add("Sec 6.5 VNAT relations ever ranked first", 8, lambda: n_first("vnat"), tol=0.5,
+    add("Sec 6.5 VNAT pairwise tau among random splits", 0.038, lambda: tau_pair("vnat", "rr"),
         src="repeated_splits")
+    add("Sec 6.5 VNAT tau among cutoff rankings", 0.4556,
+        lambda: float(np.mean([kendall(a, b) for a, b in
+                               itertools.combinations(ranks("vnat")[2], 2)])),
+        src="repeated_splits/vnat.json")
+    add("Sec 6.5 ISCX pairwise tau among random splits (rank_stability.json)", 0.4602,
+        lambda: _rs("iscx_vpn", "random_pairwise_tau_mean"), src="rank_stability/rank_stability.json")
+    add("Sec 6.5 VNAT pairwise tau among random splits (rank_stability.json)", 0.038,
+        lambda: _rs("vnat", "random_pairwise_tau_mean"), src="rank_stability/rank_stability.json")
+    add("Sec 6.5 VNAT tau among cutoff rankings (rank_stability.json)", 0.4556,
+        lambda: _rs("vnat", "cutoff_pairwise_tau_mean"), src="rank_stability/rank_stability.json")
+    # "all ten relations reach the highest score at least once ... seven are ranked first outright":
+    # ties count for every tied relation in n_relations_ever_top; unique_top counts sole leaders.
+    add("Sec 6.5 VNAT relations that reach the top at least once (20 variants)", 10,
+        lambda: _rs("vnat", "n_relations_ever_top"), tol=0, src="rank_stability/rank_stability.json")
+    add("Sec 6.5 VNAT relations ranked first outright at least once", 7,
+        lambda: _rs("vnat", "n_relations_unique_top"), tol=0, src="rank_stability/rank_stability.json")
+    add("Sec 6.5 VNAT variants ending in a tie", 7,
+        lambda: _rs("vnat", "n_variants_ending_in_a_tie"), tol=0, src="rank_stability/rank_stability.json")
 
     # --- boundary crossing (Sec 4.3, Sec 6.2) ---
     add("Sec 4.3 BCCC CertSubject boundary-crossing %", 52,
@@ -486,12 +520,12 @@ def build_claims():
         return vals
 
     for dc_path, dc_ds, dc_fam, dc_n, dc_lo, dc_hi, dc_mean, dc_std in (
-            ("iscx_vpn.json", "iscx_vpn", "cutoff", 5, 80.3, 87.6, 84.7, 2.7),
-            ("iscx_vpn.json", "iscx_vpn", "edgeseed", 5, 82.0, 89.0, 85.8, 2.5),
-            ("iscx_vpn.json", "iscx_vpn", "random", 10, 24.8, 74.3, 55.4, 15.8),
-            ("cic_andmal.json", "cic_andmal", "cutoff", 2, 9.6, 17.6, 13.6, 4.0),
-            ("cic_andmal.json", "cic_andmal", "edgeseed", 3, 4.0, 14.7, 10.1, 4.5),
-            ("cic_andmal.json", "cic_andmal", "random", 5, 8.1, 26.0, 14.9, 6.2),
+            ("iscx_vpn.json", "iscx_vpn", "cutoff", 5, 83.9, 89.0, 86.0, 1.7),
+            ("iscx_vpn.json", "iscx_vpn", "edgeseed", 5, 76.7, 85.4, 81.6, 2.9),
+            ("iscx_vpn.json", "iscx_vpn", "random", 10, 38.9, 80.4, 59.8, 12.8),
+            ("cic_andmal.json", "cic_andmal", "cutoff", 2, 8.8, 16.4, 12.6, 3.8),
+            ("cic_andmal.json", "cic_andmal", "edgeseed", 3, 2.8, 8.8, 6.1, 2.5),
+            ("cic_andmal.json", "cic_andmal", "random", 5, 5.8, 32.3, 14.9, 9.5),
             ("bccc_dohbrw.json", "bccc_dohbrw", "cutoff", 3, 73.8, 84.8, 80.2, 4.7),
             ("bccc_dohbrw.json", "bccc_dohbrw", "edgeseed", 3, 84.5, 84.5, 84.5, 0.0),
             ("bccc_dohbrw.json", "bccc_dohbrw", "random", 5, 32.9, 34.4, 33.6, 0.7)):
@@ -512,6 +546,26 @@ def build_claims():
         add(_t + " std", dc_std,
             (lambda q=dc_path, d=dc_ds, f=dc_fam: float(np.std(_decomp(q, d, f)))),
             tol=0.06, src=_s)
+
+    def _dc_mean(path, ds, family, model):
+        d = json.load(open(ART / "repeat_decomp" / path))[ds]
+        return float(np.mean([v[model]["mean"] for k, v in d.items() if k.startswith(family)]))
+
+    for _fam, _m, _v in (("edgeseed", "mlp", 0.53), ("edgeseed", "noedge", 0.59),
+                         ("random", "mlp", 0.62), ("random", "noedge", 0.75)):
+        add("Sec 6.3 ISCX %s mean under %s variants (2 places)" % (_m, _fam), _v,
+            lambda f=_fam, m=_m: _dc_mean("iscx_vpn.json", "iscx_vpn", f, m), tol=0.005,
+            src="repeat_decomp/iscx_vpn.json")
+    add("Sec 6.3 ISCX reported ratio 85.5 within audited variant means", 1,
+        lambda: int(min(np.mean(_decomp("iscx_vpn.json", "iscx_vpn", "edgeseed")),
+                        np.mean(_decomp("iscx_vpn.json", "iscx_vpn", "cutoff"))) <= 85.5 <=
+                    max(np.mean(_decomp("iscx_vpn.json", "iscx_vpn", "edgeseed")),
+                        np.mean(_decomp("iscx_vpn.json", "iscx_vpn", "cutoff")))), tol=0,
+        src="repeat_decomp/iscx_vpn.json")
+    add("Sec 6.3 CIC all three families below 15%", 1,
+        lambda: int(max(np.mean(_decomp("cic_andmal.json", "cic_andmal", f))
+                        for f in ("cutoff", "edgeseed", "random")) < 15), tol=0,
+        src="repeat_decomp/cic_andmal.json")
 
     # --- Sec 7.4: HIKARI port columns ---
     def _idx(run):
@@ -652,7 +706,7 @@ def build_claims():
         lambda: json.load(open(ART / "profiling" / "relation_profiling.json"))
         ["datasets"]["vnat"]["fields"]["ja3"]["train_test_overlap"],
         src="profiling/relation_profiling.json")
-    add("Sec 6.3 HIKARI HGB random split", 0.7165,
+    add("Sec 6.3 HIKARI HGB random split (single realization)", 0.7258,
         lambda: json.load(open(ART / "repeated_splits" / "hikari.json"))
         ["hikari"]["random_s42"]["hgb"]["mean"], src="repeated_splits/hikari.json")
     add("Sec 6.2 BCCC random-edge minus self-loop", -0.0088,
@@ -676,11 +730,11 @@ def build_claims():
         src="relation_ranking/")
     add("Sec 6.5 VNAT full-pool HAN", 0.9088,
         lambda: mean("typing_vs_pruning/han_full/vnat.json"), src="typing_vs_pruning/")
-    add("Sec 6.3 VNAT cutoff GCN min", 0.7452,
+    add("Sec 6.3 VNAT cutoff GCN min", 0.8510,
         lambda: min(v["gcn"]["mean"] for k, v in
                     json.load(open(ART / "repeated_splits" / "vnat.json"))["vnat"].items()
                     if k.startswith("cutoff")), src="repeated_splits/vnat.json")
-    add("Sec 6.3 VNAT cutoff GCN max", 0.9345,
+    add("Sec 6.3 VNAT cutoff GCN max", 0.9100,
         lambda: max(v["gcn"]["mean"] for k, v in
                     json.load(open(ART / "repeated_splits" / "vnat.json"))["vnat"].items()
                     if k.startswith("cutoff")), src="repeated_splits/vnat.json")
@@ -701,13 +755,24 @@ def build_claims():
     add("Sec 6.2 ISCX masking drop", 0.3020,
         lambda: han("iscx_vpn") - masked("iscx_vpn"),
         src="main/han + masked/han")
-    add("Sec 6.3 HIKARI MLP random split", 0.6055,
+    add("Sec 6.3 HIKARI MLP random split (single realization)", 0.6029,
         lambda: json.load(open(ART / "repeated_splits" / "hikari.json"))
         ["hikari"]["random_s42"]["mlp"]["mean"], src="repeated_splits/hikari.json")
+    for _m, _v in (("han", 0.7084), ("gcn", 0.6322), ("egs", 0.6705)):
+        add("Sec 6.3 HIKARI %s random split (single realization)" % _m.upper(), _v,
+            lambda m=_m: json.load(open(ART / "repeated_splits" / "hikari.json"))
+            ["hikari"]["random_s42"][m]["mean"], src="repeated_splits/hikari.json")
+    add("Sec 6.3 HIKARI MLP single-realization drop", 0.1602,
+        lambda: json.load(open(ART / "repeated_splits" / "hikari.json"))
+        ["hikari"]["random_s42"]["mlp"]["mean"] - mlp("hikari"),
+        src="repeated_splits/hikari.json random_s42 - main/mlp")
+    add("Sec 6.3 VNAT E-GraphSAGE random split (single realization)", 0.9890,
+        lambda: json.load(open(ART / "repeated_splits" / "vnat.json"))
+        ["vnat"]["random_s42"]["egs"]["mean"], src="repeated_splits/vnat.json")
     add("Sec 6.2 ISCX random-edge (bucket 100, 3 seeds)", 0.6132,
         lambda: mean("random_control/sweep/g100_s44.json", dataset="iscx_vpn"),
         src="random_control/sweep/")
-    add("Sec 6.5 ISCX tau among cutoff rankings", 0.7156,
+    add("Sec 6.5 ISCX tau among cutoff rankings", 0.7422,
         lambda: float(np.mean([kendall(a, b) for a, b in
                                itertools.combinations(ranks("iscx_vpn")[2], 2)])),
         src="repeated_splits/iscx_vpn.json")

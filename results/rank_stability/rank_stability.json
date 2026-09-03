@@ -15,18 +15,18 @@
         "via_tls_cipher_group"
       ],
       "n_variants": 20,
-      "random_pairwise_tau_mean": 0.5407,
+      "random_pairwise_tau_mean": 0.4602,
       "random_n_pairs": 45,
-      "cutoff_pairwise_tau_mean": 0.7156,
+      "cutoff_pairwise_tau_mean": 0.7422,
       "cutoff_n_pairs": 10,
-      "consensus_tau_random_vs_cutoff": 0.4667,
+      "consensus_tau_random_vs_cutoff": 0.5111,
       "top_counts": {
-        "via_dst_host": 1,
+        "via_cert_subject": 1,
         "via_src_host": 17,
-        "via_timebin": 3
+        "via_timebin": 4
       },
       "n_relations_ever_top": 3,
-      "n_relations_unique_top": 3,
+      "n_relations_unique_top": 2,
       "n_variants_ending_in_a_tie": 1
     },
     "vnat": {
@@ -43,25 +43,26 @@
         "via_tls_cipher_group"
       ],
       "n_variants": 20,
-      "random_pairwise_tau_mean": 0.0005,
+      "random_pairwise_tau_mean": 0.038,
       "random_n_pairs": 45,
-      "cutoff_pairwise_tau_mean": 0.4511,
+      "cutoff_pairwise_tau_mean": 0.4556,
       "cutoff_n_pairs": 10,
-      "consensus_tau_random_vs_cutoff": 0.2444,
+      "consensus_tau_random_vs_cutoff": 0.4667,
       "top_counts": {
-        "via_alpn": 1,
-        "via_cert_issuer": 4,
-        "via_cert_subject": 8,
-        "via_cert_validity": 2,
-        "via_dst_host": 4,
-        "via_ja3": 3,
-        "via_sni": 1,
-        "via_src_host": 8,
-        "via_timebin": 8
+        "via_alpn": 3,
+        "via_cert_issuer": 7,
+        "via_cert_subject": 6,
+        "via_cert_validity": 1,
+        "via_dst_host": 2,
+        "via_ja3": 1,
+        "via_sni": 2,
+        "via_src_host": 3,
+        "via_timebin": 8,
+        "via_tls_cipher_group": 2
       },
-      "n_relations_ever_top": 9,
+      "n_relations_ever_top": 10,
       "n_relations_unique_top": 7,
-      "n_variants_ending_in_a_tie": 9
+      "n_variants_ending_in_a_tie": 7
     }
   },
   "diagnostics": {

@@ -12,7 +12,7 @@ from the TLS version and the cipher-suite list as a coarse stand-in
 CipherGroup and `via_timebin` its TimeBin. `verify_paper.py` carries the mapping.
 
 **Verify the paper's numbers.** `python verify_paper.py` recomputes every
-value the paper reports (Tables 4–14 and the numbers quoted in the text, 280
+value the paper reports (Tables 4–14 and the numbers quoted in the text, 305
 claims) from the shipped files in `results/` and prints PASS/FAIL per claim.
 
 Every number the paper reports comes from a file in `results/`, and every file
@@ -642,12 +642,14 @@ percent over five seeds. The `values` copy is rounded to four places, so
 variant with the split seed and then rebuilds the edges with the fixed base
 edge seed (42) under `--skip-materialize`, so the random arm changes the split
 only and the edge-seed arm is the only one that changes the sampling. The
-shipped random-variant summaries in `results/repeated_splits/` and
-`results/repeat_decomp/` were produced before this rebuild step was added and
-carry the split seed as edge seed as well; for BCCC-DoH this is immaterial
-(its reported relation has six values, so every edge seed yields the same
-graph, Section 6.3), and for the other datasets the edge-seed arm bounds the
-sampling component separately.
+shipped summaries for ISCX-VPN, VNAT and HIKARI in `results/repeated_splits/`
+and for ISCX-VPN and CIC-AndMal in `results/repeat_decomp/` were produced with
+this rebuild step, every variant of a dataset (random, cutoff and edge-seed
+arms) in one invocation, so all three arms share one code version and one
+environment. The BCCC-DoH summaries predate the rebuild step and carry the
+split seed as edge seed as well; this is immaterial there because its reported
+relation has six values, so every edge seed yields the same graph
+(Section 6.3), and the edge-seed arm shows zero variation (Table 9).
 
 ## Checks
 
