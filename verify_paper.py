@@ -240,6 +240,11 @@ def build_claims():
         src="typing_vs_pruning/han_full/hikari.json")
 
     # --- repeated splits (Table 8) ---
+    # Random-split variants: the shipped summaries for ISCX-VPN, VNAT, HIKARI and
+    # CIC-AndMal are to be regenerated with the decoupled edge seed (see README,
+    # "Random variants and edge seeds"). BCCC-DoH is not rerun: its reported
+    # relation has six values, so every edge seed yields the same graph and the
+    # edge-seed arm shows zero variation (Table 9).
     def repeat_arm(ds, prefix, what):
         d = json.load(open(ART / "repeated_splits" / ("%s.json" % ds)))[ds]
         v = [float(np.mean(d[k]["han"]["per_seed"]))
@@ -745,7 +750,7 @@ def main():
         print("  SKIP %-50s %s <- %s" % (n, why, src))
     if not bad and not skipped:
         print("ALL CLAIMS PASS")
-    return 1 if bad else 0
+    return 1 if (bad or skipped) else 0
 
 
 if __name__ == "__main__":

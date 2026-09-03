@@ -8,6 +8,11 @@ the reported configuration.
 
   A. random    split_mode=random, varying the split seed
   B. cutoff    split_mode=time_stratified, varying the test fraction
+  Seeds are decoupled: a random-split variant redraws the split with its own
+  seed and then rebuilds the edges with the fixed base edge seed, so only the
+  edge-seed arm changes the edge sampling. (Earlier revisions of this script
+  let build_graph.py sample the edges with the split seed; see README, "Random
+  variants and edge seeds".)
   C. edgeseed  split fixed, varying only the edge-sampling seed
 
 The edge seed is held fixed in A and the split is held fixed in C, so the three
@@ -351,6 +356,19 @@ def main():
                            "--raw", args.raw, "--out", str(vdir),
                            "--config", str(cfg_p), "--split-mode", mode]
                     sh(cmd, False)
+                    if int(eseed) != int(sseed):
+                        # build_graph.py uses one cfg["seed"] for both the split
+                        # and the edge rings, so the pass above sampled the edges
+                        # with the split seed. Rebuild the edges alone with the
+                        # fixed edge seed so that a random-split variant changes
+                        # the split and nothing else; the edge-seed variants
+                        # below are the only arm that changes the sampling.
+                        cfg_e = write_cfg(args.config,
+                                          tmpcfg / ("%s_%s_edge.yaml" % (ds, tag)),
+                                          eseed, tsize)
+                        sh([py, "-u", "build_graph.py", "--datasets", ds,
+                            "--out", str(vdir), "--config", str(cfg_e),
+                            "--split-mode", mode, "--skip-materialize"], False)
                 else:
                     src = work / ("%s__edgeseed_s%d" % (ds, BASE_SEED))
                     (vdir / ds).mkdir(parents=True, exist_ok=True)

@@ -57,7 +57,12 @@ turns the captures into the flow table, `build_graph.py` writes the splits and
 the edges.
 
     python build_graph.py --datasets bccc_dohbrw iscx_vpn hikari cic_andmal vnat \
-        --raw data/raw --out data/processed_deg2 --config config.yaml
+        --raw data/raw --out data/processed_deg2 --config config.yaml \
+        --split-mode time_stratified
+
+`--split-mode time_stratified` is the class-stratified order-preserving split
+the paper adopts (Section 4.2); the script's default, `random`, is the
+conventional split used only for the random-split comparisons below.
 
 That writes, per dataset, `X_*.npy` `y_*.npy` `meta_*.csv` `hin_edges_*.npy`
 `hin_summary.json` `feature_names.json`.
@@ -102,8 +107,12 @@ and each is named for what changed.
         --data data/processed_deg2 --out data/processed_deg2_perm$S \
         --fields cert_validity_bucket cert_subject --seed $S
       python build_graph.py --datasets bccc_dohbrw \
-        --out data/processed_deg2_perm$S --config config.yaml
+        --out data/processed_deg2_perm$S --config config.yaml --skip-materialize
     done
+
+`--skip-materialize` keeps the permuted `meta_*.csv` and the copied split files
+and rebuilds only the edges; without it `build_graph.py` would re-extract the
+original metadata over the permuted copy.
 
 The permuted column differs by dataset, because the relation the paper reports
 differs. BCCC-DoH permutes `cert_validity_bucket` together with `cert_subject`,
@@ -119,7 +128,7 @@ another experiment reads.
         --datasets bccc_dohbrw \
         --column cert_validity_bucket --tokens unknown
     python build_graph.py --datasets bccc_dohbrw \
-        --out data/processed_deg2_bccc10_nounk --config config.yaml
+        --out data/processed_deg2_bccc10_nounk --config config.yaml --skip-materialize
 
     cp -r data/processed_deg2 data/_random
     python random_edge_control.py --datasets bccc_dohbrw iscx_vpn hikari cic_andmal vnat \
@@ -186,7 +195,7 @@ between them and the difference disappears under rounding.
     python check_index_feature.py --raw data/raw/hikari --split random \
         --out results/feature_audit/hikari_index_column_random.json
 
-Sec. 7.5 asks the same two questions of every feature column in every dataset,
+Sec. 5.5 asks the same two questions of every feature column in every dataset,
 and both are answerable from the matrix alone: does the column carry the row's
 identity rather than the flow's behaviour, and does it reproduce the timestamp
 that orders the split. Asking a trained score instead is too late, because by
@@ -288,11 +297,15 @@ Two families against each other on the same root: the seven TLS relations, and
 the two host relations. Whether the TLS graph is worth building is a comparison
 against the host graph, not against no graph.
 
+    # ISCX-VPN and VNAT carry all ten relations in data/processed_deg2. BCCC-DoH
+    # requests the TLS relations only there (config.yaml), so its host relations
+    # come from the ten-relation root data/processed_deg2_bccc10 built above.
     for DS in iscx_vpn vnat bccc_dohbrw; do
-      python train.py --model han --datasets $DS --data data/processed_deg2 \
+      if [ "$DS" = bccc_dohbrw ]; then ROOT=data/processed_deg2_bccc10; else ROOT=data/processed_deg2; fi
+      python train.py --model han --datasets $DS --data $ROOT \
         --sets "via_sni+via_ja3+via_cert_subject+via_alpn+via_cert_issuer+via_tls_cipher_group+via_cert_validity" \
         --runs runs/family/tls/$DS --seeds 41 42 43 44 45
-      python train.py --model han --datasets $DS --data data/processed_deg2 \
+      python train.py --model han --datasets $DS --data $ROOT \
         --sets "via_src_host+via_dst_host" \
         --runs runs/family/host/$DS --seeds 41 42 43 44 45
     done
@@ -510,8 +523,10 @@ reason that has nothing to do with the literature.
 
 ## Budget where the relations carry little
 
-Sec. 6.6 claims the budget matters only where the relations carry something.
-The claim needs the other side measured too. `--max-degree` writes the budget
+Sec. 6.6 reports the neighbor-budget sensitivity: on the datasets that complete,
+raising the budget from 2 to 4 does not materially change the reported
+performance pattern, and CIC-AndMal (seven relations) runs out of memory on a
+24 GB device. The datasets with small relation contribution are measured too. `--max-degree` writes the budget
 into `hin_summary.json`, so the root is identified by its contents rather than
 by its directory name.
 
@@ -613,6 +628,20 @@ percent over five seeds. The `values` copy is rounded to four places, so
 
     # supplementary saturation curves (relation count vs. validation score); not a paper figure
     python make_fig1.py --summaries results/saturation --out saturation_curves.pdf
+
+## Random variants and edge seeds
+
+`build_graph.py` drives both the split draw and the edge rings from one
+`seed` in its config. `repeat_splits.py` therefore materializes a random-split
+variant with the split seed and then rebuilds the edges with the fixed base
+edge seed (42) under `--skip-materialize`, so the random arm changes the split
+only and the edge-seed arm is the only one that changes the sampling. The
+shipped random-variant summaries in `results/repeated_splits/` and
+`results/repeat_decomp/` were produced before this rebuild step was added and
+carry the split seed as edge seed as well; for BCCC-DoH this is immaterial
+(its reported relation has six values, so every edge seed yields the same
+graph, Section 6.3), and for the other datasets the edge-seed arm bounds the
+sampling component separately.
 
 ## Checks
 

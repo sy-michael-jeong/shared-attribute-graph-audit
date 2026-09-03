@@ -6,15 +6,17 @@ data:
   val_size: 0.10
 
 hin:
-  # 요청하는 관계는 데이터셋마다 다르다. BCCC-DoH 와 CIC-AndMal 은 TLS 관계만
-  # 요청한다. 두 코퍼스에서 호스트 관계는 캡처 구성이 만든 것이지 트래픽이 만든
-  # 것이 아니고(감염 호스트가 소수의 주소에 몰려 있다), 시간 관계는 캡처 일정을
-  # 그대로 읽는다. 그 셋을 요청하면 그래프가 데이터가 아니라 수집 절차를
-  # 학습한다. 나머지 세 데이터셋은 열 가지를 전부 요청하고, 실현되지 않는 것은
-  # build_graph.py 가 hin_summary.json 의 skipped 에 사유와 함께 남긴다.
+  # The requested relations differ by dataset. BCCC-DoH and CIC-AndMal request
+  # the TLS relations only: in those two corpora the host relations read the
+  # capture setup rather than the traffic (infected hosts sit on a handful of
+  # addresses) and the temporal relation reads the capture schedule, so
+  # requesting them would let the graph learn the collection procedure instead
+  # of the data (paper, Section 3.2). The other three datasets request all ten;
+  # relations that do not materialize are listed with a reason under `skipped`
+  # in hin_summary.json by build_graph.py.
   #
-  # 이 구분을 적어 두지 않으면 "관계가 실현되지 않았다" 와 "애초에 요청하지
-  # 않았다" 가 결과 파일에서 구별되지 않는다.
+  # Without this distinction, "not realized" and "never requested" would be
+  # indistinguishable in the result files.
   metapaths:
     - via_sni
     - via_ja3
