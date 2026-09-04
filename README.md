@@ -12,7 +12,7 @@ from the TLS version and the cipher-suite list as a coarse stand-in
 CipherGroup and `via_timebin` its TimeBin. `verify_paper.py` carries the mapping.
 
 **Verify the paper's numbers.** `python verify_paper.py` recomputes every
-value the paper reports (Tables 4–14 and the numbers quoted in the text, 320
+value the paper reports (Tables 4–14 and the numbers quoted in the text, 325
 claims) from the shipped files in `results/` and prints PASS/FAIL per claim.
 
 Every number the paper reports comes from a file in `results/`, and every file
@@ -656,28 +656,21 @@ percent over five seeds. The `values` copy is rounded to four places, so
 `seed` in its config. `repeat_splits.py` therefore materializes a random-split
 variant with the split seed and then rebuilds the edges with the fixed base
 edge seed (42) under `--skip-materialize`, so the random arm changes the split
-only and the edge-seed arm is the only one that changes the sampling. The
-shipped summaries for ISCX-VPN, VNAT and HIKARI in `results/repeated_splits/`
-and for ISCX-VPN and CIC-AndMal in `results/repeat_decomp/` were produced with
-this rebuild step, every variant of a dataset (random, cutoff and edge-seed
-arms) in one invocation, so all three arms share one code version and one
-environment. Different edge seeds resample the individual ring edges of every relation
+only and the edge-seed arm is the only one that changes the sampling.
+Different edge seeds resample the individual ring edges of every relation
 (`value_rng(seed, value)` in `build_graph.py`), so a different seed is a
-different graph; what the audited edge-seed variants show is that for BCCC-DoH
-the scores do not move with it, to four decimal places (Table 9). The BCCC-DoH
-cutoff and edge-seed variants predate the rebuild step, which does not affect
-them (their split seed is the base seed). The BCCC-DoH random variants are
-being rerun with the rebuild step so that, as for the other datasets, the
-split and the edge sampling vary separately; until that summary is shipped,
-their `protocol` block says `legacy_coupled_seed: true`.
+different graph; what the edge-seed arm measures is how much the scores move
+with it, and for BCCC-DoH they do not, to four decimal places (Table 9).
 
 Every variant in a shipped summary carries a `protocol` block — `split_mode`,
 `split_seed`, `edge_seed`, `test_size`, and `edge_seed_recorded`, the seed read
-back from `hin_summary.json` after the build. `repeat_splits.py` refuses a
-variant whose recorded edge seed differs from the one it asked for, and
-`--rebuild-summary` restores the block for an existing run tree from its
-`_cfg/` files; a random-split variant from a run that predates the decoupling
-is marked `legacy_coupled_seed: true` rather than guessed.
+back from `hin_summary.json` after the build — so the separation can be checked
+from the result file alone: every random-split variant has `edge_seed: 42`,
+and `verify_paper.py` checks this for all six shipped summaries.
+`repeat_splits.py` refuses a variant whose recorded edge seed differs from the
+one it asked for. `--rebuild-summary` restores the block for an existing run
+tree from its `_cfg/` files and, for a random-split variant it cannot vouch
+for, records `legacy_coupled_seed: true` rather than guessing.
 
 ## Checks
 

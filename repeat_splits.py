@@ -8,11 +8,9 @@ the reported configuration.
 
   A. random    split_mode=random, varying the split seed
   B. cutoff    split_mode=time_stratified, varying the test fraction
-  Seeds are decoupled: a random-split variant redraws the split with its own
-  seed and then rebuilds the edges with the fixed base edge seed, so only the
-  edge-seed arm changes the edge sampling. (Earlier revisions of this script
-  let build_graph.py sample the edges with the split seed; see README, "Random
-  variants and edge seeds".)
+  A random-split variant redraws the split with its own seed and then
+  rebuilds the edges with the fixed base edge seed, so only the edge-seed arm
+  changes the edge sampling (README, "Random variants and edge seeds").
   C. edgeseed  split fixed, varying only the edge-sampling seed
 
 The edge seed is held fixed in A and the split is held fixed in C, so the three
@@ -41,8 +39,8 @@ its own output and stops when it does not match.
 Every variant in repeat_summary.json carries a `protocol` block:
 split_mode, split_seed, edge_seed, test_size, and edge_seed_recorded (the seed
 read back from hin_summary.json after the build). --rebuild-summary restores
-the block from the `_cfg/` files of the run tree; a random-split variant from a
-run that predates the seed decoupling has no `_edge.yaml` and is marked
+the block from the `_cfg/` files of the run tree; a random-split variant whose
+tree holds no `_edge.yaml` cannot be vouched for and is marked
 legacy_coupled_seed=true instead of being guessed.
   3) Every model summary is checked for existence and for a valid macro-F1.
      A script can exit with status zero and leave a failed result behind.
@@ -241,7 +239,7 @@ def restore_protocol(runs: Path, ds: str, tag: str):
     Preference order: the `_cfg/<ds>_<tag>_protocol.json` written by this
     script at run time (exact); else the `_cfg/` yaml files. A random-split
     variant whose split seed differs from the base seed and whose tree holds no
-    `_edge.yaml` was built before the seeds were decoupled, so its edges were
+    `_edge.yaml` has no record of the edge rebuild, so its edges may have been
     sampled with the split seed: recorded as legacy_coupled_seed=true rather
     than guessed.
     """
@@ -259,7 +257,7 @@ def restore_protocol(runs: Path, ds: str, tag: str):
             rec["edge_seed_source"] = "_cfg/%s" % edge_yaml.name
         else:
             rec["edge_seed"] = int(sseed)
-            rec["edge_seed_source"] = "none: run predates the seed decoupling"
+            rec["edge_seed_source"] = "none: no record of an edge rebuild in _cfg/"
             rec["legacy_coupled_seed"] = True
     elif mode == "random":
         rec["edge_seed_source"] = "tag (split seed equals the base edge seed)"

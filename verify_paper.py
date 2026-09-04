@@ -240,12 +240,8 @@ def build_claims():
         src="typing_vs_pruning/han_full/hikari.json")
 
     # --- repeated splits (Table 8) ---
-    # The shipped summaries for ISCX-VPN, VNAT and HIKARI (repeated_splits/) and
-    # for ISCX-VPN and CIC-AndMal (repeat_decomp/) were regenerated with the
-    # decoupled edge seed, all variants in one invocation per dataset (see README,
-    # "Random variants and edge seeds"). BCCC-DoH was not rerun: its reported
-    # relation has six values, so every edge seed yields the same graph and the
-    # edge-seed arm shows zero variation (Table 9).
+    # Every shipped summary carries a protocol block per variant; the random
+    # arm changes the split only (edge seed 42), checked under "Sec 5.1" below.
     def repeat_arm(ds, prefix, what, model="han"):
         d = json.load(open(ART / "repeated_splits" / ("%s.json" % ds)))[ds]
         v = [float(np.mean(d[k][model]["per_seed"]))
@@ -536,7 +532,7 @@ def build_claims():
             ("cic_andmal.json", "cic_andmal", "random", 5, 5.8, 32.3, 14.9, 9.5),
             ("bccc_dohbrw.json", "bccc_dohbrw", "cutoff", 3, 73.8, 84.8, 80.2, 4.7),
             ("bccc_dohbrw.json", "bccc_dohbrw", "edgeseed", 3, 84.5, 84.5, 84.5, 0.0),
-            ("bccc_dohbrw.json", "bccc_dohbrw", "random", 5, 32.9, 34.4, 33.6, 0.7)):
+            ("bccc_dohbrw.json", "bccc_dohbrw", "random", 5, 33.1, 34.0, 33.5, 0.3)):
         _t = "Table 9 %s %s" % (NAME[dc_ds], dc_fam)
         _s = "repeat_decomp/" + dc_path
         add(_t + " variants", dc_n,
@@ -603,18 +599,35 @@ def build_claims():
         lambda: _dc_arm("bccc_dohbrw", "bccc_dohbrw.json", "random_", "mean")
         - _dc_arm("bccc_dohbrw", "bccc_dohbrw.json", "cutoff_", "mean"),
         src="repeat_decomp/bccc_dohbrw.json  difference of the two means")
-    for _fam, _m, _v in (("random", "mlp", 0.8783), ("random", "noedge", 0.9586),
+    for _fam, _m, _v in (("random", "mlp", 0.8784), ("random", "noedge", 0.9588),
                          ("cutoff", "mlp", 0.9384), ("cutoff", "noedge", 0.9505)):
         add("Sec 6.3 BCCC %s mean under %s variants" % (_m, _fam), _v,
             lambda f=_fam, m=_m: _dc_mean("bccc_dohbrw.json", "bccc_dohbrw", f, m),
             src="repeat_decomp/bccc_dohbrw.json")
-    add("Sec 6.3 BCCC total margin under random variants", 0.1210,
+    add("Sec 6.3 BCCC total margin under random variants", 0.1209,
         lambda: _dc_mean("bccc_dohbrw.json", "bccc_dohbrw", "random", "han")
         - _dc_mean("bccc_dohbrw.json", "bccc_dohbrw", "random", "mlp"),
         src="repeat_decomp/bccc_dohbrw.json")
     add("Sec 6.3 BCCC random-split architecture share (roughly two thirds)", 1,
         lambda: int(0.60 <= 1 - np.mean(_decomp("bccc_dohbrw.json", "bccc_dohbrw", "random")) / 100 <= 0.72),
         tol=0, src="repeat_decomp/bccc_dohbrw.json")
+
+    # --- provenance: the random arm changes the split only (Sec 5.1) ---
+    def _random_edge_seeds_ok(sub, fname, ds):
+        d = json.load(open(ART / sub / fname))[ds]
+        rnd = [v for k, v in d.items() if k.startswith("random_")]
+        return int(len(rnd) > 0 and all(
+            "protocol" in v and v["protocol"]["edge_seed"] == 42
+            and not v["protocol"]["legacy_coupled_seed"] for v in rnd))
+    for _sub, _f, _ds in (("repeated_splits", "iscx_vpn.json", "iscx_vpn"),
+                          ("repeated_splits", "vnat.json", "vnat"),
+                          ("repeated_splits", "hikari.json", "hikari"),
+                          ("repeat_decomp", "iscx_vpn.json", "iscx_vpn"),
+                          ("repeat_decomp", "cic_andmal.json", "cic_andmal"),
+                          ("repeat_decomp", "bccc_dohbrw.json", "bccc_dohbrw")):
+        add("Sec 5.1 random variants use edge seed 42 (%s/%s)" % (_sub, _f), 1,
+            lambda a=_sub, b=_f, c=_ds: _random_edge_seeds_ok(a, b, c), tol=0,
+            src="%s/%s  protocol block" % (_sub, _f))
 
     # --- Sec 7.4: HIKARI port columns ---
     def _idx(run):

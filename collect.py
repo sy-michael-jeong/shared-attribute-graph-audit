@@ -65,6 +65,7 @@ DIRECT = [
     "profiling/relation_profiling.json",               # profile_relations.py
     "rank_stability/rank_stability.json",              # rank_stability.py
     "reproducibility/graph_rebuild.json",              # verify_graph.py
+    "structure/verify_graph.json",                     # verify_graph.py --out
     "reference_lines/token_census.json",                # token_census.py
     "reference_lines/token_census_all.json",            # token_census.py
     "token_reversal/cic_andmal_hin_summary.json",       # build_graph.py

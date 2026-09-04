@@ -9,7 +9,7 @@ authors:
     email: jsy8630@kisti.re.kr
 license: MIT
 doi: 10.5281/zenodo.22248002
-version: 1.1.0
+version: 1.2.0
 repository-code: "https://github.com/sy-michael-jeong/shared-attribute-graph-audit"
 keywords:
   - encrypted traffic
