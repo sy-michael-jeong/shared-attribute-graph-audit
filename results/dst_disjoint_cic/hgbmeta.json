@@ -1,0 +1,176 @@
+{
+  "cic_andmal": {
+    "relations_full": [
+      "via_sni",
+      "via_ja3",
+      "via_cert_subject",
+      "via_alpn",
+      "via_cert_issuer",
+      "via_tls_cipher_group",
+      "via_cert_validity"
+    ],
+    "relations_selected": [
+      "via_sni",
+      "via_ja3",
+      "via_cert_subject",
+      "via_alpn",
+      "via_cert_issuer",
+      "via_tls_cipher_group",
+      "via_cert_validity"
+    ],
+    "n_features_full": 28,
+    "n_features_selected": 28,
+    "feature_names_selected": [
+      "sni_present",
+      "sni_train_freq",
+      "sni_seen",
+      "sni_group_size",
+      "ja3_present",
+      "ja3_train_freq",
+      "ja3_seen",
+      "ja3_group_size",
+      "cert_subject_present",
+      "cert_subject_train_freq",
+      "cert_subject_seen",
+      "cert_subject_group_size",
+      "alpn_present",
+      "alpn_train_freq",
+      "alpn_seen",
+      "alpn_group_size",
+      "cert_issuer_present",
+      "cert_issuer_train_freq",
+      "cert_issuer_seen",
+      "cert_issuer_group_size",
+      "tls_cipher_group_present",
+      "tls_cipher_group_train_freq",
+      "tls_cipher_group_seen",
+      "tls_cipher_group_group_size",
+      "cert_validity_present",
+      "cert_validity_train_freq",
+      "cert_validity_seen",
+      "cert_validity_group_size"
+    ],
+    "runs": {
+      "flow_only__fit_train": {
+        "macro_f1_mean": 0.6482,
+        "macro_f1_std": 0.0011,
+        "minority_f1_mean": 0.6324,
+        "per_seed": [
+          0.649,
+          0.6491,
+          0.6489,
+          0.6479,
+          0.6463
+        ]
+      },
+      "meta_selected__fit_train": {
+        "macro_f1_mean": 0.5341,
+        "macro_f1_std": 0.0062,
+        "minority_f1_mean": 0.4234,
+        "per_seed": [
+          0.5316,
+          0.5251,
+          0.5362,
+          0.5335,
+          0.544
+        ]
+      },
+      "flow_plus_meta_selected__fit_train": {
+        "macro_f1_mean": 0.6372,
+        "macro_f1_std": 0.0033,
+        "minority_f1_mean": 0.5882,
+        "per_seed": [
+          0.6395,
+          0.6365,
+          0.6416,
+          0.6366,
+          0.6317
+        ]
+      },
+      "meta_full__fit_train": {
+        "macro_f1_mean": 0.5341,
+        "macro_f1_std": 0.0062,
+        "minority_f1_mean": 0.4234,
+        "per_seed": [
+          0.5316,
+          0.5251,
+          0.5362,
+          0.5335,
+          0.544
+        ]
+      },
+      "flow_plus_meta_full__fit_train": {
+        "macro_f1_mean": 0.6372,
+        "macro_f1_std": 0.0033,
+        "minority_f1_mean": 0.5882,
+        "per_seed": [
+          0.6395,
+          0.6365,
+          0.6416,
+          0.6366,
+          0.6317
+        ]
+      },
+      "flow_only__fit_trainval": {
+        "macro_f1_mean": 0.6498,
+        "macro_f1_std": 0.001,
+        "minority_f1_mean": 0.6335,
+        "per_seed": [
+          0.6479,
+          0.6503,
+          0.6507,
+          0.6494,
+          0.6507
+        ]
+      },
+      "meta_selected__fit_trainval": {
+        "macro_f1_mean": 0.5796,
+        "macro_f1_std": 0.0041,
+        "minority_f1_mean": 0.5747,
+        "per_seed": [
+          0.5835,
+          0.5842,
+          0.5797,
+          0.573,
+          0.5773
+        ]
+      },
+      "flow_plus_meta_selected__fit_trainval": {
+        "macro_f1_mean": 0.6527,
+        "macro_f1_std": 0.0014,
+        "minority_f1_mean": 0.6288,
+        "per_seed": [
+          0.651,
+          0.6523,
+          0.6516,
+          0.6548,
+          0.6539
+        ]
+      },
+      "meta_full__fit_trainval": {
+        "macro_f1_mean": 0.5796,
+        "macro_f1_std": 0.0041,
+        "minority_f1_mean": 0.5747,
+        "per_seed": [
+          0.5835,
+          0.5842,
+          0.5797,
+          0.573,
+          0.5773
+        ]
+      },
+      "flow_plus_meta_full__fit_trainval": {
+        "macro_f1_mean": 0.6527,
+        "macro_f1_std": 0.0014,
+        "minority_f1_mean": 0.6288,
+        "per_seed": [
+          0.651,
+          0.6523,
+          0.6516,
+          0.6548,
+          0.6539
+        ]
+      }
+    }
+  }
+}

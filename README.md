@@ -12,7 +12,7 @@ from the TLS version and the cipher-suite list as a coarse stand-in
 CipherGroup and `via_timebin` its TimeBin. `verify_paper.py` carries the mapping.
 
 **Verify the paper's numbers.** `python verify_paper.py` recomputes every
-value the paper reports (Tables 4–14 and the numbers quoted in the text, 325
+value the paper reports (Tables 4–14 and the numbers quoted in the text, 339
 claims) from the shipped files in `results/` and prints PASS/FAIL per claim.
 
 Every number the paper reports comes from a file in `results/`, and every file
@@ -438,10 +438,11 @@ already exists, without training anything:
     python train.py --model han --datasets bccc_dohbrw --data data/_bccc_random \
         --runs runs/split_protocol/random/han/bccc_dohbrw
 
-The audit split separates time, not identifiers. On the destination-disjoint
-root no address appears on both sides, and that is where the ordering between
-the tabular baseline and the graph models reverses. All four models are run on
-the same root so the comparison is between models and not between splits.
+The audit split separates time, not identifiers. On the ISCX-VPN
+destination-disjoint root no address appears on both sides, and that is where
+the ordering between the tabular baseline and the graph models reverses. All
+four models are run on the same root so the comparison is between models and
+not between splits.
 
     python train.py --model hgb --datasets iscx_vpn --data data/_iscx_dstdisj \
         --runs runs/dstdisj/hgb --seeds 41 42 43 44 45
@@ -451,6 +452,26 @@ the same root so the comparison is between models and not between splits.
         --sets via_src_host --runs runs/dstdisj/han --seeds 41 42 43 44 45
     python no_edge_han.py --datasets iscx_vpn --data data/_iscx_dstdisj \
         --sets via_src_host --out runs/dstdisj/noedge --seeds 41 42 43 44 45
+
+CIC-AndMal has the other separable destination axis (Sec. 4.1). The same split
+is built there, and the end of Sec. 6.3.1 reports HGB, HGB+meta and HAN on it;
+there the tabular baseline stays ahead. `audit.py split` prints the class count
+of every partition and the identifier overlap of the realized split; the overlap
+file records the partition sizes. HAN uses the reported configuration in
+`common.SELECTED`, so no `--sets` is given.
+
+    python build_graph.py --datasets cic_andmal --raw data/raw \
+        --out data/_cic_dstdisj --config config.yaml --split-mode dst_ip_disjoint
+    python audit.py split --data data/_cic_dstdisj --dataset cic_andmal
+    python split_overlap_audit.py --datasets cic_andmal --data data/_cic_dstdisj \
+        --protocol dst_ip_disjoint \
+        --out results/split_protocol/overlap/overlap_dst_disjoint_cic.json
+    python train.py --model hgb --datasets cic_andmal --data data/_cic_dstdisj \
+        --runs runs/dstdisj_cic/hgb --seeds 41 42 43 44 45
+    python same_info_matched.py --datasets cic_andmal --data data/_cic_dstdisj \
+        --out runs/dstdisj_cic/hgbmeta --seeds 41 42 43 44 45
+    python train.py --model han --datasets cic_andmal --data data/_cic_dstdisj \
+        --runs runs/dstdisj_cic/han --seeds 41 42 43 44 45
 
 ## The decomposition under repeated splits
 

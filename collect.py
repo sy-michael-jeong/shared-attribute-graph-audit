@@ -73,6 +73,7 @@ DIRECT = [
     "sensitivity_weak/cic_andmal_hin_summary.json",     # build_graph.py --max-degree
     "sensitivity_weak/vnat_hin_summary.json",           # build_graph.py --max-degree
     "split_protocol/overlap/overlap_dst_disjoint.json", # split_overlap_audit.py
+    "split_protocol/overlap/overlap_dst_disjoint_cic.json",  # split_overlap_audit.py
     "reference_lines/availability_null.json",          # availability_null.py
     "reference_lines/availability_null_nounk.json",    # availability_null.py
     "reference_lines/availability_rule.json",          # availability_rule.py
@@ -184,11 +185,15 @@ def build_map():
     add("repeat_decomp_bccc/repeat_summary.json", "repeat_decomp/bccc_dohbrw.json")
     add("repeat_decomp_cic/repeat_summary.json", "repeat_decomp/cic_andmal.json")
 
-    # The only split that actually separates an identifier axis; the tabular baseline collapses here.
+    # Destination-disjoint split on ISCX-VPN (Table 10); the tabular baseline collapses here.
     add("dstdisj/hgb/tabular_baseline_summary.json", "dst_disjoint/hgb.json")
     add("dstdisj/mlp/mlp_baseline_summary.json", "dst_disjoint/mlp.json")
     add("dstdisj/noedge/iscx_vpn/multiseed_summary.json", "dst_disjoint/noedge.json")
     add("dstdisj/han/multiseed_summary.json", "dst_disjoint/han.json")
+    # The same split on CIC-AndMal (end of Sec. 6.3.1); here the tabular baseline stays ahead.
+    add("dstdisj_cic/hgb/tabular_baseline_summary.json", "dst_disjoint_cic/hgb.json")
+    add("dstdisj_cic/hgbmeta/tabular_summary.json", "dst_disjoint_cic/hgbmeta.json")
+    add("dstdisj_cic/han/multiseed_summary.json", "dst_disjoint_cic/han.json")
 
     # Density-matched random control; coverage is borrowed from the real relation.
     add("random_match_bccc/multiseed_summary.json", "random_match/bccc_dohbrw.json")

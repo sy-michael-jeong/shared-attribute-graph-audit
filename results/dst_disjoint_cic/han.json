@@ -1,0 +1,170 @@
+{
+  "cic_andmal": {
+    "data_root": "data/_cic_dstdisj",
+    "seeds": [
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "graph": {
+      "n_train": 280368,
+      "n_val": 40052,
+      "n_test": 80104,
+      "edges": {
+        "via_alpn": 507868,
+        "via_cert_issuer": 604198,
+        "via_cert_subject": 603826,
+        "via_cert_validity": 801048,
+        "via_ja3": 801044,
+        "via_sni": 762992,
+        "via_tls_cipher_group": 801048
+      }
+    },
+    "sets": {
+      "reported": {
+        "metapaths": [
+          "via_sni",
+          "via_ja3",
+          "via_cert_subject",
+          "via_alpn",
+          "via_cert_issuer",
+          "via_tls_cipher_group",
+          "via_cert_validity"
+        ],
+        "per_seed": [
+          {
+            "accuracy": 0.5747028862478778,
+            "macro_f1": 0.5633362319837556,
+            "weighted_f1": 0.5682737433609439,
+            "minority_f1": 0.49288478713902945,
+            "minority_recall": 0.4445160424218016,
+            "best_val": 0.5768215328958807,
+            "seed": 41,
+            "relations": [
+              "via_sni",
+              "via_ja3",
+              "via_cert_subject",
+              "via_alpn",
+              "via_cert_issuer",
+              "via_tls_cipher_group",
+              "via_cert_validity"
+            ]
+          },
+          {
+            "accuracy": 0.583791071606911,
+            "macro_f1": 0.5822239951938794,
+            "weighted_f1": 0.5840172212401002,
+            "minority_f1": 0.5566371446049097,
+            "minority_recall": 0.561927775540341,
+            "best_val": 0.5838462006943624,
+            "seed": 42,
+            "relations": [
+              "via_sni",
+              "via_ja3",
+              "via_cert_subject",
+              "via_alpn",
+              "via_cert_issuer",
+              "via_tls_cipher_group",
+              "via_cert_validity"
+            ]
+          },
+          {
+            "accuracy": 0.58317936682313,
+            "macro_f1": 0.5817462158659328,
+            "weighted_f1": 0.583462084808928,
+            "minority_f1": 0.5572631439368826,
+            "minority_recall": 0.5641831118270909,
+            "best_val": 0.584191602507826,
+            "seed": 43,
+            "relations": [
+              "via_sni",
+              "via_ja3",
+              "via_cert_subject",
+              "via_alpn",
+              "via_cert_issuer",
+              "via_tls_cipher_group",
+              "via_cert_validity"
+            ]
+          },
+          {
+            "accuracy": 0.5866997902726455,
+            "macro_f1": 0.586694704286141,
+            "weighted_f1": 0.5867963154186563,
+            "minority_f1": 0.585244854240006,
+            "minority_recall": 0.6271445831655256,
+            "best_val": 0.5779111076772947,
+            "seed": 44,
+            "relations": [
+              "via_sni",
+              "via_ja3",
+              "via_cert_subject",
+              "via_alpn",
+              "via_cert_issuer",
+              "via_tls_cipher_group",
+              "via_cert_validity"
+            ]
+          },
+          {
+            "accuracy": 0.5826550484370319,
+            "macro_f1": 0.5826223510346056,
+            "weighted_f1": 0.5828812554312502,
+            "minority_f1": 0.5789281440896782,
+            "minority_recall": 0.6170492683581689,
+            "best_val": 0.5806392884107476,
+            "seed": 45,
+            "relations": [
+              "via_sni",
+              "via_ja3",
+              "via_cert_subject",
+              "via_alpn",
+              "via_cert_issuer",
+              "via_tls_cipher_group",
+              "via_cert_validity"
+            ]
+          }
+        ],
+        "macro_f1": {
+          "mean": 0.5793,
+          "std": 0.0082,
+          "std_sample": 0.0092,
+          "n": 5,
+          "values": [
+            0.5633,
+            0.5822,
+            0.5817,
+            0.5867,
+            0.5826
+          ]
+        },
+        "minority_f1": {
+          "mean": 0.5542,
+          "std": 0.0327,
+          "std_sample": 0.0366,
+          "n": 5,
+          "values": [
+            0.4929,
+            0.5566,
+            0.5573,
+            0.5852,
+            0.5789
+          ]
+        },
+        "weighted_f1": {
+          "mean": 0.5811,
+          "std": 0.0065,
+          "std_sample": 0.0073,
+          "n": 5,
+          "values": [
+            0.5683,
+            0.584,
+            0.5835,
+            0.5868,
+            0.5829
+          ]
+        }
+      }
+    }
+  }
+}

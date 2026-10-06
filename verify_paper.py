@@ -207,6 +207,49 @@ def build_claims():
         add("Table 10 ISCX destination-disjoint %s" % lab, v, lambda g=f: dd(g),
             src="dst_disjoint/%s" % f)
 
+    # --- the same destination-disjoint split on CIC-AndMal (end of Sec 6.3.1) ---
+    def ddc(f):
+        d = json.load(open(ART / "dst_disjoint_cic" / f))["cic_andmal"]
+        b = list(d["sets"].values())[0] if "sets" in d else d
+        return np.array([x["macro_f1"] for x in b["per_seed"]], float)
+    for lab, f, m_, s_ in (("HGB", "hgb.json", 0.6498, 0.0010), ("HAN", "han.json", 0.5793, 0.0082)):
+        add("Sec 6.3.1 CIC destination-disjoint %s" % lab, m_,
+            lambda g=f: float(ddc(g).mean()), src="dst_disjoint_cic/%s" % f)
+        add("Sec 6.3.1 CIC destination-disjoint %s std" % lab, s_,
+            lambda g=f: float(ddc(g).std()), src="dst_disjoint_cic/%s" % f)
+
+    def ddc_meta(field):
+        d = json.load(open(ART / "dst_disjoint_cic" / "hgbmeta.json"))["cic_andmal"]
+        return d["runs"]["flow_plus_meta_full__fit_trainval"][field]
+    add("Sec 6.3.1 CIC destination-disjoint HGB+meta", 0.6527,
+        lambda: ddc_meta("macro_f1_mean"), src="dst_disjoint_cic/hgbmeta.json")
+    add("Sec 6.3.1 CIC destination-disjoint HGB+meta std", 0.0014,
+        lambda: ddc_meta("macro_f1_std"), src="dst_disjoint_cic/hgbmeta.json")
+
+    def ddc_audit():
+        return json.load(open(ART / "split_protocol" / "overlap" /
+                              "overlap_dst_disjoint_cic.json"))["datasets"]["cic_andmal"]
+    add("Sec 6.3.1 CIC destination-disjoint: test destinations seen in training", 0.0,
+        lambda: ddc_audit()["fields"]["via_dst_host"]["overlap_by_value"], tol=0.0,
+        src="split_protocol/overlap/overlap_dst_disjoint_cic.json")
+    for part, target in (("train", 0.70), ("val", 0.10), ("test", 0.20)):
+        add("Sec 6.3.1 CIC destination-disjoint %s share (target %.2f)" % (part, target), target,
+            lambda p=part: ddc_audit()["n_by_split"][p] / ddc_audit()["n_flows"], tol=0.0005,
+            src="split_protocol/overlap/overlap_dst_disjoint_cic.json")
+
+    # destination values that occur in both classes (feasibility audit, Sec 4.1 data)
+    def dst_groups(ds):
+        f = json.load(open(ART / "group_split" / "group_split_feasibility.json"))
+        return f["datasets"][ds]["via_dst_host"]
+    for ds, total, shared in (("iscx_vpn", 193, 1), ("cic_andmal", 6626, 2540)):
+        add("Sec 6.3.1 %s destination values" % NAME[ds], total,
+            lambda d=ds: dst_groups(d)["n_groups"], tol=0,
+            src="group_split/group_split_feasibility.json")
+        add("Sec 6.3.1 %s destination values in both classes" % NAME[ds], shared,
+            lambda d=ds: sum(v["n_groups"] for v in dst_groups(d)["groups_per_class"].values())
+            - dst_groups(d)["n_groups"], tol=0,
+            src="group_split/group_split_feasibility.json")
+
     def fam(kind, ds):
         d = json.load(open(ART / "relation_family" / ("%s_%s.json" % (kind, ds))))[ds]
         b = list(d["sets"].values())[0]
